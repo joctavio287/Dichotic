@@ -43,7 +43,8 @@ def read_wav(
 def plot_audio_profile(
     audio_path: Union[str, Path],
     output_path: Union[str, Path, None] = None,
-    attack_threshold: float = 0.1
+    attack_threshold: float = 0.1,
+    verbose: bool = False
 ) -> dict:
     """
     Plots the audio profile showing waveform, envelope, and attack characteristics.
@@ -57,6 +58,8 @@ def plot_audio_profile(
         Path to save the plot image. If None, saves next to audio file.
     attack_threshold : float, optional
         Threshold (fraction of peak) to calculate attack time. Default is 0.1 (10%).
+    verbose : bool, optional
+        If True, prints detailed attack metrics. Default is False.
 
     Returns
     -------
@@ -166,7 +169,12 @@ def plot_audio_profile(
         'peak_amplitude': float(peak_amplitude),
         'is_fast_attack': is_fast_attack
     }
-    
+    if verbose:
+        print(f"Attention probe attack analysis:")
+        print(f"  - Attack time: {metrics['attack_time_ms']:.2f}ms")
+        print(f"  - Peak time: {metrics['peak_time_ms']:.2f}ms")
+        print(f"  - Fast attack: {'Yes ✓' if metrics['is_fast_attack'] else 'No ✗'}")
+        print(f"  - Profile saved to: {probe_profile_path}")
     return metrics
     
 def save_wav(

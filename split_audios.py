@@ -76,11 +76,6 @@ attack_metrics = plot_audio_profile(
     output_path=probe_profile_path,
     attack_threshold=0.1
 )
-print(f"Attention probe attack analysis:")
-print(f"  - Attack time: {attack_metrics['attack_time_ms']:.2f}ms")
-print(f"  - Peak time: {attack_metrics['peak_time_ms']:.2f}ms")
-print(f"  - Fast attack: {'Yes ✓' if attack_metrics['is_fast_attack'] else 'No ✗'}")
-print(f"  - Profile saved to: {probe_profile_path}")
 
 # Combinaciones de audios cruzados siempre--> ver todas las combinaciones? No superpuestos # TODO futuro emparejar por longitud asi la distorsion es lo mas chica posible
 for j, (audio_f, audio_m) in enumerate(combinations):
