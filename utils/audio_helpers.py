@@ -10,6 +10,9 @@ from pydub.generators import Sine
 from pydub import AudioSegment
 from scipy.io import wavfile
 from scipy import signal
+import matplotlib
+matplotlib.use('Agg')  # Use non-interactive backend for server environments
+import matplotlib.pyplot as plt
 import ffmpeg
 
 def read_wav(
@@ -36,6 +39,135 @@ def read_wav(
         return sample_rate, data
     else:
         return data
+
+def plot_audio_profile(
+    audio_path: Union[str, Path],
+    output_path: Union[str, Path, None] = None,
+    attack_threshold: float = 0.1
+) -> dict:
+    """
+    Plots the audio profile showing waveform, envelope, and attack characteristics.
+    Useful for verifying that the attack is fast and clear.
+
+    Parameters
+    ----------
+    audio_path : Union[str, Path]
+        Path to the audio file to analyze.
+    output_path : Union[str, Path, None], optional
+        Path to save the plot image. If None, saves next to audio file.
+    attack_threshold : float, optional
+        Threshold (fraction of peak) to calculate attack time. Default is 0.1 (10%).
+
+    Returns
+    -------
+    dict
+        Dictionary with attack metrics:
+            - attack_time_ms: Time from threshold to peak in milliseconds
+            - peak_time_ms: Time to peak amplitude in milliseconds
+            - peak_amplitude: Normalized peak amplitude
+            - is_fast_attack: True if attack_time < 20ms (quick onset)
+    """
+    sample_rate, data = wavfile.read(audio_path)
+    
+    # Normalize data
+    data = data.astype(np.float32)
+    max_val = np.max(np.abs(data))
+    if max_val == 0:
+        # Audio is silent - return early with default metrics
+        return {
+            'attack_time_ms': 0.0,
+            'peak_time_ms': 0.0,
+            'peak_amplitude': 0.0,
+            'is_fast_attack': True  # Silent audio has no attack delay
+        }
+    data_normalized = data / max_val
+    
+    # Calculate envelope using Hilbert transform
+    analytic_signal = signal.hilbert(data_normalized)
+    envelope = np.abs(analytic_signal)
+    
+    # Smooth envelope for clearer visualization
+    window_size = max(1, int(sample_rate * 0.001))  # 1ms window
+    envelope_smooth = np.convolve(envelope, np.ones(window_size)/window_size, mode='same')
+    
+    # Time axis in milliseconds
+    time_ms = np.arange(len(data)) / sample_rate * 1000
+    
+    # Find attack characteristics
+    peak_idx = np.argmax(np.abs(data_normalized))
+    peak_time_ms = peak_idx / sample_rate * 1000
+    peak_amplitude = np.max(np.abs(data_normalized))
+    
+    # Find when signal first crosses threshold (attack start)
+    threshold_value = attack_threshold * peak_amplitude
+    above_threshold = np.abs(data_normalized) >= threshold_value
+    if np.any(above_threshold):
+        attack_start_idx = np.argmax(above_threshold)
+        attack_time_ms = (peak_idx - attack_start_idx) / sample_rate * 1000
+    else:
+        attack_start_idx = 0
+        attack_time_ms = peak_time_ms
+    
+    # Determine if attack is "fast" (under 20ms is typical for clear onset)
+    is_fast_attack = attack_time_ms < 20
+    
+    # Create the plot
+    fig, axes = plt.subplots(2, 1, figsize=(12, 8))
+    
+    # Plot 1: Waveform with envelope
+    ax1 = axes[0]
+    ax1.plot(time_ms, data_normalized, 'b-', alpha=0.5, label='Waveform', linewidth=0.5)
+    ax1.plot(time_ms, envelope_smooth, 'r-', label='Envelope', linewidth=1.5)
+    ax1.axvline(x=peak_time_ms, color='g', linestyle='--', label=f'Peak ({peak_time_ms:.2f}ms)')
+    ax1.axhline(y=threshold_value, color='orange', linestyle=':', 
+                label=f'{attack_threshold*100:.0f}% threshold')
+    if attack_start_idx < peak_idx:
+        ax1.axvline(x=attack_start_idx / sample_rate * 1000, color='purple', 
+                    linestyle='--', alpha=0.7, label=f'Attack start')
+    ax1.set_xlabel('Time (ms)')
+    ax1.set_ylabel('Normalized Amplitude')
+    ax1.set_title('Audio Profile: Waveform and Envelope')
+    ax1.legend(loc='upper right')
+    ax1.grid(True, alpha=0.3)
+    
+    # Plot 2: Zoomed attack region (first 50ms or to peak + 10ms)
+    ax2 = axes[1]
+    zoom_end = min(len(time_ms) - 1, int((peak_time_ms + 10) * sample_rate / 1000))
+    zoom_end = max(zoom_end, int(0.05 * sample_rate))  # At least 50ms
+    ax2.plot(time_ms[:zoom_end], data_normalized[:zoom_end], 'b-', alpha=0.5, 
+             label='Waveform', linewidth=0.5)
+    ax2.plot(time_ms[:zoom_end], envelope_smooth[:zoom_end], 'r-', 
+             label='Envelope', linewidth=1.5)
+    ax2.axvline(x=peak_time_ms, color='g', linestyle='--', label=f'Peak')
+    ax2.axhline(y=threshold_value, color='orange', linestyle=':', 
+                label=f'{attack_threshold*100:.0f}% threshold')
+    if attack_start_idx < peak_idx and attack_start_idx < zoom_end:
+        ax2.axvline(x=attack_start_idx / sample_rate * 1000, color='purple', 
+                    linestyle='--', alpha=0.7, label='Attack start')
+    ax2.set_xlabel('Time (ms)')
+    ax2.set_ylabel('Normalized Amplitude')
+    ax2.set_title(f'Attack Region (Attack time: {attack_time_ms:.2f}ms - {"FAST ✓" if is_fast_attack else "SLOW ✗"})')
+    ax2.legend(loc='upper right')
+    ax2.grid(True, alpha=0.3)
+    
+    plt.tight_layout()
+    
+    # Save the plot
+    if output_path is None:
+        output_path = Path(audio_path).with_suffix('.png')
+    else:
+        output_path = Path(output_path)
+    plt.savefig(output_path, dpi=150, bbox_inches='tight')
+    plt.close(fig)
+    
+    metrics = {
+        'attack_time_ms': attack_time_ms,
+        'peak_time_ms': peak_time_ms,
+        'peak_amplitude': float(peak_amplitude),
+        'is_fast_attack': is_fast_attack
+    }
+    
+    return metrics
     
 def save_wav(
     file_path: Union[str, Path],

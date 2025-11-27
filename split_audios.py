@@ -9,7 +9,7 @@ from utils.audio_helpers import (
     read_wav, save_wav, get_sample_rate, scale_audio,
     create_attention_probe, create_attention_track,
     convert_to_wav, combine_audio_stereo, scramble_audio,
-    scale_audio_to_relative_db
+    scale_audio_to_relative_db, plot_audio_profile
 )
 
 INTERMEDIATE_AUDIO_DIR = Path('data/intermediate_audios')
@@ -68,7 +68,19 @@ if not attention_probe_path.exists():
     )
 if SCRAMBLED_PROBE:
     attention_probe_path = scrambled_probe_path
-#TODO hacer perfil del audio para ver el ataque: tiene que ser rápido y claro
+
+# Generate audio profile to verify attack characteristics (should be fast and clear)
+probe_profile_path = attention_probe_path.with_name(attention_probe_path.stem + '_profile.png')
+attack_metrics = plot_audio_profile(
+    audio_path=attention_probe_path,
+    output_path=probe_profile_path,
+    attack_threshold=0.1
+)
+print(f"Attention probe attack analysis:")
+print(f"  - Attack time: {attack_metrics['attack_time_ms']:.2f}ms")
+print(f"  - Peak time: {attack_metrics['peak_time_ms']:.2f}ms")
+print(f"  - Fast attack: {'Yes ✓' if attack_metrics['is_fast_attack'] else 'No ✗'}")
+print(f"  - Profile saved to: {probe_profile_path}")
 
 # Combinaciones de audios cruzados siempre--> ver todas las combinaciones? No superpuestos # TODO futuro emparejar por longitud asi la distorsion es lo mas chica posible
 for j, (audio_f, audio_m) in enumerate(combinations):
