@@ -15,12 +15,12 @@ from utils.audio_helpers import (
 INTERMEDIATE_AUDIO_DIR = Path('data/intermediate_audios')
 AUDIO_DIR = Path('data/original_audios')
 OUTPUT_DIR = Path('data/processed_audios')
-ABSOLUTE_RELATIVE_ATTENUATION_DB = 20
+ABSOLUTE_RELATIVE_ATTENUATION_DB = 10
 NUMBER_OF_SCRAMBLE_SEGMENTS = 10
 THRESHOLD_DIFF_SECONDS = 10 # seconds
 COMMON_SAMPLE_RATE = 44100 # Hz
 PROBE_DURATION = 0.1  # seconds
-SCRAMBLED_PROBE = True
+SCRAMBLED_PROBE = False
 
 INTERMEDIATE_AUDIO_DIR.mkdir(parents=True, exist_ok=True)
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
