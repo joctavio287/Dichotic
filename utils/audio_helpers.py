@@ -44,6 +44,7 @@ def plot_audio_profile(
     audio_path: Union[str, Path],
     output_path: Union[str, Path, None] = None,
     attack_threshold: float = 0.1,
+    plot_spectrum: bool = False,
     verbose: bool = False
 ) -> dict:
     """
@@ -58,6 +59,8 @@ def plot_audio_profile(
         Path to save the plot image. If None, saves next to audio file.
     attack_threshold : float, optional
         Threshold (fraction of peak) to calculate attack time. Default is 0.1 (10%).
+    plot_spectrum : bool, optional
+        If True, adds a spectrogram plot to visualize formants. Default is False.
     verbose : bool, optional
         If True, prints detailed attack metrics. Default is False.
 
@@ -96,6 +99,20 @@ def plot_audio_profile(
     # Time axis in milliseconds
     time_ms = np.arange(len(data)) / sample_rate * 1000
     
+    # Find last sample with amplitude > 1%
+    silence_thresh = 0.01
+    active_mask = np.abs(data_normalized) > silence_thresh*np.abs(data_normalized).max()
+    if np.any(active_mask):
+        first_active_idx = np.where(active_mask)[0][0]
+        last_active_idx = np.where(active_mask)[0][-1]
+        # Add 20ms buffer for context
+        plot_end_idx = min(len(data), last_active_idx + int(0.02 * sample_rate))
+        plot_duration_ms = plot_end_idx / sample_rate * 1000
+        plot_start_idx = max(0, first_active_idx-int(0.02 * sample_rate))
+        plot_start_ms = plot_start_idx / sample_rate * 1000
+    else:
+        plot_duration_ms = time_ms[-1]
+    
     # Find attack characteristics
     peak_idx = np.argmax(np.abs(data_normalized))
     peak_time_ms = peak_idx / sample_rate * 1000
@@ -115,7 +132,8 @@ def plot_audio_profile(
     is_fast_attack = attack_time_ms < 20
     
     # Create the plot
-    fig, axes = plt.subplots(2, 1, figsize=(12, 8))
+    nrows = 3 if plot_spectrum else 2
+    fig, axes = plt.subplots(nrows, 1, figsize=(12, 8))
     
     # Plot 1: Waveform with envelope
     ax1 = axes[0]
@@ -127,6 +145,7 @@ def plot_audio_profile(
     if attack_start_idx < peak_idx:
         ax1.axvline(x=attack_start_idx / sample_rate * 1000, color='purple', 
                     linestyle='--', alpha=0.7, label=f'Attack start')
+    ax1.set_xlim(plot_start_ms, plot_duration_ms)
     ax1.set_xlabel('Time (ms)')
     ax1.set_ylabel('Normalized Amplitude')
     ax1.set_title('Audio Profile: Waveform and Envelope')
@@ -149,10 +168,26 @@ def plot_audio_profile(
                     linestyle='--', alpha=0.7, label='Attack start')
     ax2.set_xlabel('Time (ms)')
     ax2.set_ylabel('Normalized Amplitude')
-    ax2.set_title(f'Attack Region (Attack time: {attack_time_ms:.2f}ms - {"FAST ✓" if is_fast_attack else "SLOW ✗"})')
+    ax2.set_title(f'Attack time: {attack_time_ms:.2f}ms')
     ax2.legend(loc='upper right')
     ax2.grid(True, alpha=0.3)
     
+    if plot_spectrum:
+        ax3 = axes[2]
+        Pxx, freqs, bins, im = ax3.specgram(
+            data_normalized + np.random.randn(len(data_normalized)) * 1e-10,  # avoid log(0)
+            NFFT=1024, 
+            Fs=sample_rate, 
+            noverlap=512, 
+            cmap='inferno'
+        )
+        ax3.set_ylabel('Frequency (Hz)')
+        ax3.set_xlabel('Time (s)')
+        ax3.set_title('Formants')
+        ax3.set_ylim(0, 8000) # Limit to relevant speech frequencies
+        ax3.set_xlim(plot_start_ms / 1000, plot_duration_ms / 1000)
+        fig.colorbar(im, ax=ax3, label='Intensity (dB)')
+
     plt.tight_layout()
     
     # Save the plot
@@ -174,7 +209,7 @@ def plot_audio_profile(
         print(f"  - Attack time: {metrics['attack_time_ms']:.2f}ms")
         print(f"  - Peak time: {metrics['peak_time_ms']:.2f}ms")
         print(f"  - Fast attack: {'Yes ✓' if metrics['is_fast_attack'] else 'No ✗'}")
-        print(f"  - Profile saved to: {probe_profile_path}")
+        print(f"  - Profile saved to: {output_path}")
     return metrics
     
 def save_wav(
@@ -656,7 +691,7 @@ def custom_resample(
 
 def create_attention_probe( # TODO tidy up
     output_attention_probe_path: Union[str, Path],
-    duration_seconds: float = 0.1,
+    duration_seconds: Union[float, None] = 0.1,
     text: str = "VA",
     sr: int = 44100
 ) -> Path:
@@ -667,7 +702,7 @@ def create_attention_probe( # TODO tidy up
     ----------
     output_attention_probe_path : Union[str, Path]
         Path to save the generated attention probe audio file.
-    duration_seconds : float, optional
+    duration_seconds : Union[float, None], optional
         Duration of the attention probe in seconds. Default is 0.1 seconds.
     text : str, optional
         Text to be converted to speech for the probe. Default is "ba".
@@ -679,8 +714,6 @@ def create_attention_probe( # TODO tidy up
     Path
         Path to the generated attention probe audio file.
     """
-    FADE_OUT_DURATION = 0.1 * duration_seconds # 10% of duration
-    THRESHOLD = 0.05
     tts = gTTS(text=text, lang='es', slow=False)
     temp_mp3_path = Path(output_attention_probe_path).with_suffix('.mp3')
     tts.save(str(temp_mp3_path))
@@ -693,6 +726,11 @@ def create_attention_probe( # TODO tidy up
     Path(temp_mp3_path).unlink(missing_ok=True)
     
     sr_data, data = wavfile.read(output_attention_probe_path)
+    if duration_seconds is None:
+        duration_seconds = len(data) / sr_data
+        sr = sr_data
+        print(f"Info: duration_seconds was None, set to {duration_seconds:.3f}s based on audio length. Also setting sr to {sr_data}Hz.")
+    FADE_OUT_DURATION = 0.1 * duration_seconds 
     data = data.astype(np.float32)
     data_max = np.abs(data).max()
     data /= data_max
