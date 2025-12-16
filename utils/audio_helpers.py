@@ -692,7 +692,7 @@ def custom_resample(
 def create_attention_probe( # TODO tidy up
     output_attention_probe_path: Union[str, Path],
     duration_seconds: Union[float, None] = 0.1,
-    text: str = "VA",
+    stimulus_type: Union[str, int] = "VA",
     sr: int = 44100
 ) -> Path:
     """
@@ -704,8 +704,8 @@ def create_attention_probe( # TODO tidy up
         Path to save the generated attention probe audio file.
     duration_seconds : Union[float, None], optional
         Duration of the attention probe in seconds. Default is 0.1 seconds.
-    text : str, optional
-        Text to be converted to speech for the probe. Default is "ba".
+    stimulus_type : Union[str, None], optional
+        Text to be converted to speech for the probe (if string). If integer, it represents a tone frequency in Hz. Default is "VA".
     sr : int, optional
         Sample rate of the generated audio file. Default is 44100 Hz.
     
@@ -714,52 +714,65 @@ def create_attention_probe( # TODO tidy up
     Path
         Path to the generated attention probe audio file.
     """
-    tts = gTTS(text=text, lang='es', slow=False)
-    temp_mp3_path = Path(output_attention_probe_path).with_suffix('.mp3')
-    tts.save(str(temp_mp3_path))
-    convert_to_wav(
-        input_file=temp_mp3_path,
-        output_file=output_attention_probe_path,
-        stereo=False,
-        exists_ok=True
-    )
-    Path(temp_mp3_path).unlink(missing_ok=True)
-    
-    sr_data, data = wavfile.read(output_attention_probe_path)
-    if duration_seconds is None:
-        duration_seconds = len(data) / sr_data
-        sr = sr_data
-        print(f"Info: duration_seconds was None, set to {duration_seconds:.3f}s based on audio length. Also setting sr to {sr_data}Hz.")
-    FADE_OUT_DURATION = 0.1 * duration_seconds 
-    data = data.astype(np.float32)
-    data_max = np.abs(data).max()
-    data /= data_max
-    
-    peak_idx = np.argmax(np.abs(data))
-    pre_peak_buffer_sec = 0.05  # 50ms antes del pico para agarrar la 'b'
-    pre_peak_samples = int(pre_peak_buffer_sec * sr_data)
-    start_idx = max(0, peak_idx - pre_peak_samples)
-    target_samples_orig = int(duration_seconds * sr_data)
-    end_idx = start_idx + target_samples_orig
-    if end_idx > len(data):
-        diff = end_idx - len(data)
-        start_idx = max(0, start_idx - diff)
-        end_idx = len(data)
-    new_data = data[start_idx : end_idx]
-    if len(new_data) < target_samples_orig:
-        padding = np.zeros(target_samples_orig - len(new_data), dtype=np.float32)
-        new_data = np.concatenate((new_data, padding))
-    if len(new_data) > target_samples_orig:
-        fade_samples = int(FADE_OUT_DURATION * sr_data)
-        if fade_samples > 0:
-            fade_curve = np.linspace(1.0, 0.0, fade_samples)
-            new_data[-fade_samples:] *= fade_curve
-    
-    if sr_data != sr:
-        num_samples_target = int(duration_seconds * sr)
-        new_data = signal.resample(new_data, num_samples_target)
-    wavfile.write(output_attention_probe_path, sr, (new_data * 32767).astype(np.int16))
-    return Path(output_attention_probe_path)
+    if isinstance(stimulus_type, str):
+        tts = gTTS(text=stimulus_type, lang='es', slow=False)
+        temp_mp3_path = Path(output_attention_probe_path).with_suffix('.mp3')
+        tts.save(str(temp_mp3_path))
+        convert_to_wav(
+            input_file=temp_mp3_path,
+            output_file=output_attention_probe_path,
+            stereo=False,
+            exists_ok=True
+        )
+        Path(temp_mp3_path).unlink(missing_ok=True)
+        
+        sr_data, data = wavfile.read(output_attention_probe_path)
+        if duration_seconds is None:
+            duration_seconds = len(data) / sr_data
+            sr = sr_data
+            print(f"Info: duration_seconds was None, set to {duration_seconds:.3f}s based on audio length. Also setting sr to {sr_data}Hz.")
+        FADE_OUT_DURATION = 0.1 * duration_seconds 
+        data = data.astype(np.float32)
+        data_max = np.abs(data).max()
+        data /= data_max
+        
+        peak_idx = np.argmax(np.abs(data))
+        pre_peak_buffer_sec = 0.05  # 50ms antes del pico para agarrar la 'b'
+        pre_peak_samples = int(pre_peak_buffer_sec * sr_data)
+        start_idx = max(0, peak_idx - pre_peak_samples)
+        target_samples_orig = int(duration_seconds * sr_data)
+        end_idx = start_idx + target_samples_orig
+        if end_idx > len(data):
+            diff = end_idx - len(data)
+            start_idx = max(0, start_idx - diff)
+            end_idx = len(data)
+        new_data = data[start_idx : end_idx]
+        if len(new_data) < target_samples_orig:
+            padding = np.zeros(target_samples_orig - len(new_data), dtype=np.float32)
+            new_data = np.concatenate((new_data, padding))
+        if len(new_data) > target_samples_orig:
+            fade_samples = int(FADE_OUT_DURATION * sr_data)
+            if fade_samples > 0:
+                fade_curve = np.linspace(1.0, 0.0, fade_samples)
+                new_data[-fade_samples:] *= fade_curve
+        
+        if sr_data != sr:
+            num_samples_target = int(duration_seconds * sr)
+            new_data = signal.resample(new_data, num_samples_target)
+        wavfile.write(output_attention_probe_path, sr, (new_data * 32767).astype(np.int16))
+        return Path(output_attention_probe_path)
+    elif isinstance(stimulus_type, int):
+        # Make tone beep
+        bip_segment = AudioSegment.silent(
+            duration=duration_seconds * 1000, # duration in milliseconds
+            frame_rate=sr
+        )
+        bip_segment += Sine(1000).to_audio_segment(duration=duration_seconds * 1000, volume=-20) 
+        bip_segment.export(output_attention_probe_path, format='wav')
+        return Path(output_attention_probe_path)
+    else:
+        raise ValueError("stimulus_type must be either str or int.")
+        
 
 def scramble_audio(
     input_file: Union[str, Path],
