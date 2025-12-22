@@ -1,0 +1,140 @@
+2.8623 	DEBUG 	Fullscreen settings ignored as running in pilot mode.
+2.8628 	INFO 	Loaded monitor calibration from ['2025_07_28 13:00']
+3.0595 	INFO 	Using renderer 'NVIDIA GeForce RTX 3060 Ti/PCIe/SSE2' for graphics
+3.0595 	INFO 	OpenGL version supported by driver is 4..
+3.0690 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x000001D009DC2170>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x000001D009DC2110>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0, 0, 0]), colorSpace='rgb', depthBits=8, fullscr=False, gamma=None, gammaErrorPolicy='raise', infoMsg=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x000001D009EA01F0>, multiSample=False, name='window1', numSamples=2, pos=[np.float64(560.0), np.float64(240.0)], screen=0, size=array([800, 600]), stencilBits=0, stereo=False, title='PsychoPy', units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+3.0691 	EXP 	window1: backgroundImage = ''
+3.0691 	EXP 	window1: backgroundFit = 'none'
+3.0823 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+3.0910 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+3.0996 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+3.1083 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+3.1170 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+3.1254 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+3.1339 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+3.1426 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+3.1508 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+3.1591 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+3.1676 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+3.1762 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+3.1848 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+3.1935 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+3.2020 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+3.2106 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+3.2191 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+3.2275 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+3.2358 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+3.2445 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+3.2528 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+3.2531 	DEBUG 	Uploading Texture Font fontname to graphics card
+3.2547 	DEBUG 	Upload of Texture Font fontname complete
+3.2667 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+3.2754 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+3.2840 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+3.2842 	DEBUG 	Uploading Texture Font fontname to graphics card
+3.2847 	DEBUG 	Upload of Texture Font fontname complete
+3.2860 	EXP 	window1: Attempting to measure frame rate of screen (0) ...
+3.2861 	EXP 	window1: recordFrameIntervals = False
+3.4499 	EXP 	window1: recordFrameIntervals = True
+3.6339 	EXP 	Screen (0) actual frame rate measured at 59.38Hz
+3.6340 	EXP 	window1: recordFrameIntervals = False
+3.6470 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+3.6557 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+3.6645 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+3.6733 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+3.6823 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+3.6910 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+3.6993 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+3.7079 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+3.7167 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+3.7254 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+3.7257 	DEBUG 	Uploading Texture Font fontname to graphics card
+3.7262 	DEBUG 	Upload of Texture Font fontname complete
+3.8851 	INFO 	keyboard.Keyboard is using ptb backend.
+3.8852 	EXP 	dichotic_listening: status = STARTED
+4.0193 	INFO 	Loaded psychtoolbox audio version 3.0.19.696976569
+4.0462 	WARNING 	No default speaker specified in Preferences / Hardware, using first speaker found: HP X27 (NVIDIA High Definition Audio)
+4.0462 	DEBUG 	Found speaker device: HP X27 (NVIDIA High Definition Audio) (3.0)
+4.0567 	INFO 	Created stream for speaker device: HP X27 (NVIDIA High Definition Audio) (3.0)
+4.0575 	EXP 	bip: sampleRate = 48000
+4.0575 	EXP 	bip: channels = None
+4.0625 	DEBUG 	Converted audio clip from mono to stereo
+4.0650 	EXP 	Sound bip set volume 1.000
+4.0750 	EXP 	Created text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+4.0861 	WARNING 	No default speaker specified in Preferences / Hardware, using first speaker found: HP X27 (NVIDIA High Definition Audio)
+4.0861 	DEBUG 	Found speaker device: HP X27 (NVIDIA High Definition Audio) (3.0)
+4.0888 	INFO 	Created stream for speaker device: HP X27 (NVIDIA High Definition Audio) (3.0)
+4.0895 	EXP 	bip: sampleRate = 48000
+4.0895 	EXP 	bip: channels = None
+4.0944 	DEBUG 	Converted audio clip from mono to stereo
+4.0967 	EXP 	Sound bip set volume 1.000
+4.1071 	WARNING 	No default speaker specified in Preferences / Hardware, using first speaker found: HP X27 (NVIDIA High Definition Audio)
+4.1071 	DEBUG 	Found speaker device: HP X27 (NVIDIA High Definition Audio) (3.0)
+4.1099 	INFO 	Created stream for speaker device: HP X27 (NVIDIA High Definition Audio) (3.0)
+4.1106 	EXP 	audiobook: sampleRate = 48000
+4.1106 	EXP 	audiobook: channels = None
+4.1157 	DEBUG 	Converted audio clip from mono to stereo
+4.1181 	EXP 	Sound audiobook set volume 1.000
+4.1205 	EXP 	Created fixation_listening = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-2.0, draggable=False, fillColor=array([1, 1, 1]), fillColorSpace='rgb', fillRGB=array([1, 1, 1]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1, 1, 1]), lineWidth=1.0, name='fixation_listening', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([0.1, 0.1]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+4.1311 	WARNING 	No default speaker specified in Preferences / Hardware, using first speaker found: HP X27 (NVIDIA High Definition Audio)
+4.1311 	DEBUG 	Found speaker device: HP X27 (NVIDIA High Definition Audio) (3.0)
+4.1337 	INFO 	Created stream for speaker device: HP X27 (NVIDIA High Definition Audio) (3.0)
+4.1345 	EXP 	bip: sampleRate = 48000
+4.1345 	EXP 	bip: channels = None
+4.1394 	DEBUG 	Converted audio clip from mono to stereo
+4.1421 	EXP 	Sound bip set volume 1.000
+4.1428 	EXP 	Created questionary_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='questionary_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+0.0563 	EXP 	bip: sampleRate = 48000
+0.0567 	DEBUG 	Converted audio clip from mono to stereo
+0.0572 	EXP 	Sound bip reached end of file
+0.0706 	EXP 	Playing sound bip on speaker HP X27 (NVIDIA High Definition Audio)
+1.0787 	EXP 	Sound bip reached end of file
+1.0926 	EXP 	Sound bip reached end of file
+1.1075 	INFO 	Keyboard events cleared
+6.9627 	EXP 	Device response: <KeyPress from None: t=6.949090000009164, value=space, duration=None>
+6.9677 	DEBUG 	Read excel file with openpyxl: conditions.xlsx
+6.9684 	EXP 	Imported conditions.xlsx as conditions, 8 conditions, 6 params
+6.9688 	EXP 	New trial (rep=0, index=0): <Trial 0 (0 in rep 0) data={'story_a_side': 'left', 'story_b_side': 'right', 'story_a_voice': 'M', 'story_b_voice': 'F', 'condition_label': 'FR_ML_AB', 'target': 'Right', 'thisN': 0, 'thisTrialN': 0, 'thisRepN': 0}>
+6.9945 	DATA 	Keypress: space
+7.0058 	INFO 	Keyboard events cleared
+7.0057 	EXP 	text: height = np.float64(0.05)
+7.0057 	EXP 	text: height = np.float64(0.05)
+7.0057 	EXP 	text: height = np.float64(0.05)
+7.0057 	EXP 	text: text = 'Presta atención a la historia del lado derecho.\n\n\nPresioná la barra espaciadora para continuar...'
+7.0057 	EXP 	text: autoDraw = True
+7.1091 	EXP 	Device response: <KeyPress from None: t=6.949090000009164, value=space, duration=0.1440156000899151>
+8.0591 	EXP 	Device response: <KeyPress from None: t=8.053161300020292, value=space, duration=None>
+8.0592 	EXP 	New trial (rep=0, index=0): <Trial 0 (0 in rep 0) data={'thisN': 0, 'thisTrialN': 0, 'thisRepN': 0}>
+8.0595 	EXP 	bip: sampleRate = 48000
+8.0599 	DEBUG 	Converted audio clip from mono to stereo
+8.0602 	EXP 	Sound bip reached end of file
+8.0741 	EXP 	Playing sound bip on speaker HP X27 (NVIDIA High Definition Audio)
+8.0608 	DATA 	Keypress: space
+8.0740 	EXP 	text: autoDraw = False
+8.1758 	EXP 	Device response: <KeyPress from None: t=8.053161300020292, value=space, duration=0.11995650001335889>
+9.0740 	EXP 	Sound bip reached end of file
+9.0930 	EXP 	Sound bip reached end of file
+9.0932 	EXP 	New trial (rep=1, index=0): <Trial 1 (0 in rep 1) data={'thisN': 1, 'thisTrialN': 0, 'thisRepN': 1}>
+9.0936 	EXP 	bip: sampleRate = 48000
+9.0939 	DEBUG 	Converted audio clip from mono to stereo
+9.0941 	EXP 	Sound bip reached end of file
+9.1063 	EXP 	Playing sound bip on speaker HP X27 (NVIDIA High Definition Audio)
+9.7758 	EXP 	Device response: <KeyPress from None: t=9.773143200087361, value=space, duration=None>
+9.7763 	DATA 	Keypress: space
+9.8930 	EXP 	Device response: <KeyPress from None: t=9.773143200087361, value=space, duration=0.11190739995799959>
+10.1040 	EXP 	Sound bip reached end of file
+10.1271 	EXP 	Sound bip reached end of file
+10.1272 	EXP 	New trial (rep=2, index=0): <Trial 2 (0 in rep 2) data={'thisN': 2, 'thisTrialN': 0, 'thisRepN': 2}>
+10.1276 	EXP 	bip: sampleRate = 48000
+10.1279 	DEBUG 	Converted audio clip from mono to stereo
+10.1282 	EXP 	Sound bip reached end of file
+10.1405 	EXP 	Playing sound bip on speaker HP X27 (NVIDIA High Definition Audio)
+10.8593 	EXP 	Device response: <KeyPress from None: t=10.853130100062117, value=escape, duration=None>
+10.8598 	DATA 	Keypress: escape
+10.9769 	EXP 	Device response: <KeyPress from None: t=10.853130100062117, value=escape, duration=0.1119675999507308>
+10.9769 	EXP 	dichotic_listening: status = STOPPED
+10.9932 	EXP 	dichotic_listening: status = STOPPED
+10.9962 	INFO 	saved data to 'C:\\Users\\User\\repos\\Dichotic\\psychopy_experiment\\data\\pilot_dichotic_listening_2025-12-19_17h57.25.777.csv'
+10.9969 	INFO 	saved data to C:\Users\User\repos\Dichotic\psychopy_experiment\data\pilot_dichotic_listening_2025-12-19_17h57.25.777.psydat
+11.1243 	DEBUG 	Saving data for dichotic_listening ExperimentHandler
+11.1257 	WARNING 	Stopping key buffers but this could be dangerous ifother keyboards rely on the same.

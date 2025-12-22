@@ -17,6 +17,8 @@ from utils.audio_helpers import (
 INTERMEDIATE_AUDIO_DIR = Path('data/intermediate_audios')
 AUDIO_DIR = Path('data/original_audios')
 OUTPUT_DIR = Path('data/processed_audios')
+TABLES_DIR = Path('psychopy_experiment')
+TABLES_DIR.mkdir(parents=True, exist_ok=True)
 ABSOLUTE_RELATIVE_ATTENUATION_DB = 10
 NUMBER_OF_SCRAMBLE_SEGMENTS = 10
 THRESHOLD_DIFF_SECONDS = 10 # seconds
@@ -50,14 +52,17 @@ assert audio_names == [m_path.stem.split('_')[1] for m_path in ordered_male], "M
 # Get combinations with consecutive order 1,2 ; 3,4 ; 5,6; etc
 combinations = []
 for i in range(number_of_stories):
-    f_path = ordered_female[i]
     if i % 2 == 0:
+        f_path = ordered_female[i]
         m_path = ordered_male[i + 1]
-    else:
-        continue
-    combinations.append(
-        (f_path, m_path)
-    )
+        combinations.append(
+            (f_path, m_path)
+        )
+        m_path = ordered_male[i]
+        f_path = ordered_female[i + 1]
+        combinations.append(
+            (f_path, m_path)
+        )
 
 # # # # Get combinatins that doesn't match in name
 # # # combinations = []
@@ -100,11 +105,15 @@ saved_combinations_clean = []
 saved_combinations = []
 
 skipped_combinations = []
+combinations
 for j, (audio_f, audio_m) in enumerate(combinations):
     number_f, audio_name_f = int(audio_f.stem.split('_')[0]), audio_f.stem.split('_')[1]
     number_m, audio_name_m = int(audio_m.stem.split('_')[0]), audio_m.stem.split('_')[1]
-    stereo_name1 = f'{number_f:02d}_{audio_name_f}_mujer_izquierda_{number_m:02d}_{audio_name_m}_hombre_derecha'
-    stereo_name2 = f'{number_f:02d}_{audio_name_f}_mujer_derecha_{number_m:02d}_{audio_name_m}_hombre_izquierda'
+
+    # A_sideL_voiceF
+    order = 'AB' if number_f < number_m else 'BA'
+    stereo_name1 = f'{number_f:02d}_{number_m:02d}_FL_MR_{order}'
+    stereo_name2 = f'{number_f:02d}_{number_m:02d}_FR_ML_{order}'
 
     # Convert to wav
     convert_to_wav(audio_f, INTERMEDIATE_AUDIO_DIR / audio_f.with_suffix('.wav').name, exists_ok=True)
@@ -195,7 +204,9 @@ for j, (audio_f, audio_m) in enumerate(combinations):
     if isinstance(PROBE_TYPE, int):
         save_path1 = probe_path / f'{stereo_name1}_tone_probe.wav'
         save_path2 = probe_path / f'{stereo_name2}_tone_probe.wav'
-    saved_combinations_clean.append((stereo_name1, stereo_name2))
+    saved_combinations_clean.append(
+        (no_probe_path / f'{stereo_name1}_no_probe.wav', no_probe_path / f'{stereo_name2}_no_probe.wav')
+    )
     saved_combinations.append((save_path1, save_path2))
     save_wav(save_path1, sr_data, normalized_data1)
     save_wav(save_path2, sr_data, normalized_data2)
@@ -209,34 +220,53 @@ expected_number_of_combinations = len(combinations) * 2
 print(f'\n\nExpected number of combinations: {expected_number_of_combinations}')
 print(f'Actual number of saved combinations: {len(saved_combinations)*2}\n\n')
 
-# Create csv with filenames and it's target
+# Create csv with filenames relative to psychopy experiment folder and it's labels
 df_rows = []
 for save_path1, save_path2 in saved_combinations:
     df_rows.append({
-        'filename': f'{save_path1}'
+        'filename':str(Path("..")/save_path1),
+        'condition_label': '_'.join(save_path1.name.split('_')[2:5]),
+        'number_story_A': int(save_path1.name.split('_')[0]),
+        'number_story_B': int(save_path1.name.split('_')[1])
     })
     df_rows.append({
-        'filename': f'{save_path2}'
+        'filename': str(Path("..")/save_path2),
+        'condition_label': '_'.join(save_path2.name.split('_')[2:5]),
+        'number_story_A': int(save_path2.name.split('_')[0]),
+        'number_story_B': int(save_path2.name.split('_')[1])
     })
 df = pd.DataFrame(df_rows)
-csv_path = OUTPUT_DIR.parent / 'audiobook_combinations_probes.csv'
+csv_path = TABLES_DIR / 'audiobook_combinations_probes.csv'
 df.to_csv(csv_path, index=False)
 
 df_rows_clean = []
 for stereo_name1, stereo_name2 in saved_combinations_clean:
     df_rows_clean.append({
-        'filename': f'{stereo_name1}'
+        'filename': str(Path("..")/stereo_name1),
+        'condition_label': '_'.join(stereo_name1.name.split('_')[2:5]),
+        'number_story_A': int(stereo_name1.name.split('_')[0]),
+        'number_story_B': int(stereo_name1.name.split('_')[1])
     })
     df_rows_clean.append({
-        'filename': f'{stereo_name2}',
+        'filename': str(Path("..")/stereo_name2),
+        'condition_label': '_'.join(stereo_name2.name.split('_')[2:5]),
+        'number_story_A': int(stereo_name2.name.split('_')[0]),
+        'number_story_B': int(stereo_name2.name.split('_')[1])
     })
 df_clean = pd.DataFrame(df_rows_clean)
-csv_path_clean = OUTPUT_DIR.parent / 'audiobook_combinations_no_probes.csv'
+csv_path_clean = TABLES_DIR / 'audiobook_combinations_no_probes.csv'
 df_clean.to_csv(csv_path_clean, index=False)
 
 # Delete intermediate files
 shutil.rmtree(INTERMEDIATE_AUDIO_DIR)
 
+# import pandas as pd
+# audiobook_combinations = pd.read_csv(
+#     r"psychopy_experiment/audiobook_combinations_probes.csv", 
+#     header=0, 
+#     delimiter=','
+# )
+# audiobook_combinations[audiobook_combinations['condition_label']=='FL_MR_AB']
 
     # TODO hacer el psyexp:
     # 1a version: instrucciones dependientes del audio (.csv con paths e instruccion asociada a c/u). El audio tal cual e incluir preguntas de compresion --> preguntar si las tienen armadas
