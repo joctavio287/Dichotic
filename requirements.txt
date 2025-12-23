@@ -1,0 +1,11 @@
+# Core preprocessing dependencies
+numpy
+pandas
+scipy
+matplotlib
+pydub
+gTTS
+ffmpeg-python
+
+# Optional (only if you use Demucs-based vocal isolation)
+demucs
