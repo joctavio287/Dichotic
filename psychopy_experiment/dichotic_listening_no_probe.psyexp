@@ -45,7 +45,7 @@
     <Param val="False" valType="bool" updates="None" name="elSimMode"/>
     <Param val="RIGHT_EYE" valType="str" updates="None" name="elTrackEyes"/>
     <Param val="PUPIL_CR_TRACKING" valType="str" updates="None" name="elTrackingMode"/>
-    <Param val="dichotic_listening" valType="str" updates="None" name="expName"/>
+    <Param val="dichotic_listening_no_probe" valType="str" updates="None" name="expName"/>
     <Param val="" valType="str" updates="None" name="expVersion"/>
     <Param val="on Sync" valType="str" updates="None" name="exportHTML"/>
     <Param val="None" valType="str" updates="None" name="eyetracker"/>
@@ -96,8 +96,8 @@
         <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
       </RoutineSettingsComponent>
       <CodeComponent name="audiobook_code" plugin="None">
-        <Param val="import pandas as pd&amp;#10;audiobook_combinations = pd.read_csv(&amp;#10;    &quot;audiobook_combinations_probes.csv&quot;, &amp;#10;    header=0, &amp;#10;    delimiter=','&amp;#10;)&amp;#10;audiobook_questionary = pd.read_csv(&amp;#10;    &quot;audiobook_questionary.csv&quot;, &amp;#10;    header=0, &amp;#10;    delimiter=','&amp;#10;)" valType="extendedCode" updates="constant" name="Before Experiment"/>
-        <Param val="import * as pd from 'pandas';&amp;#10;audiobook_combinations = pd.read_csv(&quot;audiobook_combinations_probes.csv&quot;, {&quot;header&quot;: 0, &quot;delimiter&quot;: &quot;,&quot;});&amp;#10;audiobook_questionary = pd.read_csv(&quot;audiobook_questionary.csv&quot;, {&quot;header&quot;: 0, &quot;delimiter&quot;: &quot;,&quot;});&amp;#10;" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="import pandas as pd&amp;#10;audiobook_combinations = pd.read_csv(&amp;#10;    &quot;audiobook_combinations_no_probes.csv&quot;, &amp;#10;    header=0, &amp;#10;    delimiter=','&amp;#10;)&amp;#10;audiobook_questionary = pd.read_csv(&amp;#10;    &quot;audiobook_questionary.csv&quot;, &amp;#10;    header=0, &amp;#10;    delimiter=','&amp;#10;)" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="import * as pd from 'pandas';&amp;#10;audiobook_combinations = pd.read_csv(&quot;audiobook_combinations_no_probes.csv&quot;, {&quot;header&quot;: 0, &quot;delimiter&quot;: &quot;,&quot;});&amp;#10;audiobook_questionary = pd.read_csv(&quot;audiobook_questionary.csv&quot;, {&quot;header&quot;: 0, &quot;delimiter&quot;: &quot;,&quot;});&amp;#10;" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
         <Param val="/* Syntax Error: Fix Python code */" valType="extendedCode" updates="constant" name="Begin JS Routine"/>

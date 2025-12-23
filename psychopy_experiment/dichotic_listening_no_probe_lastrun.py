@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2025.2.3),
-    on December 22, 2025, at 19:58
+    on December 22, 2025, at 21:29
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -35,7 +35,7 @@ from psychopy.hardware import keyboard
 # Run 'Before Experiment' code from audiobook_code
 import pandas as pd
 audiobook_combinations = pd.read_csv(
-    "audiobook_combinations_probes.csv", 
+    "audiobook_combinations_no_probes.csv", 
     header=0, 
     delimiter=','
 )
@@ -51,7 +51,7 @@ deviceManager = hardware.DeviceManager()
 _thisDir = os.path.dirname(os.path.abspath(__file__))
 # store info about the experiment session
 psychopyVersion = '2025.2.3'
-expName = 'dichotic_listening'  # from the Builder filename that created this script
+expName = 'dichotic_listening_no_probe'  # from the Builder filename that created this script
 expVersion = ''
 # a list of functions to run when the experiment ends (starts off blank)
 runAtExit = []
@@ -144,7 +144,7 @@ def setupData(expInfo, dataDir=None):
     thisExp = data.ExperimentHandler(
         name=expName, version=expVersion,
         extraInfo=expInfo, runtimeInfo=None,
-        originPath='C:\\Users\\jocta\\repos\\Dichotic\\psychopy_experiment\\dichotic_listening_lastrun.py',
+        originPath='C:\\Users\\jocta\\repos\\Dichotic\\psychopy_experiment\\dichotic_listening_no_probe_lastrun.py',
         savePickle=True, saveWideText=True,
         dataFileName=dataDir + os.sep + filename, sortColumns='time'
     )
@@ -726,7 +726,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         flecha='<<<'  if target=='Left' else '>>>'
         lado='IZQUIERDO' if target=='Left' else 'DERECHO'
         
-        text.setText(f"Presta atención a la historia del lado {lado} ({flecha}).\n\n\nApretá ESPACIO para continuar...\n\n{condition_label}")
+        text.setText(f"Presta atención a la historia del lado {lado} ({flecha}).\n\n\nApretá ESPACIO para continuar...")
         # create starting attributes for key_resp_prompt
         key_resp_prompt.keys = []
         key_resp_prompt.rt = []

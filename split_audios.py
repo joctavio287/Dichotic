@@ -63,18 +63,6 @@ for i in range(number_of_stories):
         combinations.append(
             (f_path, m_path)
         )
-
-# # # # Get combinatins that doesn't match in name
-# # # combinations = []
-# # # for f_path in ordered_female:
-# # #     audio_name_f = f_path.stem.split('_')[1]
-# # #     for m_path in ordered_male:
-# # #         audio_name_m = m_path.stem.split('_')[1]
-# # #         if audio_name_f != audio_name_m:
-# # #             combinations.append(
-# # #                 (f_path, m_path)
-# # #             )
-
 # Create attentional probe
 attention_probe_path = OUTPUT_DIR / 'attention_probe.wav'
 scrambled_probe_path = attention_probe_path.with_name(attention_probe_path.stem + '_scrambled.wav')
@@ -259,23 +247,3 @@ df_clean.to_csv(csv_path_clean, index=False)
 
 # Delete intermediate files
 shutil.rmtree(INTERMEDIATE_AUDIO_DIR)
-
-# import pandas as pd
-# audiobook_combinations = pd.read_csv(
-#     r"psychopy_experiment/audiobook_combinations_probes.csv", 
-#     header=0, 
-#     delimiter=','
-# )
-# audiobook_combinations[audiobook_combinations['condition_label']=='FL_MR_AB']
-
-    # TODO hacer el psyexp:
-    # 1a version: instrucciones dependientes del audio (.csv con paths e instruccion asociada a c/u). El audio tal cual e incluir preguntas de compresion --> preguntar si las tienen armadas
-    # ---> meter ttls al principio y final del audio para verificar temporalidad. Si funciona descartar version2
-    
-    # ---> podemos dejar un punto de fijación. Se indica genero de la voz y oreja, intercalar al final preguntas de compresión (son orales, entonces dejar el espacio o un indicador)
-    
-    # Termina la historia, pregunta escrita y abajo diga decile al experimentador tu respuesta  y que el diga apreta la barra para seguir.
-    
-    
-    
-    # 2a version: audios sin tonos y en stereo, mandar en paralelo los bips con ttl (el cuando se puede meter en el .csv)
