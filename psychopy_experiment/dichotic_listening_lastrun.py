@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2025.2.3),
-    on December 22, 2025, at 19:58
+    on December 23, 2025, at 10:37
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -144,7 +144,7 @@ def setupData(expInfo, dataDir=None):
     thisExp = data.ExperimentHandler(
         name=expName, version=expVersion,
         extraInfo=expInfo, runtimeInfo=None,
-        originPath='C:\\Users\\jocta\\repos\\Dichotic\\psychopy_experiment\\dichotic_listening_lastrun.py',
+        originPath='C:\\Users\\User\\repos\\Dichotic\\psychopy_experiment\\dichotic_listening_lastrun.py',
         savePickle=True, saveWideText=True,
         dataFileName=dataDir + os.sep + filename, sortColumns='time'
     )
@@ -726,7 +726,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         flecha='<<<'  if target=='Left' else '>>>'
         lado='IZQUIERDO' if target=='Left' else 'DERECHO'
         
-        text.setText(f"Presta atención a la historia del lado {lado} ({flecha}).\n\n\nApretá ESPACIO para continuar...\n\n{condition_label}")
+        text.setText(f"Presta atención a la historia del lado {lado} ({flecha}).\n\n\nApretá ESPACIO para continuar...")
         # create starting attributes for key_resp_prompt
         key_resp_prompt.keys = []
         key_resp_prompt.rt = []
@@ -881,7 +881,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         # set up handler to look after randomisation of conditions etc
         trials = data.TrialHandler2(
             name='trials',
-            nReps=2.0, 
+            nReps=10.0, 
             method='random', 
             extraInfo=expInfo, 
             originPath=-1, 
@@ -1071,7 +1071,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 )
                 # once done pausing, restore running status
                 trials.status = STARTED
-        # completed 2.0 repeats of 'trials'
+        # completed 10.0 repeats of 'trials'
         trials.status = FINISHED
         
         
@@ -1271,7 +1271,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         # set up handler to look after randomisation of conditions etc
         trials_2 = data.TrialHandler2(
             name='trials_2',
-            nReps=2.0, 
+            nReps=10.0, 
             method='sequential', 
             extraInfo=expInfo, 
             originPath=-1, 
@@ -1461,7 +1461,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 )
                 # once done pausing, restore running status
                 trials_2.status = STARTED
-        # completed 2.0 repeats of 'trials_2'
+        # completed 10.0 repeats of 'trials_2'
         trials_2.status = FINISHED
         
         
