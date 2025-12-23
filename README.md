@@ -151,5 +151,5 @@ Key parameters at the top of `split_audios.py`:
 
 ## Notes about PsychoPy
 
-The preprocessing pipeline does not require PsychoPy. For that another environment is suggested (python 3.10).
+The preprocessing pipeline does not require PsychoPy. For that another environment is suggested (python 3.10, psyhcopy 2025.2.3).
 The `psychopy_experiment/` folder contains the experiment files and expects the generated CSVs + WAVs.
