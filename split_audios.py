@@ -6,6 +6,8 @@ from pathlib import Path
 import pandas as pd
 import numpy as np
 import shutil
+import ffmpeg
+import csv
 
 from utils.audio_helpers import (
     read_wav, save_wav, get_sample_rate, scale_audio,
@@ -22,11 +24,22 @@ TABLES_DIR.mkdir(parents=True, exist_ok=True)
 ABSOLUTE_RELATIVE_ATTENUATION_DB = 10
 NUMBER_OF_SCRAMBLE_SEGMENTS = 10
 THRESHOLD_DIFF_SECONDS = 10 # seconds
-COMMON_SAMPLE_RATE = 44100 # Hz
+COMMON_SAMPLE_RATE = 48000 # Hz
 PROBE_DURATION = .1  # seconds
 ATTACK_THRESHOLD = 0.1 # Attack detection in probe profile as percentage of max amplitude
 PROBE_TYPE = 1000 # "va"
 SCRAMBLED_PROBE = False
+
+# Remove .wav files from processed folders to keep only ogg outputs
+no_probe_dir = OUTPUT_DIR / 'no_probe'
+with_probe_dir = OUTPUT_DIR / 'with_probe'
+for d in (no_probe_dir, with_probe_dir):
+    if d.exists():
+        for wav_file in d.glob('*.wav'):
+            try:
+                wav_file.unlink()
+            except Exception:
+                pass
 
 INTERMEDIATE_AUDIO_DIR.mkdir(parents=True, exist_ok=True)
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
@@ -104,8 +117,8 @@ for j, (audio_f, audio_m) in enumerate(combinations):
     stereo_name2 = f'{number_f:02d}_{number_m:02d}_FR_ML_{order}'
 
     # Convert to wav
-    convert_to_wav(audio_f, INTERMEDIATE_AUDIO_DIR / audio_f.with_suffix('.wav').name, exists_ok=True)
-    convert_to_wav(audio_m, INTERMEDIATE_AUDIO_DIR / audio_m.with_suffix('.wav').name, exists_ok=True)
+    convert_to_wav(audio_f, INTERMEDIATE_AUDIO_DIR / audio_f.with_suffix('.wav').name, exists_ok=True, sample_rate_target=COMMON_SAMPLE_RATE)
+    convert_to_wav(audio_m, INTERMEDIATE_AUDIO_DIR / audio_m.with_suffix('.wav').name, exists_ok=True, sample_rate_target=COMMON_SAMPLE_RATE)
     audio_f = INTERMEDIATE_AUDIO_DIR / audio_f.with_suffix('.wav').name
     audio_m = INTERMEDIATE_AUDIO_DIR / audio_m.with_suffix('.wav').name
     
@@ -162,18 +175,22 @@ for j, (audio_f, audio_m) in enumerate(combinations):
     # Add attention tracks
     sr_data, data1 = read_wav(no_probe_path / f'{stereo_name1}_no_probe.wav', return_sample_rate=True)
     sr_data, data2 = read_wav(no_probe_path / f'{stereo_name2}_no_probe.wav', return_sample_rate=True)
+
     normalized_data1 = data1 / np.max(np.abs(data1))
     normalized_data2 = data2 / np.max(np.abs(data2))
-    n_probes1, track_left1, track_right1 = create_attention_track(
+    n_probes1, track_left1, track_right1, left_onsets, right_onsets = create_attention_track(
         duration_samples=len(data1),
         sr=COMMON_SAMPLE_RATE,
-        probe_audio_path=attention_probe_path
+        probe_audio_path=attention_probe_path,
+        return_onsets=True
     )
-    n_probes2, track_left2, track_right2 = create_attention_track(
+    n_probes2, track_left2, track_right2, left_onsets2, right_onsets2 = create_attention_track(
         duration_samples=len(data2),
         sr=COMMON_SAMPLE_RATE,
-        probe_audio_path=attention_probe_path
+        probe_audio_path=attention_probe_path,
+        return_onsets=True
     )
+
     print(f'Added {n_probes1} probes to {stereo_name1}, and {n_probes2} probes to {stereo_name2}')
     normalized_data1[:,0] += track_left1
     normalized_data2[:,0] += track_left2
@@ -192,13 +209,67 @@ for j, (audio_f, audio_m) in enumerate(combinations):
     if isinstance(PROBE_TYPE, int):
         save_path1 = probe_path / f'{stereo_name1}_tone_probe.wav'
         save_path2 = probe_path / f'{stereo_name2}_tone_probe.wav'
-    saved_combinations_clean.append(
-        (no_probe_path / f'{stereo_name1}_no_probe.wav', no_probe_path / f'{stereo_name2}_no_probe.wav')
-    )
-    saved_combinations.append((save_path1, save_path2))
     save_wav(save_path1, sr_data, normalized_data1)
     save_wav(save_path2, sr_data, normalized_data2)
+    # Save onsets on a txt file
+    onsets_path1 = save_path1.parent / 'onsets'
+    onsets_path1.mkdir(parents=True, exist_ok=True)
+    with open(onsets_path1 / f'{stereo_name1}_onsets.csv', 'w', newline='') as f:
+        writer = csv.writer(f)
+        writer.writerow(['left_s', 'right_s'])
+        max_len = max(len(left_onsets), len(right_onsets))
+        for i in range(max_len):
+            l = f'{left_onsets[i]:.3f}' if i < len(left_onsets) else ''
+            r = f'{right_onsets[i]:.3f}' if i < len(right_onsets) else ''
+            writer.writerow([l, r])
+    onsets_path2 = save_path2.parent / 'onsets'
+    onsets_path2.mkdir(parents=True, exist_ok=True)
+    with open(onsets_path2 / f'{stereo_name2}_onsets.csv', 'w', newline='') as f:
+        writer = csv.writer(f)
+        writer.writerow(['left_s', 'right_s'])
+        max_len = max(len(left_onsets2), len(right_onsets2))
+        for i in range(max_len):
+            l = f'{left_onsets2[i]:.3f}' if i < len(left_onsets2) else ''
+            r = f'{right_onsets2[i]:.3f}' if i < len(right_onsets2) else ''
+            writer.writerow([l, r])
+    
+    # Convert to ogg
+    for input_file, output_file, sample_rate_target in [
+        (no_probe_path / f'{stereo_name1}_no_probe.wav', no_probe_path / f'{stereo_name1}_no_probe.ogg', COMMON_SAMPLE_RATE),
+        (no_probe_path / f'{stereo_name2}_no_probe.wav', no_probe_path / f'{stereo_name2}_no_probe.ogg', COMMON_SAMPLE_RATE),
+        (save_path1, save_path1.with_suffix('.ogg'), COMMON_SAMPLE_RATE),
+        (save_path2, save_path2.with_suffix('.ogg'), COMMON_SAMPLE_RATE)
+    ]:
+        try:
+            if not Path(input_file).exists():
+                print(f"Input file missing, skipping: {input_file}")
+                continue
 
+            (
+                ffmpeg
+                .input(str(input_file))
+                .output(
+                    str(output_file),
+                    format='ogg',
+                    acodec='libopus', # O 'libopus' si tienes una versión muy nueva de ffmpeg
+                    ar=sample_rate_target,
+                    ac=2,
+                    audio_bitrate='192k'
+                )
+                .overwrite_output()
+                .run(quiet=True)
+            )
+            if not Path(output_file).exists():
+                print(f"Output file missing, skipping: {output_file}")
+                continue
+        except ffmpeg.Error as e:
+            stderr = getattr(e, 'stderr', None)
+            msg = stderr.decode() if isinstance(stderr, (bytes, bytearray)) else str(e)
+            print(f'ffmpeg error converting {input_file} -> {output_file}: {msg}')
+    saved_combinations.append((save_path1.with_suffix('.ogg'), save_path2.with_suffix('.ogg')))
+    saved_combinations_clean.append((no_probe_path / f'{stereo_name1}_no_probe.ogg', no_probe_path /
+                                        f'{stereo_name2}_no_probe.ogg'))
+    
 # In the ideal case, where no combination is exluded due to length differences, the total number
 # of saved combinations should be number_of_stories*(number_of_stories-1)*2 because each story c
 # an be combined with (number_of_stories-1) stories of the other gender and be played either in 
@@ -244,6 +315,17 @@ for stereo_name1, stereo_name2 in saved_combinations_clean:
 df_clean = pd.DataFrame(df_rows_clean)
 csv_path_clean = TABLES_DIR / 'audiobook_combinations_no_probes.csv'
 df_clean.to_csv(csv_path_clean, index=False)
+
+# Remove .wav files from processed folders to keep only ogg outputs
+no_probe_dir = OUTPUT_DIR / 'no_probe'
+with_probe_dir = OUTPUT_DIR / 'with_probe'
+for d in (no_probe_dir, with_probe_dir):
+    if d.exists():
+        for wav_file in d.glob('*.wav'):
+            try:
+                wav_file.unlink()
+            except Exception:
+                pass
 
 # Delete intermediate files
 shutil.rmtree(INTERMEDIATE_AUDIO_DIR)

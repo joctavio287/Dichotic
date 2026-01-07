@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" ?>
-<PsychoPy2experiment encoding="utf-8" version="2025.2.3">
+<PsychoPy2experiment encoding="utf-8" version="2025.1.1">
   <Settings>
     <Param val="ptb" valType="str" updates="None" name="Audio lib"/>
     <Param val="" valType="str" updates="None" name="Completed URL"/>
@@ -96,8 +96,8 @@
         <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
       </RoutineSettingsComponent>
       <CodeComponent name="audiobook_code" plugin="None">
-        <Param val="import pandas as pd&amp;#10;audiobook_combinations = pd.read_csv(&amp;#10;    &quot;audiobook_combinations_probes.csv&quot;, &amp;#10;    header=0, &amp;#10;    delimiter=','&amp;#10;)&amp;#10;audiobook_questionary = pd.read_csv(&amp;#10;    &quot;audiobook_questionary.csv&quot;, &amp;#10;    header=0, &amp;#10;    delimiter=','&amp;#10;)" valType="extendedCode" updates="constant" name="Before Experiment"/>
-        <Param val="import * as pd from 'pandas';&amp;#10;audiobook_combinations = pd.read_csv(&quot;audiobook_combinations_probes.csv&quot;, {&quot;header&quot;: 0, &quot;delimiter&quot;: &quot;,&quot;});&amp;#10;audiobook_questionary = pd.read_csv(&quot;audiobook_questionary.csv&quot;, {&quot;header&quot;: 0, &quot;delimiter&quot;: &quot;,&quot;});&amp;#10;" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="import pandas as pd&amp;#10;audiobook_combinations = pd.read_csv(&amp;#10;    &quot;audiobook_combinations_probes_pruebas.csv&quot;, &amp;#10;    header=0, &amp;#10;    delimiter=','&amp;#10;)&amp;#10;audiobook_questionary = pd.read_csv(&amp;#10;    &quot;audiobook_questionary.csv&quot;, &amp;#10;    header=0, &amp;#10;    delimiter=','&amp;#10;)" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="import * as pd from 'pandas';&amp;#10;audiobook_combinations = pd.read_csv(&quot;audiobook_combinations_probes_pruebas.csv&quot;, {&quot;header&quot;: 0, &quot;delimiter&quot;: &quot;,&quot;});&amp;#10;audiobook_questionary = pd.read_csv(&quot;audiobook_questionary.csv&quot;, {&quot;header&quot;: 0, &quot;delimiter&quot;: &quot;,&quot;});&amp;#10;" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
         <Param val="/* Syntax Error: Fix Python code */" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
@@ -118,9 +118,12 @@
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="False" valType="bool" updates="constant" name="forceEndRoutine"/>
         <Param val="True" valType="bool" updates="constant" name="hamming"/>
+        <Param val="1" valType="code" updates="None" name="latencyClass"/>
         <Param val="audiobook" valType="code" updates="None" name="name"/>
+        <Param val="True" valType="str" updates="None" name="resample"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="$audio_filepath" valType="str" updates="set every repeat" name="sound"/>
+        <Param val="0.0" valType="str" updates="None" name="speakerIndex"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
         <Param val="0.0" valType="code" updates="None" name="startVal"/>
@@ -215,6 +218,7 @@
       <KeyboardComponent name="key_instructions" plugin="None">
         <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="True" valType="bool" updates="constant" name="discard previous"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
@@ -332,6 +336,7 @@
       <KeyboardComponent name="final_key" plugin="None">
         <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="True" valType="bool" updates="constant" name="discard previous"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
@@ -416,9 +421,12 @@
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="False" valType="bool" updates="constant" name="forceEndRoutine"/>
         <Param val="True" valType="bool" updates="constant" name="hamming"/>
+        <Param val="1" valType="code" updates="None" name="latencyClass"/>
         <Param val="bip" valType="code" updates="None" name="name"/>
+        <Param val="True" valType="str" updates="None" name="resample"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="../data/bip.wav" valType="str" updates="set every repeat" name="sound"/>
+        <Param val="0.0" valType="str" updates="None" name="speakerIndex"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
         <Param val="0.0" valType="code" updates="None" name="startVal"/>
@@ -540,6 +548,7 @@
       <KeyboardComponent name="key_resp_prompt" plugin="None">
         <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="True" valType="bool" updates="constant" name="discard previous"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
@@ -611,6 +620,7 @@
       <KeyboardComponent name="key_resp_questionary" plugin="None">
         <Param val="'a', 'b', 'c'" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="True" valType="bool" updates="constant" name="discard previous"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>

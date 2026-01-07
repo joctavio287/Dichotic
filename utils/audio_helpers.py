@@ -284,6 +284,7 @@ def convert_to_wav(
     end_time: Union[float, None] = None, 
     stereo: bool = False,
     exists_ok: bool = True,
+    sample_rate_target: int = 44100,
     verbose: bool = False
 ) -> None:
     """
@@ -331,7 +332,7 @@ def convert_to_wav(
             output_file,
             format='wav',
             acodec='pcm_s16le',  # 16-bit PCM
-            ar=44100,            # 44.1 kHz
+            ar=sample_rate_target,            # 44.1 kHz
             ac=2 if stereo else 1  # stereo or mono
         )
         .overwrite_output()
@@ -809,7 +810,8 @@ def scramble_audio(
 def create_attention_track(
     duration_samples: int, 
     sr: int, 
-    probe_audio_path: Union[str, Path]
+    probe_audio_path: Union[str, Path],
+    return_onsets: bool = False
 ) -> tuple[int, np.ndarray, np.ndarray]:
     """
     Generates left and right audio tracks with randomly placed attention probes (beeps).
@@ -872,15 +874,21 @@ def create_attention_track(
     current_sample = int(DELAY_SECONDS * sr)
     idxs_l = []
     idxs_r = []
+    onsets_left = []
+    onsets_right = []
     for i in range(n_probes):
         if current_sample + probe_len >= duration_samples:
             break
         if sides[i] == 'left':
             track_l[current_sample:current_sample+probe_len] += probe_wav
             idxs_l.append(current_sample)
+            # record onset time in seconds
+            onsets_left.append(current_sample / sr)
         else:
             track_r[current_sample:current_sample+probe_len] += probe_wav
             idxs_r.append(current_sample)
+            # record onset time in seconds
+            onsets_right.append(current_sample / sr)
         # The ISI comes AFTER the current beep
         isi_samples = int(isis[i] * sr)
         current_sample += probe_len + isi_samples
@@ -890,7 +898,15 @@ def create_attention_track(
         if len(idxs_l) > len(idxs_r):
             last_pos = idxs_l.pop() 
             track_l[last_pos : last_pos + probe_len] = 0 
+            # also remove corresponding onset if present
+            if onsets_left:
+                onsets_left.pop()
         else:
             last_pos = idxs_r.pop()
             track_r[last_pos : last_pos + probe_len] = 0
-    return n_probes//2, track_l, track_r
+            if onsets_right:
+                onsets_right.pop()
+    if return_onsets:
+        return n_probes//2, track_l, track_r, onsets_left, onsets_right
+    else:
+        return n_probes//2, track_l, track_r
