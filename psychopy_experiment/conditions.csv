@@ -1,0 +1,9 @@
+story_a_side,story_b_side,story_a_voice,story_b_voice,condition_label,ordered,target,target_label
+left,right,F,M,FL_MR,TRUE,Left,A
+left,right,F,M,FL_MR,TRUE,Right,B
+left,right,M,F,FR_ML,TRUE,Left,A
+left,right,M,F,FR_ML,TRUE,Right,B
+right,left,F,M,FL_MR,FALSE,Left,A
+right,left,F,M,FL_MR,FALSE,Right,B
+right,left,M,F,FR_ML,FALSE,Left,A
+right,left,M,F,FR_ML,FALSE,Right,B

@@ -45,12 +45,12 @@
     <Param val="False" valType="bool" updates="None" name="elSimMode"/>
     <Param val="RIGHT_EYE" valType="str" updates="None" name="elTrackEyes"/>
     <Param val="PUPIL_CR_TRACKING" valType="str" updates="None" name="elTrackingMode"/>
-    <Param val="dichotic_listening_no_probe" valType="str" updates="None" name="expName"/>
+    <Param val="dichotic_listening_noprobe" valType="str" updates="None" name="expName"/>
     <Param val="" valType="str" updates="None" name="expVersion"/>
     <Param val="on Sync" valType="str" updates="None" name="exportHTML"/>
     <Param val="None" valType="str" updates="None" name="eyetracker"/>
     <Param val="" valType="code" updates="None" name="frameRate"/>
-    <Param val="Attempting to measure frame rate of screen, please wait..." valType="str" updates="None" name="frameRateMsg"/>
+    <Param val="Espera mientras se configura el experimento..." valType="str" updates="None" name="frameRateMsg"/>
     <Param val="127.0.0.1" valType="str" updates="None" name="gpAddress"/>
     <Param val="4242" valType="num" updates="None" name="gpPort"/>
     <Param val="PsychToolbox" valType="str" updates="None" name="keyboardBackend"/>
@@ -95,43 +95,24 @@
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
       </RoutineSettingsComponent>
-      <CodeComponent name="audiobook_code" plugin="None">
-        <Param val="import pandas as pd&amp;#10;audiobook_combinations = pd.read_csv(&amp;#10;    &quot;audiobook_combinations_no_probes.csv&quot;, &amp;#10;    header=0, &amp;#10;    delimiter=','&amp;#10;)&amp;#10;audiobook_questionary = pd.read_csv(&amp;#10;    &quot;audiobook_questionary.csv&quot;, &amp;#10;    header=0, &amp;#10;    delimiter=','&amp;#10;)" valType="extendedCode" updates="constant" name="Before Experiment"/>
-        <Param val="import * as pd from 'pandas';&amp;#10;audiobook_combinations = pd.read_csv(&quot;audiobook_combinations_no_probes.csv&quot;, {&quot;header&quot;: 0, &quot;delimiter&quot;: &quot;,&quot;});&amp;#10;audiobook_questionary = pd.read_csv(&quot;audiobook_questionary.csv&quot;, {&quot;header&quot;: 0, &quot;delimiter&quot;: &quot;,&quot;});&amp;#10;" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+      <CodeComponent name="code_listening" plugin="None">
+        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="/* Syntax Error: Fix Python code */" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="n_story = (condition_trials.thisN+1)*2-1&amp;#10;&amp;#10;# Define filepath and attended story&amp;#10;filter_condition = audiobook_combinations['condition_label']==condition_label&amp;#10;audiobooks_possible_combinations = audiobook_combinations[filter_condition]&amp;#10;filter_A = audiobooks_possible_combinations['number_story_A']==n_story&amp;#10;filter_B = audiobooks_possible_combinations['number_story_B']==n_story&amp;#10;selected_audiobook = audiobooks_possible_combinations[filter_A|filter_B]&amp;#10;audio_filepath = selected_audiobook['filename'].values[0]&amp;#10;attended = 'number_story_A' if target=='Left' else 'number_story_B'&amp;#10;attended_story = selected_audiobook[attended].values[0]&amp;#10;   &amp;#10;# Add to log&amp;#10;thisExp.addData('audio_filepath', audio_filepath)&amp;#10;thisExp.addData('attended_story', attended_story)&amp;#10;&amp;#10;# Define new variables&amp;#10;correct_answers = []&amp;#10;questions = []&amp;#10;answers_a = []&amp;#10;answers_b = []&amp;#10;answers_c = []&amp;#10;questionary = audiobook_questionary.iloc[attended_story-1]&amp;#10;for i in range(1, 4):&amp;#10;    correct_answer = questionary[f'correct_answer{i}']&amp;#10;    question = questionary[f'question{i}']&amp;#10;    answer_a = questionary[f'answer{i}a']&amp;#10;    answer_b = questionary[f'answer{i}b']&amp;#10;    answer_c = questionary[f'answer{i}c']&amp;#10;    correct_answers.append(correct_answer)&amp;#10;    questions.append(question)&amp;#10;    answers_a.append(answer_a)&amp;#10;    answers_b.append(answer_b)&amp;#10;    answers_c.append(answer_c)  &amp;#10;    # Add to log&amp;#10;    thisExp.addData(f'correct_answer{i}', correct_answer)&amp;#10;    thisExp.addData(f'question{i}', question)&amp;#10;    thisExp.addData(f'answer{i}a', answer_a)&amp;#10;    thisExp.addData(f'answer{i}b', answer_b)&amp;#10;    thisExp.addData(f'answer{i}c', answer_c)    " valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="audiobook = audios[condition_trials.thisN];&amp;#10;console.log(100);&amp;#10;psychoJS.experiment.addData(&quot;time_audiobook_started&quot;, t);&amp;#10;audiobook.play();&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="# Set correct audio&amp;#10;audiobook = audios[condition_trials.thisN]&amp;#10;#port.write(bytes([int(100)]))&amp;#10;print(100)&amp;#10;# t is measured since routine start&amp;#10;thisExp.addData(&quot;time_audiobook_started&quot;,t)&amp;#10;audiobook.play()&amp;#10;&amp;#10;&amp;#10;&amp;#10;&amp;#10;" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="# When time exceed audiobook duration, end component&amp;#10;# t is measured since routine start&amp;#10;if t &gt;= audiobook.duration:&amp;#10;    continueRoutine = False&amp;#10;    audiobook.stop() &amp;#10;    thisExp.addData(&quot;time_audiobook_finished&quot;,t)&amp;#10;&amp;#10;&amp;#10;    &amp;#10;    " valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="if ((t &gt;= audiobook.duration)) {&amp;#10;    continueRoutine = false;&amp;#10;    audiobook.stop();&amp;#10;    psychoJS.experiment.addData(&quot;time_audiobook_finished&quot;, t);&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Each JS Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="console.log(105);&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="#port.write(bytes([int(105)]))&amp;#10;print(105)&amp;#10;&amp;#10;&amp;#10;" valType="extendedCode" updates="constant" name="End Routine"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="audiobook_code" valType="code" updates="None" name="name"/>
+        <Param val="code_listening" valType="code" updates="None" name="name"/>
       </CodeComponent>
-      <SoundComponent name="audiobook" plugin="None">
-        <Param val="" valType="device" updates="None" name="deviceLabel"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="False" valType="bool" updates="constant" name="forceEndRoutine"/>
-        <Param val="True" valType="bool" updates="constant" name="hamming"/>
-        <Param val="audiobook" valType="code" updates="None" name="name"/>
-        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="$audio_filepath" valType="str" updates="set every repeat" name="sound"/>
-        <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="0.0" valType="code" updates="None" name="startVal"/>
-        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="" valType="code" updates="constant" name="stopVal"/>
-        <Param val="True" valType="bool" updates="constant" name="stopWithRoutine"/>
-        <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
-        <Param val="" valType="code" updates="None" name="validator"/>
-        <Param val="1" valType="num" updates="constant" name="volume"/>
-      </SoundComponent>
-      <PolygonComponent name="fixation_listening" plugin="None">
+      <PolygonComponent name="polygon" plugin="None">
         <Param val="center" valType="str" updates="constant" name="anchor"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
@@ -143,7 +124,7 @@
         <Param val="white" valType="color" updates="constant" name="lineColor"/>
         <Param val="1" valType="num" updates="constant" name="lineWidth"/>
         <Param val="4" valType="int" updates="constant" name="nVertices"/>
-        <Param val="fixation_listening" valType="code" updates="None" name="name"/>
+        <Param val="polygon" valType="code" updates="None" name="name"/>
         <Param val="" valType="num" updates="constant" name="opacity"/>
         <Param val="0" valType="num" updates="constant" name="ori"/>
         <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
@@ -153,30 +134,13 @@
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
         <Param val="0.0" valType="code" updates="None" name="startVal"/>
-        <Param val="condition" valType="str" updates="None" name="stopType"/>
-        <Param val="audiobook.status == FINISHED" valType="code" updates="constant" name="stopVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
         <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="list" updates="constant" name="vertices"/>
       </PolygonComponent>
-      <ParallelOutComponent name="p_port_listening" plugin="None">
-        <Param val="USB2TTL8" valType="str" updates="None" name="address"/>
-        <Param val="True" valType="bool" updates="None" name="disabled"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="p_port_listening" valType="code" updates="None" name="name"/>
-        <Param val="EIO" valType="str" updates="None" name="register"/>
-        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="125" valType="code" updates="None" name="startData"/>
-        <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="0.0" valType="code" updates="None" name="startVal"/>
-        <Param val="0" valType="code" updates="None" name="stopData"/>
-        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val=".5" valType="code" updates="constant" name="stopVal"/>
-        <Param val="True" valType="bool" updates="constant" name="syncScreen"/>
-        <Param val="False" valType="bool" updates="None" name="syncScreenRefresh"/>
-      </ParallelOutComponent>
     </Routine>
     <Routine name="Instructions">
       <RoutineSettingsComponent name="Instructions" plugin="None">
@@ -196,19 +160,19 @@
         <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
       </RoutineSettingsComponent>
       <CodeComponent name="code_row_selection" plugin="None">
-        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="#import serial&amp;#10;#port = serial.Serial(&amp;#10;#    'COM3', baudrate=115200, timeout=0&amp;#10;#)" valType="extendedCode" updates="constant" name="Before Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="&amp;#10;        // add-on: list(s: string): string[]&amp;#10;        function list(s) {&amp;#10;            // if s is a string, we return a list of its characters&amp;#10;            if (typeof s === 'string')&amp;#10;                return s.split('');&amp;#10;            else&amp;#10;                // otherwise we return s:&amp;#10;                return s;&amp;#10;        }&amp;#10;&amp;#10;        import * as random from 'random';&amp;#10;NUMBER_OF_PAIRS = 5;&amp;#10;indices = list(util.range(8));&amp;#10;_ = Math.random.shuffle(indices);&amp;#10;selected_rows = indices.slice(0, NUMBER_OF_PAIRS);&amp;#10;psychoJS.experiment.addData(&quot;selected_rows&quot;, selected_rows);&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="import random&amp;#10;NUMBER_OF_PAIRS=5&amp;#10;indices = list(range(8))&amp;#10;_ = random.shuffle(indices)&amp;#10;selected_rows = indices[:NUMBER_OF_PAIRS]&amp;#10;thisExp.addData('selected_rows', selected_rows)" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="from psychopy import sound&amp;#10;import pandas as pd&amp;#10;import random&amp;#10;&amp;#10;# Define which rows to use&amp;#10;NUMBER_OF_PAIRS=5&amp;#10;selected_rows = random.sample(&amp;#10;    range(8), NUMBER_OF_PAIRS&amp;#10;)&amp;#10;thisExp.addData('selected_rows', selected_rows)&amp;#10;&amp;#10;# Read conditions, possible stimuli combinations and questionaries&amp;#10;conditions = pd.read_csv(&amp;#10;    &quot;conditions.csv&quot;,&amp;#10;    header=0,&amp;#10;    delimiter=','&amp;#10;)&amp;#10;audiobook_combinations = pd.read_csv(&amp;#10;    &quot;audiobook_combinations_no_probes.csv&quot;, &amp;#10;    header=0, &amp;#10;    delimiter=','&amp;#10;)&amp;#10;audiobook_questionary = pd.read_csv(&amp;#10;    &quot;audiobook_questionary.csv&quot;, &amp;#10;    header=0, &amp;#10;    delimiter=','&amp;#10;)&amp;#10;&amp;#10;# Store in memory audiobooks and relevant parameters&amp;#10;attended_stories = []&amp;#10;audio_filepaths = []&amp;#10;questionaries = []&amp;#10;targets = []&amp;#10;audios = []&amp;#10;for n_r, row in enumerate(selected_rows):&amp;#10;    condition_selected = conditions.iloc[row]&amp;#10;    targets.append(condition_selected['target'])&amp;#10;    &amp;#10;    # Define filepath and attended story&amp;#10;    filter_condition1 = audiobook_combinations['condition_label']==condition_selected[&quot;condition_label&quot;]&amp;#10;    filter_condition2 = audiobook_combinations['ordered']==condition_selected[&quot;ordered&quot;]&amp;#10;    audiobooks_possible_combinations = audiobook_combinations[filter_condition1&amp;filter_condition2]&amp;#10;    &amp;#10;    # Get pairs, 1,2; 3,4; 5,6; ...&amp;#10;    n_story = (n_r+1)*2-1 # 1,3,5,7, ...&amp;#10;    filter_A = audiobooks_possible_combinations['story_A']==n_story&amp;#10;    filter_B = audiobooks_possible_combinations['story_B']==n_story&amp;#10;    selected_audiobook = audiobooks_possible_combinations[filter_A|filter_B]&amp;#10;    audio_filepath = selected_audiobook['filename'].values[0]&amp;#10;    audio_filepaths.append(audio_filepath)&amp;#10;    audios.append(&amp;#10;        sound.Sound(audio_filepath , hamming=True)&amp;#10;    )&amp;#10;    attended = f'story_{condition_selected[&quot;target_label&quot;]}'&amp;#10;    attended_story = selected_audiobook[attended].values[0]&amp;#10;    attended_stories.append(attended_story)&amp;#10;    questionaries.append(&amp;#10;        audiobook_questionary.iloc[attended_story-1]&amp;#10;    )&amp;#10;print(attended_stories)&amp;#10;print(audio_filepaths)&amp;#10;print(questionaries)&amp;#10;print(targets)&amp;#10;print(audios)" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="/* Syntax Error: Fix Python code */" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="console.log(25);&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="#port.write(bytes([int(25)]))&amp;#10;print(25)&amp;#10;" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="console.log(25);&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="#port.write(bytes([int(30)]))&amp;#10;print(25)" valType="extendedCode" updates="constant" name="End Routine"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="code_row_selection" valType="code" updates="None" name="name"/>
       </CodeComponent>
@@ -258,23 +222,6 @@
         <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
-      <ParallelOutComponent name="p_port_instructions" plugin="None">
-        <Param val="USB2TTL8" valType="str" updates="None" name="address"/>
-        <Param val="True" valType="bool" updates="None" name="disabled"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="p_port_instructions" valType="code" updates="None" name="name"/>
-        <Param val="EIO" valType="str" updates="None" name="register"/>
-        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="50" valType="code" updates="None" name="startData"/>
-        <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="0.0" valType="code" updates="None" name="startVal"/>
-        <Param val="0" valType="code" updates="None" name="stopData"/>
-        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val=".5" valType="code" updates="constant" name="stopVal"/>
-        <Param val="True" valType="bool" updates="constant" name="syncScreen"/>
-        <Param val="False" valType="bool" updates="None" name="syncScreenRefresh"/>
-      </ParallelOutComponent>
     </Routine>
     <Routine name="Questionary2">
       <RoutineSettingsComponent name="Questionary2" plugin="None">
@@ -329,6 +276,23 @@
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
       </RoutineSettingsComponent>
+      <CodeComponent name="code_bye" plugin="None">
+        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="console.log(230);&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="#port.write(bytes([int(230)])&amp;#10;print(230)" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="console.log(240);&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="#port.write(bytes([int(240)])&amp;#10;print(240)" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="code_bye" valType="code" updates="None" name="name"/>
+      </CodeComponent>
       <KeyboardComponent name="final_key" plugin="None">
         <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="" valType="str" updates="constant" name="correctAns"/>
@@ -375,23 +339,6 @@
         <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
-      <ParallelOutComponent name="p_port_final" plugin="None">
-        <Param val="USB2TTL8" valType="str" updates="None" name="address"/>
-        <Param val="True" valType="bool" updates="None" name="disabled"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="p_port_final" valType="code" updates="None" name="name"/>
-        <Param val="EIO" valType="str" updates="None" name="register"/>
-        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="175" valType="code" updates="None" name="startData"/>
-        <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="0.0" valType="code" updates="None" name="startVal"/>
-        <Param val="0" valType="code" updates="None" name="stopData"/>
-        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val=".5" valType="code" updates="constant" name="stopVal"/>
-        <Param val="True" valType="bool" updates="constant" name="syncScreen"/>
-        <Param val="False" valType="bool" updates="None" name="syncScreenRefresh"/>
-      </ParallelOutComponent>
     </Routine>
     <Routine name="Bips">
       <RoutineSettingsComponent name="Bips" plugin="None">
@@ -410,6 +357,23 @@
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
       </RoutineSettingsComponent>
+      <CodeComponent name="code_bip" plugin="None">
+        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="if ((currentLoop.name === &quot;bip_trials1&quot;)) {&amp;#10;    trigger = 45;&amp;#10;} else {&amp;#10;    trigger = 150;&amp;#10;}&amp;#10;console.log(Number.parseInt((trigger + (currentLoop.thisN * 3))));&amp;#10;if ((currentLoop.thisN === (currentLoop.nTotal - 1))) {&amp;#10;    final_silence.status = PsychoJS.Status.FINISHED;&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="if currentLoop.name == &quot;bip_trials1&quot;:&amp;#10;    trigger = 45&amp;#10;else:&amp;#10;    trigger = 150&amp;#10;&amp;#10;#port.write(bytes([int(trigger+currentLoop.thisN*3)]))&amp;#10;print(int(trigger+currentLoop.thisN*3))&amp;#10;&amp;#10;# When the loop reaches the end, there will be no silence added&amp;#10;if currentLoop.thisN == (currentLoop.nTotal - 1):&amp;#10;    final_silence.status = FINISHED" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="console.log(Number.parseInt(((trigger + (currentLoop.thisN * 3)) + 1)));&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="#port.write(bytes([int(trigger+currentLoop.thisN*3+1)]))&amp;#10;print(int(trigger+currentLoop.thisN*3+1))" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="code_bip" valType="code" updates="None" name="name"/>
+      </CodeComponent>
       <SoundComponent name="bip" plugin="None">
         <Param val="" valType="device" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
@@ -418,7 +382,7 @@
         <Param val="True" valType="bool" updates="constant" name="hamming"/>
         <Param val="bip" valType="code" updates="None" name="name"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="../data/bip.wav" valType="str" updates="set every repeat" name="sound"/>
+        <Param val="../data/processed_audios/bip.ogg" valType="str" updates="set every repeat" name="sound"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
         <Param val="0.0" valType="code" updates="None" name="startVal"/>
@@ -452,29 +416,41 @@
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
         <Param val="0.0" valType="code" updates="None" name="startVal"/>
         <Param val="condition" valType="str" updates="None" name="stopType"/>
-        <Param val="bip.status == FINISHED" valType="code" updates="constant" name="stopVal"/>
+        <Param val="bip.status == FINISHED " valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
         <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="list" updates="constant" name="vertices"/>
       </PolygonComponent>
-      <ParallelOutComponent name="bips_p_port" plugin="None">
-        <Param val="USB2TTL8" valType="str" updates="None" name="address"/>
-        <Param val="True" valType="bool" updates="None" name="disabled"/>
+      <PolygonComponent name="final_silence" plugin="None">
+        <Param val="center" valType="str" updates="constant" name="anchor"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="bips_p_port" valType="code" updates="None" name="name"/>
-        <Param val="EIO" valType="str" updates="None" name="register"/>
+        <Param val="white" valType="color" updates="constant" name="fillColor"/>
+        <Param val="linear" valType="str" updates="constant" name="interpolate"/>
+        <Param val="white" valType="color" updates="constant" name="lineColor"/>
+        <Param val="1" valType="num" updates="constant" name="lineWidth"/>
+        <Param val="4" valType="int" updates="constant" name="nVertices"/>
+        <Param val="final_silence" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="100" valType="code" updates="None" name="startData"/>
+        <Param val="cross" valType="str" updates="None" name="shape"/>
+        <Param val="(0.1, 0.1)" valType="list" updates="constant" name="size"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="0.0" valType="code" updates="None" name="startVal"/>
-        <Param val="0" valType="code" updates="None" name="stopData"/>
+        <Param val="condition" valType="str" updates="None" name="startType"/>
+        <Param val="bip.status==FINISHED" valType="code" updates="None" name="startVal"/>
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="0.5" valType="code" updates="constant" name="stopVal"/>
-        <Param val="True" valType="bool" updates="constant" name="syncScreen"/>
-        <Param val="False" valType="bool" updates="None" name="syncScreenRefresh"/>
-      </ParallelOutComponent>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
+        <Param val="" valType="list" updates="constant" name="vertices"/>
+      </PolygonComponent>
     </Routine>
     <Routine name="ConditionPrompt">
       <RoutineSettingsComponent name="ConditionPrompt" plugin="None">
@@ -493,24 +469,24 @@
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
       </RoutineSettingsComponent>
-      <CodeComponent name="prompt_code" plugin="None">
+      <CodeComponent name="code_prompt" plugin="None">
         <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="flecha = ((target === &quot;Left&quot;) ? &quot;&lt;&lt;&lt;&quot; : &quot;&gt;&gt;&gt;&quot;);&amp;#10;lado = ((target === &quot;Left&quot;) ? &quot;IZQUIERDO&quot; : &quot;DERECHO&quot;);&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="flecha='&lt;&lt;&lt;'  if target=='Left' else '&gt;&gt;&gt;'&amp;#10;lado='IZQUIERDO' if target=='Left' else 'DERECHO'&amp;#10;" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="console.log(35);&amp;#10;flecha = ((target === &quot;Left&quot;) ? &quot;&lt;&lt;&lt;&quot; : &quot;&gt;&gt;&gt;&quot;);&amp;#10;lado = ((target === &quot;Left&quot;) ? &quot;IZQUIERDO&quot; : &quot;DERECHO&quot;);&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="#port.write(bytes([int(35)]))&amp;#10;print(35)&amp;#10;&amp;#10;flecha='&lt;&lt;&lt;'  if target=='Left' else '&gt;&gt;&gt;'&amp;#10;lado='IZQUIERDO' if target=='Left' else 'DERECHO'&amp;#10;&amp;#10;" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="console.log(40);&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="#port.write(bytes([int(40)])&amp;#10;print(40)" valType="extendedCode" updates="constant" name="End Routine"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="prompt_code" valType="code" updates="None" name="name"/>
+        <Param val="code_prompt" valType="code" updates="None" name="name"/>
       </CodeComponent>
-      <TextComponent name="text" plugin="None">
+      <TextComponent name="text_prompt" plugin="None">
         <Param val="white" valType="color" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
@@ -521,7 +497,7 @@
         <Param val="Arial" valType="str" updates="constant" name="font"/>
         <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
         <Param val="0.05" valType="num" updates="constant" name="letterHeight"/>
-        <Param val="text" valType="code" updates="None" name="name"/>
+        <Param val="text_prompt" valType="code" updates="None" name="name"/>
         <Param val="" valType="num" updates="constant" name="opacity"/>
         <Param val="0" valType="num" updates="constant" name="ori"/>
         <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
@@ -556,23 +532,6 @@
         <Param val="False" valType="bool" updates="constant" name="storeCorrect"/>
         <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
       </KeyboardComponent>
-      <ParallelOutComponent name="p_port_condition_prompt" plugin="None">
-        <Param val="USB2TTL8" valType="str" updates="None" name="address"/>
-        <Param val="True" valType="bool" updates="None" name="disabled"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="p_port_condition_prompt" valType="code" updates="None" name="name"/>
-        <Param val="EIO" valType="str" updates="None" name="register"/>
-        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="75" valType="code" updates="None" name="startData"/>
-        <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="0.0" valType="code" updates="None" name="startVal"/>
-        <Param val="0" valType="code" updates="None" name="stopData"/>
-        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val=".5" valType="code" updates="constant" name="stopVal"/>
-        <Param val="True" valType="bool" updates="constant" name="syncScreen"/>
-        <Param val="False" valType="bool" updates="None" name="syncScreenRefresh"/>
-      </ParallelOutComponent>
     </Routine>
     <Routine name="Questionary">
       <RoutineSettingsComponent name="Questionary" plugin="None">
@@ -591,22 +550,22 @@
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
       </RoutineSettingsComponent>
-      <CodeComponent name="code" plugin="None">
+      <CodeComponent name="code_questionary" plugin="None">
         <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
         <Param val="/* Syntax Error: Fix Python code */" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="question = questions[questions_trial.thisRepN-1]&amp;#10;correct_answer = correct_answers[questions_trial.thisRepN-1]&amp;#10;answer_a = answers_a[questions_trial.thisRepN-1]&amp;#10;answer_b = answers_b[questions_trial.thisRepN-1]&amp;#10;answer_c = answers_c[questions_trial.thisRepN-1]" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="question = questions[questions_trial.thisRepN-1]&amp;#10;correct_answer = correct_answers[questions_trial.thisRepN-1]&amp;#10;answer_a = answers_a[questions_trial.thisRepN-1]&amp;#10;answer_b = answers_b[questions_trial.thisRepN-1]&amp;#10;answer_c = answers_c[questions_trial.thisRepN-1]&amp;#10;&amp;#10;#port.write(bytes([int(200+currentLoop.thisN*3)]))&amp;#10;print(int(200+currentLoop.thisN*3))&amp;#10;" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="console.log(Number.parseInt(((200 + 1) + (currentLoop.thisN * 3))));&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="#port.write(bytes([int(200+1+currentLoop.thisN*3)]))&amp;#10;print(int(200+1+currentLoop.thisN*3))" valType="extendedCode" updates="constant" name="End Routine"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="code" valType="code" updates="None" name="name"/>
+        <Param val="code_questionary" valType="code" updates="None" name="name"/>
       </CodeComponent>
       <KeyboardComponent name="key_resp_questionary" plugin="None">
         <Param val="'a', 'b', 'c'" valType="list" updates="constant" name="allowedKeys"/>
@@ -654,31 +613,86 @@
         <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
-      <ParallelOutComponent name="p_port_questionary" plugin="None">
-        <Param val="0x0378" valType="str" updates="None" name="address"/>
-        <Param val="True" valType="bool" updates="None" name="disabled"/>
+    </Routine>
+    <Routine name="QuestionaryVariables">
+      <RoutineSettingsComponent name="QuestionaryVariables" plugin="None">
+        <Param val="none" valType="str" updates="None" name="backgroundFit"/>
+        <Param val="" valType="str" updates="None" name="backgroundImg"/>
+        <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
+        <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
+        <Param val="" valType="str" updates="constant" name="desc"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="p_port_questionary" valType="code" updates="None" name="name"/>
-        <Param val="EIO" valType="str" updates="None" name="register"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
+        <Param val="QuestionaryVariables" valType="code" updates="None" name="name"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="150" valType="code" updates="None" name="startData"/>
+        <Param val="" valType="code" updates="constant" name="skipIf"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
+      </RoutineSettingsComponent>
+      <CodeComponent name="code_questionary_2" plugin="None">
+        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="/* Syntax Error: Fix Python code */" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="attended_story_ = attended_stories[condition_trials.thisN]&amp;#10;audio_filepath_ = audio_filepaths[condition_trials.thisN]&amp;#10;questionary_ = questionaries[condition_trials.thisN]&amp;#10;&amp;#10;# Add to log&amp;#10;thisExp.addData('attended_story', attended_story_)&amp;#10;thisExp.addData('audio_filepath', audio_filepath_)&amp;#10;thisExp.addData('target', target)&amp;#10;&amp;#10;# Define new variables&amp;#10;correct_answers = []&amp;#10;questions = []&amp;#10;answers_a = []&amp;#10;answers_b = []&amp;#10;answers_c = []&amp;#10;for i in range(1, 4):&amp;#10;    correct_answer = questionary_[f'correct_answer{i}']&amp;#10;    question = questionary_[f'question{i}']&amp;#10;    answer_a = questionary_[f'answer{i}a']&amp;#10;    answer_b = questionary_[f'answer{i}b']&amp;#10;    answer_c = questionary_[f'answer{i}c']&amp;#10;    correct_answers.append(correct_answer)&amp;#10;    questions.append(question)&amp;#10;    answers_a.append(answer_a)&amp;#10;    answers_b.append(answer_b)&amp;#10;    answers_c.append(answer_c)  &amp;#10;&amp;#10;    # Add to log&amp;#10;    thisExp.addData(f'correct_answer{i}', correct_answer)&amp;#10;    thisExp.addData(f'question{i}', question)&amp;#10;    thisExp.addData(f'answer{i}a', answer_a)&amp;#10;    thisExp.addData(f'answer{i}b', answer_b)&amp;#10;    thisExp.addData(f'answer{i}c', answer_c)" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="code_questionary_2" valType="code" updates="None" name="name"/>
+      </CodeComponent>
+    </Routine>
+    <Routine name="Listening1">
+      <RoutineSettingsComponent name="Listening1" plugin="None">
+        <Param val="none" valType="str" updates="None" name="backgroundFit"/>
+        <Param val="" valType="str" updates="None" name="backgroundImg"/>
+        <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
+        <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
+        <Param val="" valType="str" updates="constant" name="desc"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
+        <Param val="Listening1" valType="code" updates="None" name="name"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="constant" name="skipIf"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
+      </RoutineSettingsComponent>
+      <SoundComponent name="sound_1" plugin="None">
+        <Param val="" valType="device" updates="None" name="deviceLabel"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="bool" updates="constant" name="forceEndRoutine"/>
+        <Param val="True" valType="bool" updates="constant" name="hamming"/>
+        <Param val="sound_1" valType="code" updates="None" name="name"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="C:/Users/jocta/repos/Dichotic/data/processed_audios/attention_probe.wav" valType="str" updates="set every repeat" name="sound"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="0.0" valType="code" updates="None" name="startVal"/>
-        <Param val="0" valType="code" updates="None" name="stopData"/>
+        <Param val="0.1" valType="code" updates="None" name="startVal"/>
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val=".5" valType="code" updates="constant" name="stopVal"/>
-        <Param val="True" valType="bool" updates="constant" name="syncScreen"/>
-        <Param val="False" valType="bool" updates="None" name="syncScreenRefresh"/>
-      </ParallelOutComponent>
+        <Param val="1.0" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="constant" name="stopWithRoutine"/>
+        <Param val="False" valType="bool" updates="constant" name="syncScreenRefresh"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
+        <Param val="1" valType="num" updates="constant" name="volume"/>
+      </SoundComponent>
     </Routine>
   </Routines>
   <Flow>
     <Routine name="Instructions"/>
     <LoopInitiator loopType="TrialHandler" name="condition_trials">
       <Param name="Selected rows" updates="None" val="$selected_rows" valType="str"/>
-      <Param name="conditions" updates="None" val="[{'story_a_side': 'left', 'story_b_side': 'right', 'story_a_voice': 'F', 'story_b_voice': 'M', 'condition_label': 'FL_MR_AB', 'target': 'Left'}, {'story_a_side': 'left', 'story_b_side': 'right', 'story_a_voice': 'F', 'story_b_voice': 'M', 'condition_label': 'FL_MR_AB', 'target': 'Right'}, {'story_a_side': 'left', 'story_b_side': 'right', 'story_a_voice': 'M', 'story_b_voice': 'F', 'condition_label': 'FR_ML_AB', 'target': 'Left'}, {'story_a_side': 'left', 'story_b_side': 'right', 'story_a_voice': 'M', 'story_b_voice': 'F', 'condition_label': 'FR_ML_AB', 'target': 'Right'}, {'story_a_side': 'right', 'story_b_side': 'left', 'story_a_voice': 'F', 'story_b_voice': 'M', 'condition_label': 'FL_MR_BA', 'target': 'Left'}, {'story_a_side': 'right', 'story_b_side': 'left', 'story_a_voice': 'F', 'story_b_voice': 'M', 'condition_label': 'FL_MR_BA', 'target': 'Right'}, {'story_a_side': 'right', 'story_b_side': 'left', 'story_a_voice': 'M', 'story_b_voice': 'F', 'condition_label': 'FR_ML_BA', 'target': 'Left'}, {'story_a_side': 'right', 'story_b_side': 'left', 'story_a_voice': 'M', 'story_b_voice': 'F', 'condition_label': 'FR_ML_BA', 'target': 'Right'}]" valType="str"/>
-      <Param name="conditionsFile" updates="None" val="conditions.xlsx" valType="file"/>
+      <Param name="conditions" updates="None" val="[OrderedDict([('story_a_side', 'left'), ('story_b_side', 'right'), ('story_a_voice', 'F'), ('story_b_voice', 'M'), ('condition_label', 'FL_MR'), ('ordered', np.True_), ('target', 'Left'), ('target_label', 'A')]), OrderedDict([('story_a_side', 'left'), ('story_b_side', 'right'), ('story_a_voice', 'F'), ('story_b_voice', 'M'), ('condition_label', 'FL_MR'), ('ordered', np.True_), ('target', 'Right'), ('target_label', 'B')]), OrderedDict([('story_a_side', 'left'), ('story_b_side', 'right'), ('story_a_voice', 'M'), ('story_b_voice', 'F'), ('condition_label', 'FR_ML'), ('ordered', np.True_), ('target', 'Left'), ('target_label', 'A')]), OrderedDict([('story_a_side', 'left'), ('story_b_side', 'right'), ('story_a_voice', 'M'), ('story_b_voice', 'F'), ('condition_label', 'FR_ML'), ('ordered', np.True_), ('target', 'Right'), ('target_label', 'B')]), OrderedDict([('story_a_side', 'right'), ('story_b_side', 'left'), ('story_a_voice', 'F'), ('story_b_voice', 'M'), ('condition_label', 'FL_MR'), ('ordered', np.False_), ('target', 'Left'), ('target_label', 'A')]), OrderedDict([('story_a_side', 'right'), ('story_b_side', 'left'), ('story_a_voice', 'F'), ('story_b_voice', 'M'), ('condition_label', 'FL_MR'), ('ordered', np.False_), ('target', 'Right'), ('target_label', 'B')]), OrderedDict([('story_a_side', 'right'), ('story_b_side', 'left'), ('story_a_voice', 'M'), ('story_b_voice', 'F'), ('condition_label', 'FR_ML'), ('ordered', np.False_), ('target', 'Left'), ('target_label', 'A')]), OrderedDict([('story_a_side', 'right'), ('story_b_side', 'left'), ('story_a_voice', 'M'), ('story_b_voice', 'F'), ('condition_label', 'FR_ML'), ('ordered', np.False_), ('target', 'Right'), ('target_label', 'B')])]" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="conditions.csv" valType="file"/>
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
       <Param name="isTrials" updates="None" val="True" valType="bool"/>
       <Param name="loopType" updates="None" val="sequential" valType="str"/>
@@ -687,7 +701,7 @@
       <Param name="random seed" updates="None" val="" valType="code"/>
     </LoopInitiator>
     <Routine name="ConditionPrompt"/>
-    <LoopInitiator loopType="TrialHandler" name="trials">
+    <LoopInitiator loopType="TrialHandler" name="bip_trials1">
       <Param name="Selected rows" updates="None" val="" valType="str"/>
       <Param name="conditions" updates="None" val="None" valType="str"/>
       <Param name="conditionsFile" updates="None" val="" valType="file"/>
@@ -695,13 +709,13 @@
       <Param name="isTrials" updates="None" val="False" valType="bool"/>
       <Param name="loopType" updates="None" val="random" valType="str"/>
       <Param name="nReps" updates="None" val="10" valType="num"/>
-      <Param name="name" updates="None" val="trials" valType="code"/>
+      <Param name="name" updates="None" val="bip_trials1" valType="code"/>
       <Param name="random seed" updates="None" val="" valType="code"/>
     </LoopInitiator>
     <Routine name="Bips"/>
-    <LoopTerminator name="trials"/>
+    <LoopTerminator name="bip_trials1"/>
     <Routine name="Listening"/>
-    <LoopInitiator loopType="TrialHandler" name="trials_2">
+    <LoopInitiator loopType="TrialHandler" name="bip_trials2">
       <Param name="Selected rows" updates="None" val="" valType="str"/>
       <Param name="conditions" updates="None" val="None" valType="str"/>
       <Param name="conditionsFile" updates="None" val="" valType="file"/>
@@ -709,11 +723,12 @@
       <Param name="isTrials" updates="None" val="False" valType="bool"/>
       <Param name="loopType" updates="None" val="sequential" valType="str"/>
       <Param name="nReps" updates="None" val="10" valType="num"/>
-      <Param name="name" updates="None" val="trials_2" valType="code"/>
+      <Param name="name" updates="None" val="bip_trials2" valType="code"/>
       <Param name="random seed" updates="None" val="" valType="code"/>
     </LoopInitiator>
     <Routine name="Bips"/>
-    <LoopTerminator name="trials_2"/>
+    <LoopTerminator name="bip_trials2"/>
+    <Routine name="QuestionaryVariables"/>
     <LoopInitiator loopType="TrialHandler" name="questions_trial">
       <Param name="Selected rows" updates="None" val="" valType="str"/>
       <Param name="conditions" updates="None" val="None" valType="str"/>

@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2025.2.3),
-    on December 23, 2025, at 10:39
+    on January 08, 2026, at 10:55
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -16,7 +16,7 @@ from psychopy import locale_setup
 from psychopy import prefs
 from psychopy import plugins
 plugins.activatePlugins()
-from psychopy import sound, gui, visual, core, data, event, logging, clock, colors, layout, hardware, parallel
+from psychopy import sound, gui, visual, core, data, event, logging, clock, colors, layout, hardware
 from psychopy.tools import environmenttools
 from psychopy.constants import (
     NOT_STARTED, STARTED, PLAYING, PAUSED, STOPPED, STOPPING, FINISHED, PRESSED, 
@@ -32,18 +32,11 @@ import sys  # to get file system encoding
 
 from psychopy.hardware import keyboard
 
-# Run 'Before Experiment' code from audiobook_code
-import pandas as pd
-audiobook_combinations = pd.read_csv(
-    "audiobook_combinations_no_probes.csv", 
-    header=0, 
-    delimiter=','
-)
-audiobook_questionary = pd.read_csv(
-    "audiobook_questionary.csv", 
-    header=0, 
-    delimiter=','
-)
+# Run 'Before Experiment' code from code_row_selection
+#import serial
+#port = serial.Serial(
+#    'COM3', baudrate=115200, timeout=0
+#)
 # --- Setup global variables (available in all functions) ---
 # create a device manager to handle hardware (keyboards, mice, mirophones, speakers, etc.)
 deviceManager = hardware.DeviceManager()
@@ -51,7 +44,7 @@ deviceManager = hardware.DeviceManager()
 _thisDir = os.path.dirname(os.path.abspath(__file__))
 # store info about the experiment session
 psychopyVersion = '2025.2.3'
-expName = 'dichotic_listening_no_probe'  # from the Builder filename that created this script
+expName = 'dichotic_listening_probe'  # from the Builder filename that created this script
 expVersion = ''
 # a list of functions to run when the experiment ends (starts off blank)
 runAtExit = []
@@ -144,7 +137,7 @@ def setupData(expInfo, dataDir=None):
     thisExp = data.ExperimentHandler(
         name=expName, version=expVersion,
         extraInfo=expInfo, runtimeInfo=None,
-        originPath='C:\\Users\\User\\repos\\Dichotic\\psychopy_experiment\\dichotic_listening_no_probe_lastrun.py',
+        originPath='C:\\Users\\jocta\\repos\\Dichotic\\psychopy_experiment\\dichotic_listening_probe_lastrun.py',
         savePickle=True, saveWideText=True,
         dataFileName=dataDir + os.sep + filename, sortColumns='time'
     )
@@ -229,7 +222,7 @@ def setupWindow(expInfo=None, win=None):
     if expInfo is not None:
         # get/measure frame rate if not already in expInfo
         if win._monitorFrameRate is None:
-            win._monitorFrameRate = win.getActualFrameRate(infoMsg='Attempting to measure frame rate of screen, please wait...')
+            win._monitorFrameRate = win.getActualFrameRate(infoMsg='Espera mientras se configura el experimento...')
         expInfo['frameRate'] = win._monitorFrameRate
     win.hideMessage()
     if PILOTING:
@@ -387,6 +380,71 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # Start Code - component code to be run after the window creation
     
     # --- Initialize components for Routine "Instructions" ---
+    # Run 'Begin Experiment' code from code_row_selection
+    from psychopy import sound
+    import pandas as pd
+    import random
+    
+    # Define which rows to use
+    NUMBER_OF_PAIRS=5
+    selected_rows = random.sample(
+        range(8), NUMBER_OF_PAIRS
+    )
+    thisExp.addData('selected_rows', selected_rows)
+    
+    # Read conditions, possible stimuli combinations and questionaries
+    conditions = pd.read_csv(
+        "conditions.csv",
+        header=0,
+        delimiter=','
+    )
+    audiobook_combinations = pd.read_csv(
+        "audiobook_combinations_probes_pruebas.csv", 
+        header=0, 
+        delimiter=','
+    )
+    audiobook_questionary = pd.read_csv(
+        "audiobook_questionary.csv", 
+        header=0, 
+        delimiter=','
+    )
+    
+    # Store in memory audiobooks and relevant parameters
+    attended_stories = []
+    audio_filepaths = []
+    questionaries = []
+    targets = []
+    audios = []
+    for n_r, row in enumerate(selected_rows):
+        condition_selected = conditions.iloc[row]
+        targets.append(condition_selected['target'])
+        
+        # Define filepath and attended story
+        filter_condition1 = audiobook_combinations['condition_label']==condition_selected["condition_label"]
+        filter_condition2 = audiobook_combinations['ordered']==condition_selected["ordered"]
+        audiobooks_possible_combinations = audiobook_combinations[filter_condition1&filter_condition2]
+        
+        # Get pairs, 1,2; 3,4; 5,6; ...
+        n_story = (n_r+1)*2-1 # 1,3,5,7, ...
+        filter_A = audiobooks_possible_combinations['story_A']==n_story
+        filter_B = audiobooks_possible_combinations['story_B']==n_story
+        selected_audiobook = audiobooks_possible_combinations[filter_A|filter_B]
+        audio_filepath = selected_audiobook['filename'].values[0]
+        audio_filepaths.append(audio_filepath)
+        audios.append(
+            sound.Sound(audio_filepath , hamming=True)
+        )
+        attended = f'story_{condition_selected["target_label"]}'
+        attended_story = selected_audiobook[attended].values[0]
+        attended_stories.append(attended_story)
+        questionaries.append(
+            audiobook_questionary.iloc[attended_story-1]
+        )
+    print(attended_stories)
+    print(audio_filepaths)
+    print(questionaries)
+    print(targets)
+    print(audios)
     key_instructions = keyboard.Keyboard(deviceName='defaultKeyboard')
     text_instructions = visual.TextStim(win=win, name='text_instructions',
         text='',
@@ -397,7 +455,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         depth=-2.0);
     
     # --- Initialize components for Routine "ConditionPrompt" ---
-    text = visual.TextStim(win=win, name='text',
+    text_prompt = visual.TextStim(win=win, name='text_prompt',
         text='',
         font='Arial',
         pos=(0, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
@@ -423,24 +481,23 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         ori=0.0, pos=(0, 0), draggable=False, anchor='center',
         lineWidth=1.0,
         colorSpace='rgb', lineColor='white', fillColor='white',
-        opacity=None, depth=-1.0, interpolate=True)
-    
-    # --- Initialize components for Routine "Listening" ---
-    audiobook = sound.Sound(
-        'A', 
-        secs=-1, 
-        stereo=True, 
-        hamming=True, 
-        speaker=None,    name='audiobook'
-    )
-    audiobook.setVolume(1.0)
-    fixation_listening = visual.ShapeStim(
-        win=win, name='fixation_listening', vertices='cross',
+        opacity=None, depth=-2.0, interpolate=True)
+    final_silence = visual.ShapeStim(
+        win=win, name='final_silence', vertices='cross',
         size=(0.1, 0.1),
         ori=0.0, pos=(0, 0), draggable=False, anchor='center',
         lineWidth=1.0,
         colorSpace='rgb', lineColor='white', fillColor='white',
-        opacity=None, depth=-2.0, interpolate=True)
+        opacity=None, depth=-3.0, interpolate=True)
+    
+    # --- Initialize components for Routine "Listening" ---
+    polygon = visual.ShapeStim(
+        win=win, name='polygon', vertices='cross',
+        size=(0.1, 0.1),
+        ori=0.0, pos=(0, 0), draggable=False, anchor='center',
+        lineWidth=1.0,
+        colorSpace='rgb', lineColor='white', fillColor='white',
+        opacity=None, depth=-1.0, interpolate=True)
     
     # --- Initialize components for Routine "Bips" ---
     bip = sound.Sound(
@@ -457,7 +514,16 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         ori=0.0, pos=(0, 0), draggable=False, anchor='center',
         lineWidth=1.0,
         colorSpace='rgb', lineColor='white', fillColor='white',
-        opacity=None, depth=-1.0, interpolate=True)
+        opacity=None, depth=-2.0, interpolate=True)
+    final_silence = visual.ShapeStim(
+        win=win, name='final_silence', vertices='cross',
+        size=(0.1, 0.1),
+        ori=0.0, pos=(0, 0), draggable=False, anchor='center',
+        lineWidth=1.0,
+        colorSpace='rgb', lineColor='white', fillColor='white',
+        opacity=None, depth=-3.0, interpolate=True)
+    
+    # --- Initialize components for Routine "QuestionaryVariables" ---
     
     # --- Initialize components for Routine "Questionary" ---
     key_resp_questionary = keyboard.Keyboard(deviceName='defaultKeyboard')
@@ -477,7 +543,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         pos=(0, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
-        depth=-1.0);
+        depth=-2.0);
     
     # create some handy timers
     
@@ -519,12 +585,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     continueRoutine = True
     # update component parameters for each repeat
     # Run 'Begin Routine' code from code_row_selection
-    import random
-    NUMBER_OF_PAIRS=5
-    indices = list(range(8))
-    _ = random.shuffle(indices)
-    selected_rows = indices[:NUMBER_OF_PAIRS]
-    thisExp.addData('selected_rows', selected_rows)
+    #port.write(bytes([int(25)]))
+    print(25)
+    
     # create starting attributes for key_instructions
     key_instructions.keys = []
     key_instructions.rt = []
@@ -663,6 +726,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     Instructions.tStop = globalClock.getTime(format='float')
     Instructions.tStopRefresh = tThisFlipGlobal
     thisExp.addData('Instructions.stopped', Instructions.tStop)
+    # Run 'End Routine' code from code_row_selection
+    #port.write(bytes([int(30)]))
+    print(25)
     # check responses
     if key_instructions.keys in ['', [], None]:  # No response was made
         key_instructions.keys = None
@@ -682,7 +748,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         extraInfo=expInfo, 
         originPath=-1, 
         trialList=data.importConditions(
-        'conditions.xlsx', 
+        'conditions.csv', 
         selection=selected_rows
     )
     , 
@@ -717,16 +783,20 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         # create an object to store info about Routine ConditionPrompt
         ConditionPrompt = data.Routine(
             name='ConditionPrompt',
-            components=[text, key_resp_prompt],
+            components=[text_prompt, key_resp_prompt],
         )
         ConditionPrompt.status = NOT_STARTED
         continueRoutine = True
         # update component parameters for each repeat
-        # Run 'Begin Routine' code from prompt_code
+        # Run 'Begin Routine' code from code_prompt
+        #port.write(bytes([int(35)]))
+        print(35)
+        
         flecha='<<<'  if target=='Left' else '>>>'
         lado='IZQUIERDO' if target=='Left' else 'DERECHO'
         
-        text.setText(f"Presta atención a la historia del lado {lado} ({flecha}).\n\n\nApretá ESPACIO para continuar...")
+        
+        text_prompt.setText(f"Presta atención a la historia del lado {lado} ({flecha}).\n\n\nApretá ESPACIO para continuar...")
         # create starting attributes for key_resp_prompt
         key_resp_prompt.keys = []
         key_resp_prompt.rt = []
@@ -765,38 +835,38 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
             # update/draw components on each frame
             
-            # *text* updates
+            # *text_prompt* updates
             
-            # if text is starting this frame...
-            if text.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # if text_prompt is starting this frame...
+            if text_prompt.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
                 # keep track of start time/frame for later
-                text.frameNStart = frameN  # exact frame index
-                text.tStart = t  # local t and not account for scr refresh
-                text.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(text, 'tStartRefresh')  # time at next scr refresh
+                text_prompt.frameNStart = frameN  # exact frame index
+                text_prompt.tStart = t  # local t and not account for scr refresh
+                text_prompt.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(text_prompt, 'tStartRefresh')  # time at next scr refresh
                 # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'text.started')
+                thisExp.timestampOnFlip(win, 'text_prompt.started')
                 # update status
-                text.status = STARTED
-                text.setAutoDraw(True)
+                text_prompt.status = STARTED
+                text_prompt.setAutoDraw(True)
             
-            # if text is active this frame...
-            if text.status == STARTED:
+            # if text_prompt is active this frame...
+            if text_prompt.status == STARTED:
                 # update params
                 pass
             
-            # if text is stopping this frame...
-            if text.status == STARTED:
+            # if text_prompt is stopping this frame...
+            if text_prompt.status == STARTED:
                 if bool(key_resp_prompt.status == FINISHED):
                     # keep track of stop time/frame for later
-                    text.tStop = t  # not accounting for scr refresh
-                    text.tStopRefresh = tThisFlipGlobal  # on global time
-                    text.frameNStop = frameN  # exact frame index
+                    text_prompt.tStop = t  # not accounting for scr refresh
+                    text_prompt.tStopRefresh = tThisFlipGlobal  # on global time
+                    text_prompt.frameNStop = frameN  # exact frame index
                     # add timestamp to datafile
-                    thisExp.timestampOnFlip(win, 'text.stopped')
+                    thisExp.timestampOnFlip(win, 'text_prompt.stopped')
                     # update status
-                    text.status = FINISHED
-                    text.setAutoDraw(False)
+                    text_prompt.status = FINISHED
+                    text_prompt.setAutoDraw(False)
             
             # *key_resp_prompt* updates
             waitOnFlip = False
@@ -868,6 +938,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         ConditionPrompt.tStop = globalClock.getTime(format='float')
         ConditionPrompt.tStopRefresh = tThisFlipGlobal
         thisExp.addData('ConditionPrompt.stopped', ConditionPrompt.tStop)
+        # Run 'End Routine' code from code_prompt
+        #port.write(bytes([int(40)])
+        print(40)
         # check responses
         if key_resp_prompt.keys in ['', [], None]:  # No response was made
             key_resp_prompt.keys = None
@@ -879,8 +952,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         routineTimer.reset()
         
         # set up handler to look after randomisation of conditions etc
-        trials = data.TrialHandler2(
-            name='trials',
+        bip_trials1 = data.TrialHandler2(
+            name='bip_trials1',
             nReps=10.0, 
             method='random', 
             extraInfo=expInfo, 
@@ -889,34 +962,46 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             seed=None, 
             isTrials=False, 
         )
-        thisExp.addLoop(trials)  # add the loop to the experiment
-        thisTrial = trials.trialList[0]  # so we can initialise stimuli with some values
-        # abbreviate parameter names if possible (e.g. rgb = thisTrial.rgb)
-        if thisTrial != None:
-            for paramName in thisTrial:
-                globals()[paramName] = thisTrial[paramName]
+        thisExp.addLoop(bip_trials1)  # add the loop to the experiment
+        thisBip_trials1 = bip_trials1.trialList[0]  # so we can initialise stimuli with some values
+        # abbreviate parameter names if possible (e.g. rgb = thisBip_trials1.rgb)
+        if thisBip_trials1 != None:
+            for paramName in thisBip_trials1:
+                globals()[paramName] = thisBip_trials1[paramName]
         
-        for thisTrial in trials:
-            trials.status = STARTED
-            if hasattr(thisTrial, 'status'):
-                thisTrial.status = STARTED
-            currentLoop = trials
+        for thisBip_trials1 in bip_trials1:
+            bip_trials1.status = STARTED
+            if hasattr(thisBip_trials1, 'status'):
+                thisBip_trials1.status = STARTED
+            currentLoop = bip_trials1
             thisExp.timestampOnFlip(win, 'thisRow.t', format=globalClock.format)
-            # abbreviate parameter names if possible (e.g. rgb = thisTrial.rgb)
-            if thisTrial != None:
-                for paramName in thisTrial:
-                    globals()[paramName] = thisTrial[paramName]
+            # abbreviate parameter names if possible (e.g. rgb = thisBip_trials1.rgb)
+            if thisBip_trials1 != None:
+                for paramName in thisBip_trials1:
+                    globals()[paramName] = thisBip_trials1[paramName]
             
             # --- Prepare to start Routine "Bips" ---
             # create an object to store info about Routine Bips
             Bips = data.Routine(
                 name='Bips',
-                components=[bip, fixation_bip],
+                components=[bip, fixation_bip, final_silence],
             )
             Bips.status = NOT_STARTED
             continueRoutine = True
             # update component parameters for each repeat
-            bip.setSound('../data/bip.wav', hamming=True)
+            # Run 'Begin Routine' code from code_bip
+            if currentLoop.name == "bip_trials1":
+                trigger = 45
+            else:
+                trigger = 150
+            
+            #port.write(bytes([int(trigger+currentLoop.thisN*3)]))
+            print(int(trigger+currentLoop.thisN*3))
+            
+            # When the loop reaches the end, there will be no silence added
+            if currentLoop.thisN == (currentLoop.nTotal - 1):
+                final_silence.status = FINISHED
+            bip.setSound('../data/processed_audios/bip.ogg', hamming=True)
             bip.setVolume(1.0, log=False)
             bip.seek(0)
             # store start times for Bips
@@ -944,7 +1029,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             Bips.forceEnded = routineForceEnded = not continueRoutine
             while continueRoutine:
                 # if trial has changed, end Routine now
-                if hasattr(thisTrial, 'status') and thisTrial.status == STOPPING:
+                if hasattr(thisBip_trials1, 'status') and thisBip_trials1.status == STOPPING:
                     continueRoutine = False
                 # get current time
                 t = routineTimer.getTime()
@@ -1002,7 +1087,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
                 # if fixation_bip is stopping this frame...
                 if fixation_bip.status == STARTED:
-                    if bool(bip.status == FINISHED):
+                    if bool(bip.status == FINISHED ):
                         # keep track of stop time/frame for later
                         fixation_bip.tStop = t  # not accounting for scr refresh
                         fixation_bip.tStopRefresh = tThisFlipGlobal  # on global time
@@ -1012,6 +1097,40 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                         # update status
                         fixation_bip.status = FINISHED
                         fixation_bip.setAutoDraw(False)
+                
+                # *final_silence* updates
+                
+                # if final_silence is starting this frame...
+                if final_silence.status == NOT_STARTED and bip.status==FINISHED:
+                    # keep track of start time/frame for later
+                    final_silence.frameNStart = frameN  # exact frame index
+                    final_silence.tStart = t  # local t and not account for scr refresh
+                    final_silence.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(final_silence, 'tStartRefresh')  # time at next scr refresh
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'final_silence.started')
+                    # update status
+                    final_silence.status = STARTED
+                    final_silence.setAutoDraw(True)
+                
+                # if final_silence is active this frame...
+                if final_silence.status == STARTED:
+                    # update params
+                    pass
+                
+                # if final_silence is stopping this frame...
+                if final_silence.status == STARTED:
+                    # is it time to stop? (based on global clock, using actual start)
+                    if tThisFlipGlobal > final_silence.tStartRefresh + 0.5-frameTolerance:
+                        # keep track of stop time/frame for later
+                        final_silence.tStop = t  # not accounting for scr refresh
+                        final_silence.tStopRefresh = tThisFlipGlobal  # on global time
+                        final_silence.frameNStop = frameN  # exact frame index
+                        # add timestamp to datafile
+                        thisExp.timestampOnFlip(win, 'final_silence.stopped')
+                        # update status
+                        final_silence.status = FINISHED
+                        final_silence.setAutoDraw(False)
                 
                 # check for quit (typically the Esc key)
                 if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -1055,14 +1174,17 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             Bips.tStop = globalClock.getTime(format='float')
             Bips.tStopRefresh = tThisFlipGlobal
             thisExp.addData('Bips.stopped', Bips.tStop)
+            # Run 'End Routine' code from code_bip
+            #port.write(bytes([int(trigger+currentLoop.thisN*3+1)]))
+            print(int(trigger+currentLoop.thisN*3+1))
             bip.pause()  # ensure sound has stopped at end of Routine
             # the Routine "Bips" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
-            # mark thisTrial as finished
-            if hasattr(thisTrial, 'status'):
-                thisTrial.status = FINISHED
+            # mark thisBip_trials1 as finished
+            if hasattr(thisBip_trials1, 'status'):
+                thisBip_trials1.status = FINISHED
             # if awaiting a pause, pause now
-            if trials.status == PAUSED:
+            if bip_trials1.status == PAUSED:
                 thisExp.status = PAUSED
                 pauseExperiment(
                     thisExp=thisExp, 
@@ -1070,64 +1192,33 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     timers=[globalClock], 
                 )
                 # once done pausing, restore running status
-                trials.status = STARTED
-        # completed 10.0 repeats of 'trials'
-        trials.status = FINISHED
+                bip_trials1.status = STARTED
+        # completed 10.0 repeats of 'bip_trials1'
+        bip_trials1.status = FINISHED
         
         
         # --- Prepare to start Routine "Listening" ---
         # create an object to store info about Routine Listening
         Listening = data.Routine(
             name='Listening',
-            components=[audiobook, fixation_listening],
+            components=[polygon],
         )
         Listening.status = NOT_STARTED
         continueRoutine = True
         # update component parameters for each repeat
-        # Run 'Begin Routine' code from audiobook_code
-        n_story = (condition_trials.thisN+1)*2-1
+        # Run 'Begin Routine' code from code_listening
+        # Set correct audio
+        audiobook = audios[condition_trials.thisN]
+        #port.write(bytes([int(100)]))
+        print(100)
+        # t is measured since routine start
+        thisExp.addData("time_audiobook_started",t)
+        audiobook.play()
         
-        # Define filepath and attended story
-        filter_condition = audiobook_combinations['condition_label']==condition_label
-        audiobooks_possible_combinations = audiobook_combinations[filter_condition]
-        filter_A = audiobooks_possible_combinations['number_story_A']==n_story
-        filter_B = audiobooks_possible_combinations['number_story_B']==n_story
-        selected_audiobook = audiobooks_possible_combinations[filter_A|filter_B]
-        audio_filepath = selected_audiobook['filename'].values[0]
-        attended = 'number_story_A' if target=='Left' else 'number_story_B'
-        attended_story = selected_audiobook[attended].values[0]
-           
-        # Add to log
-        thisExp.addData('audio_filepath', audio_filepath)
-        thisExp.addData('attended_story', attended_story)
         
-        # Define new variables
-        correct_answers = []
-        questions = []
-        answers_a = []
-        answers_b = []
-        answers_c = []
-        questionary = audiobook_questionary.iloc[attended_story-1]
-        for i in range(1, 4):
-            correct_answer = questionary[f'correct_answer{i}']
-            question = questionary[f'question{i}']
-            answer_a = questionary[f'answer{i}a']
-            answer_b = questionary[f'answer{i}b']
-            answer_c = questionary[f'answer{i}c']
-            correct_answers.append(correct_answer)
-            questions.append(question)
-            answers_a.append(answer_a)
-            answers_b.append(answer_b)
-            answers_c.append(answer_c)  
-            # Add to log
-            thisExp.addData(f'correct_answer{i}', correct_answer)
-            thisExp.addData(f'question{i}', question)
-            thisExp.addData(f'answer{i}a', answer_a)
-            thisExp.addData(f'answer{i}b', answer_b)
-            thisExp.addData(f'answer{i}c', answer_c)    
-        audiobook.setSound(audio_filepath, hamming=True)
-        audiobook.setVolume(1.0, log=False)
-        audiobook.seek(0)
+        
+        
+        
         # store start times for Listening
         Listening.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
         Listening.tStart = globalClock.getTime(format='float')
@@ -1161,66 +1252,37 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             tThisFlipGlobal = win.getFutureFlipTime(clock=None)
             frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
             # update/draw components on each frame
+            # Run 'Each Frame' code from code_listening
+            # When time exceed audiobook duration, end component
+            # t is measured since routine start
+            if t >= audiobook.duration:
+                continueRoutine = False
+                audiobook.stop() 
+                thisExp.addData("time_audiobook_finished",t)
             
-            # *audiobook* updates
             
-            # if audiobook is starting this frame...
-            if audiobook.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                
+                
+            
+            # *polygon* updates
+            
+            # if polygon is starting this frame...
+            if polygon.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
                 # keep track of start time/frame for later
-                audiobook.frameNStart = frameN  # exact frame index
-                audiobook.tStart = t  # local t and not account for scr refresh
-                audiobook.tStartRefresh = tThisFlipGlobal  # on global time
+                polygon.frameNStart = frameN  # exact frame index
+                polygon.tStart = t  # local t and not account for scr refresh
+                polygon.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(polygon, 'tStartRefresh')  # time at next scr refresh
                 # add timestamp to datafile
-                thisExp.addData('audiobook.started', tThisFlipGlobal)
+                thisExp.timestampOnFlip(win, 'polygon.started')
                 # update status
-                audiobook.status = STARTED
-                audiobook.play(when=win)  # sync with win flip
+                polygon.status = STARTED
+                polygon.setAutoDraw(True)
             
-            # if audiobook is stopping this frame...
-            if audiobook.status == STARTED:
-                if bool(False) or audiobook.isFinished:
-                    # keep track of stop time/frame for later
-                    audiobook.tStop = t  # not accounting for scr refresh
-                    audiobook.tStopRefresh = tThisFlipGlobal  # on global time
-                    audiobook.frameNStop = frameN  # exact frame index
-                    # add timestamp to datafile
-                    thisExp.timestampOnFlip(win, 'audiobook.stopped')
-                    # update status
-                    audiobook.status = FINISHED
-                    audiobook.stop()
-            
-            # *fixation_listening* updates
-            
-            # if fixation_listening is starting this frame...
-            if fixation_listening.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-                # keep track of start time/frame for later
-                fixation_listening.frameNStart = frameN  # exact frame index
-                fixation_listening.tStart = t  # local t and not account for scr refresh
-                fixation_listening.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(fixation_listening, 'tStartRefresh')  # time at next scr refresh
-                # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'fixation_listening.started')
-                # update status
-                fixation_listening.status = STARTED
-                fixation_listening.setAutoDraw(True)
-            
-            # if fixation_listening is active this frame...
-            if fixation_listening.status == STARTED:
+            # if polygon is active this frame...
+            if polygon.status == STARTED:
                 # update params
                 pass
-            
-            # if fixation_listening is stopping this frame...
-            if fixation_listening.status == STARTED:
-                if bool(audiobook.status == FINISHED):
-                    # keep track of stop time/frame for later
-                    fixation_listening.tStop = t  # not accounting for scr refresh
-                    fixation_listening.tStopRefresh = tThisFlipGlobal  # on global time
-                    fixation_listening.frameNStop = frameN  # exact frame index
-                    # add timestamp to datafile
-                    thisExp.timestampOnFlip(win, 'fixation_listening.stopped')
-                    # update status
-                    fixation_listening.status = FINISHED
-                    fixation_listening.setAutoDraw(False)
             
             # check for quit (typically the Esc key)
             if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -1264,13 +1326,18 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         Listening.tStop = globalClock.getTime(format='float')
         Listening.tStopRefresh = tThisFlipGlobal
         thisExp.addData('Listening.stopped', Listening.tStop)
-        audiobook.pause()  # ensure sound has stopped at end of Routine
+        # Run 'End Routine' code from code_listening
+        #port.write(bytes([int(105)]))
+        print(105)
+        
+        
+        
         # the Routine "Listening" was not non-slip safe, so reset the non-slip timer
         routineTimer.reset()
         
         # set up handler to look after randomisation of conditions etc
-        trials_2 = data.TrialHandler2(
-            name='trials_2',
+        bip_trials2 = data.TrialHandler2(
+            name='bip_trials2',
             nReps=10.0, 
             method='sequential', 
             extraInfo=expInfo, 
@@ -1279,34 +1346,46 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             seed=None, 
             isTrials=False, 
         )
-        thisExp.addLoop(trials_2)  # add the loop to the experiment
-        thisTrial_2 = trials_2.trialList[0]  # so we can initialise stimuli with some values
-        # abbreviate parameter names if possible (e.g. rgb = thisTrial_2.rgb)
-        if thisTrial_2 != None:
-            for paramName in thisTrial_2:
-                globals()[paramName] = thisTrial_2[paramName]
+        thisExp.addLoop(bip_trials2)  # add the loop to the experiment
+        thisBip_trials2 = bip_trials2.trialList[0]  # so we can initialise stimuli with some values
+        # abbreviate parameter names if possible (e.g. rgb = thisBip_trials2.rgb)
+        if thisBip_trials2 != None:
+            for paramName in thisBip_trials2:
+                globals()[paramName] = thisBip_trials2[paramName]
         
-        for thisTrial_2 in trials_2:
-            trials_2.status = STARTED
-            if hasattr(thisTrial_2, 'status'):
-                thisTrial_2.status = STARTED
-            currentLoop = trials_2
+        for thisBip_trials2 in bip_trials2:
+            bip_trials2.status = STARTED
+            if hasattr(thisBip_trials2, 'status'):
+                thisBip_trials2.status = STARTED
+            currentLoop = bip_trials2
             thisExp.timestampOnFlip(win, 'thisRow.t', format=globalClock.format)
-            # abbreviate parameter names if possible (e.g. rgb = thisTrial_2.rgb)
-            if thisTrial_2 != None:
-                for paramName in thisTrial_2:
-                    globals()[paramName] = thisTrial_2[paramName]
+            # abbreviate parameter names if possible (e.g. rgb = thisBip_trials2.rgb)
+            if thisBip_trials2 != None:
+                for paramName in thisBip_trials2:
+                    globals()[paramName] = thisBip_trials2[paramName]
             
             # --- Prepare to start Routine "Bips" ---
             # create an object to store info about Routine Bips
             Bips = data.Routine(
                 name='Bips',
-                components=[bip, fixation_bip],
+                components=[bip, fixation_bip, final_silence],
             )
             Bips.status = NOT_STARTED
             continueRoutine = True
             # update component parameters for each repeat
-            bip.setSound('../data/bip.wav', hamming=True)
+            # Run 'Begin Routine' code from code_bip
+            if currentLoop.name == "bip_trials1":
+                trigger = 45
+            else:
+                trigger = 150
+            
+            #port.write(bytes([int(trigger+currentLoop.thisN*3)]))
+            print(int(trigger+currentLoop.thisN*3))
+            
+            # When the loop reaches the end, there will be no silence added
+            if currentLoop.thisN == (currentLoop.nTotal - 1):
+                final_silence.status = FINISHED
+            bip.setSound('../data/processed_audios/bip.ogg', hamming=True)
             bip.setVolume(1.0, log=False)
             bip.seek(0)
             # store start times for Bips
@@ -1334,7 +1413,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             Bips.forceEnded = routineForceEnded = not continueRoutine
             while continueRoutine:
                 # if trial has changed, end Routine now
-                if hasattr(thisTrial_2, 'status') and thisTrial_2.status == STOPPING:
+                if hasattr(thisBip_trials2, 'status') and thisBip_trials2.status == STOPPING:
                     continueRoutine = False
                 # get current time
                 t = routineTimer.getTime()
@@ -1392,7 +1471,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
                 # if fixation_bip is stopping this frame...
                 if fixation_bip.status == STARTED:
-                    if bool(bip.status == FINISHED):
+                    if bool(bip.status == FINISHED ):
                         # keep track of stop time/frame for later
                         fixation_bip.tStop = t  # not accounting for scr refresh
                         fixation_bip.tStopRefresh = tThisFlipGlobal  # on global time
@@ -1402,6 +1481,40 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                         # update status
                         fixation_bip.status = FINISHED
                         fixation_bip.setAutoDraw(False)
+                
+                # *final_silence* updates
+                
+                # if final_silence is starting this frame...
+                if final_silence.status == NOT_STARTED and bip.status==FINISHED:
+                    # keep track of start time/frame for later
+                    final_silence.frameNStart = frameN  # exact frame index
+                    final_silence.tStart = t  # local t and not account for scr refresh
+                    final_silence.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(final_silence, 'tStartRefresh')  # time at next scr refresh
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'final_silence.started')
+                    # update status
+                    final_silence.status = STARTED
+                    final_silence.setAutoDraw(True)
+                
+                # if final_silence is active this frame...
+                if final_silence.status == STARTED:
+                    # update params
+                    pass
+                
+                # if final_silence is stopping this frame...
+                if final_silence.status == STARTED:
+                    # is it time to stop? (based on global clock, using actual start)
+                    if tThisFlipGlobal > final_silence.tStartRefresh + 0.5-frameTolerance:
+                        # keep track of stop time/frame for later
+                        final_silence.tStop = t  # not accounting for scr refresh
+                        final_silence.tStopRefresh = tThisFlipGlobal  # on global time
+                        final_silence.frameNStop = frameN  # exact frame index
+                        # add timestamp to datafile
+                        thisExp.timestampOnFlip(win, 'final_silence.stopped')
+                        # update status
+                        final_silence.status = FINISHED
+                        final_silence.setAutoDraw(False)
                 
                 # check for quit (typically the Esc key)
                 if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -1445,14 +1558,17 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             Bips.tStop = globalClock.getTime(format='float')
             Bips.tStopRefresh = tThisFlipGlobal
             thisExp.addData('Bips.stopped', Bips.tStop)
+            # Run 'End Routine' code from code_bip
+            #port.write(bytes([int(trigger+currentLoop.thisN*3+1)]))
+            print(int(trigger+currentLoop.thisN*3+1))
             bip.pause()  # ensure sound has stopped at end of Routine
             # the Routine "Bips" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
-            # mark thisTrial_2 as finished
-            if hasattr(thisTrial_2, 'status'):
-                thisTrial_2.status = FINISHED
+            # mark thisBip_trials2 as finished
+            if hasattr(thisBip_trials2, 'status'):
+                thisBip_trials2.status = FINISHED
             # if awaiting a pause, pause now
-            if trials_2.status == PAUSED:
+            if bip_trials2.status == PAUSED:
                 thisExp.status = PAUSED
                 pauseExperiment(
                     thisExp=thisExp, 
@@ -1460,10 +1576,132 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     timers=[globalClock], 
                 )
                 # once done pausing, restore running status
-                trials_2.status = STARTED
-        # completed 10.0 repeats of 'trials_2'
-        trials_2.status = FINISHED
+                bip_trials2.status = STARTED
+        # completed 10.0 repeats of 'bip_trials2'
+        bip_trials2.status = FINISHED
         
+        
+        # --- Prepare to start Routine "QuestionaryVariables" ---
+        # create an object to store info about Routine QuestionaryVariables
+        QuestionaryVariables = data.Routine(
+            name='QuestionaryVariables',
+            components=[],
+        )
+        QuestionaryVariables.status = NOT_STARTED
+        continueRoutine = True
+        # update component parameters for each repeat
+        # Run 'Begin Routine' code from code_questionary_2
+        attended_story_ = attended_stories[condition_trials.thisN]
+        audio_filepath_ = audio_filepaths[condition_trials.thisN]
+        questionary_ = questionaries[condition_trials.thisN]
+        
+        # Add to log
+        thisExp.addData('attended_story', attended_story_)
+        thisExp.addData('audio_filepath', audio_filepath_)
+        thisExp.addData('target', target)
+        
+        # Define new variables
+        correct_answers = []
+        questions = []
+        answers_a = []
+        answers_b = []
+        answers_c = []
+        for i in range(1, 4):
+            correct_answer = questionary_[f'correct_answer{i}']
+            question = questionary_[f'question{i}']
+            answer_a = questionary_[f'answer{i}a']
+            answer_b = questionary_[f'answer{i}b']
+            answer_c = questionary_[f'answer{i}c']
+            correct_answers.append(correct_answer)
+            questions.append(question)
+            answers_a.append(answer_a)
+            answers_b.append(answer_b)
+            answers_c.append(answer_c)  
+        
+            # Add to log
+            thisExp.addData(f'correct_answer{i}', correct_answer)
+            thisExp.addData(f'question{i}', question)
+            thisExp.addData(f'answer{i}a', answer_a)
+            thisExp.addData(f'answer{i}b', answer_b)
+            thisExp.addData(f'answer{i}c', answer_c)
+        # store start times for QuestionaryVariables
+        QuestionaryVariables.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
+        QuestionaryVariables.tStart = globalClock.getTime(format='float')
+        QuestionaryVariables.status = STARTED
+        thisExp.addData('QuestionaryVariables.started', QuestionaryVariables.tStart)
+        QuestionaryVariables.maxDuration = None
+        # keep track of which components have finished
+        QuestionaryVariablesComponents = QuestionaryVariables.components
+        for thisComponent in QuestionaryVariables.components:
+            thisComponent.tStart = None
+            thisComponent.tStop = None
+            thisComponent.tStartRefresh = None
+            thisComponent.tStopRefresh = None
+            if hasattr(thisComponent, 'status'):
+                thisComponent.status = NOT_STARTED
+        # reset timers
+        t = 0
+        _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+        frameN = -1
+        
+        # --- Run Routine "QuestionaryVariables" ---
+        thisExp.currentRoutine = QuestionaryVariables
+        QuestionaryVariables.forceEnded = routineForceEnded = not continueRoutine
+        while continueRoutine:
+            # if trial has changed, end Routine now
+            if hasattr(thisCondition_trial, 'status') and thisCondition_trial.status == STOPPING:
+                continueRoutine = False
+            # get current time
+            t = routineTimer.getTime()
+            tThisFlip = win.getFutureFlipTime(clock=routineTimer)
+            tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+            frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+            # update/draw components on each frame
+            
+            # check for quit (typically the Esc key)
+            if defaultKeyboard.getKeys(keyList=["escape"]):
+                thisExp.status = FINISHED
+            if thisExp.status == FINISHED or endExpNow:
+                endExperiment(thisExp, win=win)
+                return
+            # pause experiment here if requested
+            if thisExp.status == PAUSED:
+                pauseExperiment(
+                    thisExp=thisExp, 
+                    win=win, 
+                    timers=[routineTimer, globalClock], 
+                    currentRoutine=QuestionaryVariables,
+                )
+                # skip the frame we paused on
+                continue
+            
+            # has a Component requested the Routine to end?
+            if not continueRoutine:
+                QuestionaryVariables.forceEnded = routineForceEnded = True
+            # has the Routine been forcibly ended?
+            if QuestionaryVariables.forceEnded or routineForceEnded:
+                break
+            # has every Component finished?
+            continueRoutine = False
+            for thisComponent in QuestionaryVariables.components:
+                if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                    continueRoutine = True
+                    break  # at least one component has not yet finished
+            
+            # refresh the screen
+            if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+                win.flip()
+        
+        # --- Ending Routine "QuestionaryVariables" ---
+        for thisComponent in QuestionaryVariables.components:
+            if hasattr(thisComponent, "setAutoDraw"):
+                thisComponent.setAutoDraw(False)
+        # store stop times for QuestionaryVariables
+        QuestionaryVariables.tStop = globalClock.getTime(format='float')
+        QuestionaryVariables.tStopRefresh = tThisFlipGlobal
+        thisExp.addData('QuestionaryVariables.stopped', QuestionaryVariables.tStop)
+        # the Routine "QuestionaryVariables" was not non-slip safe, so reset the non-slip timer
+        routineTimer.reset()
         
         # set up handler to look after randomisation of conditions etc
         questions_trial = data.TrialHandler2(
@@ -1503,12 +1741,16 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             Questionary.status = NOT_STARTED
             continueRoutine = True
             # update component parameters for each repeat
-            # Run 'Begin Routine' code from code
+            # Run 'Begin Routine' code from code_questionary
             question = questions[questions_trial.thisRepN-1]
             correct_answer = correct_answers[questions_trial.thisRepN-1]
             answer_a = answers_a[questions_trial.thisRepN-1]
             answer_b = answers_b[questions_trial.thisRepN-1]
             answer_c = answers_c[questions_trial.thisRepN-1]
+            
+            #port.write(bytes([int(200+currentLoop.thisN*3)]))
+            print(int(200+currentLoop.thisN*3))
+            
             # create starting attributes for key_resp_questionary
             key_resp_questionary.keys = []
             key_resp_questionary.rt = []
@@ -1656,6 +1898,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             Questionary.tStop = globalClock.getTime(format='float')
             Questionary.tStopRefresh = tThisFlipGlobal
             thisExp.addData('Questionary.stopped', Questionary.tStop)
+            # Run 'End Routine' code from code_questionary
+            #port.write(bytes([int(200+1+currentLoop.thisN*3)]))
+            print(int(200+1+currentLoop.thisN*3))
             # check responses
             if key_resp_questionary.keys in ['', [], None]:  # No response was made
                 key_resp_questionary.keys = None
@@ -1712,6 +1957,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     GoodBye.status = NOT_STARTED
     continueRoutine = True
     # update component parameters for each repeat
+    # Run 'Begin Routine' code from code_bye
+    #port.write(bytes([int(230)])
+    print(230)
     # create starting attributes for final_key
     final_key.keys = []
     final_key.rt = []
@@ -1850,6 +2098,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     GoodBye.tStop = globalClock.getTime(format='float')
     GoodBye.tStopRefresh = tThisFlipGlobal
     thisExp.addData('GoodBye.stopped', GoodBye.tStop)
+    # Run 'End Routine' code from code_bye
+    #port.write(bytes([int(240)])
+    print(240)
     # check responses
     if final_key.keys in ['', [], None]:  # No response was made
         final_key.keys = None

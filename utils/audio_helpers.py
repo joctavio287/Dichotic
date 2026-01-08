@@ -1,3 +1,7 @@
+"""
+This module provides helper functions for audio processing tasks such as reading,
+saving, resampling, plotting audio profiles, and manipulating audio files.
+"""
 from pathlib import Path
 from typing import Union
 from gtts import gTTS
@@ -10,10 +14,12 @@ from pydub.generators import Sine
 from pydub import AudioSegment
 from scipy.io import wavfile
 from scipy import signal
-import matplotlib
-matplotlib.use('Agg')  # Use non-interactive backend for server environments
 import matplotlib.pyplot as plt
+import matplotlib
 import ffmpeg
+
+matplotlib.use('Agg')  # Use non-interactive backend for server environments
+random.seed(42)
 
 def read_wav(
     file_path: Union[str, Path],
@@ -447,8 +453,10 @@ def scale_audio_to_relative_db(
         print("Warning: one of the audio signals has zero energy. Returning original audio.")
 
     # If target_db = 10 * log10(E_target / E_reference), then E_target / E_reference = 10^(target_db / 10)
+    # If target_db_diff = 0, then E_target = E_reference
+
     # Calculate the target energy
-    required_ratio = 10 ** (target_db_diff / 10)
+    required_ratio = 10 ** (target_db_diff / 10) 
     target_energy = reference_energy * required_ratio
     
     # Calculate the scaling factor for Amplitude
@@ -470,55 +478,60 @@ def scale_audio_to_relative_db(
     save_wav(file_path=audio_to_scale_path, sample_rate=sample_rate, data=final_tgt)
     save_wav(file_path=reference_audio_path, sample_rate=sample_rate_ref, data=final_ref)
 
-def add_bips(
-    input_file: Union[str, Path], 
-    output_file: Union[str, Path], 
-    num_bips: int = 5, 
-    duration: float = .5,
-    bip_frequency: int = 1000
-) -> Union[str, Path]:
+def create_bip(
+    output_file: Union[str, Path],
+    bip_freq: int = 1000,
+    bip_dur: int = 500,
+    silence_sides_dur: int = 500,
+    bip_vol: int = -20,
+    number_of_bips: int = 1,
+    sample_rate: int = 48000
+) -> None:
     """
-    Adds bips (beeps) at the beginning and end of an audio file.
+    Create a bip sound for events and save it as a wav file.
 
     Parameters
     ----------
-    input_file : Union[str, Path]
-        Path to the input audio file.
-    output_file : Union[str, Path]
-        Path to save the output audio file with bips.
-    num_bips : int, optional
-        Number of bips to add at the beginning and end, by default 5
-    duration : float, optional
-        Duration of each bip in seconds, by default .5
-    bip_frequency : int, optional
-        Frequency of the bip sound in Hz, by default 1000
+    output_dir : Path
+        Directory to save the bip sound.
+    bip_freq : int
+        Frequency of the bip sound in Hz.
+    bip_dur : int
+        Duration of each bip in milliseconds.
+    bip_vol : int
+        Volume of the bip sound in dB.
+    number_of_bips : int
+        Number of bips to create.
+    sample_rate : int
+        Sample rate of the bip sound in Hz.
 
     Returns
     -------
-    Union[str, Path]
-        Path to the output audio file with bips.
+        None
     """
-
-    sample_rate = get_sample_rate(input_file)
-    bip_segment = AudioSegment.silent(
-        duration=duration * 1000, # duration in milliseconds
-        frame_rate=sample_rate
+    bip_tone = (
+        Sine(bip_freq)
+        .to_audio_segment(duration=bip_dur, volume=bip_vol)
+        .set_frame_rate(sample_rate)
     )
-
-    # Add bips (sounds like an alarm) at the beginning and end
-    for _ in range(num_bips):
-        bip_segment += Sine(bip_frequency).to_audio_segment(duration=duration * 1000, volume=-20) 
-        bip_segment += AudioSegment.silent(duration=duration * 1000)  # Silence between bips
+    if silence_sides_dur > 0:
+        silence = AudioSegment.silent(
+            duration=silence_sides_dur, frame_rate=sample_rate
+        )
+        bip_segment = silence + bip_tone + silence
+        if number_of_bips > 1:
+            for _ in range(number_of_bips - 1):
+                bip_segment += bip_tone + silence
+    else:
+        bip_segment = bip_tone
+        if number_of_bips > 1:
+            for _ in range(number_of_bips - 1):
+                bip_segment += bip_tone
     
-    # Load the original audio file
-    original_audio = AudioSegment.from_wav(input_file)
-
-    # Concatenate the original audio with bips at the beginning and end
-    new_audio = bip_segment + original_audio + bip_segment
-
-    # Export the new audio file
-    new_audio.export(output_file, format='wav')
-    return output_file
+    bip_segment = bip_segment.set_frame_rate(sample_rate)
+    bip_segment.export(
+        output_file, format='wav'
+    )
 
 def vocal_isolation(
     input_wav: Union[str, Path],
@@ -910,3 +923,88 @@ def create_attention_track(
         return n_probes//2, track_l, track_r, onsets_left, onsets_right
     else:
         return n_probes//2, track_l, track_r
+    
+def _ffmpeg_has_encoder(encoder_name: str) -> bool:
+    """Return True if `ffmpeg -encoders` lists encoder_name."""
+    try:
+        p = subprocess.run(
+            ["ffmpeg", "-hide_banner", "-encoders"],
+            check=False,
+            capture_output=True,
+            text=True
+        )
+        out = (p.stdout or "") + "\n" + (p.stderr or "")
+        return encoder_name in out
+    except Exception:
+        # If ffmpeg isn't callable, let the actual encode step raise a clear error.
+        return False
+
+def wav_to_ogg(
+    input_wav: Union[str, Path],
+    output_ogg: Union[str, Path],
+    bitrate: str = "192k",
+    codec:str = "libopus", # libvorbis
+    sample_rate_target: int = 48000
+) -> None:
+    """
+    Converts a WAV file to OGG format using ffmpeg.
+    
+    Parameters
+    ----------
+        input_wav : Union[str, Path]
+            Path to the input WAV file.
+        output_ogg : Union[str, Path]
+            Path to save the output OGG file.
+        bitrate : str
+            Bitrate for the OGG file (e.g., "192k").
+        sample_rate_target : int
+            Target sample rate for the output OGG file (e.g., 48000).
+    
+    Returns
+    -------
+        None
+    """
+    if sample_rate_target == 44100:
+        sample_rate_target = 48000
+        print("Warning: OGG files should use 48kHz sample rate. Overriding to 48000Hz.")
+    # Prefer libvorbis if present, otherwise use native vorbis (experimental in some builds)
+    if codec == "libopus" and not _ffmpeg_has_encoder("libopus"):
+        if _ffmpeg_has_encoder("libvorbis"):
+            print("Warning: ffmpeg encoder 'libopus' not available. Falling back to 'libvorbis'.")
+            codec = "libvorbis"
+        elif _ffmpeg_has_encoder("vorbis"):
+            print("Warning: ffmpeg encoder 'libopus' not available. Falling back to native 'vorbis' (experimental).")
+            codec = "vorbis"
+        else:
+            raise RuntimeError(
+                "No suitable OGG encoder found (tried libopus, libvorbis, vorbis). " \
+                "Install a fuller ffmpeg build.")
+    output_kwargs = dict(
+        acodec=codec,
+        audio_bitrate=bitrate,
+        format="ogg",
+        ar=sample_rate_target,
+        ac=2,
+    )
+    # Native 'vorbis' may be marked experimental -> requires: -strict -2
+    if codec == "vorbis":
+        output_kwargs["strict"] = "-2"
+    stream = (
+        ffmpeg
+        .input(str(input_wav))
+        .output(
+            str(output_ogg),
+            **output_kwargs
+        )
+        .overwrite_output()
+    )
+    try:
+        stream.run(quiet=True, capture_stdout=True, capture_stderr=True)
+    except ffmpeg.Error as e:
+        stderr = b""
+        try:
+            stderr = e.stderr or b""
+        except AttributeError:
+            pass
+        msg = stderr.decode('utf8', errors='replace').strip()
+        raise RuntimeError(f"ffmpeg failed while encoding {input_wav.name} -> {output_ogg.name}\n{msg}") from e

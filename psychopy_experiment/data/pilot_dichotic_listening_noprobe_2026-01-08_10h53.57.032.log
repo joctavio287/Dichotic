@@ -1,0 +1,265 @@
+2.2522 	DEBUG 	Fullscreen settings ignored as running in pilot mode.
+2.2527 	INFO 	Loaded monitor calibration from ['2025_12_16 10:09']
+2.4076 	INFO 	Using renderer 'NVIDIA GeForce RTX 5070 Ti/PCIe/SSE2' for graphics
+2.4076 	INFO 	OpenGL version supported by driver is 4..
+2.4158 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x00000289812F0A30>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x00000289812F09D0>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0, 0, 0]), colorSpace='rgb', depthBits=8, fullscr=False, gamma=None, gammaErrorPolicy='raise', infoMsg=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x00000289813A64D0>, multiSample=False, name='window1', numSamples=2, pos=[np.float64(560.0), np.float64(240.0)], screen=0, size=array([800, 600]), stencilBits=0, stereo=False, title='PsychoPy', units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+2.4158 	EXP 	window1: backgroundImage = ''
+2.4158 	EXP 	window1: backgroundFit = 'none'
+2.4260 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+2.4327 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+2.4393 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+2.4451 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+2.4514 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+2.4573 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+2.4631 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+2.4688 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+2.4748 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+2.4807 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+2.4869 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+2.4928 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+2.4987 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+2.5047 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+2.5107 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+2.5166 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+2.5225 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+2.5286 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+2.5346 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+2.5403 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+2.5405 	DEBUG 	Uploading Texture Font fontname to graphics card
+2.5419 	DEBUG 	Upload of Texture Font fontname complete
+2.5503 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+2.5564 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+2.5624 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+2.5625 	DEBUG 	Uploading Texture Font fontname to graphics card
+2.5629 	DEBUG 	Upload of Texture Font fontname complete
+2.5638 	EXP 	window1: Attempting to measure frame rate of screen (0) ...
+2.5638 	EXP 	window1: recordFrameIntervals = False
+2.7262 	EXP 	window1: recordFrameIntervals = True
+2.9100 	EXP 	Screen (0) actual frame rate measured at 59.85Hz
+2.9100 	EXP 	window1: recordFrameIntervals = False
+2.9182 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+2.9243 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+2.9304 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+2.9366 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+2.9429 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+2.9490 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+2.9550 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+2.9613 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+2.9675 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+2.9738 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+2.9799 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+2.9801 	DEBUG 	Uploading Texture Font fontname to graphics card
+2.9804 	DEBUG 	Upload of Texture Font fontname complete
+3.2344 	INFO 	keyboard.Keyboard is using ptb backend.
+3.2344 	EXP 	dichotic_listening_noprobe: status = STARTED
+3.3657 	INFO 	Loaded psychtoolbox audio version 3.0.19.696976569
+3.3852 	WARNING 	No default speaker specified in Preferences / Hardware, using first speaker found: Speakers (Realtek(R) Audio)
+3.3852 	DEBUG 	Found speaker device: Speakers (Realtek(R) Audio) (2.0)
+3.4480 	INFO 	Created stream for speaker device: Speakers (Realtek(R) Audio) (2.0)
+3.4489 	EXP 	: sampleRate = 48000
+3.4489 	EXP 	: channels = None
+3.4507 	EXP 	: sampleRate = 48000
+3.8894 	WARNING 	No default speaker specified in Preferences / Hardware, using first speaker found: Speakers (Realtek(R) Audio)
+3.8894 	DEBUG 	Found speaker device: Speakers (Realtek(R) Audio) (2.0)
+3.8925 	INFO 	Created stream for speaker device: Speakers (Realtek(R) Audio) (2.0)
+3.8934 	EXP 	: sampleRate = 48000
+3.8934 	EXP 	: channels = None
+3.8947 	EXP 	: sampleRate = 48000
+4.3291 	WARNING 	No default speaker specified in Preferences / Hardware, using first speaker found: Speakers (Realtek(R) Audio)
+4.3291 	DEBUG 	Found speaker device: Speakers (Realtek(R) Audio) (2.0)
+4.3324 	INFO 	Created stream for speaker device: Speakers (Realtek(R) Audio) (2.0)
+4.3332 	EXP 	: sampleRate = 48000
+4.3332 	EXP 	: channels = None
+4.3345 	EXP 	: sampleRate = 48000
+4.7812 	WARNING 	No default speaker specified in Preferences / Hardware, using first speaker found: Speakers (Realtek(R) Audio)
+4.7812 	DEBUG 	Found speaker device: Speakers (Realtek(R) Audio) (2.0)
+4.7844 	INFO 	Created stream for speaker device: Speakers (Realtek(R) Audio) (2.0)
+4.7852 	EXP 	: sampleRate = 48000
+4.7853 	EXP 	: channels = None
+4.7865 	EXP 	: sampleRate = 48000
+5.2249 	WARNING 	No default speaker specified in Preferences / Hardware, using first speaker found: Speakers (Realtek(R) Audio)
+5.2249 	DEBUG 	Found speaker device: Speakers (Realtek(R) Audio) (2.0)
+5.2281 	INFO 	Created stream for speaker device: Speakers (Realtek(R) Audio) (2.0)
+5.2289 	EXP 	: sampleRate = 48000
+5.2289 	EXP 	: channels = None
+5.2301 	EXP 	: sampleRate = 48000
+5.6696 	EXP 	Created text_instructions = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text_instructions', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+5.6700 	EXP 	Created text_prompt = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text_prompt', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+5.6748 	WARNING 	No default speaker specified in Preferences / Hardware, using first speaker found: Speakers (Realtek(R) Audio)
+5.6749 	DEBUG 	Found speaker device: Speakers (Realtek(R) Audio) (2.0)
+5.6779 	INFO 	Created stream for speaker device: Speakers (Realtek(R) Audio) (2.0)
+5.6787 	EXP 	bip: sampleRate = 48000
+5.6788 	EXP 	bip: channels = None
+5.6819 	DEBUG 	Converted audio clip from mono to stereo
+5.6835 	EXP 	Sound bip set volume 1.000
+5.6851 	EXP 	Created fixation_bip = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-2.0, draggable=False, fillColor=array([1, 1, 1]), fillColorSpace='rgb', fillRGB=array([1, 1, 1]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1, 1, 1]), lineWidth=1.0, name='fixation_bip', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([0.1, 0.1]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+5.6859 	EXP 	Created final_silence = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-3.0, draggable=False, fillColor=array([1, 1, 1]), fillColorSpace='rgb', fillRGB=array([1, 1, 1]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1, 1, 1]), lineWidth=1.0, name='final_silence', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([0.1, 0.1]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+5.6868 	EXP 	Created polygon = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-1.0, draggable=False, fillColor=array([1, 1, 1]), fillColorSpace='rgb', fillRGB=array([1, 1, 1]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1, 1, 1]), lineWidth=1.0, name='polygon', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([0.1, 0.1]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+5.6914 	WARNING 	No default speaker specified in Preferences / Hardware, using first speaker found: Speakers (Realtek(R) Audio)
+5.6914 	DEBUG 	Found speaker device: Speakers (Realtek(R) Audio) (2.0)
+5.6942 	INFO 	Created stream for speaker device: Speakers (Realtek(R) Audio) (2.0)
+5.6949 	EXP 	bip: sampleRate = 48000
+5.6949 	EXP 	bip: channels = None
+5.6982 	DEBUG 	Converted audio clip from mono to stereo
+5.6998 	EXP 	Sound bip set volume 1.000
+5.7009 	EXP 	Created fixation_bip = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-2.0, draggable=False, fillColor=array([1, 1, 1]), fillColorSpace='rgb', fillRGB=array([1, 1, 1]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1, 1, 1]), lineWidth=1.0, name='fixation_bip', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([0.1, 0.1]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+5.7017 	EXP 	Created final_silence = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-3.0, draggable=False, fillColor=array([1, 1, 1]), fillColorSpace='rgb', fillRGB=array([1, 1, 1]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1, 1, 1]), lineWidth=1.0, name='final_silence', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([0.1, 0.1]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+5.7020 	EXP 	Created questionary_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='questionary_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+5.7207 	EXP 	Created final_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.05), italic=False, languageStyle='LTR', name='final_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+2.0078 	INFO 	Keyboard events cleared
+2.0077 	EXP 	text_instructions: autoDraw = True
+2.6076 	DATA 	Mouse: Left button down, pos=(341,362)
+2.7074 	DATA 	Mouse:  Left button up, pos=(341,362)
+3.7432 	EXP 	Device response: <KeyPress from None: t=3.738103099982254, value=space, duration=None>
+3.7452 	DEBUG 	Read csv file with pandas: conditions.csv
+3.7458 	DEBUG 	Clearing unnamed columns from conditions.csv
+3.7462 	EXP 	Imported conditions.csv as conditions, 5 conditions, 8 params
+3.7464 	EXP 	New trial (rep=0, index=0): <Trial 0 (0 in rep 0) data={'story_a_side': 'left', 'story_b_side': 'right', 'story_a_voice': 'M', 'story_b_voice': 'F', 'condition_label': 'FR_ML', 'ordered': np.True_, 'target': 'Right', 'target_label': 'B', 'thisN': 0, 'thisTrialN': 0, 'thisRepN': 0}>
+3.7516 	DATA 	Keypress: space
+3.7561 	INFO 	Keyboard events cleared
+3.7560 	EXP 	text_instructions: autoDraw = False
+3.7560 	EXP 	text_prompt: height = np.float64(0.05)
+3.7560 	EXP 	text_prompt: height = np.float64(0.05)
+3.7560 	EXP 	text_prompt: height = np.float64(0.05)
+3.7560 	EXP 	text_prompt: text = 'Presta atención a la historia del lado DERECHO (>>>).\n\n\nApretá ESPACIO para continuar...'
+3.7560 	EXP 	text_prompt: autoDraw = True
+3.8417 	EXP 	Device response: <KeyPress from None: t=3.738103099982254, value=space, duration=0.09596329997293651>
+4.2402 	EXP 	Device response: <KeyPress from None: t=4.226066799950786, value=space, duration=None>
+4.2404 	EXP 	New trial (rep=0, index=0): <Trial 0 (0 in rep 0) data={'thisN': 0, 'thisTrialN': 0, 'thisRepN': 0}>
+4.2412 	EXP 	bip: sampleRate = 48000
+4.2420 	EXP 	Sound bip reached end of file
+4.2557 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+4.2428 	DATA 	Keypress: space
+4.2560 	EXP 	text_prompt: autoDraw = False
+4.2560 	EXP 	fixation_bip: autoDraw = True
+4.3074 	EXP 	Device response: <KeyPress from None: t=4.226066799950786, value=space, duration=0.07199009996838868>
+4.7619 	EXP 	Sound bip reached end of file
+4.7735 	EXP 	Sound bip reached end of file
+4.7894 	EXP 	fixation_bip: autoDraw = False
+4.7894 	EXP 	final_silence: autoDraw = True
+5.2740 	EXP 	New trial (rep=1, index=0): <Trial 1 (0 in rep 1) data={'thisN': 1, 'thisTrialN': 0, 'thisRepN': 1}>
+5.2747 	EXP 	bip: sampleRate = 48000
+5.2754 	EXP 	Sound bip reached end of file
+5.2895 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+5.2892 	EXP 	final_silence: autoDraw = False
+5.2892 	EXP 	fixation_bip: autoDraw = False
+5.2892 	EXP 	final_silence: autoDraw = False
+5.2892 	EXP 	fixation_bip: autoDraw = True
+5.7905 	EXP 	Sound bip reached end of file
+5.8069 	EXP 	Sound bip reached end of file
+5.8226 	EXP 	fixation_bip: autoDraw = False
+5.8226 	EXP 	final_silence: autoDraw = True
+6.3073 	EXP 	New trial (rep=2, index=0): <Trial 2 (0 in rep 2) data={'thisN': 2, 'thisTrialN': 0, 'thisRepN': 2}>
+6.3080 	EXP 	bip: sampleRate = 48000
+6.3086 	EXP 	Sound bip reached end of file
+6.3227 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+6.3227 	EXP 	final_silence: autoDraw = False
+6.3227 	EXP 	fixation_bip: autoDraw = False
+6.3227 	EXP 	final_silence: autoDraw = False
+6.3227 	EXP 	fixation_bip: autoDraw = True
+6.8242 	EXP 	Sound bip reached end of file
+6.8406 	EXP 	Sound bip reached end of file
+6.8565 	EXP 	fixation_bip: autoDraw = False
+6.8565 	EXP 	final_silence: autoDraw = True
+7.3406 	EXP 	New trial (rep=3, index=0): <Trial 3 (0 in rep 3) data={'thisN': 3, 'thisTrialN': 0, 'thisRepN': 3}>
+7.3414 	EXP 	bip: sampleRate = 48000
+7.3420 	EXP 	Sound bip reached end of file
+7.3560 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+7.3558 	EXP 	final_silence: autoDraw = False
+7.3558 	EXP 	fixation_bip: autoDraw = False
+7.3558 	EXP 	final_silence: autoDraw = False
+7.3558 	EXP 	fixation_bip: autoDraw = True
+7.8573 	EXP 	Sound bip reached end of file
+7.8739 	EXP 	Sound bip reached end of file
+7.8895 	EXP 	fixation_bip: autoDraw = False
+7.8895 	EXP 	final_silence: autoDraw = True
+8.3751 	EXP 	New trial (rep=4, index=0): <Trial 4 (0 in rep 4) data={'thisN': 4, 'thisTrialN': 0, 'thisRepN': 4}>
+8.3758 	EXP 	bip: sampleRate = 48000
+8.3763 	EXP 	Sound bip reached end of file
+8.3907 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+8.3904 	EXP 	final_silence: autoDraw = False
+8.3904 	EXP 	fixation_bip: autoDraw = False
+8.3904 	EXP 	final_silence: autoDraw = False
+8.3904 	EXP 	fixation_bip: autoDraw = True
+8.8889 	EXP 	Sound bip reached end of file
+8.9065 	EXP 	Sound bip reached end of file
+8.9227 	EXP 	fixation_bip: autoDraw = False
+8.9227 	EXP 	final_silence: autoDraw = True
+9.4075 	EXP 	New trial (rep=5, index=0): <Trial 5 (0 in rep 5) data={'thisN': 5, 'thisTrialN': 0, 'thisRepN': 5}>
+9.4082 	EXP 	bip: sampleRate = 48000
+9.4088 	EXP 	Sound bip reached end of file
+9.4226 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+9.4229 	EXP 	final_silence: autoDraw = False
+9.4229 	EXP 	fixation_bip: autoDraw = False
+9.4229 	EXP 	final_silence: autoDraw = False
+9.4229 	EXP 	fixation_bip: autoDraw = True
+9.9242 	EXP 	Sound bip reached end of file
+9.9409 	EXP 	Sound bip reached end of file
+9.9558 	EXP 	fixation_bip: autoDraw = False
+9.9558 	EXP 	final_silence: autoDraw = True
+10.4410 	EXP 	New trial (rep=6, index=0): <Trial 6 (0 in rep 6) data={'thisN': 6, 'thisTrialN': 0, 'thisRepN': 6}>
+10.4417 	EXP 	bip: sampleRate = 48000
+10.4423 	EXP 	Sound bip reached end of file
+10.4565 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+10.4564 	EXP 	final_silence: autoDraw = False
+10.4564 	EXP 	fixation_bip: autoDraw = False
+10.4564 	EXP 	final_silence: autoDraw = False
+10.4564 	EXP 	fixation_bip: autoDraw = True
+10.9589 	EXP 	Sound bip reached end of file
+10.9734 	EXP 	Sound bip reached end of file
+10.9894 	EXP 	fixation_bip: autoDraw = False
+10.9894 	EXP 	final_silence: autoDraw = True
+11.4739 	EXP 	New trial (rep=7, index=0): <Trial 7 (0 in rep 7) data={'thisN': 7, 'thisTrialN': 0, 'thisRepN': 7}>
+11.4747 	EXP 	bip: sampleRate = 48000
+11.4752 	EXP 	Sound bip reached end of file
+11.4894 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+11.4900 	EXP 	final_silence: autoDraw = False
+11.4900 	EXP 	fixation_bip: autoDraw = False
+11.4900 	EXP 	final_silence: autoDraw = False
+11.4900 	EXP 	fixation_bip: autoDraw = True
+11.9905 	EXP 	Sound bip reached end of file
+12.0069 	EXP 	Sound bip reached end of file
+12.0227 	EXP 	fixation_bip: autoDraw = False
+12.0227 	EXP 	final_silence: autoDraw = True
+12.5071 	EXP 	New trial (rep=8, index=0): <Trial 8 (0 in rep 8) data={'thisN': 8, 'thisTrialN': 0, 'thisRepN': 8}>
+12.5078 	EXP 	bip: sampleRate = 48000
+12.5084 	EXP 	Sound bip reached end of file
+12.5227 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+12.5227 	EXP 	final_silence: autoDraw = False
+12.5227 	EXP 	fixation_bip: autoDraw = False
+12.5227 	EXP 	final_silence: autoDraw = False
+12.5227 	EXP 	fixation_bip: autoDraw = True
+13.0204 	EXP 	Sound bip reached end of file
+13.0238 	EXP 	Sound bip reached end of file
+13.0393 	EXP 	fixation_bip: autoDraw = False
+13.0393 	EXP 	final_silence: autoDraw = True
+13.5243 	EXP 	New trial (rep=9, index=0): <Trial 9 (0 in rep 9) data={'thisN': 9, 'thisTrialN': 0, 'thisRepN': 9}>
+13.5250 	EXP 	bip: sampleRate = 48000
+13.5256 	EXP 	Sound bip reached end of file
+13.5397 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+13.5402 	EXP 	final_silence: autoDraw = False
+13.5402 	EXP 	fixation_bip: autoDraw = False
+13.5402 	EXP 	final_silence: autoDraw = False
+13.5402 	EXP 	fixation_bip: autoDraw = True
+14.0391 	EXP 	Sound bip reached end of file
+14.0570 	EXP 	Sound bip reached end of file
+14.0732 	EXP 	fixation_bip: autoDraw = False
+14.0732 	EXP 	final_silence: autoDraw = True
+14.5583 	EXP 	Sound  reached end of file
+14.5583 	EXP 	Playing sound  on speaker Speakers (Realtek(R) Audio)
+14.5731 	EXP 	final_silence: autoDraw = False
+14.5731 	EXP 	fixation_bip: autoDraw = False
+14.5731 	EXP 	final_silence: autoDraw = False
+14.5731 	EXP 	polygon: autoDraw = True
+26.8756 	DATA 	Mouse: Left button down, pos=(376,426)
+27.0084 	DATA 	Mouse:  Left button up, pos=(376,426)
+27.9416 	EXP 	Device response: <KeyPress from None: t=27.930155999958515, value=escape, duration=None>
+27.9420 	DATA 	Keypress: escape
+28.1245 	EXP 	Device response: <KeyPress from None: t=27.930155999958515, value=escape, duration=0.18397470004856586>
+28.1245 	EXP 	dichotic_listening_noprobe: status = STOPPED
+28.1398 	EXP 	polygon: autoDraw = False
+28.1408 	EXP 	dichotic_listening_noprobe: status = STOPPED
+28.1446 	INFO 	saved data to 'C:\\Users\\jocta\\repos\\Dichotic\\psychopy_experiment\\data\\pilot_dichotic_listening_noprobe_2026-01-08_10h53.57.032.csv'
+28.1452 	INFO 	saved data to C:\Users\jocta\repos\Dichotic\psychopy_experiment\data\pilot_dichotic_listening_noprobe_2026-01-08_10h53.57.032.psydat
+28.2431 	DEBUG 	Saving data for dichotic_listening_noprobe ExperimentHandler
+28.2443 	WARNING 	Stopping key buffers but this could be dangerous ifother keyboards rely on the same.
