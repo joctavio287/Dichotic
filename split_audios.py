@@ -41,7 +41,7 @@ PROBE_DURATION = .1  # seconds
 ATTACK_THRESHOLD = 0.1 # Attack detection in probe profile as percentage of max amplitude
 PROBE_TYPE = 1000 # "va"
 SCRAMBLED_PROBE = False
-OGG_BITRATE = '320k' # standard '64k', '96k', '128k', '160k', '192k', '256k', '320k'
+OGG_BITRATE = '192k' # standard '64k', '96k', '128k', '160k', '192k', '256k', '320k'
 
 BIP_FREQ = 1000  # Hz
 BIP_DUR = 500   # ms
@@ -133,15 +133,19 @@ for j, (audio_f, audio_m) in enumerate(combinations):
     number_m, audio_name_m = int(audio_m.stem.split('_')[0]), audio_m.stem.split('_')[1]
 
     # The code names are based on the original numbering of the stories 
-    stereo_name1 = f'{number_f:02d}_{number_m:02d}_FL_MR' 
-    stereo_name2 = f'{number_f:02d}_{number_m:02d}_FR_ML'
+    stereo_name1 = f'F{number_f:02d}_M{number_m:02d}' 
+    stereo_name2 = f'M{number_m:02d}_F{number_f:02d}' 
+    
     # Examples:
-    # 01_02_FL_MR.wav --> female story 1 on left ear, male story 2 on right ear
-    # 01_02_FR_ML.wav --> female story 1 on right ear, male story 2 on left ear
-    # 02_01_FL_MR.wav --> female story 2 on left ear, male story 1 on right ear
-    # 02_01_FR_ML.wav --> female story 2 on right ear, male story 1 on left ear
+    # First iteration: (number_f, number_m) = (1, 2)
+    # F01_M02.wav --> female story 1 on left ear, male story 2 on right ear
+    # M02_F01.wav --> male story 2 on left ear, female story 1 on right ear
+    # Second iteration: (number_f, number_m) = (2, 1)
+    # F02_M01.wav --> female story 2 on left ear, male story 1 on right ear
+    # M01_F02.wav --> male story 1 on left ear, female story 2 on right ear
+    # ...
 
-    # Convert to wav
+    # Convert to wav to operate on higher quality audio --> then downsample if needed
     convert_to_wav(audio_f, INTERMEDIATE_AUDIO_DIR / audio_f.with_suffix('.wav').name, exists_ok=True, sample_rate_target=COMMON_SAMPLE_RATE)
     convert_to_wav(audio_m, INTERMEDIATE_AUDIO_DIR / audio_m.with_suffix('.wav').name, exists_ok=True, sample_rate_target=COMMON_SAMPLE_RATE)
     audio_f = INTERMEDIATE_AUDIO_DIR / audio_f.with_suffix('.wav').name
@@ -185,9 +189,11 @@ for j, (audio_f, audio_m) in enumerate(combinations):
 
     # For each combination, first create stereo audio without probes 
     for i, stereo_name in enumerate([stereo_name1, stereo_name2]):
+        audio_left = audio_f if i==0 else audio_m
+        audio_right = audio_m if i==0 else audio_f
         combine_audio_stereo(
-            audio_left=audio_f,
-            audio_right=audio_m,
+            audio_left=audio_left,
+            audio_right=audio_right,
             output_file=no_probe_path / f'{stereo_name}_no_probe.wav'
         )
 
@@ -252,19 +258,30 @@ for j, (audio_f, audio_m) in enumerate(combinations):
         )
     
         # Save combinations
+        story_right = stereo_name.split('_')[1][1:]
+        story_left = stereo_name.split('_')[0][1:]
+        voice_right = stereo_name.split('_')[1][0]
+        voice_left = stereo_name.split('_')[0][0]
+        ordered = story_left < story_right
+        condition_label = f'O_{voice_left}_{voice_right}' if ordered else f'NO_{voice_left}_{voice_right}'
+        
         df_audio_combinations.append({
             'filename':str(Path("..")/save_path.with_suffix('.ogg')),
-            'condition_label': '_'.join(save_path.name.split('_')[2:4]),
-            'ordered': int(save_path.name.split('_')[0])<int(save_path.name.split('_')[1]),
-            'story_A': int(number_f),
-            'story_B': int(number_m)
+            'condition_label': condition_label,
+            'ordered': ordered,
+            'story_L': int(number_f),
+            'story_R': int(number_m),
+            'voice_L': voice_left,
+            'voice_R': voice_right,
         })
         df_audio_combinations_noprobes.append({
             'filename': str(Path("..")/ no_probe_path / f'{stereo_name}_no_probe.ogg'),
-            'condition_label': '_'.join(stereo_name.split('_')[2:4]),
-            'ordered': int(stereo_name.split('_')[0])<int(stereo_name.split('_')[1]),
-            'story_A': int(number_f),
-            'story_B': int(number_m)
+            'condition_label': condition_label,
+            'ordered': ordered,
+            'story_L': int(number_f),
+            'story_R': int(number_m),
+            'voice_L': voice_left,
+            'voice_R': voice_right
         })
     
 # Print summary

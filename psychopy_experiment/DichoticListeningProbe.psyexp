@@ -45,7 +45,7 @@
     <Param val="False" valType="bool" updates="None" name="elSimMode"/>
     <Param val="RIGHT_EYE" valType="str" updates="None" name="elTrackEyes"/>
     <Param val="PUPIL_CR_TRACKING" valType="str" updates="None" name="elTrackingMode"/>
-    <Param val="dichotic_listening_probe" valType="str" updates="None" name="expName"/>
+    <Param val="DichoticListeningProbe" valType="str" updates="None" name="expName"/>
     <Param val="" valType="str" updates="None" name="expVersion"/>
     <Param val="on Sync" valType="str" updates="None" name="exportHTML"/>
     <Param val="None" valType="str" updates="None" name="eyetracker"/>
@@ -100,8 +100,8 @@
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="audiobook = audios[condition_trials.thisN];&amp;#10;console.log(100);&amp;#10;psychoJS.experiment.addData(&quot;time_audiobook_started&quot;, t);&amp;#10;audiobook.play();&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="# Set correct audio&amp;#10;audiobook = audios[condition_trials.thisN]&amp;#10;#port.write(bytes([int(100)]))&amp;#10;print(100)&amp;#10;# t is measured since routine start&amp;#10;thisExp.addData(&quot;time_audiobook_started&quot;,t)&amp;#10;audiobook.play()&amp;#10;&amp;#10;&amp;#10;&amp;#10;&amp;#10;" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="psychoJS.experiment.addData(&quot;attended_story&quot;, attended_story);&amp;#10;psychoJS.experiment.addData(&quot;audio_filepath&quot;, audio_filepath);&amp;#10;psychoJS.experiment.addData(&quot;target_label&quot;, target_label);&amp;#10;psychoJS.experiment.addData(&quot;target&quot;, target);&amp;#10;psychoJS.experiment.addData(&quot;story_L&quot;, story_L);&amp;#10;psychoJS.experiment.addData(&quot;story_R&quot;, story_R);&amp;#10;psychoJS.experiment.addData(&quot;voice_L&quot;, voice_L);&amp;#10;psychoJS.experiment.addData(&quot;voice_R&quot;, voice_R);&amp;#10;audiobook = audios[condition_trials.thisN];&amp;#10;console.log(100);&amp;#10;psychoJS.experiment.addData(&quot;time_audiobook_started&quot;, t);&amp;#10;audiobook.play();&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="# Add metadata log&amp;#10;thisExp.addData('attended_story', attended_story_)&amp;#10;thisExp.addData('audio_filepath', audio_filepath_)&amp;#10;thisExp.addData('target_label', target_label_)&amp;#10;thisExp.addData('target', target)&amp;#10;thisExp.addData('story_L', story_L)&amp;#10;thisExp.addData('story_R', story_R)&amp;#10;thisExp.addData('voice_L', voice_L)&amp;#10;thisExp.addData('voice_R', voice_R)&amp;#10;&amp;#10;# Set correct audio&amp;#10;audiobook = audios[condition_trials.thisN]&amp;#10;#port.write(bytes([int(100)]))&amp;#10;print(100)&amp;#10;# t is measured since routine start&amp;#10;thisExp.addData(&quot;time_audiobook_started&quot;,t)&amp;#10;audiobook.play()&amp;#10;&amp;#10;&amp;#10;&amp;#10;&amp;#10;" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
         <Param val="# When time exceed audiobook duration, end component&amp;#10;# t is measured since routine start&amp;#10;if t &gt;= audiobook.duration:&amp;#10;    continueRoutine = False&amp;#10;    audiobook.stop() &amp;#10;    thisExp.addData(&quot;time_audiobook_finished&quot;,t)&amp;#10;&amp;#10;&amp;#10;    &amp;#10;    " valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="if ((t &gt;= audiobook.duration)) {&amp;#10;    continueRoutine = false;&amp;#10;    audiobook.stop();&amp;#10;    psychoJS.experiment.addData(&quot;time_audiobook_finished&quot;, t);&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Each JS Frame"/>
@@ -162,7 +162,7 @@
       <CodeComponent name="code_row_selection" plugin="None">
         <Param val="#import serial&amp;#10;#port = serial.Serial(&amp;#10;#    'COM3', baudrate=115200, timeout=0&amp;#10;#)" valType="extendedCode" updates="constant" name="Before Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
-        <Param val="from psychopy import sound&amp;#10;import pandas as pd&amp;#10;import random&amp;#10;&amp;#10;# Define which rows to use&amp;#10;NUMBER_OF_PAIRS=5&amp;#10;selected_rows = random.sample(&amp;#10;    range(8), NUMBER_OF_PAIRS&amp;#10;)&amp;#10;thisExp.addData('selected_rows', selected_rows)&amp;#10;&amp;#10;# Read conditions, possible stimuli combinations and questionaries&amp;#10;conditions = pd.read_csv(&amp;#10;    &quot;conditions.csv&quot;,&amp;#10;    header=0,&amp;#10;    delimiter=','&amp;#10;)&amp;#10;audiobook_combinations = pd.read_csv(&amp;#10;    &quot;audiobook_combinations_probes_pruebas.csv&quot;, &amp;#10;    header=0, &amp;#10;    delimiter=','&amp;#10;)&amp;#10;audiobook_questionary = pd.read_csv(&amp;#10;    &quot;audiobook_questionary.csv&quot;, &amp;#10;    header=0, &amp;#10;    delimiter=','&amp;#10;)&amp;#10;&amp;#10;# Store in memory audiobooks and relevant parameters&amp;#10;attended_stories = []&amp;#10;audio_filepaths = []&amp;#10;questionaries = []&amp;#10;targets = []&amp;#10;audios = []&amp;#10;for n_r, row in enumerate(selected_rows):&amp;#10;    condition_selected = conditions.iloc[row]&amp;#10;    targets.append(condition_selected['target'])&amp;#10;    &amp;#10;    # Define filepath and attended story&amp;#10;    filter_condition1 = audiobook_combinations['condition_label']==condition_selected[&quot;condition_label&quot;]&amp;#10;    filter_condition2 = audiobook_combinations['ordered']==condition_selected[&quot;ordered&quot;]&amp;#10;    audiobooks_possible_combinations = audiobook_combinations[filter_condition1&amp;filter_condition2]&amp;#10;    &amp;#10;    # Get pairs, 1,2; 3,4; 5,6; ...&amp;#10;    n_story = (n_r+1)*2-1 # 1,3,5,7, ...&amp;#10;    filter_A = audiobooks_possible_combinations['story_A']==n_story&amp;#10;    filter_B = audiobooks_possible_combinations['story_B']==n_story&amp;#10;    selected_audiobook = audiobooks_possible_combinations[filter_A|filter_B]&amp;#10;    audio_filepath = selected_audiobook['filename'].values[0]&amp;#10;    audio_filepaths.append(audio_filepath)&amp;#10;    audios.append(&amp;#10;        sound.Sound(audio_filepath , hamming=True)&amp;#10;    )&amp;#10;    attended = f'story_{condition_selected[&quot;target_label&quot;]}'&amp;#10;    attended_story = selected_audiobook[attended].values[0]&amp;#10;    attended_stories.append(attended_story)&amp;#10;    questionaries.append(&amp;#10;        audiobook_questionary.iloc[attended_story-1]&amp;#10;    )&amp;#10;print(attended_stories)&amp;#10;print(audio_filepaths)&amp;#10;print(questionaries)&amp;#10;print(targets)&amp;#10;print(audios)" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="from psychopy import sound&amp;#10;import pandas as pd&amp;#10;import random&amp;#10;&amp;#10;# Define which rows to use&amp;#10;NUMBER_OF_PAIRS=5&amp;#10;selected_rows = random.sample(&amp;#10;    range(8), NUMBER_OF_PAIRS&amp;#10;)&amp;#10;thisExp.addData('selected_rows', selected_rows)&amp;#10;&amp;#10;# Read conditions, possible stimuli combinations and questionaries&amp;#10;conditions = pd.read_csv(&amp;#10;    &quot;conditions.csv&quot;,&amp;#10;    header=0,&amp;#10;    delimiter=','&amp;#10;)&amp;#10;audiobook_combinations = pd.read_csv(&amp;#10;    &quot;audiobook_combinations_probes_pruebas.csv&quot;, &amp;#10;    header=0, &amp;#10;    delimiter=','&amp;#10;)&amp;#10;audiobook_questionary = pd.read_csv(&amp;#10;    &quot;audiobook_questionary.csv&quot;, &amp;#10;    header=0, &amp;#10;    delimiter=','&amp;#10;)&amp;#10;&amp;#10;# Store in memory audiobooks and relevant parameters&amp;#10;attended_stories = []&amp;#10;audio_filepaths = []&amp;#10;questionaries = []&amp;#10;conditions_labels = []&amp;#10;stories_L = []&amp;#10;stories_R = []&amp;#10;voices_L = []&amp;#10;voices_R = []&amp;#10;targets = []&amp;#10;audios = []&amp;#10;for n_r, row in enumerate(selected_rows):&amp;#10;    condition_selected = conditions.iloc[row]&amp;#10;    target = condition_selected['target']&amp;#10;    target_label = condition_selected['target_label']&amp;#10;    conditions_labels.append(target_label)&amp;#10;    targets.append(target)&amp;#10;&amp;#10;    # Define filepath and attended story&amp;#10;    filter_condition = audiobook_combinations['condition_label']==target_label&amp;#10;    audiobooks_possible_combinations = audiobook_combinations[filter_condition]&amp;#10;    &amp;#10;    # Get pairs, 1,2; 3,4; 5,6; ...&amp;#10;    n_story = (n_r+1)*2-1 # 1,3,5,7, ...&amp;#10;    filter_A = audiobooks_possible_combinations['story_L']==n_story&amp;#10;    filter_B = audiobooks_possible_combinations['story_R']==n_story&amp;#10;    selected_audiobook = audiobooks_possible_combinations[filter_A|filter_B]&amp;#10;    &amp;#10;    audio_filepath = selected_audiobook['filename'].values[0]&amp;#10;    audio_filepaths.append(audio_filepath)&amp;#10;    stories_L.append(selected_audiobook['story_L'].values[0])&amp;#10;    stories_R.append(selected_audiobook['story_R'].values[0])&amp;#10;    voices_L.append(selected_audiobook['voice_L'].values[0])&amp;#10;    voices_R.append(selected_audiobook['voice_R'].values[0])&amp;#10;    &amp;#10;    audios.append(&amp;#10;        sound.Sound(audio_filepath , hamming=True)&amp;#10;    )&amp;#10;    attended_story = selected_audiobook[f'story_{target}'].values[0]&amp;#10;    attended_stories.append(attended_story)&amp;#10;    questionaries.append(&amp;#10;        audiobook_questionary.iloc[attended_story-1]&amp;#10;    )&amp;#10;print(attended_stories)&amp;#10;print(audio_filepaths)&amp;#10;print(questionaries)&amp;#10;print(conditions)&amp;#10;print(targets)&amp;#10;print(audios)" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="/* Syntax Error: Fix Python code */" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
         <Param val="console.log(25);&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
         <Param val="#port.write(bytes([int(25)]))&amp;#10;print(25)&amp;#10;" valType="extendedCode" updates="constant" name="Begin Routine"/>
@@ -222,24 +222,6 @@
         <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
-    </Routine>
-    <Routine name="Questionary2">
-      <RoutineSettingsComponent name="Questionary2" plugin="None">
-        <Param val="none" valType="str" updates="None" name="backgroundFit"/>
-        <Param val="" valType="str" updates="None" name="backgroundImg"/>
-        <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
-        <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
-        <Param val="" valType="str" updates="constant" name="desc"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
-        <Param val="Questionary2" valType="code" updates="None" name="name"/>
-        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="" valType="code" updates="constant" name="skipIf"/>
-        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="" valType="code" updates="constant" name="stopVal"/>
-        <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
-      </RoutineSettingsComponent>
     </Routine>
     <Routine name="Questionary3">
       <RoutineSettingsComponent name="Questionary3" plugin="None">
@@ -474,8 +456,8 @@
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="console.log(35);&amp;#10;flecha = ((target === &quot;Left&quot;) ? &quot;&lt;&lt;&lt;&quot; : &quot;&gt;&gt;&gt;&quot;);&amp;#10;lado = ((target === &quot;Left&quot;) ? &quot;IZQUIERDO&quot; : &quot;DERECHO&quot;);&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="#port.write(bytes([int(35)]))&amp;#10;print(35)&amp;#10;&amp;#10;flecha='&lt;&lt;&lt;'  if target=='Left' else '&gt;&gt;&gt;'&amp;#10;lado='IZQUIERDO' if target=='Left' else 'DERECHO'&amp;#10;&amp;#10;" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="/* Syntax Error: Fix Python code */" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="#port.write(bytes([int(35)]))&amp;#10;print(35)&amp;#10;&amp;#10;flecha='&lt;&lt;&lt;'  if target=='Left' else '&gt;&gt;&gt;'&amp;#10;lado='IZQUIERDO' if target=='Left' else 'DERECHO'&amp;#10;&amp;#10;attended_story_ = attended_stories[condition_trials.thisN]&amp;#10;audio_filepath_ = audio_filepaths[condition_trials.thisN]&amp;#10;questionary_ = questionaries[condition_trials.thisN]&amp;#10;target_label_ = conditions_labels[condition_trials.thisN]&amp;#10;story_L = stories_L[condition_trials.thisN]&amp;#10;story_R = stories_R[condition_trials.thisN]&amp;#10;voice_L = voices_L[condition_trials.thisN]&amp;#10;voice_R = voices_R[condition_trials.thisN]&amp;#10;&amp;#10;# Define new variables&amp;#10;correct_answers = []&amp;#10;questions = []&amp;#10;answers_a = []&amp;#10;answers_b = []&amp;#10;answers_c = []&amp;#10;for i in range(1, 4):&amp;#10;    correct_answer = questionary_[f'correct_answer{i}']&amp;#10;    question = questionary_[f'question{i}']&amp;#10;    answer_a = questionary_[f'answer{i}a']&amp;#10;    answer_b = questionary_[f'answer{i}b']&amp;#10;    answer_c = questionary_[f'answer{i}c']&amp;#10;    correct_answers.append(correct_answer)&amp;#10;    questions.append(question)&amp;#10;    answers_a.append(answer_a)&amp;#10;    answers_b.append(answer_b)&amp;#10;    answers_c.append(answer_c)  &amp;#10;    " valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
@@ -556,7 +538,7 @@
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
         <Param val="/* Syntax Error: Fix Python code */" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="question = questions[questions_trial.thisRepN-1]&amp;#10;correct_answer = correct_answers[questions_trial.thisRepN-1]&amp;#10;answer_a = answers_a[questions_trial.thisRepN-1]&amp;#10;answer_b = answers_b[questions_trial.thisRepN-1]&amp;#10;answer_c = answers_c[questions_trial.thisRepN-1]&amp;#10;&amp;#10;#port.write(bytes([int(200+currentLoop.thisN*3)]))&amp;#10;print(int(200+currentLoop.thisN*3))&amp;#10;" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="question = questions[questions_trial.thisRepN-1]&amp;#10;correct_answer = correct_answers[questions_trial.thisRepN-1]&amp;#10;answer_a = answers_a[questions_trial.thisRepN-1]&amp;#10;answer_b = answers_b[questions_trial.thisRepN-1]&amp;#10;answer_c = answers_c[questions_trial.thisRepN-1]&amp;#10;&amp;#10;#port.write(bytes([int(200+currentLoop.thisN*3)]))&amp;#10;print(int(200+currentLoop.thisN*3))&amp;#10;&amp;#10;thisExp.addData(f'correct_answer{questions_trial.thisRepN-1}', correct_answer)&amp;#10;thisExp.addData(f'question{questions_trial.thisRepN-1}', question)&amp;#10;thisExp.addData(f'answer_a{questions_trial.thisRepN-1}', answer_a)&amp;#10;thisExp.addData(f'answer_b{questions_trial.thisRepN-1}', answer_b)&amp;#10;thisExp.addData(f'answer_c{questions_trial.thisRepN-1}', answer_c)" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
@@ -605,7 +587,7 @@
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
         <Param val="0.0" valType="code" updates="None" name="startVal"/>
-        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="condition" valType="str" updates="None" name="stopType"/>
         <Param val="key_resp_questionary.status == FINISHED" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="$f&quot;{question}\n\n A: {answer_a}\n\n B: {answer_b}\n\n C: {answer_c}\n\n Presioná la opción que creas correcta (teclas A, B ó C)&quot;&amp;#10;&amp;#10;&amp;#10;&amp;#10;" valType="str" updates="set every repeat" name="text"/>
@@ -636,8 +618,8 @@
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="/* Syntax Error: Fix Python code */" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="attended_story_ = attended_stories[condition_trials.thisN]&amp;#10;audio_filepath_ = audio_filepaths[condition_trials.thisN]&amp;#10;questionary_ = questionaries[condition_trials.thisN]&amp;#10;&amp;#10;# Add to log&amp;#10;thisExp.addData('attended_story', attended_story_)&amp;#10;thisExp.addData('audio_filepath', audio_filepath_)&amp;#10;thisExp.addData('target', target)&amp;#10;&amp;#10;# Define new variables&amp;#10;correct_answers = []&amp;#10;questions = []&amp;#10;answers_a = []&amp;#10;answers_b = []&amp;#10;answers_c = []&amp;#10;for i in range(1, 4):&amp;#10;    correct_answer = questionary_[f'correct_answer{i}']&amp;#10;    question = questionary_[f'question{i}']&amp;#10;    answer_a = questionary_[f'answer{i}a']&amp;#10;    answer_b = questionary_[f'answer{i}b']&amp;#10;    answer_c = questionary_[f'answer{i}c']&amp;#10;    correct_answers.append(correct_answer)&amp;#10;    questions.append(question)&amp;#10;    answers_a.append(answer_a)&amp;#10;    answers_b.append(answer_b)&amp;#10;    answers_c.append(answer_c)  &amp;#10;&amp;#10;    # Add to log&amp;#10;    thisExp.addData(f'correct_answer{i}', correct_answer)&amp;#10;    thisExp.addData(f'question{i}', question)&amp;#10;    thisExp.addData(f'answer{i}a', answer_a)&amp;#10;    thisExp.addData(f'answer{i}b', answer_b)&amp;#10;    thisExp.addData(f'answer{i}c', answer_c)" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="&amp;#10;&amp;#10;" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
@@ -686,12 +668,255 @@
         <Param val="1" valType="num" updates="constant" name="volume"/>
       </SoundComponent>
     </Routine>
+    <Routine name="Questionary0">
+      <RoutineSettingsComponent name="Questionary0" plugin="None">
+        <Param val="none" valType="str" updates="None" name="backgroundFit"/>
+        <Param val="" valType="str" updates="None" name="backgroundImg"/>
+        <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
+        <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
+        <Param val="" valType="str" updates="constant" name="desc"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
+        <Param val="Questionary0" valType="code" updates="None" name="name"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="constant" name="skipIf"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
+      </RoutineSettingsComponent>
+      <CodeComponent name="code_questionary0" plugin="None">
+        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="console.log(Number.parseInt((200 + (0 * 3))));&amp;#10;psychoJS.experiment.addData(`correct_answer0`, correct_answers[0]);&amp;#10;psychoJS.experiment.addData(`question0`, questions[0]);&amp;#10;psychoJS.experiment.addData(`answer_a0`, answers_a[0]);&amp;#10;psychoJS.experiment.addData(`answer_b0`, answers_b[0]);&amp;#10;psychoJS.experiment.addData(`answer_c0`, answers_c[0]);&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="#port.write(bytes([int(200+0*3)]))&amp;#10;print(int(200+0*3))&amp;#10;&amp;#10;thisExp.addData(f'correct_answer0', correct_answers[0])&amp;#10;thisExp.addData(f'question0', questions[0])&amp;#10;thisExp.addData(f'answer_a0', answers_a[0])&amp;#10;thisExp.addData(f'answer_b0', answers_b[0])&amp;#10;thisExp.addData(f'answer_c0', answers_c[0])" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="console.log(Number.parseInt(((200 + 1) + (0 * 3))));&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="#port.write(bytes([int(200+1+0*3)]))&amp;#10;print(int(200+1+0*3))" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="code_questionary0" valType="code" updates="None" name="name"/>
+      </CodeComponent>
+      <TextComponent name="questionary_text0" plugin="None">
+        <Param val="white" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="None" valType="str" updates="constant" name="flip"/>
+        <Param val="Arial" valType="str" updates="constant" name="font"/>
+        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
+        <Param val="0.05" valType="num" updates="constant" name="letterHeight"/>
+        <Param val="questionary_text0" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="condition" valType="str" updates="None" name="stopType"/>
+        <Param val="key_resp_questionary0.status == FINISHED" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="$f&quot;{questions[0]}\n\n A: {answers_a[0]}\n\n B: {answers_b[0]}\n\n C: {answers_c[0]}\n\n Presioná la opción que creas correcta (teclas A, B ó C)&quot;&amp;#10;&amp;#10;" valType="str" updates="set every repeat" name="text"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
+        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
+      </TextComponent>
+      <KeyboardComponent name="key_resp_questionary0" plugin="None">
+        <Param val="'a','b','c'" valType="list" updates="constant" name="allowedKeys"/>
+        <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="True" valType="bool" updates="constant" name="discard previous"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="True" valType="bool" updates="constant" name="forceEndRoutine"/>
+        <Param val="key_resp_questionary0" valType="code" updates="None" name="name"/>
+        <Param val="press" valType="str" updates="constant" name="registerOn"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="last key" valType="str" updates="constant" name="store"/>
+        <Param val="False" valType="bool" updates="constant" name="storeCorrect"/>
+        <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
+      </KeyboardComponent>
+    </Routine>
+    <Routine name="Questionary1">
+      <RoutineSettingsComponent name="Questionary1" plugin="None">
+        <Param val="none" valType="str" updates="None" name="backgroundFit"/>
+        <Param val="" valType="str" updates="None" name="backgroundImg"/>
+        <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
+        <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
+        <Param val="" valType="str" updates="constant" name="desc"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
+        <Param val="Questionary1" valType="code" updates="None" name="name"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="constant" name="skipIf"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
+      </RoutineSettingsComponent>
+      <CodeComponent name="code_questionary1" plugin="None">
+        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="console.log(Number.parseInt((200 + (1 * 3))));&amp;#10;correct_answers;&amp;#10;psychoJS.experiment.addData(`correct_answer1`, correct_answers[1]);&amp;#10;psychoJS.experiment.addData(`question1`, questions[1]);&amp;#10;psychoJS.experiment.addData(`answer_a1`, answers_a[1]);&amp;#10;psychoJS.experiment.addData(`answer_b1`, answers_b[1]);&amp;#10;psychoJS.experiment.addData(`answer_c1`, answers_c[1]);&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="#port.write(bytes([int(200+1*3)]))&amp;#10;print(int(200+1*3))&amp;#10;correct_answers&amp;#10;thisExp.addData(f'correct_answer1', correct_answers[1])&amp;#10;thisExp.addData(f'question1', questions[1])&amp;#10;thisExp.addData(f'answer_a1', answers_a[1])&amp;#10;thisExp.addData(f'answer_b1', answers_b[1])&amp;#10;thisExp.addData(f'answer_c1', answers_c[1])&amp;#10;" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="console.log(Number.parseInt(((200 + 1) + (1 * 3))));&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="#port.write(bytes([int(200+1+1*3)]))&amp;#10;print(int(200+1+1*3))" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="code_questionary1" valType="code" updates="None" name="name"/>
+      </CodeComponent>
+      <TextComponent name="questionary_text1" plugin="None">
+        <Param val="white" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="None" valType="str" updates="constant" name="flip"/>
+        <Param val="Arial" valType="str" updates="constant" name="font"/>
+        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
+        <Param val="0.05" valType="num" updates="constant" name="letterHeight"/>
+        <Param val="questionary_text1" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="condition" valType="str" updates="None" name="stopType"/>
+        <Param val="key_resp_questionary1.status == FINISHED" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="$f&quot;{questions[1]}\n\n A: {answers_a[1]}\n\n B: {answers_b[1]}\n\n C: {answers_c[1]}\n\n Presioná la opción que creas correcta (teclas A, B ó C)&quot;&amp;#10;" valType="str" updates="set every repeat" name="text"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
+        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
+      </TextComponent>
+      <KeyboardComponent name="key_resp_questionary1" plugin="None">
+        <Param val="'a','b','c'" valType="list" updates="constant" name="allowedKeys"/>
+        <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="True" valType="bool" updates="constant" name="discard previous"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="True" valType="bool" updates="constant" name="forceEndRoutine"/>
+        <Param val="key_resp_questionary1" valType="code" updates="None" name="name"/>
+        <Param val="press" valType="str" updates="constant" name="registerOn"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="last key" valType="str" updates="constant" name="store"/>
+        <Param val="False" valType="bool" updates="constant" name="storeCorrect"/>
+        <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
+      </KeyboardComponent>
+    </Routine>
+    <Routine name="Questionary2">
+      <RoutineSettingsComponent name="Questionary2" plugin="None">
+        <Param val="none" valType="str" updates="None" name="backgroundFit"/>
+        <Param val="" valType="str" updates="None" name="backgroundImg"/>
+        <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
+        <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
+        <Param val="" valType="str" updates="constant" name="desc"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
+        <Param val="Questionary2" valType="code" updates="None" name="name"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="constant" name="skipIf"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
+      </RoutineSettingsComponent>
+      <CodeComponent name="code_questionary2" plugin="None">
+        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="console.log(Number.parseInt((200 + (2 * 3))));&amp;#10;psychoJS.experiment.addData(`correct_answer2`, correct_answers[2]);&amp;#10;psychoJS.experiment.addData(`question2`, questions[2]);&amp;#10;psychoJS.experiment.addData(`answer_a2`, answers_a[2]);&amp;#10;psychoJS.experiment.addData(`answer_b2`, answers_b[2]);&amp;#10;psychoJS.experiment.addData(`answer_c2`, answers_c[2]);&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="#port.write(bytes([int(200+2*3)]))&amp;#10;print(int(200+2*3))&amp;#10;&amp;#10;thisExp.addData(f'correct_answer2', correct_answers[2])&amp;#10;thisExp.addData(f'question2', questions[2])&amp;#10;thisExp.addData(f'answer_a2', answers_a[2])&amp;#10;thisExp.addData(f'answer_b2', answers_b[2])&amp;#10;thisExp.addData(f'answer_c2', answers_c[2])" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="console.log(Number.parseInt(((200 + 1) + (2 * 3))));&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="#port.write(bytes([int(200+1+2*3)]))&amp;#10;print(int(200+1+2*3))" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="code_questionary2" valType="code" updates="None" name="name"/>
+      </CodeComponent>
+      <TextComponent name="questionary_text2" plugin="None">
+        <Param val="white" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="None" valType="str" updates="constant" name="flip"/>
+        <Param val="Arial" valType="str" updates="constant" name="font"/>
+        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
+        <Param val="0.05" valType="num" updates="constant" name="letterHeight"/>
+        <Param val="questionary_text2" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="condition" valType="str" updates="None" name="stopType"/>
+        <Param val="key_resp_questionary2.status == FINISHED" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="$f&quot;{questions[2]}\n\n A: {answers_a[2]}\n\n B: {answers_b[2]}\n\n C: {answers_c[2]}\n\n Presioná la opción que creas correcta (teclas A, B ó C)&quot;&amp;#10;" valType="str" updates="set every repeat" name="text"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
+        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
+      </TextComponent>
+      <KeyboardComponent name="key_resp_questionary2" plugin="None">
+        <Param val="'a','b','c'" valType="list" updates="constant" name="allowedKeys"/>
+        <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="True" valType="bool" updates="constant" name="discard previous"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="True" valType="bool" updates="constant" name="forceEndRoutine"/>
+        <Param val="key_resp_questionary2" valType="code" updates="None" name="name"/>
+        <Param val="press" valType="str" updates="constant" name="registerOn"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="last key" valType="str" updates="constant" name="store"/>
+        <Param val="False" valType="bool" updates="constant" name="storeCorrect"/>
+        <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
+      </KeyboardComponent>
+    </Routine>
   </Routines>
   <Flow>
     <Routine name="Instructions"/>
     <LoopInitiator loopType="TrialHandler" name="condition_trials">
       <Param name="Selected rows" updates="None" val="$selected_rows" valType="str"/>
-      <Param name="conditions" updates="None" val="[OrderedDict([('story_a_side', 'left'), ('story_b_side', 'right'), ('story_a_voice', 'F'), ('story_b_voice', 'M'), ('condition_label', 'FL_MR'), ('ordered', np.True_), ('target', 'Left'), ('target_label', 'A')]), OrderedDict([('story_a_side', 'left'), ('story_b_side', 'right'), ('story_a_voice', 'F'), ('story_b_voice', 'M'), ('condition_label', 'FL_MR'), ('ordered', np.True_), ('target', 'Right'), ('target_label', 'B')]), OrderedDict([('story_a_side', 'left'), ('story_b_side', 'right'), ('story_a_voice', 'M'), ('story_b_voice', 'F'), ('condition_label', 'FR_ML'), ('ordered', np.True_), ('target', 'Left'), ('target_label', 'A')]), OrderedDict([('story_a_side', 'left'), ('story_b_side', 'right'), ('story_a_voice', 'M'), ('story_b_voice', 'F'), ('condition_label', 'FR_ML'), ('ordered', np.True_), ('target', 'Right'), ('target_label', 'B')]), OrderedDict([('story_a_side', 'right'), ('story_b_side', 'left'), ('story_a_voice', 'F'), ('story_b_voice', 'M'), ('condition_label', 'FL_MR'), ('ordered', np.False_), ('target', 'Left'), ('target_label', 'A')]), OrderedDict([('story_a_side', 'right'), ('story_b_side', 'left'), ('story_a_voice', 'F'), ('story_b_voice', 'M'), ('condition_label', 'FL_MR'), ('ordered', np.False_), ('target', 'Right'), ('target_label', 'B')]), OrderedDict([('story_a_side', 'right'), ('story_b_side', 'left'), ('story_a_voice', 'M'), ('story_b_voice', 'F'), ('condition_label', 'FR_ML'), ('ordered', np.False_), ('target', 'Left'), ('target_label', 'A')]), OrderedDict([('story_a_side', 'right'), ('story_b_side', 'left'), ('story_a_voice', 'M'), ('story_b_voice', 'F'), ('condition_label', 'FR_ML'), ('ordered', np.False_), ('target', 'Right'), ('target_label', 'B')])]" valType="str"/>
+      <Param name="conditions" updates="None" val="[OrderedDict([('ordered', np.True_), ('voice_L', 'F'), ('voice_R', 'M'), ('target', 'L'), ('target_label', 'O_F_M')]), OrderedDict([('ordered', np.True_), ('voice_L', 'F'), ('voice_R', 'M'), ('target', 'R'), ('target_label', 'O_F_M')]), OrderedDict([('ordered', np.True_), ('voice_L', 'M'), ('voice_R', 'F'), ('target', 'L'), ('target_label', 'O_M_F')]), OrderedDict([('ordered', np.True_), ('voice_L', 'M'), ('voice_R', 'F'), ('target', 'R'), ('target_label', 'O_M_F')]), OrderedDict([('ordered', np.False_), ('voice_L', 'F'), ('voice_R', 'M'), ('target', 'L'), ('target_label', 'NO_F_M')]), OrderedDict([('ordered', np.False_), ('voice_L', 'F'), ('voice_R', 'M'), ('target', 'R'), ('target_label', 'NO_F_M')]), OrderedDict([('ordered', np.False_), ('voice_L', 'M'), ('voice_R', 'F'), ('target', 'L'), ('target_label', 'NO_M_F')]), OrderedDict([('ordered', np.False_), ('voice_L', 'M'), ('voice_R', 'F'), ('target', 'R'), ('target_label', 'NO_M_F')])]" valType="str"/>
       <Param name="conditionsFile" updates="None" val="conditions.csv" valType="file"/>
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
       <Param name="isTrials" updates="None" val="True" valType="bool"/>
@@ -708,7 +933,7 @@
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
       <Param name="isTrials" updates="None" val="False" valType="bool"/>
       <Param name="loopType" updates="None" val="random" valType="str"/>
-      <Param name="nReps" updates="None" val="10" valType="num"/>
+      <Param name="nReps" updates="None" val="1" valType="num"/>
       <Param name="name" updates="None" val="bip_trials1" valType="code"/>
       <Param name="random seed" updates="None" val="" valType="code"/>
     </LoopInitiator>
@@ -722,26 +947,15 @@
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
       <Param name="isTrials" updates="None" val="False" valType="bool"/>
       <Param name="loopType" updates="None" val="sequential" valType="str"/>
-      <Param name="nReps" updates="None" val="10" valType="num"/>
+      <Param name="nReps" updates="None" val="1" valType="num"/>
       <Param name="name" updates="None" val="bip_trials2" valType="code"/>
       <Param name="random seed" updates="None" val="" valType="code"/>
     </LoopInitiator>
     <Routine name="Bips"/>
     <LoopTerminator name="bip_trials2"/>
-    <Routine name="QuestionaryVariables"/>
-    <LoopInitiator loopType="TrialHandler" name="questions_trial">
-      <Param name="Selected rows" updates="None" val="" valType="str"/>
-      <Param name="conditions" updates="None" val="None" valType="str"/>
-      <Param name="conditionsFile" updates="None" val="" valType="file"/>
-      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
-      <Param name="isTrials" updates="None" val="False" valType="bool"/>
-      <Param name="loopType" updates="None" val="sequential" valType="str"/>
-      <Param name="nReps" updates="None" val="3" valType="num"/>
-      <Param name="name" updates="None" val="questions_trial" valType="code"/>
-      <Param name="random seed" updates="None" val="" valType="code"/>
-    </LoopInitiator>
-    <Routine name="Questionary"/>
-    <LoopTerminator name="questions_trial"/>
+    <Routine name="Questionary0"/>
+    <Routine name="Questionary1"/>
+    <Routine name="Questionary2"/>
     <LoopTerminator name="condition_trials"/>
     <Routine name="GoodBye"/>
   </Flow>

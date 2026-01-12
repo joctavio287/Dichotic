@@ -46,6 +46,35 @@ def read_wav(
     else:
         return data
 
+def read_ogg(
+    file_path: Union[str, Path],
+    return_sample_rate: bool = False
+) -> Union[np.ndarray, tuple[int, np.ndarray]]:
+    """
+    Reads an OGG file and returns it as an array.
+    
+    Parameters
+    ----------
+        file_path: Union[str, Path]
+            Path to the OGG file
+        return_sample_rate: bool
+            If True, returns a tuple (sample_rate, data)
+    
+    Returns
+    -------
+        np.ndarray or tuple[int, np.ndarray]: Audio data as a numpy array,
+            or (sample_rate, data) if return_sample_rate is True
+    """
+    audio = AudioSegment.from_file(file_path, format='ogg')
+    sample_rate = audio.frame_rate
+    data = np.array(audio.get_array_of_samples())
+    if audio.channels == 2:
+        data = data.reshape((-1, 2))
+    if return_sample_rate:
+        return sample_rate, data
+    else:
+        return data
+
 def plot_audio_profile(
     audio_path: Union[str, Path],
     output_path: Union[str, Path, None] = None,

@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2025.2.3),
-    on January 08, 2026, at 10:53
+    on January 08, 2026, at 15:37
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -44,7 +44,7 @@ deviceManager = hardware.DeviceManager()
 _thisDir = os.path.dirname(os.path.abspath(__file__))
 # store info about the experiment session
 psychopyVersion = '2025.2.3'
-expName = 'dichotic_listening_noprobe'  # from the Builder filename that created this script
+expName = 'DichoticListeningNoProbe'  # from the Builder filename that created this script
 expVersion = ''
 # a list of functions to run when the experiment ends (starts off blank)
 runAtExit = []
@@ -137,7 +137,7 @@ def setupData(expInfo, dataDir=None):
     thisExp = data.ExperimentHandler(
         name=expName, version=expVersion,
         extraInfo=expInfo, runtimeInfo=None,
-        originPath='C:\\Users\\jocta\\repos\\Dichotic\\psychopy_experiment\\dichotic_listening_noprobe_lastrun.py',
+        originPath='C:\\Users\\jocta\\repos\\Dichotic\\psychopy_experiment\\DichoticListeningNoProbe_lastrun.py',
         savePickle=True, saveWideText=True,
         dataFileName=dataDir + os.sep + filename, sortColumns='time'
     )
@@ -399,7 +399,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         delimiter=','
     )
     audiobook_combinations = pd.read_csv(
-        "audiobook_combinations_no_probes.csv", 
+        "audiobook_combinations_probes_pruebas.csv", 
         header=0, 
         delimiter=','
     )

@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2025.2.3),
-    on January 08, 2026, at 10:55
+    on January 09, 2026, at 13:35
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -44,7 +44,7 @@ deviceManager = hardware.DeviceManager()
 _thisDir = os.path.dirname(os.path.abspath(__file__))
 # store info about the experiment session
 psychopyVersion = '2025.2.3'
-expName = 'dichotic_listening_probe'  # from the Builder filename that created this script
+expName = 'DichoticListeningProbe'  # from the Builder filename that created this script
 expVersion = ''
 # a list of functions to run when the experiment ends (starts off blank)
 runAtExit = []
@@ -137,7 +137,7 @@ def setupData(expInfo, dataDir=None):
     thisExp = data.ExperimentHandler(
         name=expName, version=expVersion,
         extraInfo=expInfo, runtimeInfo=None,
-        originPath='C:\\Users\\jocta\\repos\\Dichotic\\psychopy_experiment\\dichotic_listening_probe_lastrun.py',
+        originPath='C:\\Users\\jocta\\repos\\Dichotic\\psychopy_experiment\\DichoticListeningProbe_lastrun.py',
         savePickle=True, saveWideText=True,
         dataFileName=dataDir + os.sep + filename, sortColumns='time'
     )
@@ -413,29 +413,41 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     attended_stories = []
     audio_filepaths = []
     questionaries = []
+    conditions_labels = []
+    stories_L = []
+    stories_R = []
+    voices_L = []
+    voices_R = []
     targets = []
     audios = []
     for n_r, row in enumerate(selected_rows):
         condition_selected = conditions.iloc[row]
-        targets.append(condition_selected['target'])
-        
+        target = condition_selected['target']
+        target_label = condition_selected['target_label']
+        conditions_labels.append(target_label)
+        targets.append(target)
+    
         # Define filepath and attended story
-        filter_condition1 = audiobook_combinations['condition_label']==condition_selected["condition_label"]
-        filter_condition2 = audiobook_combinations['ordered']==condition_selected["ordered"]
-        audiobooks_possible_combinations = audiobook_combinations[filter_condition1&filter_condition2]
+        filter_condition = audiobook_combinations['condition_label']==target_label
+        audiobooks_possible_combinations = audiobook_combinations[filter_condition]
         
         # Get pairs, 1,2; 3,4; 5,6; ...
         n_story = (n_r+1)*2-1 # 1,3,5,7, ...
-        filter_A = audiobooks_possible_combinations['story_A']==n_story
-        filter_B = audiobooks_possible_combinations['story_B']==n_story
+        filter_A = audiobooks_possible_combinations['story_L']==n_story
+        filter_B = audiobooks_possible_combinations['story_R']==n_story
         selected_audiobook = audiobooks_possible_combinations[filter_A|filter_B]
+        
         audio_filepath = selected_audiobook['filename'].values[0]
         audio_filepaths.append(audio_filepath)
+        stories_L.append(selected_audiobook['story_L'].values[0])
+        stories_R.append(selected_audiobook['story_R'].values[0])
+        voices_L.append(selected_audiobook['voice_L'].values[0])
+        voices_R.append(selected_audiobook['voice_R'].values[0])
+        
         audios.append(
             sound.Sound(audio_filepath , hamming=True)
         )
-        attended = f'story_{condition_selected["target_label"]}'
-        attended_story = selected_audiobook[attended].values[0]
+        attended_story = selected_audiobook[f'story_{target}'].values[0]
         attended_stories.append(attended_story)
         questionaries.append(
             audiobook_questionary.iloc[attended_story-1]
@@ -443,6 +455,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     print(attended_stories)
     print(audio_filepaths)
     print(questionaries)
+    print(conditions)
     print(targets)
     print(audios)
     key_instructions = keyboard.Keyboard(deviceName='defaultKeyboard')
@@ -523,17 +536,35 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         colorSpace='rgb', lineColor='white', fillColor='white',
         opacity=None, depth=-3.0, interpolate=True)
     
-    # --- Initialize components for Routine "QuestionaryVariables" ---
-    
-    # --- Initialize components for Routine "Questionary" ---
-    key_resp_questionary = keyboard.Keyboard(deviceName='defaultKeyboard')
-    questionary_text = visual.TextStim(win=win, name='questionary_text',
+    # --- Initialize components for Routine "Questionary0" ---
+    questionary_text0 = visual.TextStim(win=win, name='questionary_text0',
         text='',
         font='Arial',
         pos=(0, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
-        depth=-2.0);
+        depth=-1.0);
+    key_resp_questionary0 = keyboard.Keyboard(deviceName='defaultKeyboard')
+    
+    # --- Initialize components for Routine "Questionary1" ---
+    questionary_text1 = visual.TextStim(win=win, name='questionary_text1',
+        text='',
+        font='Arial',
+        pos=(0, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-1.0);
+    key_resp_questionary1 = keyboard.Keyboard(deviceName='defaultKeyboard')
+    
+    # --- Initialize components for Routine "Questionary2" ---
+    questionary_text2 = visual.TextStim(win=win, name='questionary_text2',
+        text='',
+        font='Arial',
+        pos=(0, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-1.0);
+    key_resp_questionary2 = keyboard.Keyboard(deviceName='defaultKeyboard')
     
     # --- Initialize components for Routine "GoodBye" ---
     final_key = keyboard.Keyboard(deviceName='defaultKeyboard')
@@ -795,7 +826,33 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         flecha='<<<'  if target=='Left' else '>>>'
         lado='IZQUIERDO' if target=='Left' else 'DERECHO'
         
+        attended_story_ = attended_stories[condition_trials.thisN]
+        audio_filepath_ = audio_filepaths[condition_trials.thisN]
+        questionary_ = questionaries[condition_trials.thisN]
+        target_label_ = conditions_labels[condition_trials.thisN]
+        story_L = stories_L[condition_trials.thisN]
+        story_R = stories_R[condition_trials.thisN]
+        voice_L = voices_L[condition_trials.thisN]
+        voice_R = voices_R[condition_trials.thisN]
         
+        # Define new variables
+        correct_answers = []
+        questions = []
+        answers_a = []
+        answers_b = []
+        answers_c = []
+        for i in range(1, 4):
+            correct_answer = questionary_[f'correct_answer{i}']
+            question = questionary_[f'question{i}']
+            answer_a = questionary_[f'answer{i}a']
+            answer_b = questionary_[f'answer{i}b']
+            answer_c = questionary_[f'answer{i}c']
+            correct_answers.append(correct_answer)
+            questions.append(question)
+            answers_a.append(answer_a)
+            answers_b.append(answer_b)
+            answers_c.append(answer_c)  
+            
         text_prompt.setText(f"Presta atención a la historia del lado {lado} ({flecha}).\n\n\nApretá ESPACIO para continuar...")
         # create starting attributes for key_resp_prompt
         key_resp_prompt.keys = []
@@ -954,7 +1011,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         # set up handler to look after randomisation of conditions etc
         bip_trials1 = data.TrialHandler2(
             name='bip_trials1',
-            nReps=10.0, 
+            nReps=1.0, 
             method='random', 
             extraInfo=expInfo, 
             originPath=-1, 
@@ -1193,7 +1250,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 )
                 # once done pausing, restore running status
                 bip_trials1.status = STARTED
-        # completed 10.0 repeats of 'bip_trials1'
+        # completed 1.0 repeats of 'bip_trials1'
         bip_trials1.status = FINISHED
         
         
@@ -1207,6 +1264,16 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         continueRoutine = True
         # update component parameters for each repeat
         # Run 'Begin Routine' code from code_listening
+        # Add metadata log
+        thisExp.addData('attended_story', attended_story_)
+        thisExp.addData('audio_filepath', audio_filepath_)
+        thisExp.addData('target_label', target_label_)
+        thisExp.addData('target', target)
+        thisExp.addData('story_L', story_L)
+        thisExp.addData('story_R', story_R)
+        thisExp.addData('voice_L', voice_L)
+        thisExp.addData('voice_R', voice_R)
+        
         # Set correct audio
         audiobook = audios[condition_trials.thisN]
         #port.write(bytes([int(100)]))
@@ -1338,7 +1405,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         # set up handler to look after randomisation of conditions etc
         bip_trials2 = data.TrialHandler2(
             name='bip_trials2',
-            nReps=10.0, 
+            nReps=1.0, 
             method='sequential', 
             extraInfo=expInfo, 
             originPath=-1, 
@@ -1577,62 +1644,44 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 )
                 # once done pausing, restore running status
                 bip_trials2.status = STARTED
-        # completed 10.0 repeats of 'bip_trials2'
+        # completed 1.0 repeats of 'bip_trials2'
         bip_trials2.status = FINISHED
         
         
-        # --- Prepare to start Routine "QuestionaryVariables" ---
-        # create an object to store info about Routine QuestionaryVariables
-        QuestionaryVariables = data.Routine(
-            name='QuestionaryVariables',
-            components=[],
+        # --- Prepare to start Routine "Questionary0" ---
+        # create an object to store info about Routine Questionary0
+        Questionary0 = data.Routine(
+            name='Questionary0',
+            components=[questionary_text0, key_resp_questionary0],
         )
-        QuestionaryVariables.status = NOT_STARTED
+        Questionary0.status = NOT_STARTED
         continueRoutine = True
         # update component parameters for each repeat
-        # Run 'Begin Routine' code from code_questionary_2
-        attended_story_ = attended_stories[condition_trials.thisN]
-        audio_filepath_ = audio_filepaths[condition_trials.thisN]
-        questionary_ = questionaries[condition_trials.thisN]
+        # Run 'Begin Routine' code from code_questionary0
+        #port.write(bytes([int(200+0*3)]))
+        print(int(200+0*3))
         
-        # Add to log
-        thisExp.addData('attended_story', attended_story_)
-        thisExp.addData('audio_filepath', audio_filepath_)
-        thisExp.addData('target', target)
+        thisExp.addData(f'correct_answer0', correct_answers[0])
+        thisExp.addData(f'question0', questions[0])
+        thisExp.addData(f'answer_a0', answers_a[0])
+        thisExp.addData(f'answer_b0', answers_b[0])
+        thisExp.addData(f'answer_c0', answers_c[0])
+        questionary_text0.setText(f"{questions[0]}\n\n A: {answers_a[0]}\n\n B: {answers_b[0]}\n\n C: {answers_c[0]}\n\n Presioná la opción que creas correcta (teclas A, B ó C)"
         
-        # Define new variables
-        correct_answers = []
-        questions = []
-        answers_a = []
-        answers_b = []
-        answers_c = []
-        for i in range(1, 4):
-            correct_answer = questionary_[f'correct_answer{i}']
-            question = questionary_[f'question{i}']
-            answer_a = questionary_[f'answer{i}a']
-            answer_b = questionary_[f'answer{i}b']
-            answer_c = questionary_[f'answer{i}c']
-            correct_answers.append(correct_answer)
-            questions.append(question)
-            answers_a.append(answer_a)
-            answers_b.append(answer_b)
-            answers_c.append(answer_c)  
-        
-            # Add to log
-            thisExp.addData(f'correct_answer{i}', correct_answer)
-            thisExp.addData(f'question{i}', question)
-            thisExp.addData(f'answer{i}a', answer_a)
-            thisExp.addData(f'answer{i}b', answer_b)
-            thisExp.addData(f'answer{i}c', answer_c)
-        # store start times for QuestionaryVariables
-        QuestionaryVariables.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
-        QuestionaryVariables.tStart = globalClock.getTime(format='float')
-        QuestionaryVariables.status = STARTED
-        thisExp.addData('QuestionaryVariables.started', QuestionaryVariables.tStart)
-        QuestionaryVariables.maxDuration = None
+        )
+        # create starting attributes for key_resp_questionary0
+        key_resp_questionary0.keys = []
+        key_resp_questionary0.rt = []
+        _key_resp_questionary0_allKeys = []
+        # store start times for Questionary0
+        Questionary0.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
+        Questionary0.tStart = globalClock.getTime(format='float')
+        Questionary0.status = STARTED
+        thisExp.addData('Questionary0.started', Questionary0.tStart)
+        Questionary0.maxDuration = None
         # keep track of which components have finished
-        QuestionaryVariablesComponents = QuestionaryVariables.components
-        for thisComponent in QuestionaryVariables.components:
+        Questionary0Components = Questionary0.components
+        for thisComponent in Questionary0.components:
             thisComponent.tStart = None
             thisComponent.tStop = None
             thisComponent.tStartRefresh = None
@@ -1644,9 +1693,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         _timeToFirstFrame = win.getFutureFlipTime(clock="now")
         frameN = -1
         
-        # --- Run Routine "QuestionaryVariables" ---
-        thisExp.currentRoutine = QuestionaryVariables
-        QuestionaryVariables.forceEnded = routineForceEnded = not continueRoutine
+        # --- Run Routine "Questionary0" ---
+        thisExp.currentRoutine = Questionary0
+        Questionary0.forceEnded = routineForceEnded = not continueRoutine
         while continueRoutine:
             # if trial has changed, end Routine now
             if hasattr(thisCondition_trial, 'status') and thisCondition_trial.status == STOPPING:
@@ -1657,6 +1706,67 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             tThisFlipGlobal = win.getFutureFlipTime(clock=None)
             frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
             # update/draw components on each frame
+            
+            # *questionary_text0* updates
+            
+            # if questionary_text0 is starting this frame...
+            if questionary_text0.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                # keep track of start time/frame for later
+                questionary_text0.frameNStart = frameN  # exact frame index
+                questionary_text0.tStart = t  # local t and not account for scr refresh
+                questionary_text0.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(questionary_text0, 'tStartRefresh')  # time at next scr refresh
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'questionary_text0.started')
+                # update status
+                questionary_text0.status = STARTED
+                questionary_text0.setAutoDraw(True)
+            
+            # if questionary_text0 is active this frame...
+            if questionary_text0.status == STARTED:
+                # update params
+                pass
+            
+            # if questionary_text0 is stopping this frame...
+            if questionary_text0.status == STARTED:
+                if bool(key_resp_questionary0.status == FINISHED):
+                    # keep track of stop time/frame for later
+                    questionary_text0.tStop = t  # not accounting for scr refresh
+                    questionary_text0.tStopRefresh = tThisFlipGlobal  # on global time
+                    questionary_text0.frameNStop = frameN  # exact frame index
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'questionary_text0.stopped')
+                    # update status
+                    questionary_text0.status = FINISHED
+                    questionary_text0.setAutoDraw(False)
+            
+            # *key_resp_questionary0* updates
+            waitOnFlip = False
+            
+            # if key_resp_questionary0 is starting this frame...
+            if key_resp_questionary0.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                # keep track of start time/frame for later
+                key_resp_questionary0.frameNStart = frameN  # exact frame index
+                key_resp_questionary0.tStart = t  # local t and not account for scr refresh
+                key_resp_questionary0.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(key_resp_questionary0, 'tStartRefresh')  # time at next scr refresh
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'key_resp_questionary0.started')
+                # update status
+                key_resp_questionary0.status = STARTED
+                # keyboard checking is just starting
+                waitOnFlip = True
+                win.callOnFlip(key_resp_questionary0.clock.reset)  # t=0 on next screen flip
+                win.callOnFlip(key_resp_questionary0.clearEvents, eventType='keyboard')  # clear events on next screen flip
+            if key_resp_questionary0.status == STARTED and not waitOnFlip:
+                theseKeys = key_resp_questionary0.getKeys(keyList=['a','b','c'], ignoreKeys=["escape"], waitRelease=False)
+                _key_resp_questionary0_allKeys.extend(theseKeys)
+                if len(_key_resp_questionary0_allKeys):
+                    key_resp_questionary0.keys = _key_resp_questionary0_allKeys[-1].name  # just the last key pressed
+                    key_resp_questionary0.rt = _key_resp_questionary0_allKeys[-1].rt
+                    key_resp_questionary0.duration = _key_resp_questionary0_allKeys[-1].duration
+                    # a response ends the routine
+                    continueRoutine = False
             
             # check for quit (typically the Esc key)
             if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -1670,20 +1780,20 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     thisExp=thisExp, 
                     win=win, 
                     timers=[routineTimer, globalClock], 
-                    currentRoutine=QuestionaryVariables,
+                    currentRoutine=Questionary0,
                 )
                 # skip the frame we paused on
                 continue
             
             # has a Component requested the Routine to end?
             if not continueRoutine:
-                QuestionaryVariables.forceEnded = routineForceEnded = True
+                Questionary0.forceEnded = routineForceEnded = True
             # has the Routine been forcibly ended?
-            if QuestionaryVariables.forceEnded or routineForceEnded:
+            if Questionary0.forceEnded or routineForceEnded:
                 break
             # has every Component finished?
             continueRoutine = False
-            for thisComponent in QuestionaryVariables.components:
+            for thisComponent in Questionary0.components:
                 if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
                     continueRoutine = True
                     break  # at least one component has not yet finished
@@ -1692,240 +1802,375 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
                 win.flip()
         
-        # --- Ending Routine "QuestionaryVariables" ---
-        for thisComponent in QuestionaryVariables.components:
+        # --- Ending Routine "Questionary0" ---
+        for thisComponent in Questionary0.components:
             if hasattr(thisComponent, "setAutoDraw"):
                 thisComponent.setAutoDraw(False)
-        # store stop times for QuestionaryVariables
-        QuestionaryVariables.tStop = globalClock.getTime(format='float')
-        QuestionaryVariables.tStopRefresh = tThisFlipGlobal
-        thisExp.addData('QuestionaryVariables.stopped', QuestionaryVariables.tStop)
-        # the Routine "QuestionaryVariables" was not non-slip safe, so reset the non-slip timer
+        # store stop times for Questionary0
+        Questionary0.tStop = globalClock.getTime(format='float')
+        Questionary0.tStopRefresh = tThisFlipGlobal
+        thisExp.addData('Questionary0.stopped', Questionary0.tStop)
+        # Run 'End Routine' code from code_questionary0
+        #port.write(bytes([int(200+1+0*3)]))
+        print(int(200+1+0*3))
+        # check responses
+        if key_resp_questionary0.keys in ['', [], None]:  # No response was made
+            key_resp_questionary0.keys = None
+        condition_trials.addData('key_resp_questionary0.keys',key_resp_questionary0.keys)
+        if key_resp_questionary0.keys != None:  # we had a response
+            condition_trials.addData('key_resp_questionary0.rt', key_resp_questionary0.rt)
+            condition_trials.addData('key_resp_questionary0.duration', key_resp_questionary0.duration)
+        # the Routine "Questionary0" was not non-slip safe, so reset the non-slip timer
         routineTimer.reset()
         
-        # set up handler to look after randomisation of conditions etc
-        questions_trial = data.TrialHandler2(
-            name='questions_trial',
-            nReps=3.0, 
-            method='sequential', 
-            extraInfo=expInfo, 
-            originPath=-1, 
-            trialList=[None], 
-            seed=None, 
-            isTrials=False, 
+        # --- Prepare to start Routine "Questionary1" ---
+        # create an object to store info about Routine Questionary1
+        Questionary1 = data.Routine(
+            name='Questionary1',
+            components=[questionary_text1, key_resp_questionary1],
         )
-        thisExp.addLoop(questions_trial)  # add the loop to the experiment
-        thisQuestions_trial = questions_trial.trialList[0]  # so we can initialise stimuli with some values
-        # abbreviate parameter names if possible (e.g. rgb = thisQuestions_trial.rgb)
-        if thisQuestions_trial != None:
-            for paramName in thisQuestions_trial:
-                globals()[paramName] = thisQuestions_trial[paramName]
+        Questionary1.status = NOT_STARTED
+        continueRoutine = True
+        # update component parameters for each repeat
+        # Run 'Begin Routine' code from code_questionary1
+        #port.write(bytes([int(200+1*3)]))
+        print(int(200+1*3))
+        correct_answers
+        thisExp.addData(f'correct_answer1', correct_answers[1])
+        thisExp.addData(f'question1', questions[1])
+        thisExp.addData(f'answer_a1', answers_a[1])
+        thisExp.addData(f'answer_b1', answers_b[1])
+        thisExp.addData(f'answer_c1', answers_c[1])
         
-        for thisQuestions_trial in questions_trial:
-            questions_trial.status = STARTED
-            if hasattr(thisQuestions_trial, 'status'):
-                thisQuestions_trial.status = STARTED
-            currentLoop = questions_trial
-            thisExp.timestampOnFlip(win, 'thisRow.t', format=globalClock.format)
-            # abbreviate parameter names if possible (e.g. rgb = thisQuestions_trial.rgb)
-            if thisQuestions_trial != None:
-                for paramName in thisQuestions_trial:
-                    globals()[paramName] = thisQuestions_trial[paramName]
-            
-            # --- Prepare to start Routine "Questionary" ---
-            # create an object to store info about Routine Questionary
-            Questionary = data.Routine(
-                name='Questionary',
-                components=[key_resp_questionary, questionary_text],
-            )
-            Questionary.status = NOT_STARTED
-            continueRoutine = True
-            # update component parameters for each repeat
-            # Run 'Begin Routine' code from code_questionary
-            question = questions[questions_trial.thisRepN-1]
-            correct_answer = correct_answers[questions_trial.thisRepN-1]
-            answer_a = answers_a[questions_trial.thisRepN-1]
-            answer_b = answers_b[questions_trial.thisRepN-1]
-            answer_c = answers_c[questions_trial.thisRepN-1]
-            
-            #port.write(bytes([int(200+currentLoop.thisN*3)]))
-            print(int(200+currentLoop.thisN*3))
-            
-            # create starting attributes for key_resp_questionary
-            key_resp_questionary.keys = []
-            key_resp_questionary.rt = []
-            _key_resp_questionary_allKeys = []
-            questionary_text.setText(f"{question}\n\n A: {answer_a}\n\n B: {answer_b}\n\n C: {answer_c}\n\n Presioná la opción que creas correcta (teclas A, B ó C)"
-            
-            
-            
-            )
-            # store start times for Questionary
-            Questionary.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
-            Questionary.tStart = globalClock.getTime(format='float')
-            Questionary.status = STARTED
-            thisExp.addData('Questionary.started', Questionary.tStart)
-            Questionary.maxDuration = None
-            # keep track of which components have finished
-            QuestionaryComponents = Questionary.components
-            for thisComponent in Questionary.components:
-                thisComponent.tStart = None
-                thisComponent.tStop = None
-                thisComponent.tStartRefresh = None
-                thisComponent.tStopRefresh = None
-                if hasattr(thisComponent, 'status'):
-                    thisComponent.status = NOT_STARTED
-            # reset timers
-            t = 0
-            _timeToFirstFrame = win.getFutureFlipTime(clock="now")
-            frameN = -1
-            
-            # --- Run Routine "Questionary" ---
-            thisExp.currentRoutine = Questionary
-            Questionary.forceEnded = routineForceEnded = not continueRoutine
-            while continueRoutine:
-                # if trial has changed, end Routine now
-                if hasattr(thisQuestions_trial, 'status') and thisQuestions_trial.status == STOPPING:
-                    continueRoutine = False
-                # get current time
-                t = routineTimer.getTime()
-                tThisFlip = win.getFutureFlipTime(clock=routineTimer)
-                tThisFlipGlobal = win.getFutureFlipTime(clock=None)
-                frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
-                # update/draw components on each frame
-                
-                # *key_resp_questionary* updates
-                waitOnFlip = False
-                
-                # if key_resp_questionary is starting this frame...
-                if key_resp_questionary.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-                    # keep track of start time/frame for later
-                    key_resp_questionary.frameNStart = frameN  # exact frame index
-                    key_resp_questionary.tStart = t  # local t and not account for scr refresh
-                    key_resp_questionary.tStartRefresh = tThisFlipGlobal  # on global time
-                    win.timeOnFlip(key_resp_questionary, 'tStartRefresh')  # time at next scr refresh
-                    # add timestamp to datafile
-                    thisExp.timestampOnFlip(win, 'key_resp_questionary.started')
-                    # update status
-                    key_resp_questionary.status = STARTED
-                    # keyboard checking is just starting
-                    waitOnFlip = True
-                    win.callOnFlip(key_resp_questionary.clock.reset)  # t=0 on next screen flip
-                    win.callOnFlip(key_resp_questionary.clearEvents, eventType='keyboard')  # clear events on next screen flip
-                if key_resp_questionary.status == STARTED and not waitOnFlip:
-                    theseKeys = key_resp_questionary.getKeys(keyList=['a', 'b', 'c'], ignoreKeys=["escape"], waitRelease=False)
-                    _key_resp_questionary_allKeys.extend(theseKeys)
-                    if len(_key_resp_questionary_allKeys):
-                        key_resp_questionary.keys = _key_resp_questionary_allKeys[-1].name  # just the last key pressed
-                        key_resp_questionary.rt = _key_resp_questionary_allKeys[-1].rt
-                        key_resp_questionary.duration = _key_resp_questionary_allKeys[-1].duration
-                        # a response ends the routine
-                        continueRoutine = False
-                
-                # *questionary_text* updates
-                
-                # if questionary_text is starting this frame...
-                if questionary_text.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-                    # keep track of start time/frame for later
-                    questionary_text.frameNStart = frameN  # exact frame index
-                    questionary_text.tStart = t  # local t and not account for scr refresh
-                    questionary_text.tStartRefresh = tThisFlipGlobal  # on global time
-                    win.timeOnFlip(questionary_text, 'tStartRefresh')  # time at next scr refresh
-                    # add timestamp to datafile
-                    thisExp.timestampOnFlip(win, 'questionary_text.started')
-                    # update status
-                    questionary_text.status = STARTED
-                    questionary_text.setAutoDraw(True)
-                
-                # if questionary_text is active this frame...
-                if questionary_text.status == STARTED:
-                    # update params
-                    pass
-                
-                # if questionary_text is stopping this frame...
-                if questionary_text.status == STARTED:
-                    # is it time to stop? (based on global clock, using actual start)
-                    if tThisFlipGlobal > questionary_text.tStartRefresh + key_resp_questionary.status == FINISHED-frameTolerance:
-                        # keep track of stop time/frame for later
-                        questionary_text.tStop = t  # not accounting for scr refresh
-                        questionary_text.tStopRefresh = tThisFlipGlobal  # on global time
-                        questionary_text.frameNStop = frameN  # exact frame index
-                        # add timestamp to datafile
-                        thisExp.timestampOnFlip(win, 'questionary_text.stopped')
-                        # update status
-                        questionary_text.status = FINISHED
-                        questionary_text.setAutoDraw(False)
-                
-                # check for quit (typically the Esc key)
-                if defaultKeyboard.getKeys(keyList=["escape"]):
-                    thisExp.status = FINISHED
-                if thisExp.status == FINISHED or endExpNow:
-                    endExperiment(thisExp, win=win)
-                    return
-                # pause experiment here if requested
-                if thisExp.status == PAUSED:
-                    pauseExperiment(
-                        thisExp=thisExp, 
-                        win=win, 
-                        timers=[routineTimer, globalClock], 
-                        currentRoutine=Questionary,
-                    )
-                    # skip the frame we paused on
-                    continue
-                
-                # has a Component requested the Routine to end?
-                if not continueRoutine:
-                    Questionary.forceEnded = routineForceEnded = True
-                # has the Routine been forcibly ended?
-                if Questionary.forceEnded or routineForceEnded:
-                    break
-                # has every Component finished?
+        questionary_text1.setText(f"{questions[1]}\n\n A: {answers_a[1]}\n\n B: {answers_b[1]}\n\n C: {answers_c[1]}\n\n Presioná la opción que creas correcta (teclas A, B ó C)"
+        )
+        # create starting attributes for key_resp_questionary1
+        key_resp_questionary1.keys = []
+        key_resp_questionary1.rt = []
+        _key_resp_questionary1_allKeys = []
+        # store start times for Questionary1
+        Questionary1.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
+        Questionary1.tStart = globalClock.getTime(format='float')
+        Questionary1.status = STARTED
+        thisExp.addData('Questionary1.started', Questionary1.tStart)
+        Questionary1.maxDuration = None
+        # keep track of which components have finished
+        Questionary1Components = Questionary1.components
+        for thisComponent in Questionary1.components:
+            thisComponent.tStart = None
+            thisComponent.tStop = None
+            thisComponent.tStartRefresh = None
+            thisComponent.tStopRefresh = None
+            if hasattr(thisComponent, 'status'):
+                thisComponent.status = NOT_STARTED
+        # reset timers
+        t = 0
+        _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+        frameN = -1
+        
+        # --- Run Routine "Questionary1" ---
+        thisExp.currentRoutine = Questionary1
+        Questionary1.forceEnded = routineForceEnded = not continueRoutine
+        while continueRoutine:
+            # if trial has changed, end Routine now
+            if hasattr(thisCondition_trial, 'status') and thisCondition_trial.status == STOPPING:
                 continueRoutine = False
-                for thisComponent in Questionary.components:
-                    if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
-                        continueRoutine = True
-                        break  # at least one component has not yet finished
-                
-                # refresh the screen
-                if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
-                    win.flip()
+            # get current time
+            t = routineTimer.getTime()
+            tThisFlip = win.getFutureFlipTime(clock=routineTimer)
+            tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+            frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+            # update/draw components on each frame
             
-            # --- Ending Routine "Questionary" ---
-            for thisComponent in Questionary.components:
-                if hasattr(thisComponent, "setAutoDraw"):
-                    thisComponent.setAutoDraw(False)
-            # store stop times for Questionary
-            Questionary.tStop = globalClock.getTime(format='float')
-            Questionary.tStopRefresh = tThisFlipGlobal
-            thisExp.addData('Questionary.stopped', Questionary.tStop)
-            # Run 'End Routine' code from code_questionary
-            #port.write(bytes([int(200+1+currentLoop.thisN*3)]))
-            print(int(200+1+currentLoop.thisN*3))
-            # check responses
-            if key_resp_questionary.keys in ['', [], None]:  # No response was made
-                key_resp_questionary.keys = None
-            questions_trial.addData('key_resp_questionary.keys',key_resp_questionary.keys)
-            if key_resp_questionary.keys != None:  # we had a response
-                questions_trial.addData('key_resp_questionary.rt', key_resp_questionary.rt)
-                questions_trial.addData('key_resp_questionary.duration', key_resp_questionary.duration)
-            # the Routine "Questionary" was not non-slip safe, so reset the non-slip timer
-            routineTimer.reset()
-            # mark thisQuestions_trial as finished
-            if hasattr(thisQuestions_trial, 'status'):
-                thisQuestions_trial.status = FINISHED
-            # if awaiting a pause, pause now
-            if questions_trial.status == PAUSED:
-                thisExp.status = PAUSED
+            # *questionary_text1* updates
+            
+            # if questionary_text1 is starting this frame...
+            if questionary_text1.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                # keep track of start time/frame for later
+                questionary_text1.frameNStart = frameN  # exact frame index
+                questionary_text1.tStart = t  # local t and not account for scr refresh
+                questionary_text1.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(questionary_text1, 'tStartRefresh')  # time at next scr refresh
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'questionary_text1.started')
+                # update status
+                questionary_text1.status = STARTED
+                questionary_text1.setAutoDraw(True)
+            
+            # if questionary_text1 is active this frame...
+            if questionary_text1.status == STARTED:
+                # update params
+                pass
+            
+            # if questionary_text1 is stopping this frame...
+            if questionary_text1.status == STARTED:
+                if bool(key_resp_questionary1.status == FINISHED):
+                    # keep track of stop time/frame for later
+                    questionary_text1.tStop = t  # not accounting for scr refresh
+                    questionary_text1.tStopRefresh = tThisFlipGlobal  # on global time
+                    questionary_text1.frameNStop = frameN  # exact frame index
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'questionary_text1.stopped')
+                    # update status
+                    questionary_text1.status = FINISHED
+                    questionary_text1.setAutoDraw(False)
+            
+            # *key_resp_questionary1* updates
+            waitOnFlip = False
+            
+            # if key_resp_questionary1 is starting this frame...
+            if key_resp_questionary1.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                # keep track of start time/frame for later
+                key_resp_questionary1.frameNStart = frameN  # exact frame index
+                key_resp_questionary1.tStart = t  # local t and not account for scr refresh
+                key_resp_questionary1.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(key_resp_questionary1, 'tStartRefresh')  # time at next scr refresh
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'key_resp_questionary1.started')
+                # update status
+                key_resp_questionary1.status = STARTED
+                # keyboard checking is just starting
+                waitOnFlip = True
+                win.callOnFlip(key_resp_questionary1.clock.reset)  # t=0 on next screen flip
+                win.callOnFlip(key_resp_questionary1.clearEvents, eventType='keyboard')  # clear events on next screen flip
+            if key_resp_questionary1.status == STARTED and not waitOnFlip:
+                theseKeys = key_resp_questionary1.getKeys(keyList=['a','b','c'], ignoreKeys=["escape"], waitRelease=False)
+                _key_resp_questionary1_allKeys.extend(theseKeys)
+                if len(_key_resp_questionary1_allKeys):
+                    key_resp_questionary1.keys = _key_resp_questionary1_allKeys[-1].name  # just the last key pressed
+                    key_resp_questionary1.rt = _key_resp_questionary1_allKeys[-1].rt
+                    key_resp_questionary1.duration = _key_resp_questionary1_allKeys[-1].duration
+                    # a response ends the routine
+                    continueRoutine = False
+            
+            # check for quit (typically the Esc key)
+            if defaultKeyboard.getKeys(keyList=["escape"]):
+                thisExp.status = FINISHED
+            if thisExp.status == FINISHED or endExpNow:
+                endExperiment(thisExp, win=win)
+                return
+            # pause experiment here if requested
+            if thisExp.status == PAUSED:
                 pauseExperiment(
                     thisExp=thisExp, 
                     win=win, 
-                    timers=[globalClock], 
+                    timers=[routineTimer, globalClock], 
+                    currentRoutine=Questionary1,
                 )
-                # once done pausing, restore running status
-                questions_trial.status = STARTED
-        # completed 3.0 repeats of 'questions_trial'
-        questions_trial.status = FINISHED
+                # skip the frame we paused on
+                continue
+            
+            # has a Component requested the Routine to end?
+            if not continueRoutine:
+                Questionary1.forceEnded = routineForceEnded = True
+            # has the Routine been forcibly ended?
+            if Questionary1.forceEnded or routineForceEnded:
+                break
+            # has every Component finished?
+            continueRoutine = False
+            for thisComponent in Questionary1.components:
+                if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                    continueRoutine = True
+                    break  # at least one component has not yet finished
+            
+            # refresh the screen
+            if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+                win.flip()
         
+        # --- Ending Routine "Questionary1" ---
+        for thisComponent in Questionary1.components:
+            if hasattr(thisComponent, "setAutoDraw"):
+                thisComponent.setAutoDraw(False)
+        # store stop times for Questionary1
+        Questionary1.tStop = globalClock.getTime(format='float')
+        Questionary1.tStopRefresh = tThisFlipGlobal
+        thisExp.addData('Questionary1.stopped', Questionary1.tStop)
+        # Run 'End Routine' code from code_questionary1
+        #port.write(bytes([int(200+1+1*3)]))
+        print(int(200+1+1*3))
+        # check responses
+        if key_resp_questionary1.keys in ['', [], None]:  # No response was made
+            key_resp_questionary1.keys = None
+        condition_trials.addData('key_resp_questionary1.keys',key_resp_questionary1.keys)
+        if key_resp_questionary1.keys != None:  # we had a response
+            condition_trials.addData('key_resp_questionary1.rt', key_resp_questionary1.rt)
+            condition_trials.addData('key_resp_questionary1.duration', key_resp_questionary1.duration)
+        # the Routine "Questionary1" was not non-slip safe, so reset the non-slip timer
+        routineTimer.reset()
+        
+        # --- Prepare to start Routine "Questionary2" ---
+        # create an object to store info about Routine Questionary2
+        Questionary2 = data.Routine(
+            name='Questionary2',
+            components=[questionary_text2, key_resp_questionary2],
+        )
+        Questionary2.status = NOT_STARTED
+        continueRoutine = True
+        # update component parameters for each repeat
+        # Run 'Begin Routine' code from code_questionary2
+        #port.write(bytes([int(200+2*3)]))
+        print(int(200+2*3))
+        
+        thisExp.addData(f'correct_answer2', correct_answers[2])
+        thisExp.addData(f'question2', questions[2])
+        thisExp.addData(f'answer_a2', answers_a[2])
+        thisExp.addData(f'answer_b2', answers_b[2])
+        thisExp.addData(f'answer_c2', answers_c[2])
+        questionary_text2.setText(f"{questions[2]}\n\n A: {answers_a[2]}\n\n B: {answers_b[2]}\n\n C: {answers_c[2]}\n\n Presioná la opción que creas correcta (teclas A, B ó C)"
+        )
+        # create starting attributes for key_resp_questionary2
+        key_resp_questionary2.keys = []
+        key_resp_questionary2.rt = []
+        _key_resp_questionary2_allKeys = []
+        # store start times for Questionary2
+        Questionary2.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
+        Questionary2.tStart = globalClock.getTime(format='float')
+        Questionary2.status = STARTED
+        thisExp.addData('Questionary2.started', Questionary2.tStart)
+        Questionary2.maxDuration = None
+        # keep track of which components have finished
+        Questionary2Components = Questionary2.components
+        for thisComponent in Questionary2.components:
+            thisComponent.tStart = None
+            thisComponent.tStop = None
+            thisComponent.tStartRefresh = None
+            thisComponent.tStopRefresh = None
+            if hasattr(thisComponent, 'status'):
+                thisComponent.status = NOT_STARTED
+        # reset timers
+        t = 0
+        _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+        frameN = -1
+        
+        # --- Run Routine "Questionary2" ---
+        thisExp.currentRoutine = Questionary2
+        Questionary2.forceEnded = routineForceEnded = not continueRoutine
+        while continueRoutine:
+            # if trial has changed, end Routine now
+            if hasattr(thisCondition_trial, 'status') and thisCondition_trial.status == STOPPING:
+                continueRoutine = False
+            # get current time
+            t = routineTimer.getTime()
+            tThisFlip = win.getFutureFlipTime(clock=routineTimer)
+            tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+            frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+            # update/draw components on each frame
+            
+            # *questionary_text2* updates
+            
+            # if questionary_text2 is starting this frame...
+            if questionary_text2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                # keep track of start time/frame for later
+                questionary_text2.frameNStart = frameN  # exact frame index
+                questionary_text2.tStart = t  # local t and not account for scr refresh
+                questionary_text2.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(questionary_text2, 'tStartRefresh')  # time at next scr refresh
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'questionary_text2.started')
+                # update status
+                questionary_text2.status = STARTED
+                questionary_text2.setAutoDraw(True)
+            
+            # if questionary_text2 is active this frame...
+            if questionary_text2.status == STARTED:
+                # update params
+                pass
+            
+            # if questionary_text2 is stopping this frame...
+            if questionary_text2.status == STARTED:
+                if bool(key_resp_questionary2.status == FINISHED):
+                    # keep track of stop time/frame for later
+                    questionary_text2.tStop = t  # not accounting for scr refresh
+                    questionary_text2.tStopRefresh = tThisFlipGlobal  # on global time
+                    questionary_text2.frameNStop = frameN  # exact frame index
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'questionary_text2.stopped')
+                    # update status
+                    questionary_text2.status = FINISHED
+                    questionary_text2.setAutoDraw(False)
+            
+            # *key_resp_questionary2* updates
+            waitOnFlip = False
+            
+            # if key_resp_questionary2 is starting this frame...
+            if key_resp_questionary2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                # keep track of start time/frame for later
+                key_resp_questionary2.frameNStart = frameN  # exact frame index
+                key_resp_questionary2.tStart = t  # local t and not account for scr refresh
+                key_resp_questionary2.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(key_resp_questionary2, 'tStartRefresh')  # time at next scr refresh
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'key_resp_questionary2.started')
+                # update status
+                key_resp_questionary2.status = STARTED
+                # keyboard checking is just starting
+                waitOnFlip = True
+                win.callOnFlip(key_resp_questionary2.clock.reset)  # t=0 on next screen flip
+                win.callOnFlip(key_resp_questionary2.clearEvents, eventType='keyboard')  # clear events on next screen flip
+            if key_resp_questionary2.status == STARTED and not waitOnFlip:
+                theseKeys = key_resp_questionary2.getKeys(keyList=['a','b','c'], ignoreKeys=["escape"], waitRelease=False)
+                _key_resp_questionary2_allKeys.extend(theseKeys)
+                if len(_key_resp_questionary2_allKeys):
+                    key_resp_questionary2.keys = _key_resp_questionary2_allKeys[-1].name  # just the last key pressed
+                    key_resp_questionary2.rt = _key_resp_questionary2_allKeys[-1].rt
+                    key_resp_questionary2.duration = _key_resp_questionary2_allKeys[-1].duration
+                    # a response ends the routine
+                    continueRoutine = False
+            
+            # check for quit (typically the Esc key)
+            if defaultKeyboard.getKeys(keyList=["escape"]):
+                thisExp.status = FINISHED
+            if thisExp.status == FINISHED or endExpNow:
+                endExperiment(thisExp, win=win)
+                return
+            # pause experiment here if requested
+            if thisExp.status == PAUSED:
+                pauseExperiment(
+                    thisExp=thisExp, 
+                    win=win, 
+                    timers=[routineTimer, globalClock], 
+                    currentRoutine=Questionary2,
+                )
+                # skip the frame we paused on
+                continue
+            
+            # has a Component requested the Routine to end?
+            if not continueRoutine:
+                Questionary2.forceEnded = routineForceEnded = True
+            # has the Routine been forcibly ended?
+            if Questionary2.forceEnded or routineForceEnded:
+                break
+            # has every Component finished?
+            continueRoutine = False
+            for thisComponent in Questionary2.components:
+                if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                    continueRoutine = True
+                    break  # at least one component has not yet finished
+            
+            # refresh the screen
+            if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+                win.flip()
+        
+        # --- Ending Routine "Questionary2" ---
+        for thisComponent in Questionary2.components:
+            if hasattr(thisComponent, "setAutoDraw"):
+                thisComponent.setAutoDraw(False)
+        # store stop times for Questionary2
+        Questionary2.tStop = globalClock.getTime(format='float')
+        Questionary2.tStopRefresh = tThisFlipGlobal
+        thisExp.addData('Questionary2.stopped', Questionary2.tStop)
+        # Run 'End Routine' code from code_questionary2
+        #port.write(bytes([int(200+1+2*3)]))
+        print(int(200+1+2*3))
+        # check responses
+        if key_resp_questionary2.keys in ['', [], None]:  # No response was made
+            key_resp_questionary2.keys = None
+        condition_trials.addData('key_resp_questionary2.keys',key_resp_questionary2.keys)
+        if key_resp_questionary2.keys != None:  # we had a response
+            condition_trials.addData('key_resp_questionary2.rt', key_resp_questionary2.rt)
+            condition_trials.addData('key_resp_questionary2.duration', key_resp_questionary2.duration)
+        # the Routine "Questionary2" was not non-slip safe, so reset the non-slip timer
+        routineTimer.reset()
         # mark thisCondition_trial as finished
         if hasattr(thisCondition_trial, 'status'):
             thisCondition_trial.status = FINISHED
