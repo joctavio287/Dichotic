@@ -41,7 +41,7 @@ PROBE_DURATION = .1  # seconds
 ATTACK_THRESHOLD = 0.1 # Attack detection in probe profile as percentage of max amplitude
 PROBE_TYPE = 1000 # "va"
 SCRAMBLED_PROBE = False
-OGG_BITRATE = '192k' # standard '64k', '96k', '128k', '160k', '192k', '256k', '320k'
+OGG_BITRATE = '96k' # standard '64k', '96k', '128k', '160k', '192k', '256k', '320k'
 
 BIP_FREQ = 1000  # Hz
 BIP_DUR = 500   # ms

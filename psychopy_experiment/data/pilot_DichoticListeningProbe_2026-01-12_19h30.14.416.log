@@ -1,0 +1,489 @@
+4.3505 	DEBUG 	Fullscreen settings ignored as running in pilot mode.
+4.3510 	INFO 	Loaded monitor calibration from ['2025_12_16 10:09']
+4.5769 	INFO 	Using renderer 'NVIDIA GeForce RTX 5070 Ti/PCIe/SSE2' for graphics
+4.5769 	INFO 	OpenGL version supported by driver is 4..
+4.6715 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x0000013A6B456FB0>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x0000013A6B456F50>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0, 0, 0]), colorSpace='rgb', depthBits=8, fullscr=False, gamma=None, gammaErrorPolicy='raise', infoMsg=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x0000013A6AA08A90>, multiSample=False, name='window1', numSamples=2, pos=[np.float64(560.0), np.float64(240.0)], screen=0, size=array([800, 600]), stencilBits=0, stereo=False, title='PsychoPy', units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+4.6715 	EXP 	window1: backgroundImage = ''
+4.6715 	EXP 	window1: backgroundFit = 'none'
+4.6873 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.6935 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.6997 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.7058 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.7118 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.7181 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.7239 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.7299 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.7359 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.7419 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.7479 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.7540 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.7603 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.7664 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.7727 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.7788 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.7851 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.7916 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.7978 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.8038 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.8040 	DEBUG 	Uploading Texture Font fontname to graphics card
+4.8070 	DEBUG 	Upload of Texture Font fontname complete
+4.8160 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.8222 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.8283 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.8284 	DEBUG 	Uploading Texture Font fontname to graphics card
+4.8291 	DEBUG 	Upload of Texture Font fontname complete
+4.8303 	EXP 	window1: Attempting to measure frame rate of screen (0) ...
+4.8303 	EXP 	window1: recordFrameIntervals = False
+4.9952 	EXP 	window1: recordFrameIntervals = True
+5.1785 	EXP 	Screen (0) actual frame rate measured at 60.20Hz
+5.1785 	EXP 	window1: recordFrameIntervals = False
+5.1868 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+5.1928 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+5.1990 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+5.2050 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+5.2111 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+5.2174 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+5.2234 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+5.2294 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+5.2355 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+5.2415 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+5.2474 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+5.2476 	DEBUG 	Uploading Texture Font fontname to graphics card
+5.2480 	DEBUG 	Upload of Texture Font fontname complete
+5.4969 	INFO 	keyboard.Keyboard is using ptb backend.
+5.4970 	EXP 	DichoticListeningProbe: status = STARTED
+5.6295 	INFO 	Loaded psychtoolbox audio version 3.0.19.696976569
+5.6503 	WARNING 	No default speaker specified in Preferences / Hardware, using first speaker found: Speakers (Realtek(R) Audio)
+5.6504 	DEBUG 	Found speaker device: Speakers (Realtek(R) Audio) (2.0)
+5.7139 	INFO 	Created stream for speaker device: Speakers (Realtek(R) Audio) (2.0)
+5.7147 	EXP 	: sampleRate = 48000
+5.7147 	EXP 	: channels = None
+5.7164 	EXP 	: sampleRate = 44100
+5.7433 	INFO 	Resampled audio from 44100Hz to 48000Hz using method 'default'.
+5.7493 	WARNING 	No default speaker specified in Preferences / Hardware, using first speaker found: Speakers (Realtek(R) Audio)
+5.7493 	DEBUG 	Found speaker device: Speakers (Realtek(R) Audio) (2.0)
+5.7523 	INFO 	Created stream for speaker device: Speakers (Realtek(R) Audio) (2.0)
+5.7531 	EXP 	: sampleRate = 48000
+5.7531 	EXP 	: channels = None
+5.7534 	EXP 	: sampleRate = 44100
+5.7606 	INFO 	Resampled audio from 44100Hz to 48000Hz using method 'default'.
+5.7657 	WARNING 	No default speaker specified in Preferences / Hardware, using first speaker found: Speakers (Realtek(R) Audio)
+5.7658 	DEBUG 	Found speaker device: Speakers (Realtek(R) Audio) (2.0)
+5.7684 	INFO 	Created stream for speaker device: Speakers (Realtek(R) Audio) (2.0)
+5.7690 	EXP 	: sampleRate = 48000
+5.7690 	EXP 	: channels = None
+5.7693 	EXP 	: sampleRate = 44100
+5.7860 	INFO 	Resampled audio from 44100Hz to 48000Hz using method 'default'.
+5.7921 	WARNING 	No default speaker specified in Preferences / Hardware, using first speaker found: Speakers (Realtek(R) Audio)
+5.7921 	DEBUG 	Found speaker device: Speakers (Realtek(R) Audio) (2.0)
+5.7950 	INFO 	Created stream for speaker device: Speakers (Realtek(R) Audio) (2.0)
+5.7959 	EXP 	: sampleRate = 48000
+5.7959 	EXP 	: channels = None
+5.7963 	EXP 	: sampleRate = 44100
+5.8143 	INFO 	Resampled audio from 44100Hz to 48000Hz using method 'default'.
+5.8200 	WARNING 	No default speaker specified in Preferences / Hardware, using first speaker found: Speakers (Realtek(R) Audio)
+5.8200 	DEBUG 	Found speaker device: Speakers (Realtek(R) Audio) (2.0)
+5.8231 	INFO 	Created stream for speaker device: Speakers (Realtek(R) Audio) (2.0)
+5.8238 	EXP 	: sampleRate = 48000
+5.8239 	EXP 	: channels = None
+5.8242 	EXP 	: sampleRate = 44100
+5.8501 	INFO 	Resampled audio from 44100Hz to 48000Hz using method 'default'.
+5.8656 	EXP 	Created text_instructions = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text_instructions', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+5.8660 	EXP 	Created text_prompt = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text_prompt', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+5.8713 	WARNING 	No default speaker specified in Preferences / Hardware, using first speaker found: Speakers (Realtek(R) Audio)
+5.8713 	DEBUG 	Found speaker device: Speakers (Realtek(R) Audio) (2.0)
+5.8742 	INFO 	Created stream for speaker device: Speakers (Realtek(R) Audio) (2.0)
+5.8750 	EXP 	bip: sampleRate = 48000
+5.8750 	EXP 	bip: channels = None
+5.8781 	DEBUG 	Converted audio clip from mono to stereo
+5.8797 	EXP 	Sound bip set volume 1.000
+5.8819 	EXP 	Created fixation_bip = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-2.0, draggable=False, fillColor=array([1, 1, 1]), fillColorSpace='rgb', fillRGB=array([1, 1, 1]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1, 1, 1]), lineWidth=1.0, name='fixation_bip', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([0.1, 0.1]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+5.8828 	EXP 	Created final_silence = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-3.0, draggable=False, fillColor=array([1, 1, 1]), fillColorSpace='rgb', fillRGB=array([1, 1, 1]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1, 1, 1]), lineWidth=1.0, name='final_silence', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([0.1, 0.1]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+5.8836 	EXP 	Created polygon = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-1.0, draggable=False, fillColor=array([1, 1, 1]), fillColorSpace='rgb', fillRGB=array([1, 1, 1]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1, 1, 1]), lineWidth=1.0, name='polygon', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([0.1, 0.1]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+5.8883 	WARNING 	No default speaker specified in Preferences / Hardware, using first speaker found: Speakers (Realtek(R) Audio)
+5.8884 	DEBUG 	Found speaker device: Speakers (Realtek(R) Audio) (2.0)
+5.8910 	INFO 	Created stream for speaker device: Speakers (Realtek(R) Audio) (2.0)
+5.8917 	EXP 	bip: sampleRate = 48000
+5.8917 	EXP 	bip: channels = None
+5.8949 	DEBUG 	Converted audio clip from mono to stereo
+5.8964 	EXP 	Sound bip set volume 1.000
+5.8975 	EXP 	Created fixation_bip = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-2.0, draggable=False, fillColor=array([1, 1, 1]), fillColorSpace='rgb', fillRGB=array([1, 1, 1]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1, 1, 1]), lineWidth=1.0, name='fixation_bip', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([0.1, 0.1]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+5.8984 	EXP 	Created final_silence = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-3.0, draggable=False, fillColor=array([1, 1, 1]), fillColorSpace='rgb', fillRGB=array([1, 1, 1]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1, 1, 1]), lineWidth=1.0, name='final_silence', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([0.1, 0.1]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+5.8987 	EXP 	Created questionary_text0 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='questionary_text0', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+5.8990 	EXP 	Created questionary_text1 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='questionary_text1', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+5.8993 	EXP 	Created questionary_text2 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='questionary_text2', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+5.9271 	EXP 	Created final_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.05), italic=False, languageStyle='LTR', name='final_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+2.0013 	INFO 	Keyboard events cleared
+2.0013 	EXP 	text_instructions: autoDraw = True
+5.8865 	EXP 	Device response: <KeyPress from None: t=5.862754300003871, value=lalt, duration=None>
+9.9196 	EXP 	Device response: <KeyPress from None: t=9.902830200007884, value=lalt, duration=None>
+10.9361 	EXP 	Device response: <KeyPress from None: t=9.902830200007884, value=lalt, duration=1.0238213999837171>
+11.0528 	EXP 	Device response: <KeyPress from None: t=11.04668890000903, value=lalt, duration=None>
+12.8038 	DATA 	Mouse: Left button down, pos=(509,284)
+12.9033 	DATA 	Mouse:  Left button up, pos=(509,284)
+13.1866 	EXP 	Device response: <KeyPress from None: t=13.174737399996957, value=space, duration=None>
+13.1884 	DEBUG 	Read csv file with pandas: conditions.csv
+13.1889 	DEBUG 	Clearing unnamed columns from conditions.csv
+13.1893 	EXP 	Imported conditions.csv as conditions, 5 conditions, 5 params
+13.1909 	EXP 	New trial (rep=0, index=0): <Trial 0 (0 in rep 0) data={'ordered': np.True_, 'voice_L': 'M', 'voice_R': 'F', 'target': 'L', 'target_label': 'O_M_F', 'thisN': 0, 'thisTrialN': 0, 'thisRepN': 0}>
+13.1962 	DATA 	Keypress: space
+13.2022 	INFO 	Keyboard events cleared
+13.2022 	EXP 	text_instructions: autoDraw = False
+13.2022 	EXP 	text_prompt: height = np.float64(0.05)
+13.2022 	EXP 	text_prompt: height = np.float64(0.05)
+13.2022 	EXP 	text_prompt: height = np.float64(0.05)
+13.2022 	EXP 	text_prompt: text = 'Presta atención a la historia del lado DERECHO (>>>).\n\n\nApretá ESPACIO para continuar...'
+13.2022 	EXP 	text_prompt: autoDraw = True
+13.3036 	EXP 	Device response: <KeyPress from None: t=13.174737399996957, value=space, duration=0.12794949999079108>
+14.2201 	EXP 	Device response: <KeyPress from None: t=14.2148646999849, value=space, duration=None>
+14.2210 	EXP 	New trial (rep=0, index=0): <Trial 0 (0 in rep 0) data={'thisN': 0, 'thisTrialN': 0, 'thisRepN': 0}>
+14.2228 	EXP 	bip: sampleRate = 48000
+14.2236 	EXP 	Sound bip reached end of file
+14.2356 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+14.2245 	DATA 	Keypress: space
+14.2352 	EXP 	text_prompt: autoDraw = False
+14.2352 	EXP 	fixation_bip: autoDraw = True
+14.3698 	EXP 	Device response: <KeyPress from None: t=14.2148646999849, value=space, duration=0.15186650000396185>
+14.7390 	EXP 	Sound bip reached end of file
+14.7526 	EXP 	Sound bip reached end of file
+14.7686 	EXP 	fixation_bip: autoDraw = False
+14.7686 	EXP 	final_silence: autoDraw = True
+15.2547 	EXP 	Sound  reached end of file
+15.2547 	EXP 	Playing sound  on speaker Speakers (Realtek(R) Audio)
+15.2685 	EXP 	final_silence: autoDraw = False
+15.2685 	EXP 	fixation_bip: autoDraw = False
+15.2685 	EXP 	final_silence: autoDraw = False
+15.2685 	EXP 	polygon: autoDraw = True
+18.0478 	EXP 	Sound  stopped
+18.0480 	EXP 	New trial (rep=0, index=0): <Trial 0 (0 in rep 0) data={'thisN': 0, 'thisTrialN': 0, 'thisRepN': 0}>
+18.0485 	EXP 	bip: sampleRate = 48000
+18.0492 	EXP 	Sound bip reached end of file
+18.0520 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+18.0519 	EXP 	polygon: autoDraw = False
+18.0519 	EXP 	fixation_bip: autoDraw = True
+18.5602 	EXP 	Sound bip reached end of file
+18.5700 	EXP 	Sound bip reached end of file
+18.5852 	EXP 	fixation_bip: autoDraw = False
+18.5852 	EXP 	final_silence: autoDraw = True
+19.0853 	INFO 	Keyboard events cleared
+19.0853 	EXP 	final_silence: autoDraw = False
+19.0853 	EXP 	fixation_bip: autoDraw = False
+19.0853 	EXP 	final_silence: autoDraw = False
+19.0853 	EXP 	questionary_text0: height = np.float64(0.05)
+19.0853 	EXP 	questionary_text0: height = np.float64(0.05)
+19.0853 	EXP 	questionary_text0: height = np.float64(0.05)
+19.0853 	EXP 	questionary_text0: text = '¿Por qué la máquina se negó inicialmente a cumplir la orden de fabricar "nafta" cuando el ingeniero García se lo pidió?\n\n A: Porque la máquina no tenía los componentes necesarios para crear sustancias líquidas complejas.\n\n B: Porque la aclaración que le dio García sobre qué era la nafta utilizaba una palabra que no empezaba con la letra N.\n\n C: Porque el ingeniero López interrumpió el proceso antes de que la máquina pudiera terminar la tarea.\n\n Presioná la opción que creas correcta (teclas A, B ó C)'
+19.0853 	EXP 	questionary_text0: autoDraw = True
+20.9200 	EXP 	Device response: <KeyPress from None: t=20.910828699998092, value=a, duration=None>
+20.9288 	DATA 	Keypress: a
+20.9354 	INFO 	Keyboard events cleared
+20.9354 	EXP 	questionary_text0: autoDraw = False
+20.9354 	EXP 	questionary_text1: height = np.float64(0.05)
+20.9354 	EXP 	questionary_text1: height = np.float64(0.05)
+20.9354 	EXP 	questionary_text1: height = np.float64(0.05)
+20.9354 	EXP 	questionary_text1: text = '¿Qué sucedió cuando el ingeniero López, intentando ganar la competencia, le ordenó a la máquina que hiciera "nada"?\n\n A: La máquina comenzó a eliminar objetos, personas y partes del mundo real.\n\n B: La máquina se quedó inmóvil y en silencio, dándole la victoria a López.\n\n C: La máquina generó un vacío oscuro dentro de la habitación que asustó a los científicos.\n\n Presioná la opción que creas correcta (teclas A, B ó C)'
+20.9354 	EXP 	questionary_text1: autoDraw = True
+21.0698 	EXP 	Device response: <KeyPress from None: t=20.910828699998092, value=a, duration=0.14388940000208095>
+21.3533 	EXP 	Device response: <KeyPress from None: t=21.350811499985866, value=b, duration=None>
+21.3629 	DATA 	Keypress: b
+21.3688 	INFO 	Keyboard events cleared
+21.3688 	EXP 	questionary_text1: autoDraw = False
+21.3688 	EXP 	questionary_text2: height = np.float64(0.05)
+21.3688 	EXP 	questionary_text2: height = np.float64(0.05)
+21.3688 	EXP 	questionary_text2: height = np.float64(0.05)
+21.3688 	EXP 	questionary_text2: text = 'Según el final del relato, ¿por qué la máquina no pudo restaurar la casa ni el resto de las cosas desaparecidas?\n\n A: Porque las cosas que habían desaparecido, como la casa, no tenían nombres que comenzaran con la letra N.\n\n B: Porque la energía de la máquina se había agotado completamente tras crear la "Nada".\n\n C: Porque el ingeniero García decidió dejar el mundo así como lección para su colega López.\n\n Presioná la opción que creas correcta (teclas A, B ó C)'
+21.3688 	EXP 	questionary_text2: autoDraw = True
+21.5367 	EXP 	Device response: <KeyPress from None: t=21.350811499985866, value=b, duration=0.18399410002166405>
+22.2703 	EXP 	Device response: <KeyPress from None: t=22.262794799986295, value=c, duration=None>
+22.2704 	EXP 	New trial (rep=0, index=1): <Trial 1 (1 in rep 0) data={'ordered': np.False_, 'voice_L': 'M', 'voice_R': 'F', 'target': 'R', 'target_label': 'NO_M_F', 'thisN': 1, 'thisTrialN': 1, 'thisRepN': 0}>
+22.2712 	DATA 	Keypress: c
+22.2854 	INFO 	Keyboard events cleared
+22.2854 	EXP 	questionary_text2: autoDraw = False
+22.2854 	EXP 	text_prompt: text = 'Presta atención a la historia del lado DERECHO (>>>).\n\n\nApretá ESPACIO para continuar...'
+22.2854 	EXP 	text_prompt: autoDraw = True
+22.5199 	EXP 	Device response: <KeyPress from None: t=22.262794799986295, value=c, duration=0.25596810001297854>
+23.0867 	EXP 	Device response: <KeyPress from None: t=23.078841499984264, value=space, duration=None>
+23.0869 	EXP 	New trial (rep=0, index=0): <Trial 0 (0 in rep 0) data={'thisN': 0, 'thisTrialN': 0, 'thisRepN': 0}>
+23.0875 	EXP 	bip: sampleRate = 48000
+23.0881 	EXP 	Sound bip reached end of file
+23.1022 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+23.0886 	DATA 	Keypress: space
+23.1022 	EXP 	text_prompt: autoDraw = False
+23.1022 	EXP 	fixation_bip: autoDraw = True
+23.2535 	EXP 	Device response: <KeyPress from None: t=23.078841499984264, value=space, duration=0.1598686000215821>
+23.6035 	EXP 	Sound bip reached end of file
+23.6200 	EXP 	Sound bip reached end of file
+23.6356 	EXP 	fixation_bip: autoDraw = False
+23.6356 	EXP 	final_silence: autoDraw = True
+24.1210 	EXP 	Sound  reached end of file
+24.1210 	EXP 	Playing sound  on speaker Speakers (Realtek(R) Audio)
+24.1360 	EXP 	final_silence: autoDraw = False
+24.1360 	EXP 	fixation_bip: autoDraw = False
+24.1360 	EXP 	final_silence: autoDraw = False
+24.1360 	EXP 	polygon: autoDraw = True
+25.1367 	EXP 	Sound  stopped
+25.1369 	EXP 	New trial (rep=0, index=0): <Trial 0 (0 in rep 0) data={'thisN': 0, 'thisTrialN': 0, 'thisRepN': 0}>
+25.1375 	EXP 	bip: sampleRate = 48000
+25.1380 	EXP 	Sound bip reached end of file
+25.1522 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+25.1522 	EXP 	polygon: autoDraw = False
+25.1522 	EXP 	fixation_bip: autoDraw = True
+25.6541 	EXP 	Sound bip reached end of file
+25.6701 	EXP 	Sound bip reached end of file
+25.6859 	EXP 	fixation_bip: autoDraw = False
+25.6859 	EXP 	final_silence: autoDraw = True
+26.1860 	INFO 	Keyboard events cleared
+26.1859 	EXP 	final_silence: autoDraw = False
+26.1859 	EXP 	fixation_bip: autoDraw = False
+26.1859 	EXP 	final_silence: autoDraw = False
+26.1859 	EXP 	questionary_text0: height = np.float64(0.05)
+26.1859 	EXP 	questionary_text0: height = np.float64(0.05)
+26.1859 	EXP 	questionary_text0: height = np.float64(0.05)
+26.1859 	EXP 	questionary_text0: text = '¿Cuál fue la respuesta inicial de Yoli ante la propuesta del rey intergaláctico de llevarla a su planeta?\n\n A: Rechaza la oferta, explicando que está felizmente casada con Ernesto desde hace cuarenta años y prefiere quedarse en la Tierra.\n\n B: Aceptó de inmediato, emocionada por la posibilidad de ser una reina y viajar por el espacio.\n\n C: Se escondió de las cámaras y negó ser la persona que el extraterrestre estaba buscando.\n\n Presioná la opción que creas correcta (teclas A, B ó C)'
+26.1859 	EXP 	questionary_text0: autoDraw = True
+27.0874 	EXP 	Device response: <KeyPress from None: t=27.078862099995604, value=a, duration=None>
+27.0951 	DATA 	Keypress: a
+27.1025 	INFO 	Keyboard events cleared
+27.1025 	EXP 	questionary_text0: autoDraw = False
+27.1025 	EXP 	questionary_text1: height = np.float64(0.05)
+27.1025 	EXP 	questionary_text1: height = np.float64(0.05)
+27.1025 	EXP 	questionary_text1: height = np.float64(0.05)
+27.1025 	EXP 	questionary_text1: text = '¿Qué ocurrió cuando la nave del rey finalmente aterrizó y reclamó la presencia de Yoli?\n\n A: Yoli corre inmediatamente hacia la nave para evitar que el rey cumpla su amenaza de destruir el mundo.\n\n B: El ejército impidió que Yoli se acerque a la nave y comenzaron a disparar contra el alienígena.\n\n C: Yoli lo hizo esperar y luego se reunieron en un café cercano.\n\n Presioná la opción que creas correcta (teclas A, B ó C)'
+27.1025 	EXP 	questionary_text1: autoDraw = True
+27.2870 	EXP 	Device response: <KeyPress from None: t=27.078862099995604, value=a, duration=0.20792690000962466>
+27.4214 	EXP 	Device response: <KeyPress from None: t=27.406727800000226, value=b, duration=None>
+27.4293 	DATA 	Keypress: b
+27.4356 	INFO 	Keyboard events cleared
+27.4355 	EXP 	questionary_text1: autoDraw = False
+27.4355 	EXP 	questionary_text2: height = np.float64(0.05)
+27.4355 	EXP 	questionary_text2: height = np.float64(0.05)
+27.4355 	EXP 	questionary_text2: height = np.float64(0.05)
+27.4355 	EXP 	questionary_text2: text = 'Según lo revelado por una amiga de Yoli al final del cuento, ¿cuál fue el verdadero motivo por el que ella decidió irse con el extraterrestre?\n\n A: Porque se sacrificó heroicamente para salvar a la humanidad, aunque amaba profundamente a su esposo.\n\n B: Porque sentía que su matrimonio se había vuelto una rutina y encontró algo en el rey que le encantaba.\n\n C: Porque el gobierno la obligó a subir a la nave bajo amenaza de prisión si no colaboraba.\n\n Presioná la opción que creas correcta (teclas A, B ó C)'
+27.4355 	EXP 	questionary_text2: autoDraw = True
+27.6036 	EXP 	Device response: <KeyPress from None: t=27.406727800000226, value=b, duration=0.18399250000948086>
+27.9204 	EXP 	Device response: <KeyPress from None: t=27.918809599999804, value=c, duration=None>
+27.9205 	EXP 	New trial (rep=0, index=2): <Trial 2 (2 in rep 0) data={'ordered': np.True_, 'voice_L': 'F', 'voice_R': 'M', 'target': 'R', 'target_label': 'O_F_M', 'thisN': 2, 'thisTrialN': 2, 'thisRepN': 0}>
+27.9211 	DATA 	Keypress: c
+27.9359 	INFO 	Keyboard events cleared
+27.9358 	EXP 	questionary_text2: autoDraw = False
+27.9358 	EXP 	text_prompt: text = 'Presta atención a la historia del lado DERECHO (>>>).\n\n\nApretá ESPACIO para continuar...'
+27.9358 	EXP 	text_prompt: autoDraw = True
+28.1036 	EXP 	Device response: <KeyPress from None: t=27.918809599999804, value=c, duration=0.17600649999803863>
+29.1204 	EXP 	Device response: <KeyPress from None: t=29.110849499993492, value=space, duration=None>
+29.1206 	EXP 	New trial (rep=0, index=0): <Trial 0 (0 in rep 0) data={'thisN': 0, 'thisTrialN': 0, 'thisRepN': 0}>
+29.1212 	EXP 	bip: sampleRate = 48000
+29.1219 	EXP 	Sound bip reached end of file
+29.1360 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+29.1223 	DATA 	Keypress: space
+29.1363 	EXP 	text_prompt: autoDraw = False
+29.1363 	EXP 	fixation_bip: autoDraw = True
+29.3038 	EXP 	Device response: <KeyPress from None: t=29.110849499993492, value=space, duration=0.18394899999839254>
+29.6370 	EXP 	Sound bip reached end of file
+29.6537 	EXP 	Sound bip reached end of file
+29.6690 	EXP 	fixation_bip: autoDraw = False
+29.6690 	EXP 	final_silence: autoDraw = True
+30.1544 	EXP 	Sound  reached end of file
+30.1544 	EXP 	Playing sound  on speaker Speakers (Realtek(R) Audio)
+30.1694 	EXP 	final_silence: autoDraw = False
+30.1694 	EXP 	fixation_bip: autoDraw = False
+30.1694 	EXP 	final_silence: autoDraw = False
+30.1694 	EXP 	polygon: autoDraw = True
+33.6316 	EXP 	Sound  stopped
+33.6318 	EXP 	New trial (rep=0, index=0): <Trial 0 (0 in rep 0) data={'thisN': 0, 'thisTrialN': 0, 'thisRepN': 0}>
+33.6325 	EXP 	bip: sampleRate = 48000
+33.6330 	EXP 	Sound bip reached end of file
+33.6362 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+33.6360 	EXP 	polygon: autoDraw = False
+33.6360 	EXP 	fixation_bip: autoDraw = True
+34.1526 	EXP 	Sound bip reached end of file
+34.1701 	EXP 	Sound bip reached end of file
+34.1862 	EXP 	fixation_bip: autoDraw = False
+34.1862 	EXP 	final_silence: autoDraw = True
+34.6860 	INFO 	Keyboard events cleared
+34.6860 	EXP 	final_silence: autoDraw = False
+34.6860 	EXP 	fixation_bip: autoDraw = False
+34.6860 	EXP 	final_silence: autoDraw = False
+34.6860 	EXP 	questionary_text0: height = np.float64(0.05)
+34.6860 	EXP 	questionary_text0: height = np.float64(0.05)
+34.6860 	EXP 	questionary_text0: height = np.float64(0.05)
+34.6860 	EXP 	questionary_text0: text = '¿Qué sucedió con la primera novela que Simón Acosta escribió en papel antes de casarse con Luisa?\n\n A: Fue publicada por una editorial importante y se convirtió en un éxito de ventas.\n\n B: Fue rechazada por todos los editores, quienes le dijeron que era horrible.\n\n C: Nunca llegó a terminarla porque decidió comenzar a escribir solo en su mente.\n\n Presioná la opción que creas correcta (teclas A, B ó C)'
+34.6860 	EXP 	questionary_text0: autoDraw = True
+35.3538 	EXP 	Device response: <KeyPress from None: t=35.35087249998469, value=a, duration=None>
+35.3610 	DATA 	Keypress: a
+35.3696 	INFO 	Keyboard events cleared
+35.3696 	EXP 	questionary_text0: autoDraw = False
+35.3696 	EXP 	questionary_text1: height = np.float64(0.05)
+35.3696 	EXP 	questionary_text1: height = np.float64(0.05)
+35.3696 	EXP 	questionary_text1: height = np.float64(0.05)
+35.3696 	EXP 	questionary_text1: text = '¿Cuál fue el motivo por el que Acosta decidió dejar de escribir físicamente sus libros el día que nació su hijo?\n\n A: Porque sintió mucho aburrimiento al darse cuenta de que ya se sabía el libro de memoria.\n\n B: Porque el ruido de la máquina de escribir despertaba al bebé y molestaba a su esposa.\n\n C: Porque consideró que sus historias eran demasiado complejas para ser escritas.\n\n Presioná la opción que creas correcta (teclas A, B ó C)'
+35.3696 	EXP 	questionary_text1: autoDraw = True
+35.6038 	EXP 	Device response: <KeyPress from None: t=35.59881150000729, value=b, duration=None>
+35.6108 	DATA 	Keypress: b
+35.6193 	INFO 	Keyboard events cleared
+35.6193 	EXP 	questionary_text1: autoDraw = False
+35.6193 	EXP 	questionary_text2: height = np.float64(0.05)
+35.6193 	EXP 	questionary_text2: height = np.float64(0.05)
+35.6193 	EXP 	questionary_text2: height = np.float64(0.05)
+35.6193 	EXP 	questionary_text2: text = 'Al final del cuento, ¿qué le ocurrió a Facundo cuando decidió mentirle a su madre sobre el cementerio?\n\n A: Se descubrió a sí mismo creando una ficción en su mente.\n\n B: Decidió escribir en un cuaderno la historia de sus padres para que no se pierda.\n\n C: Se sintió culpable por no haberle dicho la verdad sobre dónde estaba enterrado su padre.\n\n Presioná la opción que creas correcta (teclas A, B ó C)'
+35.6193 	EXP 	questionary_text2: autoDraw = True
+35.7705 	EXP 	Device response: <KeyPress from None: t=35.35087249998469, value=a, duration=0.4078989000117872>
+35.8872 	EXP 	Device response: <KeyPress from None: t=35.59881150000729, value=b, duration=0.28803669998887926>
+35.9871 	EXP 	Device response: <KeyPress from None: t=35.9747376999876, value=c, duration=None>
+35.9872 	EXP 	New trial (rep=0, index=3): <Trial 3 (3 in rep 0) data={'ordered': np.False_, 'voice_L': 'F', 'voice_R': 'M', 'target': 'R', 'target_label': 'NO_F_M', 'thisN': 3, 'thisTrialN': 3, 'thisRepN': 0}>
+35.9879 	DATA 	Keypress: c
+36.0027 	INFO 	Keyboard events cleared
+36.0027 	EXP 	questionary_text2: autoDraw = False
+36.0027 	EXP 	text_prompt: text = 'Presta atención a la historia del lado DERECHO (>>>).\n\n\nApretá ESPACIO para continuar...'
+36.0027 	EXP 	text_prompt: autoDraw = True
+36.2374 	EXP 	Device response: <KeyPress from None: t=35.9747376999876, value=c, duration=0.25608680001460016>
+37.1208 	DATA 	Mouse: Left button down, pos=(515,289)
+37.2876 	DATA 	Mouse:  Left button up, pos=(515,289)
+37.3872 	EXP 	Device response: <KeyPress from None: t=37.37482229998568, value=space, duration=None>
+37.3874 	EXP 	New trial (rep=0, index=0): <Trial 0 (0 in rep 0) data={'thisN': 0, 'thisTrialN': 0, 'thisRepN': 0}>
+37.3880 	EXP 	bip: sampleRate = 48000
+37.3886 	EXP 	Sound bip reached end of file
+37.4026 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+37.3891 	DATA 	Keypress: space
+37.4027 	EXP 	text_prompt: autoDraw = False
+37.4027 	EXP 	fixation_bip: autoDraw = True
+37.5559 	EXP 	Device response: <KeyPress from None: t=37.37482229998568, value=space, duration=0.1681455000070855>
+37.9042 	EXP 	Sound bip reached end of file
+37.9208 	EXP 	Sound bip reached end of file
+37.9362 	EXP 	fixation_bip: autoDraw = False
+37.9362 	EXP 	final_silence: autoDraw = True
+38.4213 	EXP 	Sound  reached end of file
+38.4213 	EXP 	Playing sound  on speaker Speakers (Realtek(R) Audio)
+38.4364 	EXP 	final_silence: autoDraw = False
+38.4364 	EXP 	fixation_bip: autoDraw = False
+38.4364 	EXP 	final_silence: autoDraw = False
+38.4364 	EXP 	polygon: autoDraw = True
+40.8880 	EXP 	Sound  stopped
+40.8882 	EXP 	New trial (rep=0, index=0): <Trial 0 (0 in rep 0) data={'thisN': 0, 'thisTrialN': 0, 'thisRepN': 0}>
+40.8888 	EXP 	bip: sampleRate = 48000
+40.8893 	EXP 	Sound bip reached end of file
+40.9031 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+40.9029 	EXP 	polygon: autoDraw = False
+40.9029 	EXP 	fixation_bip: autoDraw = True
+41.4044 	EXP 	Sound bip reached end of file
+41.4208 	EXP 	Sound bip reached end of file
+41.4362 	EXP 	fixation_bip: autoDraw = False
+41.4362 	EXP 	final_silence: autoDraw = True
+41.9363 	INFO 	Keyboard events cleared
+41.9363 	EXP 	final_silence: autoDraw = False
+41.9363 	EXP 	fixation_bip: autoDraw = False
+41.9363 	EXP 	final_silence: autoDraw = False
+41.9363 	EXP 	questionary_text0: height = np.float64(0.05)
+41.9363 	EXP 	questionary_text0: height = np.float64(0.05)
+41.9363 	EXP 	questionary_text0: height = np.float64(0.05)
+41.9363 	EXP 	questionary_text0: text = '¿Qué contaba Lorenzo sobre sus primeros días de clases cuando regresaba a casa?\n\n A: Que la maestra le había enseñado muchas cosas nuevas y tenía mucha tarea.\n\n B: Que se sentía muy solo porque nadie quería jugar con él en el recreo.\n\n C: Que un compañero llamado Camilo se portaba mal y vivía en penitencia.\n\n Presioná la opción que creas correcta (teclas A, B ó C)'
+41.9363 	EXP 	questionary_text0: autoDraw = True
+42.5708 	EXP 	Device response: <KeyPress from None: t=42.566972800006624, value=a, duration=None>
+42.5790 	DATA 	Keypress: a
+42.5865 	INFO 	Keyboard events cleared
+42.5865 	EXP 	questionary_text0: autoDraw = False
+42.5865 	EXP 	questionary_text1: height = np.float64(0.05)
+42.5865 	EXP 	questionary_text1: height = np.float64(0.05)
+42.5865 	EXP 	questionary_text1: height = np.float64(0.05)
+42.5865 	EXP 	questionary_text1: text = '¿Cómo afectaron las historias sobre Camilo a la vida cotidiana de la familia de Lorenzo?\n\n A: Los padres decidieron hablar con la directora inmediatamente para expulsar al niño problemático.\n\n B: El comportamiento de Camilo se volvió un tema recurrente y usaban su nombre para describir sus propios errores domésticos.\n\n C: Mariana le prohibió a Lorenzo que se juntara con Camilo para evitar que aprendiera malas palabras.\n\n Presioná la opción que creas correcta (teclas A, B ó C)'
+42.5865 	EXP 	questionary_text1: autoDraw = True
+43.0543 	EXP 	Device response: <KeyPress from None: t=42.566972800006624, value=a, duration=0.47185109998099506>
+43.2214 	EXP 	Device response: <KeyPress from None: t=43.2148867000069, value=c, duration=None>
+43.2277 	DATA 	Keypress: c
+43.2364 	INFO 	Keyboard events cleared
+43.2364 	EXP 	questionary_text1: autoDraw = False
+43.2364 	EXP 	questionary_text2: height = np.float64(0.05)
+43.2364 	EXP 	questionary_text2: height = np.float64(0.05)
+43.2364 	EXP 	questionary_text2: height = np.float64(0.05)
+43.2364 	EXP 	questionary_text2: text = '¿Qué descubrió Mariana al hablar con la maestra durante la reunión de padres?\n\n A: Que Camilo era el hijo de la directora y por eso hacía lo que quería.\n\n B: Que Camilo se había mudado de escuela justo antes de la reunión.\n\n C: Que no existía ningún alumno llamado Camilo.\n\n Presioná la opción que creas correcta (teclas A, B ó C)'
+43.2364 	EXP 	questionary_text2: autoDraw = True
+43.5042 	EXP 	Device response: <KeyPress from None: t=43.2148867000069, value=c, duration=0.2879854000057094>
+43.6713 	EXP 	Device response: <KeyPress from None: t=43.66284309999901, value=c, duration=None>
+43.6714 	EXP 	New trial (rep=0, index=4): <Trial 4 (4 in rep 0) data={'ordered': np.True_, 'voice_L': 'F', 'voice_R': 'M', 'target': 'L', 'target_label': 'O_F_M', 'thisN': 4, 'thisTrialN': 4, 'thisRepN': 0}>
+43.6722 	DATA 	Keypress: c
+43.6867 	INFO 	Keyboard events cleared
+43.6866 	EXP 	questionary_text2: autoDraw = False
+43.6866 	EXP 	text_prompt: text = 'Presta atención a la historia del lado DERECHO (>>>).\n\n\nApretá ESPACIO para continuar...'
+43.6866 	EXP 	text_prompt: autoDraw = True
+43.7542 	EXP 	Device response: <KeyPress from None: t=43.742827400012175, value=a, duration=None>
+43.7547 	DATA 	Keypress: a
+43.9378 	EXP 	Device response: <KeyPress from None: t=43.66284309999901, value=c, duration=0.26395289998617955>
+44.1041 	EXP 	Device response: <KeyPress from None: t=43.742827400012175, value=a, duration=0.35199899997678585>
+45.0042 	EXP 	Device response: <KeyPress from None: t=44.99090879998403, value=space, duration=None>
+45.0044 	EXP 	New trial (rep=0, index=0): <Trial 0 (0 in rep 0) data={'thisN': 0, 'thisTrialN': 0, 'thisRepN': 0}>
+45.0050 	EXP 	bip: sampleRate = 48000
+45.0056 	EXP 	Sound bip reached end of file
+45.0198 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+45.0061 	DATA 	Keypress: space
+45.0198 	EXP 	text_prompt: autoDraw = False
+45.0198 	EXP 	fixation_bip: autoDraw = True
+45.2214 	EXP 	Device response: <KeyPress from None: t=44.99090879998403, value=space, duration=0.22390570002608>
+45.5236 	EXP 	Sound bip reached end of file
+45.5370 	EXP 	Sound bip reached end of file
+45.5532 	EXP 	fixation_bip: autoDraw = False
+45.5532 	EXP 	final_silence: autoDraw = True
+46.0383 	EXP 	Sound  reached end of file
+46.0383 	EXP 	Playing sound  on speaker Speakers (Realtek(R) Audio)
+46.0528 	EXP 	final_silence: autoDraw = False
+46.0528 	EXP 	fixation_bip: autoDraw = False
+46.0528 	EXP 	final_silence: autoDraw = False
+46.0528 	EXP 	polygon: autoDraw = True
+49.0320 	EXP 	Sound  stopped
+49.0322 	EXP 	New trial (rep=0, index=0): <Trial 0 (0 in rep 0) data={'thisN': 0, 'thisTrialN': 0, 'thisRepN': 0}>
+49.0328 	EXP 	bip: sampleRate = 48000
+49.0334 	EXP 	Sound bip reached end of file
+49.0366 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+49.0366 	EXP 	polygon: autoDraw = False
+49.0366 	EXP 	fixation_bip: autoDraw = True
+49.5511 	EXP 	Sound bip reached end of file
+49.5546 	EXP 	Sound bip reached end of file
+49.5698 	EXP 	fixation_bip: autoDraw = False
+49.5698 	EXP 	final_silence: autoDraw = True
+50.0701 	INFO 	Keyboard events cleared
+50.0701 	EXP 	final_silence: autoDraw = False
+50.0701 	EXP 	fixation_bip: autoDraw = False
+50.0701 	EXP 	final_silence: autoDraw = False
+50.0701 	EXP 	questionary_text0: height = np.float64(0.05)
+50.0701 	EXP 	questionary_text0: height = np.float64(0.05)
+50.0701 	EXP 	questionary_text0: height = np.float64(0.05)
+50.0701 	EXP 	questionary_text0: text = '¿Qué condición debía cumplir el hombre para conservar su riqueza y quedar libre del pacto?\n\n A: Lograr esconderse del Diablo durante un plazo de veinte años.\n\n B: Adivinar la edad exacta del Diablo antes de que terminara el plazo.\n\n C: Viajar por todo el mundo entrevistando a los sabios de Europa y Asia.\n\n Presioná la opción que creas correcta (teclas A, B ó C)'
+50.0701 	EXP 	questionary_text0: autoDraw = True
+50.6553 	DATA 	Keypress: a
+50.6717 	EXP 	Device response: <KeyPress from None: t=50.65497219999088, value=a, duration=None>
+50.6868 	INFO 	Keyboard events cleared
+50.6868 	EXP 	questionary_text0: autoDraw = False
+50.6868 	EXP 	questionary_text1: height = np.float64(0.05)
+50.6868 	EXP 	questionary_text1: height = np.float64(0.05)
+50.6868 	EXP 	questionary_text1: height = np.float64(0.05)
+50.6868 	EXP 	questionary_text1: text = '¿Cómo reaccionó el hombre ante su nueva vida de lujos tras firmar el pacto?\n\n A: Se acostumbró rápidamente a la riqueza y pronto olvidó el compromiso que tenía. \n\n B: Sintió mucha nostalgia por su antiguo rancho y sus alpargatas.\n\n C: Pasó los veinte años estudiando para intentar descubrir el secreto del Diablo.\n\n Presioná la opción que creas correcta (teclas A, B ó C)'
+50.6868 	EXP 	questionary_text1: autoDraw = True
+50.7543 	EXP 	Device response: <KeyPress from None: t=50.74286219998612, value=c, duration=None>
+50.7610 	DATA 	Keypress: c
+50.7701 	INFO 	Keyboard events cleared
+50.7700 	EXP 	questionary_text1: autoDraw = False
+50.7700 	EXP 	questionary_text2: height = np.float64(0.05)
+50.7700 	EXP 	questionary_text2: height = np.float64(0.05)
+50.7700 	EXP 	questionary_text2: height = np.float64(0.05)
+50.7700 	EXP 	questionary_text2: text = '¿De qué manera logró el hombre obtener la información necesaria para vencer al Diablo?\n\n A: Consultó un papel antiguo que tenía guardado en el cajón de su mesa de luz.\n\n B: Su esposa se disfrazó de un ave exótica para engañar al Diablo y hacerlo confesar.\n\n C: Los sabios de México y Bolivia le revelaron el número exacto tras una larga búsqueda.\n\n Presioná la opción que creas correcta (teclas A, B ó C)'
+50.7700 	EXP 	questionary_text2: autoDraw = True
+50.8713 	EXP 	Device response: <KeyPress from None: t=50.854802199988626, value=b, duration=None>
+50.8722 	DATA 	Keypress: b
+50.8869 	INFO 	Keyboard events cleared
+50.8868 	EXP 	questionary_text2: autoDraw = False
+50.8868 	EXP 	final_text: autoDraw = True
+50.9381 	EXP 	Device response: <KeyPress from None: t=50.65497219999088, value=a, duration=0.27187660001800396>
+50.9544 	EXP 	Device response: <KeyPress from None: t=50.74286219998612, value=c, duration=0.20792130002519116>
+51.1043 	EXP 	Device response: <KeyPress from None: t=51.09490530000767, value=a, duration=None>
+51.1049 	DATA 	Keypress: a
+51.1211 	EXP 	Device response: <KeyPress from None: t=51.110803099989425, value=c, duration=None>
+51.1216 	DATA 	Keypress: c
+51.1380 	EXP 	Device response: <KeyPress from None: t=50.854802199988626, value=b, duration=0.2800048000062816>
+51.3547 	EXP 	Device response: <KeyPress from None: t=51.110803099989425, value=c, duration=0.2400381000188645>
+51.4047 	EXP 	Device response: <KeyPress from None: t=51.09490530000767, value=a, duration=0.29592559998854995>
+52.0383 	EXP 	Device response: <KeyPress from None: t=52.02285249999841, value=space, duration=None>
+52.0387 	DATA 	Keypress: space
+52.0532 	EXP 	final_text: autoDraw = False
+52.0543 	EXP 	DichoticListeningProbe: status = STOPPED
+52.0588 	INFO 	saved data to 'C:\\Users\\jocta\\repos\\Dichotic\\psychopy_experiment\\data\\pilot_DichoticListeningProbe_2026-01-12_19h30.14.416.csv'
+52.0595 	INFO 	saved data to C:\Users\jocta\repos\Dichotic\psychopy_experiment\data\pilot_DichoticListeningProbe_2026-01-12_19h30.14.416.psydat
+52.1557 	DEBUG 	Saving data for DichoticListeningProbe ExperimentHandler
+52.1570 	WARNING 	Stopping key buffers but this could be dangerous ifother keyboards rely on the same.

@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2025.2.3),
-    on January 09, 2026, at 13:35
+    on January 12, 2026, at 20:42
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -399,7 +399,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         delimiter=','
     )
     audiobook_combinations = pd.read_csv(
-        "audiobook_combinations_probes_pruebas.csv", 
+        "audiobook_combinations_probes.csv", 
         header=0, 
         delimiter=','
     )
