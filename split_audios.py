@@ -269,8 +269,8 @@ for j, (audio_f, audio_m) in enumerate(combinations):
             'filename':str(Path("..")/save_path.with_suffix('.ogg')),
             'condition_label': condition_label,
             'ordered': ordered,
-            'story_L': int(number_f),
-            'story_R': int(number_m),
+            'story_L': story_left,
+            'story_R': story_right,
             'voice_L': voice_left,
             'voice_R': voice_right,
         })
@@ -278,8 +278,8 @@ for j, (audio_f, audio_m) in enumerate(combinations):
             'filename': str(Path("..")/ no_probe_path / f'{stereo_name}_no_probe.ogg'),
             'condition_label': condition_label,
             'ordered': ordered,
-            'story_L': int(number_f),
-            'story_R': int(number_m),
+            'story_L': story_left,
+            'story_R': story_right,
             'voice_L': voice_left,
             'voice_R': voice_right
         })
