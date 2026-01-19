@@ -1,0 +1,2546 @@
+7.2098 	INFO 	Loaded monitor calibration from ['2025_12_16 10:09']
+7.2942 	WARNING 	User requested fullscreen with size [1024  768], but screen is actually [1920, 1080]. Using actual size
+7.4154 	INFO 	Using renderer 'NVIDIA GeForce RTX 5070 Ti/PCIe/SSE2' for graphics
+7.4154 	INFO 	OpenGL version supported by driver is 4..
+7.4249 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x0000023B9FDF61D0>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x0000023B9FDF6170>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0, 0, 0]), colorSpace='rgb', depthBits=8, fullscr=True, gamma=None, gammaErrorPolicy='raise', infoMsg=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x0000023B9FEB7C40>, multiSample=False, name='window1', numSamples=2, pos=[np.float64(0.0), np.float64(0.0)], screen=0, size=array([1920, 1080]), stencilBits=0, stereo=False, title='PsychoPy', units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+7.4249 	EXP 	window1: backgroundImage = ''
+7.4249 	EXP 	window1: backgroundFit = 'none'
+7.5825 	EXP 	window1: Attempting to measure frame rate of screen (0) ...
+7.5825 	EXP 	window1: recordFrameIntervals = False
+7.7620 	EXP 	window1: recordFrameIntervals = True
+7.9454 	EXP 	Screen (0) actual frame rate measured at 59.98Hz
+7.9454 	EXP 	window1: recordFrameIntervals = False
+8.1926 	INFO 	keyboard.Keyboard is using ptb backend.
+8.1926 	EXP 	DichoticListeningProbe: status = STARTED
+8.3246 	INFO 	Loaded psychtoolbox audio version 3.0.19.696976569
+8.3443 	WARNING 	No default speaker specified in Preferences / Hardware, using first speaker found: Speakers (Realtek(R) Audio)
+8.4074 	INFO 	Created stream for speaker device: Speakers (Realtek(R) Audio) (2.0)
+8.4084 	EXP 	: sampleRate = 48000
+8.4084 	EXP 	: channels = None
+8.4092 	EXP 	: sampleRate = 48000
+8.4222 	WARNING 	No default speaker specified in Preferences / Hardware, using first speaker found: Speakers (Realtek(R) Audio)
+8.4250 	INFO 	Created stream for speaker device: Speakers (Realtek(R) Audio) (2.0)
+8.4256 	EXP 	: sampleRate = 48000
+8.4256 	EXP 	: channels = None
+8.4262 	EXP 	: sampleRate = 48000
+8.4385 	WARNING 	No default speaker specified in Preferences / Hardware, using first speaker found: Speakers (Realtek(R) Audio)
+8.4410 	INFO 	Created stream for speaker device: Speakers (Realtek(R) Audio) (2.0)
+8.4416 	EXP 	: sampleRate = 48000
+8.4417 	EXP 	: channels = None
+8.4423 	EXP 	: sampleRate = 48000
+8.4544 	WARNING 	No default speaker specified in Preferences / Hardware, using first speaker found: Speakers (Realtek(R) Audio)
+8.4569 	INFO 	Created stream for speaker device: Speakers (Realtek(R) Audio) (2.0)
+8.4575 	EXP 	: sampleRate = 48000
+8.4575 	EXP 	: channels = None
+8.4581 	EXP 	: sampleRate = 48000
+8.4703 	WARNING 	No default speaker specified in Preferences / Hardware, using first speaker found: Speakers (Realtek(R) Audio)
+8.4728 	INFO 	Created stream for speaker device: Speakers (Realtek(R) Audio) (2.0)
+8.4733 	EXP 	: sampleRate = 48000
+8.4734 	EXP 	: channels = None
+8.4740 	EXP 	: sampleRate = 48000
+8.4860 	WARNING 	No default speaker specified in Preferences / Hardware, using first speaker found: Speakers (Realtek(R) Audio)
+8.4884 	INFO 	Created stream for speaker device: Speakers (Realtek(R) Audio) (2.0)
+8.4890 	EXP 	: sampleRate = 48000
+8.4890 	EXP 	: channels = None
+8.4901 	EXP 	: sampleRate = 48000
+8.5021 	WARNING 	No default speaker specified in Preferences / Hardware, using first speaker found: Speakers (Realtek(R) Audio)
+8.5046 	INFO 	Created stream for speaker device: Speakers (Realtek(R) Audio) (2.0)
+8.5052 	EXP 	: sampleRate = 48000
+8.5052 	EXP 	: channels = None
+8.5058 	EXP 	: sampleRate = 48000
+9.1127 	EXP 	Created text_instructions = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(1.0), italic=False, languageStyle='LTR', name='text_instructions', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+9.1131 	EXP 	Created text_prompt = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=1.0, italic=False, languageStyle='LTR', name='text_prompt', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+9.1183 	WARNING 	No default speaker specified in Preferences / Hardware, using first speaker found: Speakers (Realtek(R) Audio)
+9.1214 	INFO 	Created stream for speaker device: Speakers (Realtek(R) Audio) (2.0)
+9.1222 	EXP 	bip: sampleRate = 48000
+9.1222 	EXP 	bip: channels = None
+9.1271 	EXP 	Sound bip set volume 1.000
+9.1289 	EXP 	Created fixation_bip = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-2.0, draggable=False, fillColor=array([1, 1, 1]), fillColorSpace='rgb', fillRGB=array([1, 1, 1]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1, 1, 1]), lineWidth=1.0, name='fixation_bip', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([0.1, 0.1]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+9.1298 	EXP 	Created polygon = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-1.0, draggable=False, fillColor=array([1, 1, 1]), fillColorSpace='rgb', fillRGB=array([1, 1, 1]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1, 1, 1]), lineWidth=1.0, name='polygon', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([0.1, 0.1]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+9.1346 	WARNING 	No default speaker specified in Preferences / Hardware, using first speaker found: Speakers (Realtek(R) Audio)
+9.1374 	INFO 	Created stream for speaker device: Speakers (Realtek(R) Audio) (2.0)
+9.1381 	EXP 	bip: sampleRate = 48000
+9.1381 	EXP 	bip: channels = None
+9.1432 	EXP 	Sound bip set volume 1.000
+9.1442 	EXP 	Created fixation_bip = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-2.0, draggable=False, fillColor=array([1, 1, 1]), fillColorSpace='rgb', fillRGB=array([1, 1, 1]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1, 1, 1]), lineWidth=1.0, name='fixation_bip', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([0.1, 0.1]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+9.1445 	EXP 	Created questionary_text0 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=1.0, italic=False, languageStyle='LTR', name='questionary_text0', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+9.1448 	EXP 	Created questionary_text1 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=1.0, italic=False, languageStyle='LTR', name='questionary_text1', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+9.1451 	EXP 	Created questionary_text2 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=1.0, italic=False, languageStyle='LTR', name='questionary_text2', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+9.1533 	EXP 	Created final_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.05), italic=False, languageStyle='LTR', name='final_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+0.0752 	EXP 	text_instructions: height = 0.035
+2.0087 	INFO 	Keyboard events cleared
+2.0086 	EXP 	text_instructions: autoDraw = True
+2.0086 	EXP 	text_instructions: height = np.float64(0.035)
+2.0086 	EXP 	text_instructions: height = np.float64(0.035)
+2.0086 	EXP 	text_instructions: height = np.float64(0.035)
+2.0086 	EXP 	text_instructions: text = 'En cada ensayo escucharás dos historias simultáneas (una en cada oído). Tus tareas son\n\n1) Mantenerte quieto/a y mirar la cruz central.\n\n2) Prestar atención sólo a la historia indicada.\n\n3) Responder las preguntas con el teclado.\n\nPresioná ESPACIO para continuar...'
+3.1946 	EXP 	Device response: <KeyPress from None: t=3.1844852999784052, value=space, duration=None>
+3.1948 	EXP 	New trial (rep=0, index=0): <Trial 0 (0 in rep 0) data={'thisN': 0, 'thisTrialN': 0, 'thisRepN': 0}>
+3.6260 	EXP 	Device response: <KeyPress from None: t=3.1844852999784052, value=space, duration=0.08802630001446232>
+3.6261 	EXP 	Device response: <KeyPress from None: t=3.376584499987075, value=space, duration=None>
+3.6261 	EXP 	Device response: <KeyPress from None: t=3.376584499987075, value=space, duration=0.0879443000012543>
+3.6261 	EXP 	Device response: <KeyPress from None: t=3.5525135999778286, value=space, duration=None>
+3.6293 	DATA 	Keypress: space
+3.6294 	DATA 	Keypress: space
+3.6295 	DATA 	Keypress: space
+3.6420 	INFO 	Keyboard events cleared
+3.6420 	EXP 	text_instructions: autoDraw = False
+3.6420 	EXP 	text_prompt: height = np.float64(1.0)
+3.6420 	EXP 	text_prompt: height = np.float64(1.0)
+3.6420 	EXP 	text_prompt: height = np.float64(1.0)
+3.6420 	EXP 	text_prompt: text = 'Presta atención a la historia del lado IZQUIERDO (<<<).\n\n\nApretá ESPACIO para continuar...'
+3.6420 	EXP 	text_prompt: height = 0.035
+3.6420 	EXP 	text_prompt: autoDraw = True
+3.6420 	EXP 	text_prompt: height = np.float64(0.035)
+3.6420 	EXP 	text_prompt: height = np.float64(0.035)
+3.6420 	EXP 	text_prompt: height = np.float64(0.035)
+3.6420 	EXP 	text_prompt: text = 'Presta atención a la historia del lado IZQUIERDO (<<<).\n\n\nApretá ESPACIO para continuar...'
+4.0921 	EXP 	Device response: <KeyPress from None: t=4.088430000003427, value=space, duration=None>
+4.0923 	EXP 	New trial (rep=0, index=0): <Trial 0 (0 in rep 0) data={'thisN': 0, 'thisTrialN': 0, 'thisRepN': 0}>
+4.0930 	EXP 	bip: sampleRate = 48000
+4.0938 	EXP 	Sound bip reached end of file
+4.1087 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+4.0944 	DATA 	Keypress: space
+4.1087 	EXP 	text_prompt: autoDraw = False
+4.1087 	EXP 	fixation_bip: autoDraw = True
+4.2088 	EXP 	Device response: <KeyPress from None: t=3.5525135999778286, value=space, duration=0.6558896000206005>
+4.6088 	EXP 	Sound bip reached end of file
+4.6088 	EXP 	Sound bip reached end of file
+4.6089 	EXP 	New trial (rep=1, index=0): <Trial 1 (0 in rep 1) data={'thisN': 1, 'thisTrialN': 0, 'thisRepN': 1}>
+4.6095 	EXP 	bip: sampleRate = 48000
+4.6101 	EXP 	Sound bip reached end of file
+4.6254 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+4.6254 	EXP 	fixation_bip: autoDraw = False
+4.6254 	EXP 	fixation_bip: autoDraw = False
+4.6254 	EXP 	fixation_bip: autoDraw = True
+5.1284 	EXP 	Sound bip reached end of file
+5.1285 	EXP 	Sound bip reached end of file
+5.1286 	EXP 	New trial (rep=2, index=0): <Trial 2 (0 in rep 2) data={'thisN': 2, 'thisTrialN': 0, 'thisRepN': 2}>
+5.1292 	EXP 	bip: sampleRate = 48000
+5.1298 	EXP 	Sound bip reached end of file
+5.1421 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+5.1420 	EXP 	fixation_bip: autoDraw = False
+5.1420 	EXP 	fixation_bip: autoDraw = False
+5.1420 	EXP 	fixation_bip: autoDraw = True
+5.6494 	EXP 	Sound bip reached end of file
+5.6495 	EXP 	Sound bip reached end of file
+5.6496 	EXP 	New trial (rep=3, index=0): <Trial 3 (0 in rep 3) data={'thisN': 3, 'thisTrialN': 0, 'thisRepN': 3}>
+5.6502 	EXP 	bip: sampleRate = 48000
+5.6507 	EXP 	Sound bip reached end of file
+5.6587 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+5.6587 	EXP 	fixation_bip: autoDraw = False
+5.6587 	EXP 	fixation_bip: autoDraw = False
+5.6587 	EXP 	fixation_bip: autoDraw = True
+6.1675 	EXP 	Sound bip reached end of file
+6.1675 	EXP 	Sound bip reached end of file
+6.1676 	EXP 	New trial (rep=4, index=0): <Trial 4 (0 in rep 4) data={'thisN': 4, 'thisTrialN': 0, 'thisRepN': 4}>
+6.1682 	EXP 	bip: sampleRate = 48000
+6.1687 	EXP 	Sound bip reached end of file
+6.1754 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+6.1754 	EXP 	fixation_bip: autoDraw = False
+6.1754 	EXP 	fixation_bip: autoDraw = False
+6.1754 	EXP 	fixation_bip: autoDraw = True
+6.6768 	EXP 	Sound bip reached end of file
+6.6768 	EXP 	Sound bip reached end of file
+6.6769 	EXP 	New trial (rep=5, index=0): <Trial 5 (0 in rep 5) data={'thisN': 5, 'thisTrialN': 0, 'thisRepN': 5}>
+6.6775 	EXP 	bip: sampleRate = 48000
+6.6780 	EXP 	Sound bip reached end of file
+6.6921 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+6.6921 	EXP 	fixation_bip: autoDraw = False
+6.6921 	EXP 	fixation_bip: autoDraw = False
+6.6921 	EXP 	fixation_bip: autoDraw = True
+7.1986 	EXP 	Sound bip reached end of file
+7.1986 	EXP 	Sound bip reached end of file
+7.1987 	EXP 	New trial (rep=6, index=0): <Trial 6 (0 in rep 6) data={'thisN': 6, 'thisTrialN': 0, 'thisRepN': 6}>
+7.1992 	EXP 	bip: sampleRate = 48000
+7.1997 	EXP 	Sound bip reached end of file
+7.2088 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+7.2088 	EXP 	fixation_bip: autoDraw = False
+7.2088 	EXP 	fixation_bip: autoDraw = False
+7.2088 	EXP 	fixation_bip: autoDraw = True
+7.7097 	EXP 	Sound bip reached end of file
+7.7098 	EXP 	Sound bip reached end of file
+7.7099 	EXP 	New trial (rep=7, index=0): <Trial 7 (0 in rep 7) data={'thisN': 7, 'thisTrialN': 0, 'thisRepN': 7}>
+7.7105 	EXP 	bip: sampleRate = 48000
+7.7109 	EXP 	Sound bip reached end of file
+7.7255 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+7.7255 	EXP 	fixation_bip: autoDraw = False
+7.7255 	EXP 	fixation_bip: autoDraw = False
+7.7255 	EXP 	fixation_bip: autoDraw = True
+8.2286 	EXP 	Sound bip reached end of file
+8.2286 	EXP 	Sound bip reached end of file
+8.2287 	EXP 	New trial (rep=8, index=0): <Trial 8 (0 in rep 8) data={'thisN': 8, 'thisTrialN': 0, 'thisRepN': 8}>
+8.2293 	EXP 	bip: sampleRate = 48000
+8.2298 	EXP 	Sound bip reached end of file
+8.2422 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+8.2421 	EXP 	fixation_bip: autoDraw = False
+8.2421 	EXP 	fixation_bip: autoDraw = False
+8.2421 	EXP 	fixation_bip: autoDraw = True
+8.7487 	EXP 	Sound bip reached end of file
+8.7487 	EXP 	Sound bip reached end of file
+8.7488 	EXP 	New trial (rep=9, index=0): <Trial 9 (0 in rep 9) data={'thisN': 9, 'thisTrialN': 0, 'thisRepN': 9}>
+8.7494 	EXP 	bip: sampleRate = 48000
+8.7499 	EXP 	Sound bip reached end of file
+8.7588 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+8.7588 	EXP 	fixation_bip: autoDraw = False
+8.7588 	EXP 	fixation_bip: autoDraw = False
+8.7588 	EXP 	fixation_bip: autoDraw = True
+9.2687 	EXP 	Sound bip reached end of file
+9.2687 	EXP 	Sound bip reached end of file
+9.2688 	EXP 	New trial (rep=10, index=0): <Trial 10 (0 in rep 10) data={'thisN': 10, 'thisTrialN': 0, 'thisRepN': 10}>
+9.2695 	EXP 	bip: sampleRate = 48000
+9.2700 	EXP 	Sound bip reached end of file
+9.2755 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+9.2754 	EXP 	fixation_bip: autoDraw = False
+9.2754 	EXP 	fixation_bip: autoDraw = False
+9.2754 	EXP 	fixation_bip: autoDraw = True
+9.7895 	EXP 	Sound bip reached end of file
+9.7895 	EXP 	Sound bip reached end of file
+9.7896 	EXP 	New trial (rep=11, index=0): <Trial 11 (0 in rep 11) data={'thisN': 11, 'thisTrialN': 0, 'thisRepN': 11}>
+9.7902 	EXP 	bip: sampleRate = 48000
+9.7907 	EXP 	Sound bip reached end of file
+9.7920 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+9.7921 	EXP 	fixation_bip: autoDraw = False
+9.7921 	EXP 	fixation_bip: autoDraw = False
+9.7921 	EXP 	fixation_bip: autoDraw = True
+10.3103 	EXP 	Sound bip reached end of file
+10.3104 	EXP 	Sound bip reached end of file
+10.3105 	EXP 	New trial (rep=12, index=0): <Trial 12 (0 in rep 12) data={'thisN': 12, 'thisTrialN': 0, 'thisRepN': 12}>
+10.3111 	EXP 	bip: sampleRate = 48000
+10.3115 	EXP 	Sound bip reached end of file
+10.3255 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+10.3255 	EXP 	fixation_bip: autoDraw = False
+10.3255 	EXP 	fixation_bip: autoDraw = False
+10.3255 	EXP 	fixation_bip: autoDraw = True
+10.8263 	EXP 	Sound bip reached end of file
+10.8263 	EXP 	Sound bip reached end of file
+10.8264 	EXP 	New trial (rep=13, index=0): <Trial 13 (0 in rep 13) data={'thisN': 13, 'thisTrialN': 0, 'thisRepN': 13}>
+10.8270 	EXP 	bip: sampleRate = 48000
+10.8274 	EXP 	Sound bip reached end of file
+10.8422 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+10.8422 	EXP 	fixation_bip: autoDraw = False
+10.8422 	EXP 	fixation_bip: autoDraw = False
+10.8422 	EXP 	fixation_bip: autoDraw = True
+11.3502 	EXP 	Sound bip reached end of file
+11.3503 	EXP 	Sound bip reached end of file
+11.3503 	EXP 	New trial (rep=14, index=0): <Trial 14 (0 in rep 14) data={'thisN': 14, 'thisTrialN': 0, 'thisRepN': 14}>
+11.3509 	EXP 	bip: sampleRate = 48000
+11.3514 	EXP 	Sound bip reached end of file
+11.3588 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+11.3589 	EXP 	fixation_bip: autoDraw = False
+11.3589 	EXP 	fixation_bip: autoDraw = False
+11.3589 	EXP 	fixation_bip: autoDraw = True
+11.8665 	EXP 	Sound bip reached end of file
+11.8665 	EXP 	Sound bip reached end of file
+11.8756 	EXP 	Sound  reached end of file
+11.8756 	EXP 	Playing sound  on speaker Speakers (Realtek(R) Audio)
+11.8755 	EXP 	fixation_bip: autoDraw = False
+11.8755 	EXP 	fixation_bip: autoDraw = False
+11.8755 	EXP 	polygon: autoDraw = True
+16.8886 	EXP 	Sound  reached end of file
+16.8924 	EXP 	Sound  reached end of file
+16.8927 	EXP 	New trial (rep=0, index=0): <Trial 0 (0 in rep 0) data={'thisN': 0, 'thisTrialN': 0, 'thisRepN': 0}>
+16.8934 	EXP 	bip: sampleRate = 48000
+16.8939 	EXP 	Sound bip reached end of file
+16.9090 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+16.9091 	EXP 	polygon: autoDraw = False
+16.9091 	EXP 	fixation_bip: autoDraw = True
+17.4091 	EXP 	Sound bip reached end of file
+17.4091 	EXP 	Sound bip reached end of file
+17.4092 	EXP 	New trial (rep=1, index=0): <Trial 1 (0 in rep 1) data={'thisN': 1, 'thisTrialN': 0, 'thisRepN': 1}>
+17.4098 	EXP 	bip: sampleRate = 48000
+17.4102 	EXP 	Sound bip reached end of file
+17.4257 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+17.4257 	EXP 	fixation_bip: autoDraw = False
+17.4257 	EXP 	fixation_bip: autoDraw = False
+17.4257 	EXP 	fixation_bip: autoDraw = True
+17.9265 	EXP 	Sound bip reached end of file
+17.9266 	EXP 	Sound bip reached end of file
+17.9267 	EXP 	New trial (rep=2, index=0): <Trial 2 (0 in rep 2) data={'thisN': 2, 'thisTrialN': 0, 'thisRepN': 2}>
+17.9273 	EXP 	bip: sampleRate = 48000
+17.9278 	EXP 	Sound bip reached end of file
+17.9424 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+17.9424 	EXP 	fixation_bip: autoDraw = False
+17.9424 	EXP 	fixation_bip: autoDraw = False
+17.9424 	EXP 	fixation_bip: autoDraw = True
+18.4506 	EXP 	Sound bip reached end of file
+18.4506 	EXP 	Sound bip reached end of file
+18.4507 	EXP 	New trial (rep=3, index=0): <Trial 3 (0 in rep 3) data={'thisN': 3, 'thisTrialN': 0, 'thisRepN': 3}>
+18.4513 	EXP 	bip: sampleRate = 48000
+18.4518 	EXP 	Sound bip reached end of file
+18.4591 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+18.4591 	EXP 	fixation_bip: autoDraw = False
+18.4591 	EXP 	fixation_bip: autoDraw = False
+18.4591 	EXP 	fixation_bip: autoDraw = True
+18.9669 	EXP 	Sound bip reached end of file
+18.9670 	EXP 	Sound bip reached end of file
+18.9670 	EXP 	New trial (rep=4, index=0): <Trial 4 (0 in rep 4) data={'thisN': 4, 'thisTrialN': 0, 'thisRepN': 4}>
+18.9676 	EXP 	bip: sampleRate = 48000
+18.9681 	EXP 	Sound bip reached end of file
+18.9758 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+18.9757 	EXP 	fixation_bip: autoDraw = False
+18.9757 	EXP 	fixation_bip: autoDraw = False
+18.9757 	EXP 	fixation_bip: autoDraw = True
+19.4782 	EXP 	Sound bip reached end of file
+19.4782 	EXP 	Sound bip reached end of file
+19.4784 	EXP 	New trial (rep=5, index=0): <Trial 5 (0 in rep 5) data={'thisN': 5, 'thisTrialN': 0, 'thisRepN': 5}>
+19.4790 	EXP 	bip: sampleRate = 48000
+19.4794 	EXP 	Sound bip reached end of file
+19.4924 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+19.4924 	EXP 	fixation_bip: autoDraw = False
+19.4924 	EXP 	fixation_bip: autoDraw = False
+19.4924 	EXP 	fixation_bip: autoDraw = True
+19.9927 	EXP 	Sound bip reached end of file
+19.9927 	EXP 	Sound bip reached end of file
+19.9928 	EXP 	New trial (rep=6, index=0): <Trial 6 (0 in rep 6) data={'thisN': 6, 'thisTrialN': 0, 'thisRepN': 6}>
+19.9933 	EXP 	bip: sampleRate = 48000
+19.9938 	EXP 	Sound bip reached end of file
+20.0093 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+20.0091 	EXP 	fixation_bip: autoDraw = False
+20.0091 	EXP 	fixation_bip: autoDraw = False
+20.0091 	EXP 	fixation_bip: autoDraw = True
+20.5095 	EXP 	Sound bip reached end of file
+20.5095 	EXP 	Sound bip reached end of file
+20.5096 	EXP 	New trial (rep=7, index=0): <Trial 7 (0 in rep 7) data={'thisN': 7, 'thisTrialN': 0, 'thisRepN': 7}>
+20.5102 	EXP 	bip: sampleRate = 48000
+20.5107 	EXP 	Sound bip reached end of file
+20.5258 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+20.5258 	EXP 	fixation_bip: autoDraw = False
+20.5258 	EXP 	fixation_bip: autoDraw = False
+20.5258 	EXP 	fixation_bip: autoDraw = True
+21.0304 	EXP 	Sound bip reached end of file
+21.0304 	EXP 	Sound bip reached end of file
+21.0305 	EXP 	New trial (rep=8, index=0): <Trial 8 (0 in rep 8) data={'thisN': 8, 'thisTrialN': 0, 'thisRepN': 8}>
+21.0312 	EXP 	bip: sampleRate = 48000
+21.0317 	EXP 	Sound bip reached end of file
+21.0425 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+21.0425 	EXP 	fixation_bip: autoDraw = False
+21.0425 	EXP 	fixation_bip: autoDraw = False
+21.0425 	EXP 	fixation_bip: autoDraw = True
+21.5484 	EXP 	Sound bip reached end of file
+21.5484 	EXP 	Sound bip reached end of file
+21.5485 	EXP 	New trial (rep=9, index=0): <Trial 9 (0 in rep 9) data={'thisN': 9, 'thisTrialN': 0, 'thisRepN': 9}>
+21.5491 	EXP 	bip: sampleRate = 48000
+21.5496 	EXP 	Sound bip reached end of file
+21.5591 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+21.5591 	EXP 	fixation_bip: autoDraw = False
+21.5591 	EXP 	fixation_bip: autoDraw = False
+21.5591 	EXP 	fixation_bip: autoDraw = True
+22.0704 	EXP 	Sound bip reached end of file
+22.0704 	EXP 	Sound bip reached end of file
+22.0705 	EXP 	New trial (rep=10, index=0): <Trial 10 (0 in rep 10) data={'thisN': 10, 'thisTrialN': 0, 'thisRepN': 10}>
+22.0712 	EXP 	bip: sampleRate = 48000
+22.0716 	EXP 	Sound bip reached end of file
+22.0758 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+22.0758 	EXP 	fixation_bip: autoDraw = False
+22.0758 	EXP 	fixation_bip: autoDraw = False
+22.0758 	EXP 	fixation_bip: autoDraw = True
+22.5892 	EXP 	Sound bip reached end of file
+22.5892 	EXP 	Sound bip reached end of file
+22.5893 	EXP 	New trial (rep=11, index=0): <Trial 11 (0 in rep 11) data={'thisN': 11, 'thisTrialN': 0, 'thisRepN': 11}>
+22.5899 	EXP 	bip: sampleRate = 48000
+22.5904 	EXP 	Sound bip reached end of file
+22.5924 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+22.5925 	EXP 	fixation_bip: autoDraw = False
+22.5925 	EXP 	fixation_bip: autoDraw = False
+22.5925 	EXP 	fixation_bip: autoDraw = True
+23.1065 	EXP 	Sound bip reached end of file
+23.1065 	EXP 	Sound bip reached end of file
+23.1066 	EXP 	New trial (rep=12, index=0): <Trial 12 (0 in rep 12) data={'thisN': 12, 'thisTrialN': 0, 'thisRepN': 12}>
+23.1072 	EXP 	bip: sampleRate = 48000
+23.1077 	EXP 	Sound bip reached end of file
+23.1092 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+23.1091 	EXP 	fixation_bip: autoDraw = False
+23.1091 	EXP 	fixation_bip: autoDraw = False
+23.1091 	EXP 	fixation_bip: autoDraw = True
+23.6286 	EXP 	Sound bip reached end of file
+23.6286 	EXP 	Sound bip reached end of file
+23.6287 	EXP 	New trial (rep=13, index=0): <Trial 13 (0 in rep 13) data={'thisN': 13, 'thisTrialN': 0, 'thisRepN': 13}>
+23.6294 	EXP 	bip: sampleRate = 48000
+23.6299 	EXP 	Sound bip reached end of file
+23.6426 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+23.6426 	EXP 	fixation_bip: autoDraw = False
+23.6426 	EXP 	fixation_bip: autoDraw = False
+23.6426 	EXP 	fixation_bip: autoDraw = True
+24.1471 	EXP 	Sound bip reached end of file
+24.1471 	EXP 	Sound bip reached end of file
+24.1472 	EXP 	New trial (rep=14, index=0): <Trial 14 (0 in rep 14) data={'thisN': 14, 'thisTrialN': 0, 'thisRepN': 14}>
+24.1478 	EXP 	bip: sampleRate = 48000
+24.1482 	EXP 	Sound bip reached end of file
+24.1592 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+24.1592 	EXP 	fixation_bip: autoDraw = False
+24.1592 	EXP 	fixation_bip: autoDraw = False
+24.1592 	EXP 	fixation_bip: autoDraw = True
+24.6595 	EXP 	Sound bip reached end of file
+24.6595 	EXP 	Sound bip reached end of file
+24.8926 	INFO 	Keyboard events cleared
+24.8926 	EXP 	fixation_bip: autoDraw = False
+24.8926 	EXP 	fixation_bip: autoDraw = False
+24.8926 	EXP 	questionary_text0: height = np.float64(1.0)
+24.8926 	EXP 	questionary_text0: height = np.float64(1.0)
+24.8926 	EXP 	questionary_text0: height = np.float64(1.0)
+24.8926 	EXP 	questionary_text0: text = '¿Por qué la máquina se negó inicialmente a cumplir la orden de fabricar "nafta" cuando el ingeniero García se lo pidió?\n\n A: Porque la máquina no tenía los componentes necesarios para crear sustancias líquidas complejas.\n\n B: Porque la aclaración que le dio García sobre qué era la nafta utilizaba una palabra que no empezaba con la letra N.\n\n C: Porque el ingeniero López interrumpió el proceso antes de que la máquina pudiera terminar la tarea.\n\n Presioná la opción que creas correcta (teclas A, B ó C)'
+24.8926 	EXP 	questionary_text0: height = 0.035
+24.8926 	EXP 	questionary_text0: autoDraw = True
+24.8926 	EXP 	questionary_text0: height = np.float64(0.035)
+24.8926 	EXP 	questionary_text0: height = np.float64(0.035)
+24.8926 	EXP 	questionary_text0: height = np.float64(0.035)
+24.8926 	EXP 	questionary_text0: text = '¿Por qué la máquina se negó inicialmente a cumplir la orden de fabricar "nafta" cuando el ingeniero García se lo pidió?\n\n A: Porque la máquina no tenía los componentes necesarios para crear sustancias líquidas complejas.\n\n B: Porque la aclaración que le dio García sobre qué era la nafta utilizaba una palabra que no empezaba con la letra N.\n\n C: Porque el ingeniero López interrumpió el proceso antes de que la máquina pudiera terminar la tarea.\n\n Presioná la opción que creas correcta (teclas A, B ó C)'
+132.3127 	DATA 	Keypress: b
+132.3288 	EXP 	Device response: <KeyPress from None: t=132.31236270000227, value=b, duration=None>
+132.3786 	INFO 	Keyboard events cleared
+132.3785 	EXP 	questionary_text0: autoDraw = False
+132.3785 	EXP 	questionary_text1: height = np.float64(1.0)
+132.3785 	EXP 	questionary_text1: height = np.float64(1.0)
+132.3785 	EXP 	questionary_text1: height = np.float64(1.0)
+132.3785 	EXP 	questionary_text1: text = '¿Qué sucedió cuando el ingeniero López, intentando ganar la competencia, le ordenó a la máquina que hiciera "nada"?\n\n A: La máquina comenzó a eliminar objetos, personas y partes del mundo real.\n\n B: La máquina se quedó inmóvil y en silencio, dándole la victoria a López.\n\n C: La máquina generó un vacío oscuro dentro de la habitación que asustó a los científicos.\n\n Presioná la opción que creas correcta (teclas A, B ó C)'
+132.3785 	EXP 	questionary_text1: height = 0.035
+132.3785 	EXP 	questionary_text1: autoDraw = True
+132.3785 	EXP 	questionary_text1: height = np.float64(0.035)
+132.3785 	EXP 	questionary_text1: height = np.float64(0.035)
+132.3785 	EXP 	questionary_text1: height = np.float64(0.035)
+132.3785 	EXP 	questionary_text1: text = '¿Qué sucedió cuando el ingeniero López, intentando ganar la competencia, le ordenó a la máquina que hiciera "nada"?\n\n A: La máquina comenzó a eliminar objetos, personas y partes del mundo real.\n\n B: La máquina se quedó inmóvil y en silencio, dándole la victoria a López.\n\n C: La máquina generó un vacío oscuro dentro de la habitación que asustó a los científicos.\n\n Presioná la opción que creas correcta (teclas A, B ó C)'
+132.3957 	EXP 	Device response: <KeyPress from None: t=132.31236270000227, value=b, duration=0.07184259998030029>
+132.4786 	EXP 	Device response: <KeyPress from None: t=132.4721462999878, value=b, duration=None>
+132.5381 	DATA 	Keypress: b
+132.5454 	INFO 	Keyboard events cleared
+132.5454 	EXP 	questionary_text1: autoDraw = False
+132.5454 	EXP 	questionary_text2: height = np.float64(1.0)
+132.5454 	EXP 	questionary_text2: height = np.float64(1.0)
+132.5454 	EXP 	questionary_text2: height = np.float64(1.0)
+132.5454 	EXP 	questionary_text2: text = 'Según el final del relato, ¿por qué la máquina no pudo restaurar la casa ni el resto de las cosas desaparecidas?\n\n A: Porque las cosas que habían desaparecido, como la casa, no tenían nombres que comenzaran con la letra N.\n\n B: Porque la energía de la máquina se había agotado completamente tras crear la "Nada".\n\n C: Porque el ingeniero García decidió dejar el mundo así como lección para su colega López.\n\n Presioná la opción que creas correcta (teclas A, B ó C)'
+132.5454 	EXP 	questionary_text2: height = 0.035
+132.5454 	EXP 	questionary_text2: autoDraw = True
+132.5454 	EXP 	questionary_text2: height = np.float64(0.035)
+132.5454 	EXP 	questionary_text2: height = np.float64(0.035)
+132.5454 	EXP 	questionary_text2: height = np.float64(0.035)
+132.5454 	EXP 	questionary_text2: text = 'Según el final del relato, ¿por qué la máquina no pudo restaurar la casa ni el resto de las cosas desaparecidas?\n\n A: Porque las cosas que habían desaparecido, como la casa, no tenían nombres que comenzaran con la letra N.\n\n B: Porque la energía de la máquina se había agotado completamente tras crear la "Nada".\n\n C: Porque el ingeniero García decidió dejar el mundo así como lección para su colega López.\n\n Presioná la opción que creas correcta (teclas A, B ó C)'
+132.6288 	EXP 	Device response: <KeyPress from None: t=132.6240567000059, value=b, duration=None>
+132.6289 	EXP 	New trial (rep=1, index=0): <Trial 1 (0 in rep 1) data={'thisN': 1, 'thisTrialN': 0, 'thisRepN': 1}>
+132.6331 	DATA 	Keypress: b
+132.6454 	INFO 	Keyboard events cleared
+132.6453 	EXP 	questionary_text2: autoDraw = False
+132.6453 	EXP 	text_prompt: height = np.float64(0.035)
+132.6453 	EXP 	text_prompt: height = np.float64(0.035)
+132.6453 	EXP 	text_prompt: height = np.float64(0.035)
+132.6453 	EXP 	text_prompt: text = 'Presta atención a la historia del lado DERECHO (>>>).\n\n\nApretá ESPACIO para continuar...'
+132.6453 	EXP 	text_prompt: height = 0.035
+132.6453 	EXP 	text_prompt: autoDraw = True
+132.6453 	EXP 	text_prompt: height = np.float64(0.035)
+132.6453 	EXP 	text_prompt: height = np.float64(0.035)
+132.6453 	EXP 	text_prompt: height = np.float64(0.035)
+132.6453 	EXP 	text_prompt: text = 'Presta atención a la historia del lado DERECHO (>>>).\n\n\nApretá ESPACIO para continuar...'
+132.7288 	EXP 	Device response: <KeyPress from None: t=132.4721462999878, value=b, duration=0.24007430000347085>
+132.7786 	EXP 	Device response: <KeyPress from None: t=132.76803869998548, value=b, duration=None>
+132.7788 	DATA 	Keypress: b
+132.8954 	EXP 	Device response: <KeyPress from None: t=132.6240567000059, value=b, duration=0.25604929999099113>
+133.3621 	EXP 	Device response: <KeyPress from None: t=133.35205610000412, value=space, duration=None>
+133.3623 	EXP 	New trial (rep=0, index=0): <Trial 0 (0 in rep 0) data={'thisN': 0, 'thisTrialN': 0, 'thisRepN': 0}>
+133.3629 	EXP 	bip: sampleRate = 48000
+133.3635 	EXP 	Sound bip reached end of file
+133.3787 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+133.3638 	DATA 	Keypress: space
+133.3785 	EXP 	text_prompt: autoDraw = False
+133.3785 	EXP 	fixation_bip: autoDraw = True
+133.4621 	EXP 	Device response: <KeyPress from None: t=4.088430000003427, value=space, duration=129.35962919998565>
+133.8807 	EXP 	Sound bip reached end of file
+133.8807 	EXP 	Sound bip reached end of file
+133.8810 	EXP 	New trial (rep=1, index=0): <Trial 1 (0 in rep 1) data={'thisN': 1, 'thisTrialN': 0, 'thisRepN': 1}>
+133.8816 	EXP 	bip: sampleRate = 48000
+133.8821 	EXP 	Sound bip reached end of file
+133.8954 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+133.8954 	EXP 	fixation_bip: autoDraw = False
+133.8954 	EXP 	fixation_bip: autoDraw = False
+133.8954 	EXP 	fixation_bip: autoDraw = True
+134.3955 	EXP 	Sound bip reached end of file
+134.3955 	EXP 	Sound bip reached end of file
+134.3956 	EXP 	New trial (rep=2, index=0): <Trial 2 (0 in rep 2) data={'thisN': 2, 'thisTrialN': 0, 'thisRepN': 2}>
+134.3962 	EXP 	bip: sampleRate = 48000
+134.3966 	EXP 	Sound bip reached end of file
+134.4121 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+134.4121 	EXP 	fixation_bip: autoDraw = False
+134.4121 	EXP 	fixation_bip: autoDraw = False
+134.4121 	EXP 	fixation_bip: autoDraw = True
+134.9122 	EXP 	Sound bip reached end of file
+134.9122 	EXP 	Sound bip reached end of file
+134.9122 	EXP 	New trial (rep=3, index=0): <Trial 3 (0 in rep 3) data={'thisN': 3, 'thisTrialN': 0, 'thisRepN': 3}>
+134.9128 	EXP 	bip: sampleRate = 48000
+134.9133 	EXP 	Sound bip reached end of file
+134.9288 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+134.9290 	EXP 	fixation_bip: autoDraw = False
+134.9290 	EXP 	fixation_bip: autoDraw = False
+134.9290 	EXP 	fixation_bip: autoDraw = True
+135.4285 	EXP 	Sound bip reached end of file
+135.4285 	EXP 	Sound bip reached end of file
+135.4286 	EXP 	New trial (rep=4, index=0): <Trial 4 (0 in rep 4) data={'thisN': 4, 'thisTrialN': 0, 'thisRepN': 4}>
+135.4292 	EXP 	bip: sampleRate = 48000
+135.4297 	EXP 	Sound bip reached end of file
+135.4455 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+135.4454 	EXP 	fixation_bip: autoDraw = False
+135.4454 	EXP 	fixation_bip: autoDraw = False
+135.4454 	EXP 	fixation_bip: autoDraw = True
+135.9519 	EXP 	Sound bip reached end of file
+135.9519 	EXP 	Sound bip reached end of file
+135.9520 	EXP 	New trial (rep=5, index=0): <Trial 5 (0 in rep 5) data={'thisN': 5, 'thisTrialN': 0, 'thisRepN': 5}>
+135.9526 	EXP 	bip: sampleRate = 48000
+135.9531 	EXP 	Sound bip reached end of file
+135.9621 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+135.9621 	EXP 	fixation_bip: autoDraw = False
+135.9621 	EXP 	fixation_bip: autoDraw = False
+135.9621 	EXP 	fixation_bip: autoDraw = True
+136.4693 	EXP 	Sound bip reached end of file
+136.4693 	EXP 	Sound bip reached end of file
+136.4694 	EXP 	New trial (rep=6, index=0): <Trial 6 (0 in rep 6) data={'thisN': 6, 'thisTrialN': 0, 'thisRepN': 6}>
+136.4700 	EXP 	bip: sampleRate = 48000
+136.4705 	EXP 	Sound bip reached end of file
+136.4787 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+136.4788 	EXP 	fixation_bip: autoDraw = False
+136.4788 	EXP 	fixation_bip: autoDraw = False
+136.4788 	EXP 	fixation_bip: autoDraw = True
+136.9789 	EXP 	Sound bip reached end of file
+136.9790 	EXP 	Sound bip reached end of file
+136.9790 	EXP 	New trial (rep=7, index=0): <Trial 7 (0 in rep 7) data={'thisN': 7, 'thisTrialN': 0, 'thisRepN': 7}>
+136.9796 	EXP 	bip: sampleRate = 48000
+136.9801 	EXP 	Sound bip reached end of file
+136.9954 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+136.9955 	EXP 	fixation_bip: autoDraw = False
+136.9955 	EXP 	fixation_bip: autoDraw = False
+136.9955 	EXP 	fixation_bip: autoDraw = True
+137.5000 	EXP 	Sound bip reached end of file
+137.5000 	EXP 	Sound bip reached end of file
+137.5001 	EXP 	New trial (rep=8, index=0): <Trial 8 (0 in rep 8) data={'thisN': 8, 'thisTrialN': 0, 'thisRepN': 8}>
+137.5007 	EXP 	bip: sampleRate = 48000
+137.5012 	EXP 	Sound bip reached end of file
+137.5121 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+137.5121 	EXP 	fixation_bip: autoDraw = False
+137.5121 	EXP 	fixation_bip: autoDraw = False
+137.5121 	EXP 	fixation_bip: autoDraw = True
+138.0131 	EXP 	Sound bip reached end of file
+138.0131 	EXP 	Sound bip reached end of file
+138.0132 	EXP 	New trial (rep=9, index=0): <Trial 9 (0 in rep 9) data={'thisN': 9, 'thisTrialN': 0, 'thisRepN': 9}>
+138.0138 	EXP 	bip: sampleRate = 48000
+138.0142 	EXP 	Sound bip reached end of file
+138.0289 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+138.0289 	EXP 	fixation_bip: autoDraw = False
+138.0289 	EXP 	fixation_bip: autoDraw = False
+138.0289 	EXP 	fixation_bip: autoDraw = True
+138.5314 	EXP 	Sound bip reached end of file
+138.5315 	EXP 	Sound bip reached end of file
+138.5316 	EXP 	New trial (rep=10, index=0): <Trial 10 (0 in rep 10) data={'thisN': 10, 'thisTrialN': 0, 'thisRepN': 10}>
+138.5322 	EXP 	bip: sampleRate = 48000
+138.5326 	EXP 	Sound bip reached end of file
+138.5455 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+138.5455 	EXP 	fixation_bip: autoDraw = False
+138.5455 	EXP 	fixation_bip: autoDraw = False
+138.5455 	EXP 	fixation_bip: autoDraw = True
+139.0408 	EXP 	Sound bip reached end of file
+139.0408 	EXP 	Sound bip reached end of file
+139.0409 	EXP 	New trial (rep=11, index=0): <Trial 11 (0 in rep 11) data={'thisN': 11, 'thisTrialN': 0, 'thisRepN': 11}>
+139.0414 	EXP 	bip: sampleRate = 48000
+139.0419 	EXP 	Sound bip reached end of file
+139.0456 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+139.0455 	EXP 	fixation_bip: autoDraw = False
+139.0455 	EXP 	fixation_bip: autoDraw = False
+139.0455 	EXP 	fixation_bip: autoDraw = True
+139.5590 	EXP 	Sound bip reached end of file
+139.5591 	EXP 	Sound bip reached end of file
+139.5592 	EXP 	New trial (rep=12, index=0): <Trial 12 (0 in rep 12) data={'thisN': 12, 'thisTrialN': 0, 'thisRepN': 12}>
+139.5598 	EXP 	bip: sampleRate = 48000
+139.5603 	EXP 	Sound bip reached end of file
+139.5622 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+139.5621 	EXP 	fixation_bip: autoDraw = False
+139.5621 	EXP 	fixation_bip: autoDraw = False
+139.5621 	EXP 	fixation_bip: autoDraw = True
+140.0800 	EXP 	Sound bip reached end of file
+140.0801 	EXP 	Sound bip reached end of file
+140.0802 	EXP 	New trial (rep=13, index=0): <Trial 13 (0 in rep 13) data={'thisN': 13, 'thisTrialN': 0, 'thisRepN': 13}>
+140.0808 	EXP 	bip: sampleRate = 48000
+140.0813 	EXP 	Sound bip reached end of file
+140.0955 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+140.0956 	EXP 	fixation_bip: autoDraw = False
+140.0956 	EXP 	fixation_bip: autoDraw = False
+140.0956 	EXP 	fixation_bip: autoDraw = True
+140.5918 	EXP 	Sound bip reached end of file
+140.5919 	EXP 	Sound bip reached end of file
+140.5920 	EXP 	New trial (rep=14, index=0): <Trial 14 (0 in rep 14) data={'thisN': 14, 'thisTrialN': 0, 'thisRepN': 14}>
+140.5926 	EXP 	bip: sampleRate = 48000
+140.5931 	EXP 	Sound bip reached end of file
+140.5954 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+140.5956 	EXP 	fixation_bip: autoDraw = False
+140.5956 	EXP 	fixation_bip: autoDraw = False
+140.5956 	EXP 	fixation_bip: autoDraw = True
+141.1087 	EXP 	Sound bip reached end of file
+141.1088 	EXP 	Sound bip reached end of file
+141.1123 	EXP 	Sound  reached end of file
+141.1123 	EXP 	Playing sound  on speaker Speakers (Realtek(R) Audio)
+141.1123 	EXP 	fixation_bip: autoDraw = False
+141.1123 	EXP 	fixation_bip: autoDraw = False
+141.1123 	EXP 	polygon: autoDraw = True
+146.1317 	EXP 	Sound  reached end of file
+146.1457 	EXP 	Sound  reached end of file
+146.1460 	EXP 	New trial (rep=0, index=0): <Trial 0 (0 in rep 0) data={'thisN': 0, 'thisTrialN': 0, 'thisRepN': 0}>
+146.1466 	EXP 	bip: sampleRate = 48000
+146.1471 	EXP 	Sound bip reached end of file
+146.1624 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+146.1623 	EXP 	polygon: autoDraw = False
+146.1623 	EXP 	fixation_bip: autoDraw = True
+146.6655 	EXP 	Sound bip reached end of file
+146.6656 	EXP 	Sound bip reached end of file
+146.6656 	EXP 	New trial (rep=1, index=0): <Trial 1 (0 in rep 1) data={'thisN': 1, 'thisTrialN': 0, 'thisRepN': 1}>
+146.6662 	EXP 	bip: sampleRate = 48000
+146.6667 	EXP 	Sound bip reached end of file
+146.6790 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+146.6789 	EXP 	fixation_bip: autoDraw = False
+146.6789 	EXP 	fixation_bip: autoDraw = False
+146.6789 	EXP 	fixation_bip: autoDraw = True
+147.1807 	EXP 	Sound bip reached end of file
+147.1807 	EXP 	Sound bip reached end of file
+147.1808 	EXP 	New trial (rep=2, index=0): <Trial 2 (0 in rep 2) data={'thisN': 2, 'thisTrialN': 0, 'thisRepN': 2}>
+147.1815 	EXP 	bip: sampleRate = 48000
+147.1819 	EXP 	Sound bip reached end of file
+147.1957 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+147.1958 	EXP 	fixation_bip: autoDraw = False
+147.1958 	EXP 	fixation_bip: autoDraw = False
+147.1958 	EXP 	fixation_bip: autoDraw = True
+147.7013 	EXP 	Sound bip reached end of file
+147.7013 	EXP 	Sound bip reached end of file
+147.7014 	EXP 	New trial (rep=3, index=0): <Trial 3 (0 in rep 3) data={'thisN': 3, 'thisTrialN': 0, 'thisRepN': 3}>
+147.7020 	EXP 	bip: sampleRate = 48000
+147.7025 	EXP 	Sound bip reached end of file
+147.7125 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+147.7125 	EXP 	fixation_bip: autoDraw = False
+147.7125 	EXP 	fixation_bip: autoDraw = False
+147.7125 	EXP 	fixation_bip: autoDraw = True
+148.2210 	EXP 	Sound bip reached end of file
+148.2210 	EXP 	Sound bip reached end of file
+148.2211 	EXP 	New trial (rep=4, index=0): <Trial 4 (0 in rep 4) data={'thisN': 4, 'thisTrialN': 0, 'thisRepN': 4}>
+148.2218 	EXP 	bip: sampleRate = 48000
+148.2223 	EXP 	Sound bip reached end of file
+148.2291 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+148.2291 	EXP 	fixation_bip: autoDraw = False
+148.2291 	EXP 	fixation_bip: autoDraw = False
+148.2291 	EXP 	fixation_bip: autoDraw = True
+148.7439 	EXP 	Sound bip reached end of file
+148.7440 	EXP 	Sound bip reached end of file
+148.7441 	EXP 	New trial (rep=5, index=0): <Trial 5 (0 in rep 5) data={'thisN': 5, 'thisTrialN': 0, 'thisRepN': 5}>
+148.7447 	EXP 	bip: sampleRate = 48000
+148.7452 	EXP 	Sound bip reached end of file
+148.7458 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+148.7624 	EXP 	fixation_bip: autoDraw = False
+148.7624 	EXP 	fixation_bip: autoDraw = False
+148.7624 	EXP 	fixation_bip: autoDraw = True
+149.2580 	EXP 	Sound bip reached end of file
+149.2580 	EXP 	Sound bip reached end of file
+149.2581 	EXP 	New trial (rep=6, index=0): <Trial 6 (0 in rep 6) data={'thisN': 6, 'thisTrialN': 0, 'thisRepN': 6}>
+149.2587 	EXP 	bip: sampleRate = 48000
+149.2591 	EXP 	Sound bip reached end of file
+149.2624 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+149.2624 	EXP 	fixation_bip: autoDraw = False
+149.2624 	EXP 	fixation_bip: autoDraw = False
+149.2624 	EXP 	fixation_bip: autoDraw = True
+149.7706 	EXP 	Sound bip reached end of file
+149.7706 	EXP 	Sound bip reached end of file
+149.7707 	EXP 	New trial (rep=7, index=0): <Trial 7 (0 in rep 7) data={'thisN': 7, 'thisTrialN': 0, 'thisRepN': 7}>
+149.7713 	EXP 	bip: sampleRate = 48000
+149.7718 	EXP 	Sound bip reached end of file
+149.7792 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+149.7790 	EXP 	fixation_bip: autoDraw = False
+149.7790 	EXP 	fixation_bip: autoDraw = False
+149.7790 	EXP 	fixation_bip: autoDraw = True
+150.2817 	EXP 	Sound bip reached end of file
+150.2818 	EXP 	Sound bip reached end of file
+150.2819 	EXP 	New trial (rep=8, index=0): <Trial 8 (0 in rep 8) data={'thisN': 8, 'thisTrialN': 0, 'thisRepN': 8}>
+150.2824 	EXP 	bip: sampleRate = 48000
+150.2829 	EXP 	Sound bip reached end of file
+150.2958 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+150.2958 	EXP 	fixation_bip: autoDraw = False
+150.2958 	EXP 	fixation_bip: autoDraw = False
+150.2958 	EXP 	fixation_bip: autoDraw = True
+150.7997 	EXP 	Sound bip reached end of file
+150.7997 	EXP 	Sound bip reached end of file
+150.7998 	EXP 	New trial (rep=9, index=0): <Trial 9 (0 in rep 9) data={'thisN': 9, 'thisTrialN': 0, 'thisRepN': 9}>
+150.8004 	EXP 	bip: sampleRate = 48000
+150.8009 	EXP 	Sound bip reached end of file
+150.8125 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+150.8125 	EXP 	fixation_bip: autoDraw = False
+150.8125 	EXP 	fixation_bip: autoDraw = False
+150.8125 	EXP 	fixation_bip: autoDraw = True
+151.3140 	EXP 	Sound bip reached end of file
+151.3140 	EXP 	Sound bip reached end of file
+151.3141 	EXP 	New trial (rep=10, index=0): <Trial 10 (0 in rep 10) data={'thisN': 10, 'thisTrialN': 0, 'thisRepN': 10}>
+151.3147 	EXP 	bip: sampleRate = 48000
+151.3152 	EXP 	Sound bip reached end of file
+151.3292 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+151.3292 	EXP 	fixation_bip: autoDraw = False
+151.3292 	EXP 	fixation_bip: autoDraw = False
+151.3292 	EXP 	fixation_bip: autoDraw = True
+151.8310 	EXP 	Sound bip reached end of file
+151.8310 	EXP 	Sound bip reached end of file
+151.8311 	EXP 	New trial (rep=11, index=0): <Trial 11 (0 in rep 11) data={'thisN': 11, 'thisTrialN': 0, 'thisRepN': 11}>
+151.8317 	EXP 	bip: sampleRate = 48000
+151.8322 	EXP 	Sound bip reached end of file
+151.8458 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+151.8459 	EXP 	fixation_bip: autoDraw = False
+151.8459 	EXP 	fixation_bip: autoDraw = False
+151.8459 	EXP 	fixation_bip: autoDraw = True
+152.3482 	EXP 	Sound bip reached end of file
+152.3482 	EXP 	Sound bip reached end of file
+152.3484 	EXP 	New trial (rep=12, index=0): <Trial 12 (0 in rep 12) data={'thisN': 12, 'thisTrialN': 0, 'thisRepN': 12}>
+152.3490 	EXP 	bip: sampleRate = 48000
+152.3494 	EXP 	Sound bip reached end of file
+152.3626 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+152.3625 	EXP 	fixation_bip: autoDraw = False
+152.3625 	EXP 	fixation_bip: autoDraw = False
+152.3625 	EXP 	fixation_bip: autoDraw = True
+152.8724 	EXP 	Sound bip reached end of file
+152.8724 	EXP 	Sound bip reached end of file
+152.8725 	EXP 	New trial (rep=13, index=0): <Trial 13 (0 in rep 13) data={'thisN': 13, 'thisTrialN': 0, 'thisRepN': 13}>
+152.8731 	EXP 	bip: sampleRate = 48000
+152.8736 	EXP 	Sound bip reached end of file
+152.8792 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+152.8791 	EXP 	fixation_bip: autoDraw = False
+152.8791 	EXP 	fixation_bip: autoDraw = False
+152.8791 	EXP 	fixation_bip: autoDraw = True
+153.3927 	EXP 	Sound bip reached end of file
+153.3927 	EXP 	Sound bip reached end of file
+153.3928 	EXP 	New trial (rep=14, index=0): <Trial 14 (0 in rep 14) data={'thisN': 14, 'thisTrialN': 0, 'thisRepN': 14}>
+153.3934 	EXP 	bip: sampleRate = 48000
+153.3939 	EXP 	Sound bip reached end of file
+153.3958 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+153.3959 	EXP 	fixation_bip: autoDraw = False
+153.3959 	EXP 	fixation_bip: autoDraw = False
+153.3959 	EXP 	fixation_bip: autoDraw = True
+153.9099 	EXP 	Sound bip reached end of file
+153.9100 	EXP 	Sound bip reached end of file
+153.9293 	INFO 	Keyboard events cleared
+153.9292 	EXP 	fixation_bip: autoDraw = False
+153.9292 	EXP 	fixation_bip: autoDraw = False
+153.9292 	EXP 	questionary_text0: height = np.float64(0.035)
+153.9292 	EXP 	questionary_text0: height = np.float64(0.035)
+153.9292 	EXP 	questionary_text0: height = np.float64(0.035)
+153.9292 	EXP 	questionary_text0: text = '¿Qué sensación particular experimentó el hombre después de volver a la cama tras ahuyentar a los perros?\n\n A: Sintió un alivio inmediato y se quedó profundamente dormido.\n\n B: Percibió un silencio tenso en la casa y le pareció que el colchón vibraba.\n\n C: Escuchó que los perros comenzaban a pelear con un gato en el patio.\n\n Presioná la opción que creas correcta (teclas A, B ó C)'
+153.9292 	EXP 	questionary_text0: height = 0.035
+153.9292 	EXP 	questionary_text0: autoDraw = True
+153.9292 	EXP 	questionary_text0: height = np.float64(0.035)
+153.9292 	EXP 	questionary_text0: height = np.float64(0.035)
+153.9292 	EXP 	questionary_text0: height = np.float64(0.035)
+153.9292 	EXP 	questionary_text0: text = '¿Qué sensación particular experimentó el hombre después de volver a la cama tras ahuyentar a los perros?\n\n A: Sintió un alivio inmediato y se quedó profundamente dormido.\n\n B: Percibió un silencio tenso en la casa y le pareció que el colchón vibraba.\n\n C: Escuchó que los perros comenzaban a pelear con un gato en el patio.\n\n Presioná la opción que creas correcta (teclas A, B ó C)'
+160.0295 	EXP 	Device response: <KeyPress from None: t=160.0241595999978, value=space, duration=None>
+160.0297 	DATA 	Keypress: space
+160.2461 	EXP 	Device response: <KeyPress from None: t=133.35205610000412, value=space, duration=26.88001289998647>
+162.1962 	EXP 	Device response: <KeyPress from None: t=162.1840785999957, value=space, duration=None>
+162.1965 	DATA 	Keypress: space
+162.3462 	EXP 	Device response: <KeyPress from None: t=160.0241595999978, value=space, duration=2.3198900999850594>
+162.4129 	EXP 	Device response: <KeyPress from None: t=162.40008679998573, value=space, duration=None>
+162.4132 	DATA 	Keypress: space
+162.5962 	EXP 	Device response: <KeyPress from None: t=162.1840785999957, value=space, duration=0.4080180999881122>
+163.5629 	EXP 	Device response: <KeyPress from None: t=163.56011289998423, value=b, duration=None>
+163.5725 	DATA 	Keypress: b
+163.5794 	INFO 	Keyboard events cleared
+163.5794 	EXP 	questionary_text0: autoDraw = False
+163.5794 	EXP 	questionary_text1: height = np.float64(0.035)
+163.5794 	EXP 	questionary_text1: height = np.float64(0.035)
+163.5794 	EXP 	questionary_text1: height = np.float64(0.035)
+163.5794 	EXP 	questionary_text1: text = '¿Qué comportamiento inusual presentaron el postigo y el gallo según el relato?\n\n A: El póstigo estaba atascado y el gallo se escapó del gallinero.\n\n B: El póstigo se había roto por la tormenta y el gallo no cantó al amanecer.\n\n C: El postigo golpeaba sin haber viento y el gallo no paraba de cantar.\n\n Presioná la opción que creas correcta (teclas A, B ó C)'
+163.5794 	EXP 	questionary_text1: height = 0.035
+163.5794 	EXP 	questionary_text1: autoDraw = True
+163.5794 	EXP 	questionary_text1: height = np.float64(0.035)
+163.5794 	EXP 	questionary_text1: height = np.float64(0.035)
+163.5794 	EXP 	questionary_text1: height = np.float64(0.035)
+163.5794 	EXP 	questionary_text1: text = '¿Qué comportamiento inusual presentaron el postigo y el gallo según el relato?\n\n A: El póstigo estaba atascado y el gallo se escapó del gallinero.\n\n B: El póstigo se había roto por la tormenta y el gallo no cantó al amanecer.\n\n C: El postigo golpeaba sin haber viento y el gallo no paraba de cantar.\n\n Presioná la opción que creas correcta (teclas A, B ó C)'
+164.0129 	EXP 	Device response: <KeyPress from None: t=132.76803869998548, value=b, duration=31.231964200007496>
+164.1296 	EXP 	Device response: <KeyPress from None: t=164.12001529999543, value=b, duration=None>
+164.1383 	DATA 	Keypress: b
+164.1462 	INFO 	Keyboard events cleared
+164.1462 	EXP 	questionary_text1: autoDraw = False
+164.1462 	EXP 	questionary_text2: height = np.float64(0.035)
+164.1462 	EXP 	questionary_text2: height = np.float64(0.035)
+164.1462 	EXP 	questionary_text2: height = np.float64(0.035)
+164.1462 	EXP 	questionary_text2: text = 'Al final de la historia, ¿qué notó la mujer al observar la risa de su marido?\n\n A: Que el hombre estaba feliz porque finalmente había amanecido.\n\n B: Que se reía de una broma que ella no había entendido.\n\n C: Que a pesar de la risa ruidosa, sus músculos estaban tensos y no parecía feliz.\n\n Presioná la opción que creas correcta (teclas A, B ó C)'
+164.1462 	EXP 	questionary_text2: height = 0.035
+164.1462 	EXP 	questionary_text2: autoDraw = True
+164.1462 	EXP 	questionary_text2: height = np.float64(0.035)
+164.1462 	EXP 	questionary_text2: height = np.float64(0.035)
+164.1462 	EXP 	questionary_text2: height = np.float64(0.035)
+164.1462 	EXP 	questionary_text2: text = 'Al final de la historia, ¿qué notó la mujer al observar la risa de su marido?\n\n A: Que el hombre estaba feliz porque finalmente había amanecido.\n\n B: Que se reía de una broma que ella no había entendido.\n\n C: Que a pesar de la risa ruidosa, sus músculos estaban tensos y no parecía feliz.\n\n Presioná la opción que creas correcta (teclas A, B ó C)'
+164.2129 	EXP 	Device response: <KeyPress from None: t=163.56011289998423, value=b, duration=0.6398563999973703>
+164.3462 	EXP 	Device response: <KeyPress from None: t=164.34407719998853, value=b, duration=None>
+164.3463 	EXP 	New trial (rep=2, index=0): <Trial 2 (0 in rep 2) data={'thisN': 2, 'thisTrialN': 0, 'thisRepN': 2}>
+164.3484 	DATA 	Keypress: b
+164.3629 	INFO 	Keyboard events cleared
+164.3628 	EXP 	questionary_text2: autoDraw = False
+164.3628 	EXP 	text_prompt: text = 'Presta atención a la historia del lado DERECHO (>>>).\n\n\nApretá ESPACIO para continuar...'
+164.3628 	EXP 	text_prompt: height = 0.035
+164.3628 	EXP 	text_prompt: autoDraw = True
+164.3628 	EXP 	text_prompt: height = np.float64(0.035)
+164.3628 	EXP 	text_prompt: height = np.float64(0.035)
+164.3628 	EXP 	text_prompt: height = np.float64(0.035)
+164.3628 	EXP 	text_prompt: text = 'Presta atención a la historia del lado DERECHO (>>>).\n\n\nApretá ESPACIO para continuar...'
+164.4129 	EXP 	Device response: <KeyPress from None: t=164.12001529999543, value=b, duration=0.28804630000377074>
+164.5129 	EXP 	Device response: <KeyPress from None: t=164.51199959998485, value=b, duration=None>
+164.5131 	DATA 	Keypress: b
+164.5963 	EXP 	Device response: <KeyPress from None: t=164.34407719998853, value=b, duration=0.2479868000082206>
+171.3131 	EXP 	Device response: <KeyPress from None: t=171.3120968999865, value=space, duration=None>
+171.3133 	EXP 	New trial (rep=0, index=0): <Trial 0 (0 in rep 0) data={'thisN': 0, 'thisTrialN': 0, 'thisRepN': 0}>
+171.3140 	EXP 	bip: sampleRate = 48000
+171.3146 	EXP 	Sound bip reached end of file
+171.3297 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+171.3149 	DATA 	Keypress: space
+171.3297 	EXP 	text_prompt: autoDraw = False
+171.3297 	EXP 	fixation_bip: autoDraw = True
+171.4964 	EXP 	Device response: <KeyPress from None: t=162.40008679998573, value=space, duration=9.08002399999532>
+171.5131 	EXP 	Device response: <KeyPress from None: t=171.50403539999388, value=space, duration=None>
+171.5133 	DATA 	Keypress: space
+171.8314 	EXP 	Sound bip reached end of file
+171.8315 	EXP 	Sound bip reached end of file
+171.8316 	EXP 	Device response: <KeyPress from None: t=171.3120968999865, value=space, duration=0.48787030001403764>
+171.8316 	EXP 	New trial (rep=1, index=0): <Trial 1 (0 in rep 1) data={'thisN': 1, 'thisTrialN': 0, 'thisRepN': 1}>
+171.8322 	EXP 	bip: sampleRate = 48000
+171.8327 	EXP 	Sound bip reached end of file
+171.8464 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+171.8464 	EXP 	fixation_bip: autoDraw = False
+171.8464 	EXP 	fixation_bip: autoDraw = False
+171.8464 	EXP 	fixation_bip: autoDraw = True
+172.3515 	EXP 	Sound bip reached end of file
+172.3516 	EXP 	Sound bip reached end of file
+172.3517 	EXP 	New trial (rep=2, index=0): <Trial 2 (0 in rep 2) data={'thisN': 2, 'thisTrialN': 0, 'thisRepN': 2}>
+172.3523 	EXP 	bip: sampleRate = 48000
+172.3528 	EXP 	Sound bip reached end of file
+172.3631 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+172.3631 	EXP 	fixation_bip: autoDraw = False
+172.3631 	EXP 	fixation_bip: autoDraw = False
+172.3631 	EXP 	fixation_bip: autoDraw = True
+172.8710 	EXP 	Sound bip reached end of file
+172.8710 	EXP 	Sound bip reached end of file
+172.8711 	EXP 	New trial (rep=3, index=0): <Trial 3 (0 in rep 3) data={'thisN': 3, 'thisTrialN': 0, 'thisRepN': 3}>
+172.8717 	EXP 	bip: sampleRate = 48000
+172.8722 	EXP 	Sound bip reached end of file
+172.8798 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+172.8797 	EXP 	fixation_bip: autoDraw = False
+172.8797 	EXP 	fixation_bip: autoDraw = False
+172.8797 	EXP 	fixation_bip: autoDraw = True
+173.3800 	EXP 	Sound bip reached end of file
+173.3800 	EXP 	Sound bip reached end of file
+173.3801 	EXP 	New trial (rep=4, index=0): <Trial 4 (0 in rep 4) data={'thisN': 4, 'thisTrialN': 0, 'thisRepN': 4}>
+173.3806 	EXP 	bip: sampleRate = 48000
+173.3811 	EXP 	Sound bip reached end of file
+173.3964 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+173.3964 	EXP 	fixation_bip: autoDraw = False
+173.3964 	EXP 	fixation_bip: autoDraw = False
+173.3964 	EXP 	fixation_bip: autoDraw = True
+173.8983 	EXP 	Sound bip reached end of file
+173.8983 	EXP 	Sound bip reached end of file
+173.8984 	EXP 	New trial (rep=5, index=0): <Trial 5 (0 in rep 5) data={'thisN': 5, 'thisTrialN': 0, 'thisRepN': 5}>
+173.8990 	EXP 	bip: sampleRate = 48000
+173.8995 	EXP 	Sound bip reached end of file
+173.9129 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+173.9132 	EXP 	fixation_bip: autoDraw = False
+173.9132 	EXP 	fixation_bip: autoDraw = False
+173.9132 	EXP 	fixation_bip: autoDraw = True
+174.4160 	EXP 	Sound bip reached end of file
+174.4160 	EXP 	Sound bip reached end of file
+174.4161 	EXP 	New trial (rep=6, index=0): <Trial 6 (0 in rep 6) data={'thisN': 6, 'thisTrialN': 0, 'thisRepN': 6}>
+174.4166 	EXP 	bip: sampleRate = 48000
+174.4171 	EXP 	Sound bip reached end of file
+174.4298 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+174.4298 	EXP 	fixation_bip: autoDraw = False
+174.4298 	EXP 	fixation_bip: autoDraw = False
+174.4298 	EXP 	fixation_bip: autoDraw = True
+174.9299 	EXP 	Sound bip reached end of file
+174.9299 	EXP 	Sound bip reached end of file
+174.9300 	EXP 	New trial (rep=7, index=0): <Trial 7 (0 in rep 7) data={'thisN': 7, 'thisTrialN': 0, 'thisRepN': 7}>
+174.9306 	EXP 	bip: sampleRate = 48000
+174.9310 	EXP 	Sound bip reached end of file
+174.9465 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+174.9465 	EXP 	fixation_bip: autoDraw = False
+174.9465 	EXP 	fixation_bip: autoDraw = False
+174.9465 	EXP 	fixation_bip: autoDraw = True
+175.4465 	EXP 	Sound bip reached end of file
+175.4465 	EXP 	Sound bip reached end of file
+175.4466 	EXP 	New trial (rep=8, index=0): <Trial 8 (0 in rep 8) data={'thisN': 8, 'thisTrialN': 0, 'thisRepN': 8}>
+175.4472 	EXP 	bip: sampleRate = 48000
+175.4476 	EXP 	Sound bip reached end of file
+175.4632 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+175.4631 	EXP 	fixation_bip: autoDraw = False
+175.4631 	EXP 	fixation_bip: autoDraw = False
+175.4631 	EXP 	fixation_bip: autoDraw = True
+175.9663 	EXP 	Sound bip reached end of file
+175.9664 	EXP 	Sound bip reached end of file
+175.9664 	EXP 	New trial (rep=9, index=0): <Trial 9 (0 in rep 9) data={'thisN': 9, 'thisTrialN': 0, 'thisRepN': 9}>
+175.9670 	EXP 	bip: sampleRate = 48000
+175.9675 	EXP 	Sound bip reached end of file
+175.9798 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+175.9798 	EXP 	fixation_bip: autoDraw = False
+175.9798 	EXP 	fixation_bip: autoDraw = False
+175.9798 	EXP 	fixation_bip: autoDraw = True
+176.4818 	EXP 	Sound bip reached end of file
+176.4819 	EXP 	Sound bip reached end of file
+176.4819 	EXP 	New trial (rep=10, index=0): <Trial 10 (0 in rep 10) data={'thisN': 10, 'thisTrialN': 0, 'thisRepN': 10}>
+176.4825 	EXP 	bip: sampleRate = 48000
+176.4830 	EXP 	Sound bip reached end of file
+176.4965 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+176.4965 	EXP 	fixation_bip: autoDraw = False
+176.4965 	EXP 	fixation_bip: autoDraw = False
+176.4965 	EXP 	fixation_bip: autoDraw = True
+176.9998 	EXP 	Sound bip reached end of file
+176.9998 	EXP 	Sound bip reached end of file
+176.9999 	EXP 	New trial (rep=11, index=0): <Trial 11 (0 in rep 11) data={'thisN': 11, 'thisTrialN': 0, 'thisRepN': 11}>
+177.0004 	EXP 	bip: sampleRate = 48000
+177.0009 	EXP 	Sound bip reached end of file
+177.0134 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+177.0132 	EXP 	fixation_bip: autoDraw = False
+177.0132 	EXP 	fixation_bip: autoDraw = False
+177.0132 	EXP 	fixation_bip: autoDraw = True
+177.5145 	EXP 	Sound bip reached end of file
+177.5145 	EXP 	Sound bip reached end of file
+177.5146 	EXP 	New trial (rep=12, index=0): <Trial 12 (0 in rep 12) data={'thisN': 12, 'thisTrialN': 0, 'thisRepN': 12}>
+177.5153 	EXP 	bip: sampleRate = 48000
+177.5158 	EXP 	Sound bip reached end of file
+177.5299 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+177.5299 	EXP 	fixation_bip: autoDraw = False
+177.5299 	EXP 	fixation_bip: autoDraw = False
+177.5299 	EXP 	fixation_bip: autoDraw = True
+178.0322 	EXP 	Sound bip reached end of file
+178.0322 	EXP 	Sound bip reached end of file
+178.0323 	EXP 	New trial (rep=13, index=0): <Trial 13 (0 in rep 13) data={'thisN': 13, 'thisTrialN': 0, 'thisRepN': 13}>
+178.0331 	EXP 	bip: sampleRate = 48000
+178.0336 	EXP 	Sound bip reached end of file
+178.0466 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+178.0466 	EXP 	fixation_bip: autoDraw = False
+178.0466 	EXP 	fixation_bip: autoDraw = False
+178.0466 	EXP 	fixation_bip: autoDraw = True
+178.5468 	EXP 	Sound bip reached end of file
+178.5468 	EXP 	Sound bip reached end of file
+178.5469 	EXP 	New trial (rep=14, index=0): <Trial 14 (0 in rep 14) data={'thisN': 14, 'thisTrialN': 0, 'thisRepN': 14}>
+178.5477 	EXP 	bip: sampleRate = 48000
+178.5482 	EXP 	Sound bip reached end of file
+178.5633 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+178.5633 	EXP 	fixation_bip: autoDraw = False
+178.5633 	EXP 	fixation_bip: autoDraw = False
+178.5633 	EXP 	fixation_bip: autoDraw = True
+179.0641 	EXP 	Sound bip reached end of file
+179.0641 	EXP 	Sound bip reached end of file
+179.0798 	EXP 	Sound  reached end of file
+179.0798 	EXP 	Playing sound  on speaker Speakers (Realtek(R) Audio)
+179.0798 	EXP 	fixation_bip: autoDraw = False
+179.0798 	EXP 	fixation_bip: autoDraw = False
+179.0798 	EXP 	polygon: autoDraw = True
+184.0889 	EXP 	Sound  reached end of file
+184.0967 	EXP 	Sound  reached end of file
+184.0969 	EXP 	New trial (rep=0, index=0): <Trial 0 (0 in rep 0) data={'thisN': 0, 'thisTrialN': 0, 'thisRepN': 0}>
+184.0976 	EXP 	bip: sampleRate = 48000
+184.0981 	EXP 	Sound bip reached end of file
+184.1133 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+184.1134 	EXP 	polygon: autoDraw = False
+184.1134 	EXP 	fixation_bip: autoDraw = True
+184.6149 	EXP 	Sound bip reached end of file
+184.6150 	EXP 	Sound bip reached end of file
+184.6150 	EXP 	New trial (rep=1, index=0): <Trial 1 (0 in rep 1) data={'thisN': 1, 'thisTrialN': 0, 'thisRepN': 1}>
+184.6157 	EXP 	bip: sampleRate = 48000
+184.6162 	EXP 	Sound bip reached end of file
+184.6301 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+184.6300 	EXP 	fixation_bip: autoDraw = False
+184.6300 	EXP 	fixation_bip: autoDraw = False
+184.6300 	EXP 	fixation_bip: autoDraw = True
+185.1332 	EXP 	Sound bip reached end of file
+185.1333 	EXP 	Sound bip reached end of file
+185.1334 	EXP 	New trial (rep=2, index=0): <Trial 2 (0 in rep 2) data={'thisN': 2, 'thisTrialN': 0, 'thisRepN': 2}>
+185.1340 	EXP 	bip: sampleRate = 48000
+185.1344 	EXP 	Sound bip reached end of file
+185.1469 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+185.1467 	EXP 	fixation_bip: autoDraw = False
+185.1467 	EXP 	fixation_bip: autoDraw = False
+185.1467 	EXP 	fixation_bip: autoDraw = True
+185.6511 	EXP 	Sound bip reached end of file
+185.6511 	EXP 	Sound bip reached end of file
+185.6512 	EXP 	New trial (rep=3, index=0): <Trial 3 (0 in rep 3) data={'thisN': 3, 'thisTrialN': 0, 'thisRepN': 3}>
+185.6518 	EXP 	bip: sampleRate = 48000
+185.6523 	EXP 	Sound bip reached end of file
+185.6634 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+185.6634 	EXP 	fixation_bip: autoDraw = False
+185.6634 	EXP 	fixation_bip: autoDraw = False
+185.6634 	EXP 	fixation_bip: autoDraw = True
+186.1710 	EXP 	Sound bip reached end of file
+186.1710 	EXP 	Sound bip reached end of file
+186.1711 	EXP 	New trial (rep=4, index=0): <Trial 4 (0 in rep 4) data={'thisN': 4, 'thisTrialN': 0, 'thisRepN': 4}>
+186.1717 	EXP 	bip: sampleRate = 48000
+186.1722 	EXP 	Sound bip reached end of file
+186.1801 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+186.1800 	EXP 	fixation_bip: autoDraw = False
+186.1800 	EXP 	fixation_bip: autoDraw = False
+186.1800 	EXP 	fixation_bip: autoDraw = True
+186.6809 	EXP 	Sound bip reached end of file
+186.6809 	EXP 	Sound bip reached end of file
+186.6810 	EXP 	New trial (rep=5, index=0): <Trial 5 (0 in rep 5) data={'thisN': 5, 'thisTrialN': 0, 'thisRepN': 5}>
+186.6815 	EXP 	bip: sampleRate = 48000
+186.6820 	EXP 	Sound bip reached end of file
+186.6968 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+186.6968 	EXP 	fixation_bip: autoDraw = False
+186.6968 	EXP 	fixation_bip: autoDraw = False
+186.6968 	EXP 	fixation_bip: autoDraw = True
+187.2007 	EXP 	Sound bip reached end of file
+187.2007 	EXP 	Sound bip reached end of file
+187.2008 	EXP 	New trial (rep=6, index=0): <Trial 6 (0 in rep 6) data={'thisN': 6, 'thisTrialN': 0, 'thisRepN': 6}>
+187.2014 	EXP 	bip: sampleRate = 48000
+187.2019 	EXP 	Sound bip reached end of file
+187.2135 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+187.2135 	EXP 	fixation_bip: autoDraw = False
+187.2135 	EXP 	fixation_bip: autoDraw = False
+187.2135 	EXP 	fixation_bip: autoDraw = True
+187.7138 	EXP 	Sound bip reached end of file
+187.7138 	EXP 	Sound bip reached end of file
+187.7139 	EXP 	New trial (rep=7, index=0): <Trial 7 (0 in rep 7) data={'thisN': 7, 'thisTrialN': 0, 'thisRepN': 7}>
+187.7145 	EXP 	bip: sampleRate = 48000
+187.7150 	EXP 	Sound bip reached end of file
+187.7301 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+187.7302 	EXP 	fixation_bip: autoDraw = False
+187.7302 	EXP 	fixation_bip: autoDraw = False
+187.7302 	EXP 	fixation_bip: autoDraw = True
+188.2340 	EXP 	Sound bip reached end of file
+188.2340 	EXP 	Sound bip reached end of file
+188.2340 	EXP 	New trial (rep=8, index=0): <Trial 8 (0 in rep 8) data={'thisN': 8, 'thisTrialN': 0, 'thisRepN': 8}>
+188.2346 	EXP 	bip: sampleRate = 48000
+188.2351 	EXP 	Sound bip reached end of file
+188.2468 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+188.2468 	EXP 	fixation_bip: autoDraw = False
+188.2468 	EXP 	fixation_bip: autoDraw = False
+188.2468 	EXP 	fixation_bip: autoDraw = True
+188.7526 	EXP 	Sound bip reached end of file
+188.7526 	EXP 	Sound bip reached end of file
+188.7527 	EXP 	New trial (rep=9, index=0): <Trial 9 (0 in rep 9) data={'thisN': 9, 'thisTrialN': 0, 'thisRepN': 9}>
+188.7533 	EXP 	bip: sampleRate = 48000
+188.7538 	EXP 	Sound bip reached end of file
+188.7635 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+188.7635 	EXP 	fixation_bip: autoDraw = False
+188.7635 	EXP 	fixation_bip: autoDraw = False
+188.7635 	EXP 	fixation_bip: autoDraw = True
+189.2701 	EXP 	Sound bip reached end of file
+189.2701 	EXP 	Sound bip reached end of file
+189.2702 	EXP 	New trial (rep=10, index=0): <Trial 10 (0 in rep 10) data={'thisN': 10, 'thisTrialN': 0, 'thisRepN': 10}>
+189.2708 	EXP 	bip: sampleRate = 48000
+189.2713 	EXP 	Sound bip reached end of file
+189.2802 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+189.2801 	EXP 	fixation_bip: autoDraw = False
+189.2801 	EXP 	fixation_bip: autoDraw = False
+189.2801 	EXP 	fixation_bip: autoDraw = True
+189.7816 	EXP 	Sound bip reached end of file
+189.7817 	EXP 	Sound bip reached end of file
+189.7818 	EXP 	New trial (rep=11, index=0): <Trial 11 (0 in rep 11) data={'thisN': 11, 'thisTrialN': 0, 'thisRepN': 11}>
+189.7823 	EXP 	bip: sampleRate = 48000
+189.7828 	EXP 	Sound bip reached end of file
+189.7969 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+189.7969 	EXP 	fixation_bip: autoDraw = False
+189.7969 	EXP 	fixation_bip: autoDraw = False
+189.7969 	EXP 	fixation_bip: autoDraw = True
+190.3010 	EXP 	Sound bip reached end of file
+190.3010 	EXP 	Sound bip reached end of file
+190.3011 	EXP 	New trial (rep=12, index=0): <Trial 12 (0 in rep 12) data={'thisN': 12, 'thisTrialN': 0, 'thisRepN': 12}>
+190.3017 	EXP 	bip: sampleRate = 48000
+190.3022 	EXP 	Sound bip reached end of file
+190.3135 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+190.3136 	EXP 	fixation_bip: autoDraw = False
+190.3136 	EXP 	fixation_bip: autoDraw = False
+190.3136 	EXP 	fixation_bip: autoDraw = True
+190.8136 	EXP 	Sound bip reached end of file
+190.8136 	EXP 	Sound bip reached end of file
+190.8137 	EXP 	New trial (rep=13, index=0): <Trial 13 (0 in rep 13) data={'thisN': 13, 'thisTrialN': 0, 'thisRepN': 13}>
+190.8143 	EXP 	bip: sampleRate = 48000
+190.8148 	EXP 	Sound bip reached end of file
+190.8302 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+190.8302 	EXP 	fixation_bip: autoDraw = False
+190.8302 	EXP 	fixation_bip: autoDraw = False
+190.8302 	EXP 	fixation_bip: autoDraw = True
+191.3331 	EXP 	Sound bip reached end of file
+191.3331 	EXP 	Sound bip reached end of file
+191.3332 	EXP 	New trial (rep=14, index=0): <Trial 14 (0 in rep 14) data={'thisN': 14, 'thisTrialN': 0, 'thisRepN': 14}>
+191.3339 	EXP 	bip: sampleRate = 48000
+191.3343 	EXP 	Sound bip reached end of file
+191.3469 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+191.3469 	EXP 	fixation_bip: autoDraw = False
+191.3469 	EXP 	fixation_bip: autoDraw = False
+191.3469 	EXP 	fixation_bip: autoDraw = True
+191.8526 	EXP 	Sound bip reached end of file
+191.8527 	EXP 	Sound bip reached end of file
+191.8801 	INFO 	Keyboard events cleared
+191.8801 	EXP 	fixation_bip: autoDraw = False
+191.8801 	EXP 	fixation_bip: autoDraw = False
+191.8801 	EXP 	questionary_text0: height = np.float64(0.035)
+191.8801 	EXP 	questionary_text0: height = np.float64(0.035)
+191.8801 	EXP 	questionary_text0: height = np.float64(0.035)
+191.8801 	EXP 	questionary_text0: text = '¿Qué sucedió con la primera novela que Simón Acosta escribió en papel antes de casarse con Luisa?\n\n A: Fue publicada por una editorial importante y se convirtió en un éxito de ventas.\n\n B: Fue rechazada por todos los editores, quienes le dijeron que era horrible.\n\n C: Nunca llegó a terminarla porque decidió comenzar a escribir solo en su mente.\n\n Presioná la opción que creas correcta (teclas A, B ó C)'
+191.8801 	EXP 	questionary_text0: height = 0.035
+191.8801 	EXP 	questionary_text0: autoDraw = True
+191.8801 	EXP 	questionary_text0: height = np.float64(0.035)
+191.8801 	EXP 	questionary_text0: height = np.float64(0.035)
+191.8801 	EXP 	questionary_text0: height = np.float64(0.035)
+191.8801 	EXP 	questionary_text0: text = '¿Qué sucedió con la primera novela que Simón Acosta escribió en papel antes de casarse con Luisa?\n\n A: Fue publicada por una editorial importante y se convirtió en un éxito de ventas.\n\n B: Fue rechazada por todos los editores, quienes le dijeron que era horrible.\n\n C: Nunca llegó a terminarla porque decidió comenzar a escribir solo en su mente.\n\n Presioná la opción que creas correcta (teclas A, B ó C)'
+192.6470 	EXP 	Device response: <KeyPress from None: t=192.63204729999416, value=b, duration=None>
+192.6577 	DATA 	Keypress: b
+192.6636 	INFO 	Keyboard events cleared
+192.6636 	EXP 	questionary_text0: autoDraw = False
+192.6636 	EXP 	questionary_text1: height = np.float64(0.035)
+192.6636 	EXP 	questionary_text1: height = np.float64(0.035)
+192.6636 	EXP 	questionary_text1: height = np.float64(0.035)
+192.6636 	EXP 	questionary_text1: text = '¿Cuál fue el motivo por el que Acosta decidió dejar de escribir físicamente sus libros el día que nació su hijo?\n\n A: Porque sintió mucho aburrimiento al darse cuenta de que ya se sabía el libro de memoria.\n\n B: Porque el ruido de la máquina de escribir despertaba al bebé y molestaba a su esposa.\n\n C: Porque consideró que sus historias eran demasiado complejas para ser escritas.\n\n Presioná la opción que creas correcta (teclas A, B ó C)'
+192.6636 	EXP 	questionary_text1: height = 0.035
+192.6636 	EXP 	questionary_text1: autoDraw = True
+192.6636 	EXP 	questionary_text1: height = np.float64(0.035)
+192.6636 	EXP 	questionary_text1: height = np.float64(0.035)
+192.6636 	EXP 	questionary_text1: height = np.float64(0.035)
+192.6636 	EXP 	questionary_text1: text = '¿Cuál fue el motivo por el que Acosta decidió dejar de escribir físicamente sus libros el día que nació su hijo?\n\n A: Porque sintió mucho aburrimiento al darse cuenta de que ya se sabía el libro de memoria.\n\n B: Porque el ruido de la máquina de escribir despertaba al bebé y molestaba a su esposa.\n\n C: Porque consideró que sus historias eran demasiado complejas para ser escritas.\n\n Presioná la opción que creas correcta (teclas A, B ó C)'
+192.6970 	EXP 	Device response: <KeyPress from None: t=164.51199959998485, value=b, duration=28.1760123000131>
+192.7802 	EXP 	Device response: <KeyPress from None: t=192.76801989998785, value=b, duration=None>
+192.7899 	DATA 	Keypress: b
+192.7970 	INFO 	Keyboard events cleared
+192.7969 	EXP 	questionary_text1: autoDraw = False
+192.7969 	EXP 	questionary_text2: height = np.float64(0.035)
+192.7969 	EXP 	questionary_text2: height = np.float64(0.035)
+192.7969 	EXP 	questionary_text2: height = np.float64(0.035)
+192.7969 	EXP 	questionary_text2: text = 'Al final del cuento, ¿qué le ocurrió a Facundo cuando decidió mentirle a su madre sobre el cementerio?\n\n A: Se descubrió a sí mismo creando una ficción en su mente.\n\n B: Decidió escribir en un cuaderno la historia de sus padres para que no se pierda.\n\n C: Se sintió culpable por no haberle dicho la verdad sobre dónde estaba enterrado su padre.\n\n Presioná la opción que creas correcta (teclas A, B ó C)'
+192.7969 	EXP 	questionary_text2: height = 0.035
+192.7969 	EXP 	questionary_text2: autoDraw = True
+192.7969 	EXP 	questionary_text2: height = np.float64(0.035)
+192.7969 	EXP 	questionary_text2: height = np.float64(0.035)
+192.7969 	EXP 	questionary_text2: height = np.float64(0.035)
+192.7969 	EXP 	questionary_text2: text = 'Al final del cuento, ¿qué le ocurrió a Facundo cuando decidió mentirle a su madre sobre el cementerio?\n\n A: Se descubrió a sí mismo creando una ficción en su mente.\n\n B: Decidió escribir en un cuaderno la historia de sus padres para que no se pierda.\n\n C: Se sintió culpable por no haberle dicho la verdad sobre dónde estaba enterrado su padre.\n\n Presioná la opción que creas correcta (teclas A, B ó C)'
+192.8802 	EXP 	Device response: <KeyPress from None: t=192.63204729999416, value=b, duration=0.2399577999894973>
+192.9303 	EXP 	Device response: <KeyPress from None: t=192.92791359999683, value=b, duration=None>
+192.9304 	EXP 	New trial (rep=3, index=0): <Trial 3 (0 in rep 3) data={'thisN': 3, 'thisTrialN': 0, 'thisRepN': 3}>
+192.9337 	DATA 	Keypress: b
+192.9470 	INFO 	Keyboard events cleared
+192.9469 	EXP 	questionary_text2: autoDraw = False
+192.9469 	EXP 	text_prompt: height = np.float64(0.035)
+192.9469 	EXP 	text_prompt: height = np.float64(0.035)
+192.9469 	EXP 	text_prompt: height = np.float64(0.035)
+192.9469 	EXP 	text_prompt: text = 'Presta atención a la historia del lado IZQUIERDO (<<<).\n\n\nApretá ESPACIO para continuar...'
+192.9469 	EXP 	text_prompt: height = 0.035
+192.9469 	EXP 	text_prompt: autoDraw = True
+192.9469 	EXP 	text_prompt: height = np.float64(0.035)
+192.9469 	EXP 	text_prompt: height = np.float64(0.035)
+192.9469 	EXP 	text_prompt: height = np.float64(0.035)
+192.9469 	EXP 	text_prompt: text = 'Presta atención a la historia del lado IZQUIERDO (<<<).\n\n\nApretá ESPACIO para continuar...'
+193.0137 	EXP 	Device response: <KeyPress from None: t=192.76801989998785, value=b, duration=0.23993070001597516>
+193.0803 	DATA 	Keypress: b
+193.0970 	EXP 	Device response: <KeyPress from None: t=193.07999830000335, value=b, duration=None>
+193.1802 	EXP 	Device response: <KeyPress from None: t=192.92791359999683, value=b, duration=0.24007519998122007>
+193.2470 	EXP 	Device response: <KeyPress from None: t=193.23197019999498, value=b, duration=None>
+193.2472 	DATA 	Keypress: b
+193.3470 	EXP 	Device response: <KeyPress from None: t=193.07999830000335, value=b, duration=0.26398709998466074>
+193.4802 	EXP 	Device response: <KeyPress from None: t=193.47201420000056, value=space, duration=None>
+193.4804 	EXP 	New trial (rep=0, index=0): <Trial 0 (0 in rep 0) data={'thisN': 0, 'thisTrialN': 0, 'thisRepN': 0}>
+193.4810 	EXP 	bip: sampleRate = 48000
+193.4816 	EXP 	Sound bip reached end of file
+193.4968 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+193.4818 	DATA 	Keypress: space
+193.4970 	EXP 	text_prompt: autoDraw = False
+193.4970 	EXP 	fixation_bip: autoDraw = True
+193.6137 	EXP 	Device response: <KeyPress from None: t=171.50403539999388, value=space, duration=22.09591490001185>
+193.9931 	EXP 	Sound bip reached end of file
+193.9931 	EXP 	Sound bip reached end of file
+193.9932 	EXP 	New trial (rep=1, index=0): <Trial 1 (0 in rep 1) data={'thisN': 1, 'thisTrialN': 0, 'thisRepN': 1}>
+193.9938 	EXP 	bip: sampleRate = 48000
+193.9943 	EXP 	Sound bip reached end of file
+193.9968 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+193.9969 	EXP 	fixation_bip: autoDraw = False
+193.9969 	EXP 	fixation_bip: autoDraw = False
+193.9969 	EXP 	fixation_bip: autoDraw = True
+194.5132 	EXP 	Sound bip reached end of file
+194.5132 	EXP 	Sound bip reached end of file
+194.5133 	EXP 	New trial (rep=2, index=0): <Trial 2 (0 in rep 2) data={'thisN': 2, 'thisTrialN': 0, 'thisRepN': 2}>
+194.5139 	EXP 	bip: sampleRate = 48000
+194.5144 	EXP 	Sound bip reached end of file
+194.5303 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+194.5303 	EXP 	fixation_bip: autoDraw = False
+194.5303 	EXP 	fixation_bip: autoDraw = False
+194.5303 	EXP 	fixation_bip: autoDraw = True
+195.0336 	EXP 	Sound bip reached end of file
+195.0336 	EXP 	Sound bip reached end of file
+195.0337 	EXP 	New trial (rep=3, index=0): <Trial 3 (0 in rep 3) data={'thisN': 3, 'thisTrialN': 0, 'thisRepN': 3}>
+195.0343 	EXP 	bip: sampleRate = 48000
+195.0348 	EXP 	Sound bip reached end of file
+195.0472 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+195.0470 	EXP 	fixation_bip: autoDraw = False
+195.0470 	EXP 	fixation_bip: autoDraw = False
+195.0470 	EXP 	fixation_bip: autoDraw = True
+195.5517 	EXP 	Sound bip reached end of file
+195.5517 	EXP 	Sound bip reached end of file
+195.5518 	EXP 	New trial (rep=4, index=0): <Trial 4 (0 in rep 4) data={'thisN': 4, 'thisTrialN': 0, 'thisRepN': 4}>
+195.5523 	EXP 	bip: sampleRate = 48000
+195.5528 	EXP 	Sound bip reached end of file
+195.5636 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+195.5636 	EXP 	fixation_bip: autoDraw = False
+195.5636 	EXP 	fixation_bip: autoDraw = False
+195.5636 	EXP 	fixation_bip: autoDraw = True
+196.0720 	EXP 	Sound bip reached end of file
+196.0720 	EXP 	Sound bip reached end of file
+196.0721 	EXP 	New trial (rep=5, index=0): <Trial 5 (0 in rep 5) data={'thisN': 5, 'thisTrialN': 0, 'thisRepN': 5}>
+196.0727 	EXP 	bip: sampleRate = 48000
+196.0732 	EXP 	Sound bip reached end of file
+196.0803 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+196.0803 	EXP 	fixation_bip: autoDraw = False
+196.0803 	EXP 	fixation_bip: autoDraw = False
+196.0803 	EXP 	fixation_bip: autoDraw = True
+196.5836 	EXP 	Sound bip reached end of file
+196.5837 	EXP 	Sound bip reached end of file
+196.5837 	EXP 	New trial (rep=6, index=0): <Trial 6 (0 in rep 6) data={'thisN': 6, 'thisTrialN': 0, 'thisRepN': 6}>
+196.5844 	EXP 	bip: sampleRate = 48000
+196.5848 	EXP 	Sound bip reached end of file
+196.5970 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+196.5970 	EXP 	fixation_bip: autoDraw = False
+196.5970 	EXP 	fixation_bip: autoDraw = False
+196.5970 	EXP 	fixation_bip: autoDraw = True
+197.1003 	EXP 	Sound bip reached end of file
+197.1003 	EXP 	Sound bip reached end of file
+197.1004 	EXP 	New trial (rep=7, index=0): <Trial 7 (0 in rep 7) data={'thisN': 7, 'thisTrialN': 0, 'thisRepN': 7}>
+197.1012 	EXP 	bip: sampleRate = 48000
+197.1017 	EXP 	Sound bip reached end of file
+197.1137 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+197.1137 	EXP 	fixation_bip: autoDraw = False
+197.1137 	EXP 	fixation_bip: autoDraw = False
+197.1137 	EXP 	fixation_bip: autoDraw = True
+197.6146 	EXP 	Sound bip reached end of file
+197.6146 	EXP 	Sound bip reached end of file
+197.6147 	EXP 	New trial (rep=8, index=0): <Trial 8 (0 in rep 8) data={'thisN': 8, 'thisTrialN': 0, 'thisRepN': 8}>
+197.6153 	EXP 	bip: sampleRate = 48000
+197.6158 	EXP 	Sound bip reached end of file
+197.6304 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+197.6304 	EXP 	fixation_bip: autoDraw = False
+197.6304 	EXP 	fixation_bip: autoDraw = False
+197.6304 	EXP 	fixation_bip: autoDraw = True
+198.1336 	EXP 	Sound bip reached end of file
+198.1336 	EXP 	Sound bip reached end of file
+198.1337 	EXP 	New trial (rep=9, index=0): <Trial 9 (0 in rep 9) data={'thisN': 9, 'thisTrialN': 0, 'thisRepN': 9}>
+198.1343 	EXP 	bip: sampleRate = 48000
+198.1348 	EXP 	Sound bip reached end of file
+198.1471 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+198.1471 	EXP 	fixation_bip: autoDraw = False
+198.1471 	EXP 	fixation_bip: autoDraw = False
+198.1471 	EXP 	fixation_bip: autoDraw = True
+198.6519 	EXP 	Sound bip reached end of file
+198.6519 	EXP 	Sound bip reached end of file
+198.6520 	EXP 	New trial (rep=10, index=0): <Trial 10 (0 in rep 10) data={'thisN': 10, 'thisTrialN': 0, 'thisRepN': 10}>
+198.6526 	EXP 	bip: sampleRate = 48000
+198.6530 	EXP 	Sound bip reached end of file
+198.6637 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+198.6638 	EXP 	fixation_bip: autoDraw = False
+198.6638 	EXP 	fixation_bip: autoDraw = False
+198.6638 	EXP 	fixation_bip: autoDraw = True
+199.1729 	EXP 	Sound bip reached end of file
+199.1729 	EXP 	Sound bip reached end of file
+199.1730 	EXP 	New trial (rep=11, index=0): <Trial 11 (0 in rep 11) data={'thisN': 11, 'thisTrialN': 0, 'thisRepN': 11}>
+199.1736 	EXP 	bip: sampleRate = 48000
+199.1741 	EXP 	Sound bip reached end of file
+199.1805 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+199.1804 	EXP 	fixation_bip: autoDraw = False
+199.1804 	EXP 	fixation_bip: autoDraw = False
+199.1804 	EXP 	fixation_bip: autoDraw = True
+199.6891 	EXP 	Sound bip reached end of file
+199.6891 	EXP 	Sound bip reached end of file
+199.6892 	EXP 	New trial (rep=12, index=0): <Trial 12 (0 in rep 12) data={'thisN': 12, 'thisTrialN': 0, 'thisRepN': 12}>
+199.6898 	EXP 	bip: sampleRate = 48000
+199.6902 	EXP 	Sound bip reached end of file
+199.6969 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+199.6971 	EXP 	fixation_bip: autoDraw = False
+199.6971 	EXP 	fixation_bip: autoDraw = False
+199.6971 	EXP 	fixation_bip: autoDraw = True
+200.2106 	EXP 	Sound bip reached end of file
+200.2107 	EXP 	Sound bip reached end of file
+200.2108 	EXP 	New trial (rep=13, index=0): <Trial 13 (0 in rep 13) data={'thisN': 13, 'thisTrialN': 0, 'thisRepN': 13}>
+200.2113 	EXP 	bip: sampleRate = 48000
+200.2118 	EXP 	Sound bip reached end of file
+200.2138 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+200.2137 	EXP 	fixation_bip: autoDraw = False
+200.2137 	EXP 	fixation_bip: autoDraw = False
+200.2137 	EXP 	fixation_bip: autoDraw = True
+200.7312 	EXP 	Sound bip reached end of file
+200.7312 	EXP 	Sound bip reached end of file
+200.7317 	EXP 	New trial (rep=14, index=0): <Trial 14 (0 in rep 14) data={'thisN': 14, 'thisTrialN': 0, 'thisRepN': 14}>
+200.7323 	EXP 	bip: sampleRate = 48000
+200.7330 	EXP 	Sound bip reached end of file
+200.7471 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+200.7471 	EXP 	fixation_bip: autoDraw = False
+200.7471 	EXP 	fixation_bip: autoDraw = False
+200.7471 	EXP 	fixation_bip: autoDraw = True
+201.2547 	EXP 	Sound bip reached end of file
+201.2548 	EXP 	Sound bip reached end of file
+201.2638 	EXP 	Sound  reached end of file
+201.2638 	EXP 	Playing sound  on speaker Speakers (Realtek(R) Audio)
+201.2638 	EXP 	fixation_bip: autoDraw = False
+201.2638 	EXP 	fixation_bip: autoDraw = False
+201.2638 	EXP 	polygon: autoDraw = True
+202.0472 	EXP 	Device response: <KeyPress from None: t=202.04000310000265, value=space, duration=None>
+202.0474 	DATA 	Keypress: space
+202.1972 	EXP 	Device response: <KeyPress from None: t=193.47201420000056, value=space, duration=8.712012899981346>
+206.2833 	EXP 	Sound  reached end of file
+206.2974 	EXP 	Sound  reached end of file
+206.2976 	EXP 	New trial (rep=0, index=0): <Trial 0 (0 in rep 0) data={'thisN': 0, 'thisTrialN': 0, 'thisRepN': 0}>
+206.2982 	EXP 	bip: sampleRate = 48000
+206.2987 	EXP 	Sound bip reached end of file
+206.3140 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+206.3140 	EXP 	polygon: autoDraw = False
+206.3140 	EXP 	fixation_bip: autoDraw = True
+206.8177 	EXP 	Sound bip reached end of file
+206.8177 	EXP 	Sound bip reached end of file
+206.8178 	EXP 	New trial (rep=1, index=0): <Trial 1 (0 in rep 1) data={'thisN': 1, 'thisTrialN': 0, 'thisRepN': 1}>
+206.8184 	EXP 	bip: sampleRate = 48000
+206.8189 	EXP 	Sound bip reached end of file
+206.8306 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+206.8306 	EXP 	fixation_bip: autoDraw = False
+206.8306 	EXP 	fixation_bip: autoDraw = False
+206.8306 	EXP 	fixation_bip: autoDraw = True
+207.3301 	EXP 	Sound bip reached end of file
+207.3301 	EXP 	Sound bip reached end of file
+207.3302 	EXP 	New trial (rep=2, index=0): <Trial 2 (0 in rep 2) data={'thisN': 2, 'thisTrialN': 0, 'thisRepN': 2}>
+207.3308 	EXP 	bip: sampleRate = 48000
+207.3313 	EXP 	Sound bip reached end of file
+207.3473 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+207.3473 	EXP 	fixation_bip: autoDraw = False
+207.3473 	EXP 	fixation_bip: autoDraw = False
+207.3473 	EXP 	fixation_bip: autoDraw = True
+207.8515 	EXP 	Sound bip reached end of file
+207.8515 	EXP 	Sound bip reached end of file
+207.8516 	EXP 	New trial (rep=3, index=0): <Trial 3 (0 in rep 3) data={'thisN': 3, 'thisTrialN': 0, 'thisRepN': 3}>
+207.8522 	EXP 	bip: sampleRate = 48000
+207.8526 	EXP 	Sound bip reached end of file
+207.8640 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+207.8640 	EXP 	fixation_bip: autoDraw = False
+207.8640 	EXP 	fixation_bip: autoDraw = False
+207.8640 	EXP 	fixation_bip: autoDraw = True
+208.3640 	EXP 	Sound bip reached end of file
+208.3641 	EXP 	Sound bip reached end of file
+208.3642 	EXP 	New trial (rep=4, index=0): <Trial 4 (0 in rep 4) data={'thisN': 4, 'thisTrialN': 0, 'thisRepN': 4}>
+208.3648 	EXP 	bip: sampleRate = 48000
+208.3653 	EXP 	Sound bip reached end of file
+208.3807 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+208.3805 	EXP 	fixation_bip: autoDraw = False
+208.3805 	EXP 	fixation_bip: autoDraw = False
+208.3805 	EXP 	fixation_bip: autoDraw = True
+208.8829 	EXP 	Sound bip reached end of file
+208.8830 	EXP 	Sound bip reached end of file
+208.8831 	EXP 	New trial (rep=5, index=0): <Trial 5 (0 in rep 5) data={'thisN': 5, 'thisTrialN': 0, 'thisRepN': 5}>
+208.8837 	EXP 	bip: sampleRate = 48000
+208.8842 	EXP 	Sound bip reached end of file
+208.8974 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+208.8973 	EXP 	fixation_bip: autoDraw = False
+208.8973 	EXP 	fixation_bip: autoDraw = False
+208.8973 	EXP 	fixation_bip: autoDraw = True
+209.3992 	EXP 	Sound bip reached end of file
+209.3992 	EXP 	Sound bip reached end of file
+209.3993 	EXP 	New trial (rep=6, index=0): <Trial 6 (0 in rep 6) data={'thisN': 6, 'thisTrialN': 0, 'thisRepN': 6}>
+209.3999 	EXP 	bip: sampleRate = 48000
+209.4004 	EXP 	Sound bip reached end of file
+209.4138 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+209.4140 	EXP 	fixation_bip: autoDraw = False
+209.4140 	EXP 	fixation_bip: autoDraw = False
+209.4140 	EXP 	fixation_bip: autoDraw = True
+209.9234 	EXP 	Sound bip reached end of file
+209.9234 	EXP 	Sound bip reached end of file
+209.9235 	EXP 	New trial (rep=7, index=0): <Trial 7 (0 in rep 7) data={'thisN': 7, 'thisTrialN': 0, 'thisRepN': 7}>
+209.9241 	EXP 	bip: sampleRate = 48000
+209.9246 	EXP 	Sound bip reached end of file
+209.9307 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+209.9307 	EXP 	fixation_bip: autoDraw = False
+209.9307 	EXP 	fixation_bip: autoDraw = False
+209.9307 	EXP 	fixation_bip: autoDraw = True
+210.4400 	EXP 	Sound bip reached end of file
+210.4400 	EXP 	Sound bip reached end of file
+210.4401 	EXP 	New trial (rep=8, index=0): <Trial 8 (0 in rep 8) data={'thisN': 8, 'thisTrialN': 0, 'thisRepN': 8}>
+210.4408 	EXP 	bip: sampleRate = 48000
+210.4413 	EXP 	Sound bip reached end of file
+210.4474 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+210.4474 	EXP 	fixation_bip: autoDraw = False
+210.4474 	EXP 	fixation_bip: autoDraw = False
+210.4474 	EXP 	fixation_bip: autoDraw = True
+210.9532 	EXP 	Sound bip reached end of file
+210.9533 	EXP 	Sound bip reached end of file
+210.9534 	EXP 	New trial (rep=9, index=0): <Trial 9 (0 in rep 9) data={'thisN': 9, 'thisTrialN': 0, 'thisRepN': 9}>
+210.9540 	EXP 	bip: sampleRate = 48000
+210.9544 	EXP 	Sound bip reached end of file
+210.9641 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+210.9641 	EXP 	fixation_bip: autoDraw = False
+210.9641 	EXP 	fixation_bip: autoDraw = False
+210.9641 	EXP 	fixation_bip: autoDraw = True
+211.4700 	EXP 	Sound bip reached end of file
+211.4700 	EXP 	Sound bip reached end of file
+211.4701 	EXP 	New trial (rep=10, index=0): <Trial 10 (0 in rep 10) data={'thisN': 10, 'thisTrialN': 0, 'thisRepN': 10}>
+211.4708 	EXP 	bip: sampleRate = 48000
+211.4713 	EXP 	Sound bip reached end of file
+211.4807 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+211.4806 	EXP 	fixation_bip: autoDraw = False
+211.4806 	EXP 	fixation_bip: autoDraw = False
+211.4806 	EXP 	fixation_bip: autoDraw = True
+211.9914 	EXP 	Sound bip reached end of file
+211.9914 	EXP 	Sound bip reached end of file
+211.9915 	EXP 	New trial (rep=11, index=0): <Trial 11 (0 in rep 11) data={'thisN': 11, 'thisTrialN': 0, 'thisRepN': 11}>
+211.9921 	EXP 	bip: sampleRate = 48000
+211.9926 	EXP 	Sound bip reached end of file
+211.9973 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+211.9975 	EXP 	fixation_bip: autoDraw = False
+211.9975 	EXP 	fixation_bip: autoDraw = False
+211.9975 	EXP 	fixation_bip: autoDraw = True
+212.5032 	EXP 	Sound bip reached end of file
+212.5032 	EXP 	Sound bip reached end of file
+212.5033 	EXP 	New trial (rep=12, index=0): <Trial 12 (0 in rep 12) data={'thisN': 12, 'thisTrialN': 0, 'thisRepN': 12}>
+212.5040 	EXP 	bip: sampleRate = 48000
+212.5045 	EXP 	Sound bip reached end of file
+212.5141 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+212.5141 	EXP 	fixation_bip: autoDraw = False
+212.5141 	EXP 	fixation_bip: autoDraw = False
+212.5141 	EXP 	fixation_bip: autoDraw = True
+213.0192 	EXP 	Sound bip reached end of file
+213.0192 	EXP 	Sound bip reached end of file
+213.0193 	EXP 	New trial (rep=13, index=0): <Trial 13 (0 in rep 13) data={'thisN': 13, 'thisTrialN': 0, 'thisRepN': 13}>
+213.0199 	EXP 	bip: sampleRate = 48000
+213.0204 	EXP 	Sound bip reached end of file
+213.0308 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+213.0308 	EXP 	fixation_bip: autoDraw = False
+213.0308 	EXP 	fixation_bip: autoDraw = False
+213.0308 	EXP 	fixation_bip: autoDraw = True
+213.5435 	EXP 	Sound bip reached end of file
+213.5435 	EXP 	Sound bip reached end of file
+213.5436 	EXP 	New trial (rep=14, index=0): <Trial 14 (0 in rep 14) data={'thisN': 14, 'thisTrialN': 0, 'thisRepN': 14}>
+213.5442 	EXP 	bip: sampleRate = 48000
+213.5447 	EXP 	Sound bip reached end of file
+213.5475 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+213.5475 	EXP 	fixation_bip: autoDraw = False
+213.5475 	EXP 	fixation_bip: autoDraw = False
+213.5475 	EXP 	fixation_bip: autoDraw = True
+214.0612 	EXP 	Sound bip reached end of file
+214.0612 	EXP 	Sound bip reached end of file
+214.0807 	INFO 	Keyboard events cleared
+214.0807 	EXP 	fixation_bip: autoDraw = False
+214.0807 	EXP 	fixation_bip: autoDraw = False
+214.0807 	EXP 	questionary_text0: height = np.float64(0.035)
+214.0807 	EXP 	questionary_text0: height = np.float64(0.035)
+214.0807 	EXP 	questionary_text0: height = np.float64(0.035)
+214.0807 	EXP 	questionary_text0: text = '¿Por qué Verónica sentía rechazo hacia Sandra, la hija del dueño de la librería?\n\n A: Porque Sandra le tenía envidia a Verónica por ser la mejor alumna de la clase y siempre la molestaba.\n\n B: Porque Sandra siempre le regalaba diccionarios usados en lugar de libros de cuentos.\n\n C: Porque a pesar de tener acceso a todos los libros, Sandra odiaba leer y no se los prestaba a nadie.\n\n Presioná la opción que creas correcta (teclas A, B ó C)'
+214.0807 	EXP 	questionary_text0: height = 0.035
+214.0807 	EXP 	questionary_text0: autoDraw = True
+214.0807 	EXP 	questionary_text0: height = np.float64(0.035)
+214.0807 	EXP 	questionary_text0: height = np.float64(0.035)
+214.0807 	EXP 	questionary_text0: height = np.float64(0.035)
+214.0807 	EXP 	questionary_text0: text = '¿Por qué Verónica sentía rechazo hacia Sandra, la hija del dueño de la librería?\n\n A: Porque Sandra le tenía envidia a Verónica por ser la mejor alumna de la clase y siempre la molestaba.\n\n B: Porque Sandra siempre le regalaba diccionarios usados en lugar de libros de cuentos.\n\n C: Porque a pesar de tener acceso a todos los libros, Sandra odiaba leer y no se los prestaba a nadie.\n\n Presioná la opción que creas correcta (teclas A, B ó C)'
+219.5477 	EXP 	Device response: <KeyPress from None: t=219.5440011000028, value=a, duration=None>
+219.5586 	DATA 	Keypress: a
+219.5643 	INFO 	Keyboard events cleared
+219.5643 	EXP 	questionary_text0: autoDraw = False
+219.5643 	EXP 	questionary_text1: height = np.float64(0.035)
+219.5643 	EXP 	questionary_text1: height = np.float64(0.035)
+219.5643 	EXP 	questionary_text1: height = np.float64(0.035)
+219.5643 	EXP 	questionary_text1: text = '¿Qué hacía Sandra cada vez que Verónica iba a su casa a buscar el libro "Corazón de vidrio"?\n\n A: Le decía que volviera al día siguiente, mintiendo con que ya se lo había prestado a otra chica.\n\n B: Le exigía que le trajera caramelos a cambio de prestarle el libro por unas horas.\n\n C: Se escondía en su habitación y hacía que sus padres le dijeran a Verónica que no estaba.\n\n Presioná la opción que creas correcta (teclas A, B ó C)'
+219.5643 	EXP 	questionary_text1: height = 0.035
+219.5643 	EXP 	questionary_text1: autoDraw = True
+219.5643 	EXP 	questionary_text1: height = np.float64(0.035)
+219.5643 	EXP 	questionary_text1: height = np.float64(0.035)
+219.5643 	EXP 	questionary_text1: height = np.float64(0.035)
+219.5643 	EXP 	questionary_text1: text = '¿Qué hacía Sandra cada vez que Verónica iba a su casa a buscar el libro "Corazón de vidrio"?\n\n A: Le decía que volviera al día siguiente, mintiendo con que ya se lo había prestado a otra chica.\n\n B: Le exigía que le trajera caramelos a cambio de prestarle el libro por unas horas.\n\n C: Se escondía en su habitación y hacía que sus padres le dijeran a Verónica que no estaba.\n\n Presioná la opción que creas correcta (teclas A, B ó C)'
+219.7644 	EXP 	Device response: <KeyPress from None: t=219.7598913999973, value=c, duration=None>
+219.7747 	DATA 	Keypress: c
+219.7811 	INFO 	Keyboard events cleared
+219.7810 	EXP 	questionary_text1: autoDraw = False
+219.7810 	EXP 	questionary_text2: height = np.float64(0.035)
+219.7810 	EXP 	questionary_text2: height = np.float64(0.035)
+219.7810 	EXP 	questionary_text2: height = np.float64(0.035)
+219.7810 	EXP 	questionary_text2: text = 'Una vez que Verónica finalmente consiguió el libro y se lo llevó a su casa, ¿cómo lo leyó?\n\n A: Lo leyó todo en una sola noche para no perder ni un segundo de la historia.\n\n B: No pudo leerlo porque se sintió culpable por la discusión entre Sandra y su madre.\n\n C: Lo leía de a poco y a veces lo escondía, fingiendo no tenerlo para aumentar la felicidad de poseerlo.\n\n Presioná la opción que creas correcta (teclas A, B ó C)'
+219.7810 	EXP 	questionary_text2: height = 0.035
+219.7810 	EXP 	questionary_text2: autoDraw = True
+219.7810 	EXP 	questionary_text2: height = np.float64(0.035)
+219.7810 	EXP 	questionary_text2: height = np.float64(0.035)
+219.7810 	EXP 	questionary_text2: height = np.float64(0.035)
+219.7810 	EXP 	questionary_text2: text = 'Una vez que Verónica finalmente consiguió el libro y se lo llevó a su casa, ¿cómo lo leyó?\n\n A: Lo leyó todo en una sola noche para no perder ni un segundo de la historia.\n\n B: No pudo leerlo porque se sintió culpable por la discusión entre Sandra y su madre.\n\n C: Lo leía de a poco y a veces lo escondía, fingiendo no tenerlo para aumentar la felicidad de poseerlo.\n\n Presioná la opción que creas correcta (teclas A, B ó C)'
+219.7979 	EXP 	Device response: <KeyPress from None: t=219.5440011000028, value=a, duration=0.23991299999761395>
+219.9644 	EXP 	Device response: <KeyPress from None: t=219.7598913999973, value=c, duration=0.19201929998234846>
+220.0644 	EXP 	Device response: <KeyPress from None: t=220.04790770000545, value=a, duration=None>
+220.0645 	EXP 	New trial (rep=4, index=0): <Trial 4 (0 in rep 4) data={'thisN': 4, 'thisTrialN': 0, 'thisRepN': 4}>
+220.0664 	DATA 	Keypress: a
+220.0808 	INFO 	Keyboard events cleared
+220.0808 	EXP 	questionary_text2: autoDraw = False
+220.0808 	EXP 	text_prompt: text = 'Presta atención a la historia del lado IZQUIERDO (<<<).\n\n\nApretá ESPACIO para continuar...'
+220.0808 	EXP 	text_prompt: height = 0.035
+220.0808 	EXP 	text_prompt: autoDraw = True
+220.0808 	EXP 	text_prompt: height = np.float64(0.035)
+220.0808 	EXP 	text_prompt: height = np.float64(0.035)
+220.0808 	EXP 	text_prompt: height = np.float64(0.035)
+220.0808 	EXP 	text_prompt: text = 'Presta atención a la historia del lado IZQUIERDO (<<<).\n\n\nApretá ESPACIO para continuar...'
+220.2144 	EXP 	Device response: <KeyPress from None: t=220.20796329999575, value=c, duration=None>
+220.2145 	DATA 	Keypress: c
+220.2477 	EXP 	Device response: <KeyPress from None: t=220.04790770000545, value=a, duration=0.1839773999818135>
+220.4144 	EXP 	Device response: <KeyPress from None: t=220.40795219998108, value=a, duration=None>
+220.4146 	DATA 	Keypress: a
+220.4477 	EXP 	Device response: <KeyPress from None: t=220.20796329999575, value=c, duration=0.22391989998868667>
+220.5809 	EXP 	Device response: <KeyPress from None: t=220.40795219998108, value=a, duration=0.1680198000103701>
+221.5144 	EXP 	Device response: <KeyPress from None: t=221.51200200000312, value=space, duration=None>
+221.5147 	EXP 	New trial (rep=0, index=0): <Trial 0 (0 in rep 0) data={'thisN': 0, 'thisTrialN': 0, 'thisRepN': 0}>
+221.5153 	EXP 	bip: sampleRate = 48000
+221.5159 	EXP 	Sound bip reached end of file
+221.5310 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+221.5162 	DATA 	Keypress: space
+221.5310 	EXP 	text_prompt: autoDraw = False
+221.5310 	EXP 	fixation_bip: autoDraw = True
+221.6809 	EXP 	Device response: <KeyPress from None: t=202.04000310000265, value=space, duration=19.639878399990266>
+222.0294 	EXP 	Sound bip reached end of file
+222.0294 	EXP 	Sound bip reached end of file
+222.0295 	EXP 	New trial (rep=1, index=0): <Trial 1 (0 in rep 1) data={'thisN': 1, 'thisTrialN': 0, 'thisRepN': 1}>
+222.0301 	EXP 	bip: sampleRate = 48000
+222.0305 	EXP 	Sound bip reached end of file
+222.0310 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+222.0477 	EXP 	fixation_bip: autoDraw = False
+222.0477 	EXP 	fixation_bip: autoDraw = False
+222.0477 	EXP 	fixation_bip: autoDraw = True
+222.5393 	EXP 	Sound bip reached end of file
+222.5393 	EXP 	Sound bip reached end of file
+222.5394 	EXP 	New trial (rep=2, index=0): <Trial 2 (0 in rep 2) data={'thisN': 2, 'thisTrialN': 0, 'thisRepN': 2}>
+222.5401 	EXP 	bip: sampleRate = 48000
+222.5406 	EXP 	Sound bip reached end of file
+222.5477 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+222.5477 	EXP 	fixation_bip: autoDraw = False
+222.5477 	EXP 	fixation_bip: autoDraw = False
+222.5477 	EXP 	fixation_bip: autoDraw = True
+223.0516 	EXP 	Sound bip reached end of file
+223.0516 	EXP 	Sound bip reached end of file
+223.0517 	EXP 	New trial (rep=3, index=0): <Trial 3 (0 in rep 3) data={'thisN': 3, 'thisTrialN': 0, 'thisRepN': 3}>
+223.0523 	EXP 	bip: sampleRate = 48000
+223.0528 	EXP 	Sound bip reached end of file
+223.0643 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+223.0643 	EXP 	fixation_bip: autoDraw = False
+223.0643 	EXP 	fixation_bip: autoDraw = False
+223.0643 	EXP 	fixation_bip: autoDraw = True
+223.5644 	EXP 	Sound bip reached end of file
+223.5644 	EXP 	Sound bip reached end of file
+223.5645 	EXP 	New trial (rep=4, index=0): <Trial 4 (0 in rep 4) data={'thisN': 4, 'thisTrialN': 0, 'thisRepN': 4}>
+223.5651 	EXP 	bip: sampleRate = 48000
+223.5656 	EXP 	Sound bip reached end of file
+223.5810 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+223.5809 	EXP 	fixation_bip: autoDraw = False
+223.5809 	EXP 	fixation_bip: autoDraw = False
+223.5809 	EXP 	fixation_bip: autoDraw = True
+224.0809 	EXP 	Sound bip reached end of file
+224.0810 	EXP 	Sound bip reached end of file
+224.0811 	EXP 	New trial (rep=5, index=0): <Trial 5 (0 in rep 5) data={'thisN': 5, 'thisTrialN': 0, 'thisRepN': 5}>
+224.0817 	EXP 	bip: sampleRate = 48000
+224.0822 	EXP 	Sound bip reached end of file
+224.0976 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+224.0977 	EXP 	fixation_bip: autoDraw = False
+224.0977 	EXP 	fixation_bip: autoDraw = False
+224.0977 	EXP 	fixation_bip: autoDraw = True
+224.6024 	EXP 	Sound bip reached end of file
+224.6024 	EXP 	Sound bip reached end of file
+224.6025 	EXP 	New trial (rep=6, index=0): <Trial 6 (0 in rep 6) data={'thisN': 6, 'thisTrialN': 0, 'thisRepN': 6}>
+224.6031 	EXP 	bip: sampleRate = 48000
+224.6036 	EXP 	Sound bip reached end of file
+224.6144 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+224.6144 	EXP 	fixation_bip: autoDraw = False
+224.6144 	EXP 	fixation_bip: autoDraw = False
+224.6144 	EXP 	fixation_bip: autoDraw = True
+225.1216 	EXP 	Sound bip reached end of file
+225.1216 	EXP 	Sound bip reached end of file
+225.1217 	EXP 	New trial (rep=7, index=0): <Trial 7 (0 in rep 7) data={'thisN': 7, 'thisTrialN': 0, 'thisRepN': 7}>
+225.1223 	EXP 	bip: sampleRate = 48000
+225.1227 	EXP 	Sound bip reached end of file
+225.1311 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+225.1311 	EXP 	fixation_bip: autoDraw = False
+225.1311 	EXP 	fixation_bip: autoDraw = False
+225.1311 	EXP 	fixation_bip: autoDraw = True
+225.6393 	EXP 	Sound bip reached end of file
+225.6393 	EXP 	Sound bip reached end of file
+225.6394 	EXP 	New trial (rep=8, index=0): <Trial 8 (0 in rep 8) data={'thisN': 8, 'thisTrialN': 0, 'thisRepN': 8}>
+225.6400 	EXP 	bip: sampleRate = 48000
+225.6405 	EXP 	Sound bip reached end of file
+225.6478 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+225.6478 	EXP 	fixation_bip: autoDraw = False
+225.6478 	EXP 	fixation_bip: autoDraw = False
+225.6478 	EXP 	fixation_bip: autoDraw = True
+226.1502 	EXP 	Sound bip reached end of file
+226.1502 	EXP 	Sound bip reached end of file
+226.1503 	EXP 	New trial (rep=9, index=0): <Trial 9 (0 in rep 9) data={'thisN': 9, 'thisTrialN': 0, 'thisRepN': 9}>
+226.1508 	EXP 	bip: sampleRate = 48000
+226.1513 	EXP 	Sound bip reached end of file
+226.1645 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+226.1644 	EXP 	fixation_bip: autoDraw = False
+226.1644 	EXP 	fixation_bip: autoDraw = False
+226.1644 	EXP 	fixation_bip: autoDraw = True
+226.6720 	EXP 	Sound bip reached end of file
+226.6720 	EXP 	Sound bip reached end of file
+226.6721 	EXP 	New trial (rep=10, index=0): <Trial 10 (0 in rep 10) data={'thisN': 10, 'thisTrialN': 0, 'thisRepN': 10}>
+226.6727 	EXP 	bip: sampleRate = 48000
+226.6732 	EXP 	Sound bip reached end of file
+226.6811 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+226.6811 	EXP 	fixation_bip: autoDraw = False
+226.6811 	EXP 	fixation_bip: autoDraw = False
+226.6811 	EXP 	fixation_bip: autoDraw = True
+227.1826 	EXP 	Sound bip reached end of file
+227.1826 	EXP 	Sound bip reached end of file
+227.1827 	EXP 	New trial (rep=11, index=0): <Trial 11 (0 in rep 11) data={'thisN': 11, 'thisTrialN': 0, 'thisRepN': 11}>
+227.1833 	EXP 	bip: sampleRate = 48000
+227.1838 	EXP 	Sound bip reached end of file
+227.1978 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+227.1978 	EXP 	fixation_bip: autoDraw = False
+227.1978 	EXP 	fixation_bip: autoDraw = False
+227.1978 	EXP 	fixation_bip: autoDraw = True
+227.6979 	EXP 	Sound bip reached end of file
+227.6979 	EXP 	Sound bip reached end of file
+227.6980 	EXP 	New trial (rep=12, index=0): <Trial 12 (0 in rep 12) data={'thisN': 12, 'thisTrialN': 0, 'thisRepN': 12}>
+227.6986 	EXP 	bip: sampleRate = 48000
+227.6991 	EXP 	Sound bip reached end of file
+227.7145 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+227.7145 	EXP 	fixation_bip: autoDraw = False
+227.7145 	EXP 	fixation_bip: autoDraw = False
+227.7145 	EXP 	fixation_bip: autoDraw = True
+228.2175 	EXP 	Sound bip reached end of file
+228.2175 	EXP 	Sound bip reached end of file
+228.2176 	EXP 	New trial (rep=13, index=0): <Trial 13 (0 in rep 13) data={'thisN': 13, 'thisTrialN': 0, 'thisRepN': 13}>
+228.2181 	EXP 	bip: sampleRate = 48000
+228.2186 	EXP 	Sound bip reached end of file
+228.2312 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+228.2311 	EXP 	fixation_bip: autoDraw = False
+228.2311 	EXP 	fixation_bip: autoDraw = False
+228.2311 	EXP 	fixation_bip: autoDraw = True
+228.7319 	EXP 	Sound bip reached end of file
+228.7320 	EXP 	Sound bip reached end of file
+228.7320 	EXP 	New trial (rep=14, index=0): <Trial 14 (0 in rep 14) data={'thisN': 14, 'thisTrialN': 0, 'thisRepN': 14}>
+228.7326 	EXP 	bip: sampleRate = 48000
+228.7331 	EXP 	Sound bip reached end of file
+228.7478 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+228.7478 	EXP 	fixation_bip: autoDraw = False
+228.7478 	EXP 	fixation_bip: autoDraw = False
+228.7478 	EXP 	fixation_bip: autoDraw = True
+229.2530 	EXP 	Sound bip reached end of file
+229.2530 	EXP 	Sound bip reached end of file
+229.2645 	EXP 	Sound  reached end of file
+229.2645 	EXP 	Playing sound  on speaker Speakers (Realtek(R) Audio)
+229.2645 	EXP 	fixation_bip: autoDraw = False
+229.2645 	EXP 	fixation_bip: autoDraw = False
+229.2645 	EXP 	polygon: autoDraw = True
+234.2828 	EXP 	Sound  reached end of file
+234.2981 	EXP 	Sound  reached end of file
+234.2983 	EXP 	New trial (rep=0, index=0): <Trial 0 (0 in rep 0) data={'thisN': 0, 'thisTrialN': 0, 'thisRepN': 0}>
+234.2989 	EXP 	bip: sampleRate = 48000
+234.2994 	EXP 	Sound bip reached end of file
+234.3147 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+234.3147 	EXP 	polygon: autoDraw = False
+234.3147 	EXP 	fixation_bip: autoDraw = True
+234.8147 	EXP 	Sound bip reached end of file
+234.8148 	EXP 	Sound bip reached end of file
+234.8148 	EXP 	New trial (rep=1, index=0): <Trial 1 (0 in rep 1) data={'thisN': 1, 'thisTrialN': 0, 'thisRepN': 1}>
+234.8154 	EXP 	bip: sampleRate = 48000
+234.8159 	EXP 	Sound bip reached end of file
+234.8314 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+234.8314 	EXP 	fixation_bip: autoDraw = False
+234.8314 	EXP 	fixation_bip: autoDraw = False
+234.8314 	EXP 	fixation_bip: autoDraw = True
+235.3316 	EXP 	Sound bip reached end of file
+235.3317 	EXP 	Sound bip reached end of file
+235.3317 	EXP 	New trial (rep=2, index=0): <Trial 2 (0 in rep 2) data={'thisN': 2, 'thisTrialN': 0, 'thisRepN': 2}>
+235.3323 	EXP 	bip: sampleRate = 48000
+235.3328 	EXP 	Sound bip reached end of file
+235.3481 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+235.3480 	EXP 	fixation_bip: autoDraw = False
+235.3480 	EXP 	fixation_bip: autoDraw = False
+235.3480 	EXP 	fixation_bip: autoDraw = True
+235.8535 	EXP 	Sound bip reached end of file
+235.8535 	EXP 	Sound bip reached end of file
+235.8536 	EXP 	New trial (rep=3, index=0): <Trial 3 (0 in rep 3) data={'thisN': 3, 'thisTrialN': 0, 'thisRepN': 3}>
+235.8542 	EXP 	bip: sampleRate = 48000
+235.8547 	EXP 	Sound bip reached end of file
+235.8647 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+235.8647 	EXP 	fixation_bip: autoDraw = False
+235.8647 	EXP 	fixation_bip: autoDraw = False
+235.8647 	EXP 	fixation_bip: autoDraw = True
+236.3704 	EXP 	Sound bip reached end of file
+236.3704 	EXP 	Sound bip reached end of file
+236.3705 	EXP 	New trial (rep=4, index=0): <Trial 4 (0 in rep 4) data={'thisN': 4, 'thisTrialN': 0, 'thisRepN': 4}>
+236.3711 	EXP 	bip: sampleRate = 48000
+236.3716 	EXP 	Sound bip reached end of file
+236.3814 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+236.3813 	EXP 	fixation_bip: autoDraw = False
+236.3813 	EXP 	fixation_bip: autoDraw = False
+236.3813 	EXP 	fixation_bip: autoDraw = True
+236.8912 	EXP 	Sound bip reached end of file
+236.8912 	EXP 	Sound bip reached end of file
+236.8913 	EXP 	New trial (rep=5, index=0): <Trial 5 (0 in rep 5) data={'thisN': 5, 'thisTrialN': 0, 'thisRepN': 5}>
+236.8919 	EXP 	bip: sampleRate = 48000
+236.8924 	EXP 	Sound bip reached end of file
+236.8979 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+236.8981 	EXP 	fixation_bip: autoDraw = False
+236.8981 	EXP 	fixation_bip: autoDraw = False
+236.8981 	EXP 	fixation_bip: autoDraw = True
+237.4127 	EXP 	Sound bip reached end of file
+237.4127 	EXP 	Sound bip reached end of file
+237.4128 	EXP 	New trial (rep=6, index=0): <Trial 6 (0 in rep 6) data={'thisN': 6, 'thisTrialN': 0, 'thisRepN': 6}>
+237.4134 	EXP 	bip: sampleRate = 48000
+237.4139 	EXP 	Sound bip reached end of file
+237.4148 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+237.4314 	EXP 	fixation_bip: autoDraw = False
+237.4314 	EXP 	fixation_bip: autoDraw = False
+237.4314 	EXP 	fixation_bip: autoDraw = True
+237.9331 	EXP 	Sound bip reached end of file
+237.9331 	EXP 	Sound bip reached end of file
+237.9333 	EXP 	New trial (rep=7, index=0): <Trial 7 (0 in rep 7) data={'thisN': 7, 'thisTrialN': 0, 'thisRepN': 7}>
+237.9340 	EXP 	bip: sampleRate = 48000
+237.9345 	EXP 	Sound bip reached end of file
+237.9482 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+237.9481 	EXP 	fixation_bip: autoDraw = False
+237.9481 	EXP 	fixation_bip: autoDraw = False
+237.9481 	EXP 	fixation_bip: autoDraw = True
+238.4482 	EXP 	Sound bip reached end of file
+238.4482 	EXP 	Sound bip reached end of file
+238.4483 	EXP 	New trial (rep=8, index=0): <Trial 8 (0 in rep 8) data={'thisN': 8, 'thisTrialN': 0, 'thisRepN': 8}>
+238.4489 	EXP 	bip: sampleRate = 48000
+238.4495 	EXP 	Sound bip reached end of file
+238.4648 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+238.4648 	EXP 	fixation_bip: autoDraw = False
+238.4648 	EXP 	fixation_bip: autoDraw = False
+238.4648 	EXP 	fixation_bip: autoDraw = True
+238.9649 	EXP 	Sound bip reached end of file
+238.9649 	EXP 	Sound bip reached end of file
+238.9650 	EXP 	New trial (rep=9, index=0): <Trial 9 (0 in rep 9) data={'thisN': 9, 'thisTrialN': 0, 'thisRepN': 9}>
+238.9656 	EXP 	bip: sampleRate = 48000
+238.9661 	EXP 	Sound bip reached end of file
+238.9815 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+238.9813 	EXP 	fixation_bip: autoDraw = False
+238.9813 	EXP 	fixation_bip: autoDraw = False
+238.9813 	EXP 	fixation_bip: autoDraw = True
+239.4832 	EXP 	Sound bip reached end of file
+239.4832 	EXP 	Sound bip reached end of file
+239.4833 	EXP 	New trial (rep=10, index=0): <Trial 10 (0 in rep 10) data={'thisN': 10, 'thisTrialN': 0, 'thisRepN': 10}>
+239.4839 	EXP 	bip: sampleRate = 48000
+239.4844 	EXP 	Sound bip reached end of file
+239.4981 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+239.4981 	EXP 	fixation_bip: autoDraw = False
+239.4981 	EXP 	fixation_bip: autoDraw = False
+239.4981 	EXP 	fixation_bip: autoDraw = True
+240.0007 	EXP 	Sound bip reached end of file
+240.0007 	EXP 	Sound bip reached end of file
+240.0008 	EXP 	New trial (rep=11, index=0): <Trial 11 (0 in rep 11) data={'thisN': 11, 'thisTrialN': 0, 'thisRepN': 11}>
+240.0014 	EXP 	bip: sampleRate = 48000
+240.0019 	EXP 	Sound bip reached end of file
+240.0146 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+240.0148 	EXP 	fixation_bip: autoDraw = False
+240.0148 	EXP 	fixation_bip: autoDraw = False
+240.0148 	EXP 	fixation_bip: autoDraw = True
+240.5149 	EXP 	Sound bip reached end of file
+240.5149 	EXP 	Sound bip reached end of file
+240.5150 	EXP 	New trial (rep=12, index=0): <Trial 12 (0 in rep 12) data={'thisN': 12, 'thisTrialN': 0, 'thisRepN': 12}>
+240.5156 	EXP 	bip: sampleRate = 48000
+240.5161 	EXP 	Sound bip reached end of file
+240.5315 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+240.5315 	EXP 	fixation_bip: autoDraw = False
+240.5315 	EXP 	fixation_bip: autoDraw = False
+240.5315 	EXP 	fixation_bip: autoDraw = True
+241.0317 	EXP 	Sound bip reached end of file
+241.0317 	EXP 	Sound bip reached end of file
+241.0318 	EXP 	New trial (rep=13, index=0): <Trial 13 (0 in rep 13) data={'thisN': 13, 'thisTrialN': 0, 'thisRepN': 13}>
+241.0323 	EXP 	bip: sampleRate = 48000
+241.0328 	EXP 	Sound bip reached end of file
+241.0482 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+241.0482 	EXP 	fixation_bip: autoDraw = False
+241.0482 	EXP 	fixation_bip: autoDraw = False
+241.0482 	EXP 	fixation_bip: autoDraw = True
+241.5488 	EXP 	Sound bip reached end of file
+241.5488 	EXP 	Sound bip reached end of file
+241.5489 	EXP 	New trial (rep=14, index=0): <Trial 14 (0 in rep 14) data={'thisN': 14, 'thisTrialN': 0, 'thisRepN': 14}>
+241.5495 	EXP 	bip: sampleRate = 48000
+241.5500 	EXP 	Sound bip reached end of file
+241.5649 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+241.5649 	EXP 	fixation_bip: autoDraw = False
+241.5649 	EXP 	fixation_bip: autoDraw = False
+241.5649 	EXP 	fixation_bip: autoDraw = True
+242.0738 	EXP 	Sound bip reached end of file
+242.0738 	EXP 	Sound bip reached end of file
+242.0983 	INFO 	Keyboard events cleared
+242.0982 	EXP 	fixation_bip: autoDraw = False
+242.0982 	EXP 	fixation_bip: autoDraw = False
+242.0982 	EXP 	questionary_text0: height = np.float64(0.035)
+242.0982 	EXP 	questionary_text0: height = np.float64(0.035)
+242.0982 	EXP 	questionary_text0: height = np.float64(0.035)
+242.0982 	EXP 	questionary_text0: text = '¿Qué condición debía cumplir el hombre para conservar su riqueza y quedar libre del pacto?\n\n A: Lograr esconderse del Diablo durante un plazo de veinte años.\n\n B: Adivinar la edad exacta del Diablo antes de que terminara el plazo.\n\n C: Viajar por todo el mundo entrevistando a los sabios de Europa y Asia.\n\n Presioná la opción que creas correcta (teclas A, B ó C)'
+242.0982 	EXP 	questionary_text0: height = 0.035
+242.0982 	EXP 	questionary_text0: autoDraw = True
+242.0982 	EXP 	questionary_text0: height = np.float64(0.035)
+242.0982 	EXP 	questionary_text0: height = np.float64(0.035)
+242.0982 	EXP 	questionary_text0: height = np.float64(0.035)
+242.0982 	EXP 	questionary_text0: text = '¿Qué condición debía cumplir el hombre para conservar su riqueza y quedar libre del pacto?\n\n A: Lograr esconderse del Diablo durante un plazo de veinte años.\n\n B: Adivinar la edad exacta del Diablo antes de que terminara el plazo.\n\n C: Viajar por todo el mundo entrevistando a los sabios de Europa y Asia.\n\n Presioná la opción que creas correcta (teclas A, B ó C)'
+243.4317 	EXP 	Device response: <KeyPress from None: t=243.41594819998136, value=a, duration=None>
+243.4412 	DATA 	Keypress: a
+243.4483 	INFO 	Keyboard events cleared
+243.4482 	EXP 	questionary_text0: autoDraw = False
+243.4482 	EXP 	questionary_text1: height = np.float64(0.035)
+243.4482 	EXP 	questionary_text1: height = np.float64(0.035)
+243.4482 	EXP 	questionary_text1: height = np.float64(0.035)
+243.4482 	EXP 	questionary_text1: text = '¿Cómo reaccionó el hombre ante su nueva vida de lujos tras firmar el pacto?\n\n A: Se acostumbró rápidamente a la riqueza y pronto olvidó el compromiso que tenía. \n\n B: Sintió mucha nostalgia por su antiguo rancho y sus alpargatas.\n\n C: Pasó los veinte años estudiando para intentar descubrir el secreto del Diablo.\n\n Presioná la opción que creas correcta (teclas A, B ó C)'
+243.4482 	EXP 	questionary_text1: height = 0.035
+243.4482 	EXP 	questionary_text1: autoDraw = True
+243.4482 	EXP 	questionary_text1: height = np.float64(0.035)
+243.4482 	EXP 	questionary_text1: height = np.float64(0.035)
+243.4482 	EXP 	questionary_text1: height = np.float64(0.035)
+243.4482 	EXP 	questionary_text1: text = '¿Cómo reaccionó el hombre ante su nueva vida de lujos tras firmar el pacto?\n\n A: Se acostumbró rápidamente a la riqueza y pronto olvidó el compromiso que tenía. \n\n B: Sintió mucha nostalgia por su antiguo rancho y sus alpargatas.\n\n C: Pasó los veinte años estudiando para intentar descubrir el secreto del Diablo.\n\n Presioná la opción que creas correcta (teclas A, B ó C)'
+243.6983 	EXP 	Device response: <KeyPress from None: t=243.41594819998136, value=a, duration=0.27197760000126436>
+243.7150 	EXP 	Device response: <KeyPress from None: t=243.7118324000039, value=b, duration=None>
+243.7257 	DATA 	Keypress: b
+243.7318 	INFO 	Keyboard events cleared
+243.7318 	EXP 	questionary_text1: autoDraw = False
+243.7318 	EXP 	questionary_text2: height = np.float64(0.035)
+243.7318 	EXP 	questionary_text2: height = np.float64(0.035)
+243.7318 	EXP 	questionary_text2: height = np.float64(0.035)
+243.7318 	EXP 	questionary_text2: text = '¿De qué manera logró el hombre obtener la información necesaria para vencer al Diablo?\n\n A: Consultó un papel antiguo que tenía guardado en el cajón de su mesa de luz.\n\n B: Su esposa se disfrazó de un ave exótica para engañar al Diablo y hacerlo confesar.\n\n C: Los sabios de México y Bolivia le revelaron el número exacto tras una larga búsqueda.\n\n Presioná la opción que creas correcta (teclas A, B ó C)'
+243.7318 	EXP 	questionary_text2: height = 0.035
+243.7318 	EXP 	questionary_text2: autoDraw = True
+243.7318 	EXP 	questionary_text2: height = np.float64(0.035)
+243.7318 	EXP 	questionary_text2: height = np.float64(0.035)
+243.7318 	EXP 	questionary_text2: height = np.float64(0.035)
+243.7318 	EXP 	questionary_text2: text = '¿De qué manera logró el hombre obtener la información necesaria para vencer al Diablo?\n\n A: Consultó un papel antiguo que tenía guardado en el cajón de su mesa de luz.\n\n B: Su esposa se disfrazó de un ave exótica para engañar al Diablo y hacerlo confesar.\n\n C: Los sabios de México y Bolivia le revelaron el número exacto tras una larga búsqueda.\n\n Presioná la opción que creas correcta (teclas A, B ó C)'
+243.9650 	EXP 	Device response: <KeyPress from None: t=193.23197019999498, value=b, duration=50.727926699997624>
+244.0322 	DATA 	Keypress: c
+244.0483 	EXP 	Device response: <KeyPress from None: t=244.03180460000294, value=c, duration=None>
+244.0484 	EXP 	New trial (rep=5, index=0): <Trial 5 (0 in rep 5) data={'thisN': 5, 'thisTrialN': 0, 'thisRepN': 5}>
+244.0650 	INFO 	Keyboard events cleared
+244.0649 	EXP 	questionary_text2: autoDraw = False
+244.0649 	EXP 	text_prompt: text = 'Presta atención a la historia del lado IZQUIERDO (<<<).\n\n\nApretá ESPACIO para continuar...'
+244.0649 	EXP 	text_prompt: height = 0.035
+244.0649 	EXP 	text_prompt: autoDraw = True
+244.0649 	EXP 	text_prompt: height = np.float64(0.035)
+244.0649 	EXP 	text_prompt: height = np.float64(0.035)
+244.0649 	EXP 	text_prompt: height = np.float64(0.035)
+244.0649 	EXP 	text_prompt: text = 'Presta atención a la historia del lado IZQUIERDO (<<<).\n\n\nApretá ESPACIO para continuar...'
+244.0652 	DATA 	Keypress: a
+244.7816 	EXP 	Device response: <KeyPress from None: t=244.03180460000294, value=c, duration=0.7441637000010815>
+245.4317 	EXP 	Device response: <KeyPress from None: t=245.42390890000388, value=space, duration=None>
+245.4320 	EXP 	New trial (rep=0, index=0): <Trial 0 (0 in rep 0) data={'thisN': 0, 'thisTrialN': 0, 'thisRepN': 0}>
+245.4326 	EXP 	bip: sampleRate = 48000
+245.4332 	EXP 	Sound bip reached end of file
+245.4483 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+245.4335 	DATA 	Keypress: space
+245.4483 	EXP 	text_prompt: autoDraw = False
+245.4483 	EXP 	fixation_bip: autoDraw = True
+245.6984 	EXP 	Device response: <KeyPress from None: t=221.51200200000312, value=space, duration=24.175918199995067>
+245.9509 	EXP 	Sound bip reached end of file
+245.9509 	EXP 	Sound bip reached end of file
+245.9510 	EXP 	New trial (rep=1, index=0): <Trial 1 (0 in rep 1) data={'thisN': 1, 'thisTrialN': 0, 'thisRepN': 1}>
+245.9516 	EXP 	bip: sampleRate = 48000
+245.9521 	EXP 	Sound bip reached end of file
+245.9650 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+245.9649 	EXP 	fixation_bip: autoDraw = False
+245.9649 	EXP 	fixation_bip: autoDraw = False
+245.9649 	EXP 	fixation_bip: autoDraw = True
+246.4652 	EXP 	Sound bip reached end of file
+246.4652 	EXP 	Sound bip reached end of file
+246.4653 	EXP 	New trial (rep=2, index=0): <Trial 2 (0 in rep 2) data={'thisN': 2, 'thisTrialN': 0, 'thisRepN': 2}>
+246.4659 	EXP 	bip: sampleRate = 48000
+246.4664 	EXP 	Sound bip reached end of file
+246.4816 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+246.4815 	EXP 	fixation_bip: autoDraw = False
+246.4815 	EXP 	fixation_bip: autoDraw = False
+246.4815 	EXP 	fixation_bip: autoDraw = True
+246.9833 	EXP 	Sound bip reached end of file
+246.9834 	EXP 	Sound bip reached end of file
+246.9835 	EXP 	New trial (rep=3, index=0): <Trial 3 (0 in rep 3) data={'thisN': 3, 'thisTrialN': 0, 'thisRepN': 3}>
+246.9842 	EXP 	bip: sampleRate = 48000
+246.9847 	EXP 	Sound bip reached end of file
+246.9981 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+246.9983 	EXP 	fixation_bip: autoDraw = False
+246.9983 	EXP 	fixation_bip: autoDraw = False
+246.9983 	EXP 	fixation_bip: autoDraw = True
+247.5014 	EXP 	Sound bip reached end of file
+247.5014 	EXP 	Sound bip reached end of file
+247.5016 	EXP 	New trial (rep=4, index=0): <Trial 4 (0 in rep 4) data={'thisN': 4, 'thisTrialN': 0, 'thisRepN': 4}>
+247.5022 	EXP 	bip: sampleRate = 48000
+247.5027 	EXP 	Sound bip reached end of file
+247.5148 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+247.5150 	EXP 	fixation_bip: autoDraw = False
+247.5150 	EXP 	fixation_bip: autoDraw = False
+247.5150 	EXP 	fixation_bip: autoDraw = True
+248.0236 	EXP 	Sound bip reached end of file
+248.0236 	EXP 	Sound bip reached end of file
+248.0237 	EXP 	New trial (rep=5, index=0): <Trial 5 (0 in rep 5) data={'thisN': 5, 'thisTrialN': 0, 'thisRepN': 5}>
+248.0243 	EXP 	bip: sampleRate = 48000
+248.0248 	EXP 	Sound bip reached end of file
+248.0317 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+248.0318 	EXP 	fixation_bip: autoDraw = False
+248.0318 	EXP 	fixation_bip: autoDraw = False
+248.0318 	EXP 	fixation_bip: autoDraw = True
+248.5430 	EXP 	Sound bip reached end of file
+248.5430 	EXP 	Sound bip reached end of file
+248.5431 	EXP 	New trial (rep=6, index=0): <Trial 6 (0 in rep 6) data={'thisN': 6, 'thisTrialN': 0, 'thisRepN': 6}>
+248.5437 	EXP 	bip: sampleRate = 48000
+248.5442 	EXP 	Sound bip reached end of file
+248.5484 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+248.5484 	EXP 	fixation_bip: autoDraw = False
+248.5484 	EXP 	fixation_bip: autoDraw = False
+248.5484 	EXP 	fixation_bip: autoDraw = True
+249.0643 	EXP 	Sound bip reached end of file
+249.0644 	EXP 	Sound bip reached end of file
+249.0644 	EXP 	New trial (rep=7, index=0): <Trial 7 (0 in rep 7) data={'thisN': 7, 'thisTrialN': 0, 'thisRepN': 7}>
+249.0650 	EXP 	bip: sampleRate = 48000
+249.0655 	EXP 	Sound bip reached end of file
+249.0817 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+249.0816 	EXP 	fixation_bip: autoDraw = False
+249.0816 	EXP 	fixation_bip: autoDraw = False
+249.0816 	EXP 	fixation_bip: autoDraw = True
+249.5860 	EXP 	Sound bip reached end of file
+249.5860 	EXP 	Sound bip reached end of file
+249.5861 	EXP 	New trial (rep=8, index=0): <Trial 8 (0 in rep 8) data={'thisN': 8, 'thisTrialN': 0, 'thisRepN': 8}>
+249.5867 	EXP 	bip: sampleRate = 48000
+249.5871 	EXP 	Sound bip reached end of file
+249.5982 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+249.5984 	EXP 	fixation_bip: autoDraw = False
+249.5984 	EXP 	fixation_bip: autoDraw = False
+249.5984 	EXP 	fixation_bip: autoDraw = True
+250.1012 	EXP 	Sound bip reached end of file
+250.1013 	EXP 	Sound bip reached end of file
+250.1014 	EXP 	New trial (rep=9, index=0): <Trial 9 (0 in rep 9) data={'thisN': 9, 'thisTrialN': 0, 'thisRepN': 9}>
+250.1019 	EXP 	bip: sampleRate = 48000
+250.1025 	EXP 	Sound bip reached end of file
+250.1149 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+250.1151 	EXP 	fixation_bip: autoDraw = False
+250.1151 	EXP 	fixation_bip: autoDraw = False
+250.1151 	EXP 	fixation_bip: autoDraw = True
+250.6240 	EXP 	Sound bip reached end of file
+250.6241 	EXP 	Sound bip reached end of file
+250.6241 	EXP 	New trial (rep=10, index=0): <Trial 10 (0 in rep 10) data={'thisN': 10, 'thisTrialN': 0, 'thisRepN': 10}>
+250.6247 	EXP 	bip: sampleRate = 48000
+250.6252 	EXP 	Sound bip reached end of file
+250.6317 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+250.6317 	EXP 	fixation_bip: autoDraw = False
+250.6317 	EXP 	fixation_bip: autoDraw = False
+250.6317 	EXP 	fixation_bip: autoDraw = True
+251.1440 	EXP 	Sound bip reached end of file
+251.1440 	EXP 	Sound bip reached end of file
+251.1441 	EXP 	New trial (rep=11, index=0): <Trial 11 (0 in rep 11) data={'thisN': 11, 'thisTrialN': 0, 'thisRepN': 11}>
+251.1447 	EXP 	bip: sampleRate = 48000
+251.1451 	EXP 	Sound bip reached end of file
+251.1484 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+251.1484 	EXP 	fixation_bip: autoDraw = False
+251.1484 	EXP 	fixation_bip: autoDraw = False
+251.1484 	EXP 	fixation_bip: autoDraw = True
+251.6630 	EXP 	Sound bip reached end of file
+251.6631 	EXP 	Sound bip reached end of file
+251.6631 	EXP 	New trial (rep=12, index=0): <Trial 12 (0 in rep 12) data={'thisN': 12, 'thisTrialN': 0, 'thisRepN': 12}>
+251.6638 	EXP 	bip: sampleRate = 48000
+251.6642 	EXP 	Sound bip reached end of file
+251.6651 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+251.6816 	EXP 	fixation_bip: autoDraw = False
+251.6816 	EXP 	fixation_bip: autoDraw = False
+251.6816 	EXP 	fixation_bip: autoDraw = True
+252.1824 	EXP 	Sound bip reached end of file
+252.1825 	EXP 	Sound bip reached end of file
+252.1826 	EXP 	New trial (rep=13, index=0): <Trial 13 (0 in rep 13) data={'thisN': 13, 'thisTrialN': 0, 'thisRepN': 13}>
+252.1832 	EXP 	bip: sampleRate = 48000
+252.1836 	EXP 	Sound bip reached end of file
+252.1984 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+252.1985 	EXP 	fixation_bip: autoDraw = False
+252.1985 	EXP 	fixation_bip: autoDraw = False
+252.1985 	EXP 	fixation_bip: autoDraw = True
+252.7045 	EXP 	Sound bip reached end of file
+252.7045 	EXP 	Sound bip reached end of file
+252.7046 	EXP 	New trial (rep=14, index=0): <Trial 14 (0 in rep 14) data={'thisN': 14, 'thisTrialN': 0, 'thisRepN': 14}>
+252.7052 	EXP 	bip: sampleRate = 48000
+252.7057 	EXP 	Sound bip reached end of file
+252.7152 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+252.7152 	EXP 	fixation_bip: autoDraw = False
+252.7152 	EXP 	fixation_bip: autoDraw = False
+252.7152 	EXP 	fixation_bip: autoDraw = True
+253.2228 	EXP 	Sound bip reached end of file
+253.2229 	EXP 	Sound bip reached end of file
+253.2319 	EXP 	Sound  reached end of file
+253.2319 	EXP 	Playing sound  on speaker Speakers (Realtek(R) Audio)
+253.2319 	EXP 	fixation_bip: autoDraw = False
+253.2319 	EXP 	fixation_bip: autoDraw = False
+253.2319 	EXP 	polygon: autoDraw = True
+258.2404 	EXP 	Sound  reached end of file
+258.2486 	EXP 	Sound  reached end of file
+258.2489 	EXP 	New trial (rep=0, index=0): <Trial 0 (0 in rep 0) data={'thisN': 0, 'thisTrialN': 0, 'thisRepN': 0}>
+258.2496 	EXP 	bip: sampleRate = 48000
+258.2501 	EXP 	Sound bip reached end of file
+258.2652 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+258.2652 	EXP 	polygon: autoDraw = False
+258.2652 	EXP 	fixation_bip: autoDraw = True
+258.7653 	EXP 	Sound bip reached end of file
+258.7653 	EXP 	Sound bip reached end of file
+258.7654 	EXP 	New trial (rep=1, index=0): <Trial 1 (0 in rep 1) data={'thisN': 1, 'thisTrialN': 0, 'thisRepN': 1}>
+258.7661 	EXP 	bip: sampleRate = 48000
+258.7666 	EXP 	Sound bip reached end of file
+258.7819 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+258.7818 	EXP 	fixation_bip: autoDraw = False
+258.7818 	EXP 	fixation_bip: autoDraw = False
+258.7818 	EXP 	fixation_bip: autoDraw = True
+259.2844 	EXP 	Sound bip reached end of file
+259.2845 	EXP 	Sound bip reached end of file
+259.2846 	EXP 	New trial (rep=2, index=0): <Trial 2 (0 in rep 2) data={'thisN': 2, 'thisTrialN': 0, 'thisRepN': 2}>
+259.2852 	EXP 	bip: sampleRate = 48000
+259.2856 	EXP 	Sound bip reached end of file
+259.2986 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+259.2986 	EXP 	fixation_bip: autoDraw = False
+259.2986 	EXP 	fixation_bip: autoDraw = False
+259.2986 	EXP 	fixation_bip: autoDraw = True
+259.8015 	EXP 	Sound bip reached end of file
+259.8015 	EXP 	Sound bip reached end of file
+259.8016 	EXP 	New trial (rep=3, index=0): <Trial 3 (0 in rep 3) data={'thisN': 3, 'thisTrialN': 0, 'thisRepN': 3}>
+259.8022 	EXP 	bip: sampleRate = 48000
+259.8027 	EXP 	Sound bip reached end of file
+259.8151 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+259.8154 	EXP 	fixation_bip: autoDraw = False
+259.8154 	EXP 	fixation_bip: autoDraw = False
+259.8154 	EXP 	fixation_bip: autoDraw = True
+260.3239 	EXP 	Sound bip reached end of file
+260.3239 	EXP 	Sound bip reached end of file
+260.3240 	EXP 	New trial (rep=4, index=0): <Trial 4 (0 in rep 4) data={'thisN': 4, 'thisTrialN': 0, 'thisRepN': 4}>
+260.3246 	EXP 	bip: sampleRate = 48000
+260.3251 	EXP 	Sound bip reached end of file
+260.3321 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+260.3320 	EXP 	fixation_bip: autoDraw = False
+260.3320 	EXP 	fixation_bip: autoDraw = False
+260.3320 	EXP 	fixation_bip: autoDraw = True
+260.8414 	EXP 	Sound bip reached end of file
+260.8414 	EXP 	Sound bip reached end of file
+260.8416 	EXP 	New trial (rep=5, index=0): <Trial 5 (0 in rep 5) data={'thisN': 5, 'thisTrialN': 0, 'thisRepN': 5}>
+260.8422 	EXP 	bip: sampleRate = 48000
+260.8427 	EXP 	Sound bip reached end of file
+260.8487 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+260.8487 	EXP 	fixation_bip: autoDraw = False
+260.8487 	EXP 	fixation_bip: autoDraw = False
+260.8487 	EXP 	fixation_bip: autoDraw = True
+261.3556 	EXP 	Sound bip reached end of file
+261.3556 	EXP 	Sound bip reached end of file
+261.3557 	EXP 	New trial (rep=6, index=0): <Trial 6 (0 in rep 6) data={'thisN': 6, 'thisTrialN': 0, 'thisRepN': 6}>
+261.3563 	EXP 	bip: sampleRate = 48000
+261.3568 	EXP 	Sound bip reached end of file
+261.3653 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+261.3653 	EXP 	fixation_bip: autoDraw = False
+261.3653 	EXP 	fixation_bip: autoDraw = False
+261.3653 	EXP 	fixation_bip: autoDraw = True
+261.8702 	EXP 	Sound bip reached end of file
+261.8702 	EXP 	Sound bip reached end of file
+261.8703 	EXP 	New trial (rep=7, index=0): <Trial 7 (0 in rep 7) data={'thisN': 7, 'thisTrialN': 0, 'thisRepN': 7}>
+261.8709 	EXP 	bip: sampleRate = 48000
+261.8713 	EXP 	Sound bip reached end of file
+261.8820 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+261.8820 	EXP 	fixation_bip: autoDraw = False
+261.8820 	EXP 	fixation_bip: autoDraw = False
+261.8820 	EXP 	fixation_bip: autoDraw = True
+262.3819 	EXP 	Sound bip reached end of file
+262.3820 	EXP 	Sound bip reached end of file
+262.3820 	EXP 	New trial (rep=8, index=0): <Trial 8 (0 in rep 8) data={'thisN': 8, 'thisTrialN': 0, 'thisRepN': 8}>
+262.3826 	EXP 	bip: sampleRate = 48000
+262.3831 	EXP 	Sound bip reached end of file
+262.3986 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+262.3988 	EXP 	fixation_bip: autoDraw = False
+262.3988 	EXP 	fixation_bip: autoDraw = False
+262.3988 	EXP 	fixation_bip: autoDraw = True
+262.9001 	EXP 	Sound bip reached end of file
+262.9001 	EXP 	Sound bip reached end of file
+262.9002 	EXP 	New trial (rep=9, index=0): <Trial 9 (0 in rep 9) data={'thisN': 9, 'thisTrialN': 0, 'thisRepN': 9}>
+262.9008 	EXP 	bip: sampleRate = 48000
+262.9012 	EXP 	Sound bip reached end of file
+262.9152 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+262.9154 	EXP 	fixation_bip: autoDraw = False
+262.9154 	EXP 	fixation_bip: autoDraw = False
+262.9154 	EXP 	fixation_bip: autoDraw = True
+263.4177 	EXP 	Sound bip reached end of file
+263.4177 	EXP 	Sound bip reached end of file
+263.4183 	EXP 	New trial (rep=10, index=0): <Trial 10 (0 in rep 10) data={'thisN': 10, 'thisTrialN': 0, 'thisRepN': 10}>
+263.4189 	EXP 	bip: sampleRate = 48000
+263.4194 	EXP 	Sound bip reached end of file
+263.4321 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+263.4321 	EXP 	fixation_bip: autoDraw = False
+263.4321 	EXP 	fixation_bip: autoDraw = False
+263.4321 	EXP 	fixation_bip: autoDraw = True
+263.9380 	EXP 	Sound bip reached end of file
+263.9380 	EXP 	Sound bip reached end of file
+263.9381 	EXP 	New trial (rep=11, index=0): <Trial 11 (0 in rep 11) data={'thisN': 11, 'thisTrialN': 0, 'thisRepN': 11}>
+263.9386 	EXP 	bip: sampleRate = 48000
+263.9391 	EXP 	Sound bip reached end of file
+263.9488 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+263.9488 	EXP 	fixation_bip: autoDraw = False
+263.9488 	EXP 	fixation_bip: autoDraw = False
+263.9488 	EXP 	fixation_bip: autoDraw = True
+264.4526 	EXP 	Sound bip reached end of file
+264.4526 	EXP 	Sound bip reached end of file
+264.4527 	EXP 	New trial (rep=12, index=0): <Trial 12 (0 in rep 12) data={'thisN': 12, 'thisTrialN': 0, 'thisRepN': 12}>
+264.4533 	EXP 	bip: sampleRate = 48000
+264.4538 	EXP 	Sound bip reached end of file
+264.4654 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+264.4654 	EXP 	fixation_bip: autoDraw = False
+264.4654 	EXP 	fixation_bip: autoDraw = False
+264.4654 	EXP 	fixation_bip: autoDraw = True
+264.9655 	EXP 	Sound bip reached end of file
+264.9655 	EXP 	Sound bip reached end of file
+264.9656 	EXP 	New trial (rep=13, index=0): <Trial 13 (0 in rep 13) data={'thisN': 13, 'thisTrialN': 0, 'thisRepN': 13}>
+264.9662 	EXP 	bip: sampleRate = 48000
+264.9667 	EXP 	Sound bip reached end of file
+264.9821 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+264.9820 	EXP 	fixation_bip: autoDraw = False
+264.9820 	EXP 	fixation_bip: autoDraw = False
+264.9820 	EXP 	fixation_bip: autoDraw = True
+265.4846 	EXP 	Sound bip reached end of file
+265.4847 	EXP 	Sound bip reached end of file
+265.4847 	EXP 	New trial (rep=14, index=0): <Trial 14 (0 in rep 14) data={'thisN': 14, 'thisTrialN': 0, 'thisRepN': 14}>
+265.4853 	EXP 	bip: sampleRate = 48000
+265.4858 	EXP 	Sound bip reached end of file
+265.4988 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+265.4988 	EXP 	fixation_bip: autoDraw = False
+265.4988 	EXP 	fixation_bip: autoDraw = False
+265.4988 	EXP 	fixation_bip: autoDraw = True
+266.0036 	EXP 	Sound bip reached end of file
+266.0037 	EXP 	Sound bip reached end of file
+266.0322 	INFO 	Keyboard events cleared
+266.0322 	EXP 	fixation_bip: autoDraw = False
+266.0322 	EXP 	fixation_bip: autoDraw = False
+266.0322 	EXP 	questionary_text0: height = np.float64(0.035)
+266.0322 	EXP 	questionary_text0: height = np.float64(0.035)
+266.0322 	EXP 	questionary_text0: height = np.float64(0.035)
+266.0322 	EXP 	questionary_text0: text = '¿Por qué a los estudiantes no les generaba entusiasmo inicial la noticia de la llegada del presidente?\n\n A: Porque estaban muy concentrados estudiando para sus exámenes finales.\n\n B: Porque preferían a los héroes de la historia antigua y los personajes contemporáneos no les interesaban\n\n C: Porque tenían miedo de que el director suspendiera las salidas del fin de semana.\n\n Presioná la opción que creas correcta (teclas A, B ó C)'
+266.0322 	EXP 	questionary_text0: height = 0.035
+266.0322 	EXP 	questionary_text0: autoDraw = True
+266.0322 	EXP 	questionary_text0: height = np.float64(0.035)
+266.0322 	EXP 	questionary_text0: height = np.float64(0.035)
+266.0322 	EXP 	questionary_text0: height = np.float64(0.035)
+266.0322 	EXP 	questionary_text0: text = '¿Por qué a los estudiantes no les generaba entusiasmo inicial la noticia de la llegada del presidente?\n\n A: Porque estaban muy concentrados estudiando para sus exámenes finales.\n\n B: Porque preferían a los héroes de la historia antigua y los personajes contemporáneos no les interesaban\n\n C: Porque tenían miedo de que el director suspendiera las salidas del fin de semana.\n\n Presioná la opción que creas correcta (teclas A, B ó C)'
+266.6322 	EXP 	Device response: <KeyPress from None: t=266.6159051999857, value=a, duration=None>
+266.6426 	DATA 	Keypress: a
+266.6488 	INFO 	Keyboard events cleared
+266.6488 	EXP 	questionary_text0: autoDraw = False
+266.6488 	EXP 	questionary_text1: height = np.float64(0.035)
+266.6488 	EXP 	questionary_text1: height = np.float64(0.035)
+266.6488 	EXP 	questionary_text1: height = np.float64(0.035)
+266.6488 	EXP 	questionary_text1: text = '¿Qué elemento del presidente capturó la curiosidad y las burlas silenciosas de los alumnos durante la formación?\n\n A: Su forma de caminar y el parecido físico que tenía con un bulldog.\n\n B: El extraño sombrero chato que llevaba bajo el brazo y que parecía no tener hueco para la cabeza\n\n C: El discurso aburrido que empezó a dar apenas entró por la puerta de hierro\n\n Presioná la opción que creas correcta (teclas A, B ó C)'
+266.6488 	EXP 	questionary_text1: height = 0.035
+266.6488 	EXP 	questionary_text1: autoDraw = True
+266.6488 	EXP 	questionary_text1: height = np.float64(0.035)
+266.6488 	EXP 	questionary_text1: height = np.float64(0.035)
+266.6488 	EXP 	questionary_text1: height = np.float64(0.035)
+266.6488 	EXP 	questionary_text1: text = '¿Qué elemento del presidente capturó la curiosidad y las burlas silenciosas de los alumnos durante la formación?\n\n A: Su forma de caminar y el parecido físico que tenía con un bulldog.\n\n B: El extraño sombrero chato que llevaba bajo el brazo y que parecía no tener hueco para la cabeza\n\n C: El discurso aburrido que empezó a dar apenas entró por la puerta de hierro\n\n Presioná la opción que creas correcta (teclas A, B ó C)'
+266.7156 	EXP 	Device response: <KeyPress from None: t=266.7038443000056, value=c, duration=None>
+266.7253 	DATA 	Keypress: c
+266.7322 	INFO 	Keyboard events cleared
+266.7322 	EXP 	questionary_text1: autoDraw = False
+266.7322 	EXP 	questionary_text2: height = np.float64(0.035)
+266.7322 	EXP 	questionary_text2: height = np.float64(0.035)
+266.7322 	EXP 	questionary_text2: height = np.float64(0.035)
+266.7322 	EXP 	questionary_text2: text = '¿Cuál fue la consecuencia mediática del incidente ocurrido durante la visita presidencial?\n\n A: Los diarios de Buenos Aires describieron a los alumnos como una horda salvaje\n\n B: El colegio recibió premios nacionales por la libertad de expresión de sus alumnos.\n\n C: Los periodistas elogiaron al director por haber mantenido el orden durante la silbatina.\n\n Presioná la opción que creas correcta (teclas A, B ó C)'
+266.7322 	EXP 	questionary_text2: height = 0.035
+266.7322 	EXP 	questionary_text2: autoDraw = True
+266.7322 	EXP 	questionary_text2: height = np.float64(0.035)
+266.7322 	EXP 	questionary_text2: height = np.float64(0.035)
+266.7322 	EXP 	questionary_text2: height = np.float64(0.035)
+266.7322 	EXP 	questionary_text2: text = '¿Cuál fue la consecuencia mediática del incidente ocurrido durante la visita presidencial?\n\n A: Los diarios de Buenos Aires describieron a los alumnos como una horda salvaje\n\n B: El colegio recibió premios nacionales por la libertad de expresión de sus alumnos.\n\n C: Los periodistas elogiaron al director por haber mantenido el orden durante la silbatina.\n\n Presioná la opción que creas correcta (teclas A, B ó C)'
+266.8820 	EXP 	Device response: <KeyPress from None: t=266.6159051999857, value=a, duration=0.2559239999973215>
+267.1655 	EXP 	Device response: <KeyPress from None: t=267.1598286999797, value=a, duration=None>
+267.1656 	EXP 	New trial (rep=6, index=0): <Trial 6 (0 in rep 6) data={'thisN': 6, 'thisTrialN': 0, 'thisRepN': 6}>
+267.1693 	DATA 	Keypress: a
+267.1821 	INFO 	Keyboard events cleared
+267.1821 	EXP 	questionary_text2: autoDraw = False
+267.1821 	EXP 	text_prompt: height = np.float64(0.035)
+267.1821 	EXP 	text_prompt: height = np.float64(0.035)
+267.1821 	EXP 	text_prompt: height = np.float64(0.035)
+267.1821 	EXP 	text_prompt: text = 'Presta atención a la historia del lado DERECHO (>>>).\n\n\nApretá ESPACIO para continuar...'
+267.1821 	EXP 	text_prompt: height = 0.035
+267.1821 	EXP 	text_prompt: autoDraw = True
+267.1821 	EXP 	text_prompt: height = np.float64(0.035)
+267.1821 	EXP 	text_prompt: height = np.float64(0.035)
+267.1821 	EXP 	text_prompt: height = np.float64(0.035)
+267.1821 	EXP 	text_prompt: text = 'Presta atención a la historia del lado DERECHO (>>>).\n\n\nApretá ESPACIO para continuar...'
+267.2822 	EXP 	Device response: <KeyPress from None: t=267.1598286999797, value=a, duration=0.11993270000675693>
+267.3489 	EXP 	Device response: <KeyPress from None: t=267.33580539998366, value=b, duration=None>
+267.3491 	DATA 	Keypress: b
+267.4824 	EXP 	Device response: <KeyPress from None: t=243.7118324000039, value=b, duration=23.767991599976085>
+267.5156 	EXP 	Device response: <KeyPress from None: t=267.51173830000334, value=a, duration=None>
+267.5158 	DATA 	Keypress: a
+267.7989 	EXP 	Device response: <KeyPress from None: t=267.51173830000334, value=a, duration=0.2720334999903571>
+267.8156 	EXP 	Device response: <KeyPress from None: t=266.7038443000056, value=c, duration=1.1039344999880996>
+268.0656 	EXP 	Device response: <KeyPress from None: t=268.05581329998677, value=space, duration=None>
+268.0658 	EXP 	New trial (rep=0, index=0): <Trial 0 (0 in rep 0) data={'thisN': 0, 'thisTrialN': 0, 'thisRepN': 0}>
+268.0665 	EXP 	bip: sampleRate = 48000
+268.0671 	EXP 	Sound bip reached end of file
+268.0822 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+268.0673 	DATA 	Keypress: space
+268.0820 	EXP 	text_prompt: autoDraw = False
+268.0820 	EXP 	fixation_bip: autoDraw = True
+268.2489 	EXP 	Device response: <KeyPress from None: t=245.42390890000388, value=space, duration=22.82385190000059>
+268.5827 	EXP 	Sound bip reached end of file
+268.5827 	EXP 	Sound bip reached end of file
+268.5828 	EXP 	New trial (rep=1, index=0): <Trial 1 (0 in rep 1) data={'thisN': 1, 'thisTrialN': 0, 'thisRepN': 1}>
+268.5834 	EXP 	bip: sampleRate = 48000
+268.5838 	EXP 	Sound bip reached end of file
+268.5988 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+268.5989 	EXP 	fixation_bip: autoDraw = False
+268.5989 	EXP 	fixation_bip: autoDraw = False
+268.5989 	EXP 	fixation_bip: autoDraw = True
+269.1022 	EXP 	Sound bip reached end of file
+269.1022 	EXP 	Sound bip reached end of file
+269.1023 	EXP 	New trial (rep=2, index=0): <Trial 2 (0 in rep 2) data={'thisN': 2, 'thisTrialN': 0, 'thisRepN': 2}>
+269.1029 	EXP 	bip: sampleRate = 48000
+269.1034 	EXP 	Sound bip reached end of file
+269.1155 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+269.1156 	EXP 	fixation_bip: autoDraw = False
+269.1156 	EXP 	fixation_bip: autoDraw = False
+269.1156 	EXP 	fixation_bip: autoDraw = True
+269.6234 	EXP 	Sound bip reached end of file
+269.6234 	EXP 	Sound bip reached end of file
+269.6235 	EXP 	New trial (rep=3, index=0): <Trial 3 (0 in rep 3) data={'thisN': 3, 'thisTrialN': 0, 'thisRepN': 3}>
+269.6242 	EXP 	bip: sampleRate = 48000
+269.6247 	EXP 	Sound bip reached end of file
+269.6323 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+269.6325 	EXP 	fixation_bip: autoDraw = False
+269.6325 	EXP 	fixation_bip: autoDraw = False
+269.6325 	EXP 	fixation_bip: autoDraw = True
+270.1417 	EXP 	Sound bip reached end of file
+270.1417 	EXP 	Sound bip reached end of file
+270.1418 	EXP 	New trial (rep=4, index=0): <Trial 4 (0 in rep 4) data={'thisN': 4, 'thisTrialN': 0, 'thisRepN': 4}>
+270.1424 	EXP 	bip: sampleRate = 48000
+270.1429 	EXP 	Sound bip reached end of file
+270.1490 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+270.1489 	EXP 	fixation_bip: autoDraw = False
+270.1489 	EXP 	fixation_bip: autoDraw = False
+270.1489 	EXP 	fixation_bip: autoDraw = True
+270.6527 	EXP 	Sound bip reached end of file
+270.6528 	EXP 	Sound bip reached end of file
+270.6529 	EXP 	New trial (rep=5, index=0): <Trial 5 (0 in rep 5) data={'thisN': 5, 'thisTrialN': 0, 'thisRepN': 5}>
+270.6534 	EXP 	bip: sampleRate = 48000
+270.6539 	EXP 	Sound bip reached end of file
+270.6656 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+270.6656 	EXP 	fixation_bip: autoDraw = False
+270.6656 	EXP 	fixation_bip: autoDraw = False
+270.6656 	EXP 	fixation_bip: autoDraw = True
+271.1657 	EXP 	Sound bip reached end of file
+271.1657 	EXP 	Sound bip reached end of file
+271.1658 	EXP 	New trial (rep=6, index=0): <Trial 6 (0 in rep 6) data={'thisN': 6, 'thisTrialN': 0, 'thisRepN': 6}>
+271.1664 	EXP 	bip: sampleRate = 48000
+271.1669 	EXP 	Sound bip reached end of file
+271.1823 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+271.1821 	EXP 	fixation_bip: autoDraw = False
+271.1821 	EXP 	fixation_bip: autoDraw = False
+271.1821 	EXP 	fixation_bip: autoDraw = True
+271.6837 	EXP 	Sound bip reached end of file
+271.6837 	EXP 	Sound bip reached end of file
+271.6838 	EXP 	New trial (rep=7, index=0): <Trial 7 (0 in rep 7) data={'thisN': 7, 'thisTrialN': 0, 'thisRepN': 7}>
+271.6844 	EXP 	bip: sampleRate = 48000
+271.6848 	EXP 	Sound bip reached end of file
+271.6990 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+271.6990 	EXP 	fixation_bip: autoDraw = False
+271.6990 	EXP 	fixation_bip: autoDraw = False
+271.6990 	EXP 	fixation_bip: autoDraw = True
+272.2047 	EXP 	Sound bip reached end of file
+272.2048 	EXP 	Sound bip reached end of file
+272.2049 	EXP 	New trial (rep=8, index=0): <Trial 8 (0 in rep 8) data={'thisN': 8, 'thisTrialN': 0, 'thisRepN': 8}>
+272.2055 	EXP 	bip: sampleRate = 48000
+272.2060 	EXP 	Sound bip reached end of file
+272.2157 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+272.2157 	EXP 	fixation_bip: autoDraw = False
+272.2157 	EXP 	fixation_bip: autoDraw = False
+272.2157 	EXP 	fixation_bip: autoDraw = True
+272.7248 	EXP 	Sound bip reached end of file
+272.7248 	EXP 	Sound bip reached end of file
+272.7249 	EXP 	New trial (rep=9, index=0): <Trial 9 (0 in rep 9) data={'thisN': 9, 'thisTrialN': 0, 'thisRepN': 9}>
+272.7255 	EXP 	bip: sampleRate = 48000
+272.7260 	EXP 	Sound bip reached end of file
+272.7324 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+272.7323 	EXP 	fixation_bip: autoDraw = False
+272.7323 	EXP 	fixation_bip: autoDraw = False
+272.7323 	EXP 	fixation_bip: autoDraw = True
+273.2402 	EXP 	Sound bip reached end of file
+273.2402 	EXP 	Sound bip reached end of file
+273.2403 	EXP 	New trial (rep=10, index=0): <Trial 10 (0 in rep 10) data={'thisN': 10, 'thisTrialN': 0, 'thisRepN': 10}>
+273.2409 	EXP 	bip: sampleRate = 48000
+273.2414 	EXP 	Sound bip reached end of file
+273.2490 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+273.2490 	EXP 	fixation_bip: autoDraw = False
+273.2490 	EXP 	fixation_bip: autoDraw = False
+273.2490 	EXP 	fixation_bip: autoDraw = True
+273.7610 	EXP 	Sound bip reached end of file
+273.7610 	EXP 	Sound bip reached end of file
+273.7611 	EXP 	New trial (rep=11, index=0): <Trial 11 (0 in rep 11) data={'thisN': 11, 'thisTrialN': 0, 'thisRepN': 11}>
+273.7617 	EXP 	bip: sampleRate = 48000
+273.7622 	EXP 	Sound bip reached end of file
+273.7657 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+273.7657 	EXP 	fixation_bip: autoDraw = False
+273.7657 	EXP 	fixation_bip: autoDraw = False
+273.7657 	EXP 	fixation_bip: autoDraw = True
+274.2817 	EXP 	Sound bip reached end of file
+274.2817 	EXP 	Sound bip reached end of file
+274.2819 	EXP 	New trial (rep=12, index=0): <Trial 12 (0 in rep 12) data={'thisN': 12, 'thisTrialN': 0, 'thisRepN': 12}>
+274.2824 	EXP 	bip: sampleRate = 48000
+274.2829 	EXP 	Sound bip reached end of file
+274.2990 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+274.2990 	EXP 	fixation_bip: autoDraw = False
+274.2990 	EXP 	fixation_bip: autoDraw = False
+274.2990 	EXP 	fixation_bip: autoDraw = True
+274.8026 	EXP 	Sound bip reached end of file
+274.8027 	EXP 	Sound bip reached end of file
+274.8027 	EXP 	New trial (rep=13, index=0): <Trial 13 (0 in rep 13) data={'thisN': 13, 'thisTrialN': 0, 'thisRepN': 13}>
+274.8033 	EXP 	bip: sampleRate = 48000
+274.8038 	EXP 	Sound bip reached end of file
+274.8157 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+274.8157 	EXP 	fixation_bip: autoDraw = False
+274.8157 	EXP 	fixation_bip: autoDraw = False
+274.8157 	EXP 	fixation_bip: autoDraw = True
+275.3157 	EXP 	Sound bip reached end of file
+275.3158 	EXP 	Sound bip reached end of file
+275.3158 	EXP 	New trial (rep=14, index=0): <Trial 14 (0 in rep 14) data={'thisN': 14, 'thisTrialN': 0, 'thisRepN': 14}>
+275.3164 	EXP 	bip: sampleRate = 48000
+275.3168 	EXP 	Sound bip reached end of file
+275.3324 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+275.3324 	EXP 	fixation_bip: autoDraw = False
+275.3324 	EXP 	fixation_bip: autoDraw = False
+275.3324 	EXP 	fixation_bip: autoDraw = True
+275.8317 	EXP 	Sound bip reached end of file
+275.8318 	EXP 	Sound bip reached end of file
+275.8491 	EXP 	Sound  reached end of file
+275.8491 	EXP 	Playing sound  on speaker Speakers (Realtek(R) Audio)
+275.8491 	EXP 	fixation_bip: autoDraw = False
+275.8491 	EXP 	fixation_bip: autoDraw = False
+275.8491 	EXP 	polygon: autoDraw = True
+276.4823 	EXP 	Device response: <KeyPress from None: t=276.47189289997914, value=c, duration=None>
+276.4826 	DATA 	Keypress: c
+276.5158 	EXP 	Device response: <KeyPress from None: t=276.5038149000029, value=a, duration=None>
+276.5160 	DATA 	Keypress: a
+276.5491 	EXP 	Device response: <KeyPress from None: t=276.54372620000504, value=b, duration=None>
+276.5493 	DATA 	Keypress: b
+276.6823 	EXP 	Device response: <KeyPress from None: t=267.33580539998366, value=b, duration=9.343920600018464>
+276.7158 	EXP 	Device response: <KeyPress from None: t=276.5038149000029, value=a, duration=0.19998689999920316>
+276.7491 	EXP 	Device response: <KeyPress from None: t=276.47189289997914, value=c, duration=0.26388980000047013>
+276.9994 	EXP 	Device response: <KeyPress from None: t=276.9917213000008, value=c, duration=None>
+276.9996 	DATA 	Keypress: c
+277.0325 	EXP 	Device response: <KeyPress from None: t=277.031791699992, value=a, duration=None>
+277.0326 	DATA 	Keypress: a
+277.0658 	EXP 	Device response: <KeyPress from None: t=277.05578199998126, value=b, duration=None>
+277.0660 	DATA 	Keypress: b
+277.1491 	EXP 	Device response: <KeyPress from None: t=276.54372620000504, value=b, duration=0.5999808999767993>
+277.1658 	EXP 	Device response: <KeyPress from None: t=276.9917213000008, value=c, duration=0.16800909998710267>
+277.1992 	EXP 	Device response: <KeyPress from None: t=277.031791699992, value=a, duration=0.15200140001252294>
+277.3823 	EXP 	Device response: <KeyPress from None: t=277.3757110000006, value=a, duration=None>
+277.3825 	DATA 	Keypress: a
+277.3992 	EXP 	Device response: <KeyPress from None: t=277.3918044999882, value=c, duration=None>
+277.3994 	DATA 	Keypress: c
+277.4163 	DATA 	Keypress: b
+277.4325 	EXP 	Device response: <KeyPress from None: t=277.4158017000009, value=b, duration=None>
+277.5158 	EXP 	Device response: <KeyPress from None: t=277.05578199998126, value=b, duration=0.45601180000812747>
+277.5491 	EXP 	Device response: <KeyPress from None: t=277.3918044999882, value=c, duration=0.15190520000760444>
+277.5658 	EXP 	Device response: <KeyPress from None: t=277.3757110000006, value=a, duration=0.1840055999928154>
+277.6491 	EXP 	Device response: <KeyPress from None: t=277.6397090999817, value=c, duration=None>
+277.6493 	DATA 	Keypress: c
+277.6658 	EXP 	Device response: <KeyPress from None: t=277.65579009999055, value=a, duration=None>
+277.6660 	DATA 	Keypress: a
+277.6992 	EXP 	Device response: <KeyPress from None: t=277.68776999998954, value=b, duration=None>
+277.6993 	DATA 	Keypress: b
+277.8658 	EXP 	Device response: <KeyPress from None: t=277.4158017000009, value=b, duration=0.439944599987939>
+277.8992 	EXP 	Device response: <KeyPress from None: t=277.6397090999817, value=c, duration=0.25606410001637414>
+277.9325 	EXP 	Device response: <KeyPress from None: t=277.65579009999055, value=a, duration=0.26391599999624304>
+280.8645 	EXP 	Sound  reached end of file
+280.8658 	EXP 	Sound  reached end of file
+280.8660 	EXP 	New trial (rep=0, index=0): <Trial 0 (0 in rep 0) data={'thisN': 0, 'thisTrialN': 0, 'thisRepN': 0}>
+280.8667 	EXP 	bip: sampleRate = 48000
+280.8672 	EXP 	Sound bip reached end of file
+280.8824 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+280.8824 	EXP 	polygon: autoDraw = False
+280.8824 	EXP 	fixation_bip: autoDraw = True
+281.3840 	EXP 	Sound bip reached end of file
+281.3840 	EXP 	Sound bip reached end of file
+281.3841 	EXP 	New trial (rep=1, index=0): <Trial 1 (0 in rep 1) data={'thisN': 1, 'thisTrialN': 0, 'thisRepN': 1}>
+281.3847 	EXP 	bip: sampleRate = 48000
+281.3852 	EXP 	Sound bip reached end of file
+281.3992 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+281.3992 	EXP 	fixation_bip: autoDraw = False
+281.3992 	EXP 	fixation_bip: autoDraw = False
+281.3992 	EXP 	fixation_bip: autoDraw = True
+281.6993 	EXP 	Device response: <KeyPress from None: t=281.6958946999803, value=a, duration=None>
+281.6996 	DATA 	Keypress: a
+281.8327 	EXP 	Device response: <KeyPress from None: t=281.8237786999962, value=c, duration=None>
+281.8328 	DATA 	Keypress: c
+281.9004 	EXP 	Sound bip reached end of file
+281.9004 	EXP 	Sound bip reached end of file
+281.9005 	EXP 	New trial (rep=2, index=0): <Trial 2 (0 in rep 2) data={'thisN': 2, 'thisTrialN': 0, 'thisRepN': 2}>
+281.9011 	EXP 	bip: sampleRate = 48000
+281.9016 	EXP 	Sound bip reached end of file
+281.9157 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+281.9159 	EXP 	fixation_bip: autoDraw = False
+281.9159 	EXP 	fixation_bip: autoDraw = False
+281.9159 	EXP 	fixation_bip: autoDraw = True
+281.9993 	EXP 	Device response: <KeyPress from None: t=281.6958946999803, value=a, duration=0.2878367000084836>
+282.0160 	EXP 	Device response: <KeyPress from None: t=282.00779370000237, value=b, duration=None>
+282.0162 	DATA 	Keypress: b
+282.2659 	EXP 	Device response: <KeyPress from None: t=277.68776999998954, value=b, duration=4.567936300009023>
+282.4170 	EXP 	Sound bip reached end of file
+282.4170 	EXP 	Sound bip reached end of file
+282.4171 	EXP 	New trial (rep=3, index=0): <Trial 3 (0 in rep 3) data={'thisN': 3, 'thisTrialN': 0, 'thisRepN': 3}>
+282.4178 	EXP 	bip: sampleRate = 48000
+282.4183 	EXP 	Sound bip reached end of file
+282.4326 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+282.4326 	EXP 	fixation_bip: autoDraw = False
+282.4326 	EXP 	fixation_bip: autoDraw = False
+282.4326 	EXP 	fixation_bip: autoDraw = True
+282.4660 	EXP 	Device response: <KeyPress from None: t=281.8237786999962, value=c, duration=0.640039899997646>
+282.9338 	EXP 	Sound bip reached end of file
+282.9338 	EXP 	Sound bip reached end of file
+282.9339 	EXP 	New trial (rep=4, index=0): <Trial 4 (0 in rep 4) data={'thisN': 4, 'thisTrialN': 0, 'thisRepN': 4}>
+282.9345 	EXP 	bip: sampleRate = 48000
+282.9351 	EXP 	Sound bip reached end of file
+282.9493 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+282.9493 	EXP 	fixation_bip: autoDraw = False
+282.9493 	EXP 	fixation_bip: autoDraw = False
+282.9493 	EXP 	fixation_bip: autoDraw = True
+283.4504 	EXP 	Sound bip reached end of file
+283.4504 	EXP 	Sound bip reached end of file
+283.4505 	EXP 	New trial (rep=5, index=0): <Trial 5 (0 in rep 5) data={'thisN': 5, 'thisTrialN': 0, 'thisRepN': 5}>
+283.4512 	EXP 	bip: sampleRate = 48000
+283.4517 	EXP 	Sound bip reached end of file
+283.4660 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+283.4659 	EXP 	fixation_bip: autoDraw = False
+283.4659 	EXP 	fixation_bip: autoDraw = False
+283.4659 	EXP 	fixation_bip: autoDraw = True
+283.9684 	EXP 	Sound bip reached end of file
+283.9684 	EXP 	Sound bip reached end of file
+283.9685 	EXP 	New trial (rep=6, index=0): <Trial 6 (0 in rep 6) data={'thisN': 6, 'thisTrialN': 0, 'thisRepN': 6}>
+283.9690 	EXP 	bip: sampleRate = 48000
+283.9695 	EXP 	Sound bip reached end of file
+283.9826 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+283.9993 	EXP 	fixation_bip: autoDraw = False
+283.9993 	EXP 	fixation_bip: autoDraw = False
+283.9993 	EXP 	fixation_bip: autoDraw = True
+284.4856 	EXP 	Sound bip reached end of file
+284.4856 	EXP 	Sound bip reached end of file
+284.4857 	EXP 	New trial (rep=7, index=0): <Trial 7 (0 in rep 7) data={'thisN': 7, 'thisTrialN': 0, 'thisRepN': 7}>
+284.4862 	EXP 	bip: sampleRate = 48000
+284.4867 	EXP 	Sound bip reached end of file
+284.4992 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+284.4993 	EXP 	fixation_bip: autoDraw = False
+284.4993 	EXP 	fixation_bip: autoDraw = False
+284.4993 	EXP 	fixation_bip: autoDraw = True
+284.5494 	EXP 	Device response: <KeyPress from None: t=284.54382209997857, value=b, duration=None>
+284.5496 	DATA 	Keypress: b
+284.8160 	EXP 	Device response: <KeyPress from None: t=282.00779370000237, value=b, duration=2.791980499983765>
+284.8493 	EXP 	Device response: <KeyPress from None: t=284.847706200002, value=a, duration=None>
+284.8495 	DATA 	Keypress: a
+285.0016 	EXP 	Sound bip reached end of file
+285.0016 	EXP 	Sound bip reached end of file
+285.0017 	EXP 	New trial (rep=8, index=0): <Trial 8 (0 in rep 8) data={'thisN': 8, 'thisTrialN': 0, 'thisRepN': 8}>
+285.0023 	EXP 	bip: sampleRate = 48000
+285.0028 	EXP 	Sound bip reached end of file
+285.0158 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+285.0159 	EXP 	fixation_bip: autoDraw = False
+285.0159 	EXP 	fixation_bip: autoDraw = False
+285.0159 	EXP 	fixation_bip: autoDraw = True
+285.0660 	EXP 	Device response: <KeyPress from None: t=284.847706200002, value=a, duration=0.2161396000010427>
+285.1825 	EXP 	Device response: <KeyPress from None: t=285.16769639999256, value=b, duration=None>
+285.1827 	DATA 	Keypress: b
+285.4660 	EXP 	Device response: <KeyPress from None: t=284.54382209997857, value=b, duration=0.9199041000101715>
+285.5234 	EXP 	Sound bip reached end of file
+285.5235 	EXP 	Sound bip reached end of file
+285.5236 	EXP 	New trial (rep=9, index=0): <Trial 9 (0 in rep 9) data={'thisN': 9, 'thisTrialN': 0, 'thisRepN': 9}>
+285.5241 	EXP 	bip: sampleRate = 48000
+285.5246 	EXP 	Sound bip reached end of file
+285.5326 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+285.5326 	EXP 	fixation_bip: autoDraw = False
+285.5326 	EXP 	fixation_bip: autoDraw = False
+285.5326 	EXP 	fixation_bip: autoDraw = True
+285.9494 	EXP 	Device response: <KeyPress from None: t=285.93576789999497, value=c, duration=None>
+285.9496 	DATA 	Keypress: c
+286.0312 	EXP 	Sound bip reached end of file
+286.0313 	EXP 	Sound bip reached end of file
+286.0313 	EXP 	New trial (rep=10, index=0): <Trial 10 (0 in rep 10) data={'thisN': 10, 'thisTrialN': 0, 'thisRepN': 10}>
+286.0319 	EXP 	bip: sampleRate = 48000
+286.0324 	EXP 	Sound bip reached end of file
+286.0327 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+286.0493 	EXP 	fixation_bip: autoDraw = False
+286.0493 	EXP 	fixation_bip: autoDraw = False
+286.0493 	EXP 	fixation_bip: autoDraw = True
+286.5561 	EXP 	Sound bip reached end of file
+286.5561 	EXP 	Sound bip reached end of file
+286.5563 	EXP 	New trial (rep=11, index=0): <Trial 11 (0 in rep 11) data={'thisN': 11, 'thisTrialN': 0, 'thisRepN': 11}>
+286.5569 	EXP 	bip: sampleRate = 48000
+286.5574 	EXP 	Sound bip reached end of file
+286.5660 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+286.5660 	EXP 	fixation_bip: autoDraw = False
+286.5660 	EXP 	fixation_bip: autoDraw = False
+286.5660 	EXP 	fixation_bip: autoDraw = True
+286.5826 	EXP 	Device response: <KeyPress from None: t=285.93576789999497, value=c, duration=0.6319347000098787>
+286.9328 	EXP 	Device response: <KeyPress from None: t=286.919765300001, value=b, duration=None>
+286.9329 	DATA 	Keypress: b
+287.0704 	EXP 	Sound bip reached end of file
+287.0705 	EXP 	Sound bip reached end of file
+287.0705 	EXP 	New trial (rep=12, index=0): <Trial 12 (0 in rep 12) data={'thisN': 12, 'thisTrialN': 0, 'thisRepN': 12}>
+287.0711 	EXP 	bip: sampleRate = 48000
+287.0716 	EXP 	Sound bip reached end of file
+287.0827 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+287.0826 	EXP 	fixation_bip: autoDraw = False
+287.0826 	EXP 	fixation_bip: autoDraw = False
+287.0826 	EXP 	fixation_bip: autoDraw = True
+287.2661 	EXP 	Device response: <KeyPress from None: t=287.25576999998884, value=a, duration=None>
+287.2662 	DATA 	Keypress: a
+287.4994 	EXP 	Device response: <KeyPress from None: t=287.25576999998884, value=a, duration=0.2399211000010837>
+287.5661 	EXP 	Device response: <KeyPress from None: t=285.16769639999256, value=b, duration=2.3920768999960274>
+287.5916 	EXP 	Sound bip reached end of file
+287.5916 	EXP 	Sound bip reached end of file
+287.5917 	EXP 	New trial (rep=13, index=0): <Trial 13 (0 in rep 13) data={'thisN': 13, 'thisTrialN': 0, 'thisRepN': 13}>
+287.5922 	EXP 	bip: sampleRate = 48000
+287.5927 	EXP 	Sound bip reached end of file
+287.5992 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+287.5994 	EXP 	fixation_bip: autoDraw = False
+287.5994 	EXP 	fixation_bip: autoDraw = False
+287.5994 	EXP 	fixation_bip: autoDraw = True
+288.1153 	EXP 	Sound bip reached end of file
+288.1153 	EXP 	Sound bip reached end of file
+288.1154 	EXP 	New trial (rep=14, index=0): <Trial 14 (0 in rep 14) data={'thisN': 14, 'thisTrialN': 0, 'thisRepN': 14}>
+288.1161 	EXP 	bip: sampleRate = 48000
+288.1166 	EXP 	Sound bip reached end of file
+288.1327 	EXP 	Playing sound bip on speaker Speakers (Realtek(R) Audio)
+288.1327 	EXP 	fixation_bip: autoDraw = False
+288.1327 	EXP 	fixation_bip: autoDraw = False
+288.1327 	EXP 	fixation_bip: autoDraw = True
+288.6304 	EXP 	Sound bip reached end of file
+288.6304 	EXP 	Sound bip reached end of file
+288.6494 	INFO 	Keyboard events cleared
+288.6494 	EXP 	fixation_bip: autoDraw = False
+288.6494 	EXP 	fixation_bip: autoDraw = False
+288.6494 	EXP 	questionary_text0: height = np.float64(0.035)
+288.6494 	EXP 	questionary_text0: height = np.float64(0.035)
+288.6494 	EXP 	questionary_text0: height = np.float64(0.035)
+288.6494 	EXP 	questionary_text0: text = '¿Qué característica especial, según el estafador, hacía que la tela de los nuevos trajes fuera única en el mundo?\n\n A: Que cambiaba de color según el estado de ánimo del emperador.\n\n B: Que estaba hecha con hilos de oro traídos exclusivamente de Oriente.\n\n C: Que solo podía ser vista por personas que fueran inteligentes.\n\n Presioná la opción que creas correcta (teclas A, B ó C)'
+288.6494 	EXP 	questionary_text0: height = 0.035
+288.6494 	EXP 	questionary_text0: autoDraw = True
+288.6494 	EXP 	questionary_text0: height = np.float64(0.035)
+288.6494 	EXP 	questionary_text0: height = np.float64(0.035)
+288.6494 	EXP 	questionary_text0: height = np.float64(0.035)
+288.6494 	EXP 	questionary_text0: text = '¿Qué característica especial, según el estafador, hacía que la tela de los nuevos trajes fuera única en el mundo?\n\n A: Que cambiaba de color según el estado de ánimo del emperador.\n\n B: Que estaba hecha con hilos de oro traídos exclusivamente de Oriente.\n\n C: Que solo podía ser vista por personas que fueran inteligentes.\n\n Presioná la opción que creas correcta (teclas A, B ó C)'
+289.2329 	EXP 	Device response: <KeyPress from None: t=289.2318236999854, value=a, duration=None>
+289.2434 	DATA 	Keypress: a
+289.2494 	INFO 	Keyboard events cleared
+289.2494 	EXP 	questionary_text0: autoDraw = False
+289.2494 	EXP 	questionary_text1: height = np.float64(0.035)
+289.2494 	EXP 	questionary_text1: height = np.float64(0.035)
+289.2494 	EXP 	questionary_text1: height = np.float64(0.035)
+289.2494 	EXP 	questionary_text1: text = '¿Cómo reaccionó el jefe de Gabinete en sus visitas al diseñador al no poder ver la tela en el ropero?\n\n A: Elogió la supuesta belleza de las prendas y aumentó la cantidad de trajes encargados\n\n B: Confesó al emperador que era incapaz de ver el traje para ser honesto.\n\n C: Denunció al diseñador por fraude para proteger el tesoro del imperio.\n\n Presioná la opción que creas correcta (teclas A, B ó C)'
+289.2494 	EXP 	questionary_text1: height = 0.035
+289.2494 	EXP 	questionary_text1: autoDraw = True
+289.2494 	EXP 	questionary_text1: height = np.float64(0.035)
+289.2494 	EXP 	questionary_text1: height = np.float64(0.035)
+289.2494 	EXP 	questionary_text1: height = np.float64(0.035)
+289.2494 	EXP 	questionary_text1: text = '¿Cómo reaccionó el jefe de Gabinete en sus visitas al diseñador al no poder ver la tela en el ropero?\n\n A: Elogió la supuesta belleza de las prendas y aumentó la cantidad de trajes encargados\n\n B: Confesó al emperador que era incapaz de ver el traje para ser honesto.\n\n C: Denunció al diseñador por fraude para proteger el tesoro del imperio.\n\n Presioná la opción que creas correcta (teclas A, B ó C)'
+289.3827 	EXP 	Device response: <KeyPress from None: t=289.3757759, value=c, duration=None>
+289.3936 	DATA 	Keypress: c
+289.3994 	INFO 	Keyboard events cleared
+289.3994 	EXP 	questionary_text1: autoDraw = False
+289.3994 	EXP 	questionary_text2: height = np.float64(0.035)
+289.3994 	EXP 	questionary_text2: height = np.float64(0.035)
+289.3994 	EXP 	questionary_text2: height = np.float64(0.035)
+289.3994 	EXP 	questionary_text2: text = '¿Qué decisión tomó el emperador el día después de que el niño revelara la verdad ante todo el pueblo?\n\n A: Castigó al nene colorado y a su padre por haberle faltado el respeto en público.\n\n B: Despidió a su jefe de Gabinete y contrató al niño por haber sido el único sincero\n\n C: Ordenó confeccionar trajes reales de lana para tapar su vergüenza ante los ciudadanos.\n\n Presioná la opción que creas correcta (teclas A, B ó C)'
+289.3994 	EXP 	questionary_text2: height = 0.035
+289.3994 	EXP 	questionary_text2: autoDraw = True
+289.3994 	EXP 	questionary_text2: height = np.float64(0.035)
+289.3994 	EXP 	questionary_text2: height = np.float64(0.035)
+289.3994 	EXP 	questionary_text2: height = np.float64(0.035)
+289.3994 	EXP 	questionary_text2: text = '¿Qué decisión tomó el emperador el día después de que el niño revelara la verdad ante todo el pueblo?\n\n A: Castigó al nene colorado y a su padre por haberle faltado el respeto en público.\n\n B: Despidió a su jefe de Gabinete y contrató al niño por haber sido el único sincero\n\n C: Ordenó confeccionar trajes reales de lana para tapar su vergüenza ante los ciudadanos.\n\n Presioná la opción que creas correcta (teclas A, B ó C)'
+289.4994 	EXP 	Device response: <KeyPress from None: t=289.49573419999797, value=b, duration=None>
+289.5001 	DATA 	Keypress: b
+289.5161 	INFO 	Keyboard events cleared
+289.5161 	EXP 	questionary_text2: autoDraw = False
+289.5161 	EXP 	final_text: autoDraw = True
+289.7495 	EXP 	Device response: <KeyPress from None: t=286.919765300001, value=b, duration=2.823941199982073>
+289.9329 	EXP 	Device response: <KeyPress from None: t=289.2318236999854, value=a, duration=0.687974700005725>
+290.0331 	EXP 	Device response: <KeyPress from None: t=289.3757759, value=c, duration=0.6560475000005681>
+290.2996 	EXP 	Device response: <KeyPress from None: t=290.29584619999514, value=space, duration=None>
+290.2999 	DATA 	Keypress: space
+290.3161 	EXP 	final_text: autoDraw = False
+290.3162 	EXP 	DichoticListeningProbe: status = STOPPED
+290.3305 	INFO 	saved data to 'C:\\Users\\jocta\\repos\\Dichotic\\psychopy_experiment\\data\\octavioprueba_DichoticListeningProbe_2026-01-19_14h44.09.638.csv'
+290.3314 	INFO 	saved data to C:\Users\jocta\repos\Dichotic\psychopy_experiment\data\octavioprueba_DichoticListeningProbe_2026-01-19_14h44.09.638.psydat
+290.4501 	WARNING 	Stopping key buffers but this could be dangerous ifother keyboards rely on the same.

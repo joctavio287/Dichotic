@@ -509,9 +509,10 @@ def scale_audio_to_relative_db(
 
 def create_bip(
     output_file: Union[str, Path],
-    bip_freq: int = 1000,
-    bip_dur: int = 500,
-    silence_sides_dur: int = 500,
+    bip_freq: float = 1000,
+    bip_dur: float = 500,
+    silence_sides_dur: float = 500,
+    silence_type: Union[str, None] = None,
     bip_vol: int = -20,
     number_of_bips: int = 1,
     sample_rate: int = 48000
@@ -523,16 +524,21 @@ def create_bip(
     ----------
     output_dir : Path
         Directory to save the bip sound.
-    bip_freq : int
+    bip_freq : float
         Frequency of the bip sound in Hz.
-    bip_dur : int
+    bip_dur : float
         Duration of each bip in milliseconds.
+    silence_sides_dur : float
+        Duration of a side silence (before/after/both) the bip in milliseconds.
+    silence_type : Union[str, None]
+        Type of silence to add: 'before', 'after', 'both', or None for no silence.
     bip_vol : int
         Volume of the bip sound in dB.
     number_of_bips : int
         Number of bips to create.
     sample_rate : int
         Sample rate of the bip sound in Hz.
+    
 
     Returns
     -------
@@ -547,11 +553,18 @@ def create_bip(
         silence = AudioSegment.silent(
             duration=silence_sides_dur, frame_rate=sample_rate
         )
-        bip_segment = silence + bip_tone + silence
+        if silence_type == 'before':
+            bip_segment = silence + bip_tone
+        elif silence_type == 'after':
+            bip_segment = bip_tone + silence
+        elif silence_type == 'both':
+            bip_segment = silence + bip_tone + silence
+        
         if number_of_bips > 1:
             for _ in range(number_of_bips - 1):
-                bip_segment += bip_tone + silence
+                bip_segment += bip_segment
     else:
+        # Rare case of no silence but multiple bips--> just concatenate bips
         bip_segment = bip_tone
         if number_of_bips > 1:
             for _ in range(number_of_bips - 1):

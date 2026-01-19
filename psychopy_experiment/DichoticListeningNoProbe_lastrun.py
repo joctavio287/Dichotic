@@ -585,8 +585,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     continueRoutine = True
     # update component parameters for each repeat
     # Run 'Begin Routine' code from code_row_selection
-    #port.write(bytes([int(25)]))
-    print(25)
+    port.write(bytes([int(25)]))
+    # print(25)
     
     # create starting attributes for key_instructions
     key_instructions.keys = []
@@ -727,8 +727,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     Instructions.tStopRefresh = tThisFlipGlobal
     thisExp.addData('Instructions.stopped', Instructions.tStop)
     # Run 'End Routine' code from code_row_selection
-    #port.write(bytes([int(30)]))
-    print(25)
+    port.write(bytes([int(30)]))
+    # print(25)
     # check responses
     if key_instructions.keys in ['', [], None]:  # No response was made
         key_instructions.keys = None
@@ -789,8 +789,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         continueRoutine = True
         # update component parameters for each repeat
         # Run 'Begin Routine' code from code_prompt
-        #port.write(bytes([int(35)]))
-        print(35)
+        port.write(bytes([int(35)]))
+        # print(35)
         
         flecha='<<<'  if target=='Left' else '>>>'
         lado='IZQUIERDO' if target=='Left' else 'DERECHO'
@@ -939,8 +939,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         ConditionPrompt.tStopRefresh = tThisFlipGlobal
         thisExp.addData('ConditionPrompt.stopped', ConditionPrompt.tStop)
         # Run 'End Routine' code from code_prompt
-        #port.write(bytes([int(40)])
-        print(40)
+        port.write(bytes([int(40)])
+        # print(40)
         # check responses
         if key_resp_prompt.keys in ['', [], None]:  # No response was made
             key_resp_prompt.keys = None
@@ -995,8 +995,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             else:
                 trigger = 150
             
-            #port.write(bytes([int(trigger+currentLoop.thisN*3)]))
-            print(int(trigger+currentLoop.thisN*3))
+            port.write(bytes([int(trigger+currentLoop.thisN*3)]))
+            # print(int(trigger+currentLoop.thisN*3))
             
             # When the loop reaches the end, there will be no silence added
             if currentLoop.thisN == (currentLoop.nTotal - 1):
@@ -1175,8 +1175,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             Bips.tStopRefresh = tThisFlipGlobal
             thisExp.addData('Bips.stopped', Bips.tStop)
             # Run 'End Routine' code from code_bip
-            #port.write(bytes([int(trigger+currentLoop.thisN*3+1)]))
-            print(int(trigger+currentLoop.thisN*3+1))
+            port.write(bytes([int(trigger+currentLoop.thisN*3+1)]))
+            # print(int(trigger+currentLoop.thisN*3+1))
             bip.pause()  # ensure sound has stopped at end of Routine
             # the Routine "Bips" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
@@ -1209,8 +1209,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         # Run 'Begin Routine' code from code_listening
         # Set correct audio
         audiobook = audios[condition_trials.thisN]
-        #port.write(bytes([int(100)]))
-        print(100)
+        port.write(bytes([int(100)]))
+        # print(100)
         # t is measured since routine start
         thisExp.addData("time_audiobook_started",t)
         audiobook.play()
@@ -1327,8 +1327,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         Listening.tStopRefresh = tThisFlipGlobal
         thisExp.addData('Listening.stopped', Listening.tStop)
         # Run 'End Routine' code from code_listening
-        #port.write(bytes([int(105)]))
-        print(105)
+        port.write(bytes([int(105)]))
+        # print(105)
         
         
         
@@ -1379,8 +1379,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             else:
                 trigger = 150
             
-            #port.write(bytes([int(trigger+currentLoop.thisN*3)]))
-            print(int(trigger+currentLoop.thisN*3))
+            port.write(bytes([int(trigger+currentLoop.thisN*3)]))
+            # print(int(trigger+currentLoop.thisN*3))
             
             # When the loop reaches the end, there will be no silence added
             if currentLoop.thisN == (currentLoop.nTotal - 1):
@@ -1559,8 +1559,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             Bips.tStopRefresh = tThisFlipGlobal
             thisExp.addData('Bips.stopped', Bips.tStop)
             # Run 'End Routine' code from code_bip
-            #port.write(bytes([int(trigger+currentLoop.thisN*3+1)]))
-            print(int(trigger+currentLoop.thisN*3+1))
+            port.write(bytes([int(trigger+currentLoop.thisN*3+1)]))
+            # print(int(trigger+currentLoop.thisN*3+1))
             bip.pause()  # ensure sound has stopped at end of Routine
             # the Routine "Bips" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
@@ -1748,8 +1748,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             answer_b = answers_b[questions_trial.thisRepN-1]
             answer_c = answers_c[questions_trial.thisRepN-1]
             
-            #port.write(bytes([int(200+currentLoop.thisN*3)]))
-            print(int(200+currentLoop.thisN*3))
+            port.write(bytes([int(200+currentLoop.thisN*3)]))
+            # print(int(200+currentLoop.thisN*3))
             
             # create starting attributes for key_resp_questionary
             key_resp_questionary.keys = []
@@ -1899,8 +1899,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             Questionary.tStopRefresh = tThisFlipGlobal
             thisExp.addData('Questionary.stopped', Questionary.tStop)
             # Run 'End Routine' code from code_questionary
-            #port.write(bytes([int(200+1+currentLoop.thisN*3)]))
-            print(int(200+1+currentLoop.thisN*3))
+            port.write(bytes([int(200+1+currentLoop.thisN*3)]))
+            # print(int(200+1+currentLoop.thisN*3))
             # check responses
             if key_resp_questionary.keys in ['', [], None]:  # No response was made
                 key_resp_questionary.keys = None
@@ -1958,8 +1958,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     continueRoutine = True
     # update component parameters for each repeat
     # Run 'Begin Routine' code from code_bye
-    #port.write(bytes([int(230)])
-    print(230)
+    port.write(bytes([int(230)])
+    # print(230)
     # create starting attributes for final_key
     final_key.keys = []
     final_key.rt = []
@@ -2099,8 +2099,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     GoodBye.tStopRefresh = tThisFlipGlobal
     thisExp.addData('GoodBye.stopped', GoodBye.tStop)
     # Run 'End Routine' code from code_bye
-    #port.write(bytes([int(240)])
-    print(240)
+    port.write(bytes([int(240)])
+    # print(240)
     # check responses
     if final_key.keys in ['', [], None]:  # No response was made
         final_key.keys = None

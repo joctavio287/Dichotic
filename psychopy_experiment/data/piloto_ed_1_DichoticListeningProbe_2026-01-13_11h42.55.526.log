@@ -1,0 +1,1488 @@
+1032.1761 	INFO 	Loaded monitor calibration from ['2023_02_23 11:52']
+1032.1982 	WARNING 	User requested fullscreen with size [1024  768], but screen is actually [1280, 1024]. Using actual size
+1032.3609 	INFO 	Using renderer 'GeForce 9500 GT/PCIe/SSE2' for graphics
+1032.3609 	INFO 	OpenGL version supported by driver is 3..
+1032.3710 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x000001DABF287C10>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x000001DABF287BB0>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0, 0, 0]), colorSpace='rgb', depthBits=8, fullscr=True, gamma=None, gammaErrorPolicy='raise', infoMsg=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x000001DABF3556C0>, multiSample=False, name='window1', numSamples=2, pos=[np.float64(0.0), np.float64(0.0)], screen=0, size=array([1280, 1024]), stencilBits=0, stereo=False, title='PsychoPy', units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+1032.3711 	EXP 	window1: backgroundImage = ''
+1032.3711 	EXP 	window1: backgroundFit = 'none'
+1032.7219 	EXP 	window1: Attempting to measure frame rate of screen (0) ...
+1032.7219 	EXP 	window1: recordFrameIntervals = False
+1033.0194 	EXP 	window1: recordFrameIntervals = True
+1033.1663 	EXP 	Screen (0) actual frame rate measured at 75.57Hz
+1033.1663 	EXP 	window1: recordFrameIntervals = False
+1033.3844 	INFO 	keyboard.Keyboard is using ptb backend.
+1033.3844 	EXP 	DichoticListeningProbe: status = STARTED
+1033.5459 	INFO 	Loaded psychtoolbox audio version 3.0.19.696976569
+1033.6601 	INFO 	Created stream for speaker device: Altavoces (3- Logitech USB Headset) (5.0)
+1033.6613 	EXP 	: sampleRate = 48000
+1033.6613 	EXP 	: channels = None
+1033.6636 	EXP 	: sampleRate = 48000
+1034.5095 	INFO 	Created stream for speaker device: Altavoces (3- Logitech USB Headset) (5.0)
+1034.5106 	EXP 	: sampleRate = 48000
+1034.5106 	EXP 	: channels = None
+1034.5129 	EXP 	: sampleRate = 48000
+1035.3489 	INFO 	Created stream for speaker device: Altavoces (3- Logitech USB Headset) (5.0)
+1035.3500 	EXP 	: sampleRate = 48000
+1035.3500 	EXP 	: channels = None
+1035.3522 	EXP 	: sampleRate = 48000
+1036.2081 	INFO 	Created stream for speaker device: Altavoces (3- Logitech USB Headset) (5.0)
+1036.2090 	EXP 	: sampleRate = 48000
+1036.2090 	EXP 	: channels = None
+1036.2113 	EXP 	: sampleRate = 48000
+1037.0467 	INFO 	Created stream for speaker device: Altavoces (3- Logitech USB Headset) (5.0)
+1037.0478 	EXP 	: sampleRate = 48000
+1037.0478 	EXP 	: channels = None
+1037.0500 	EXP 	: sampleRate = 48000
+1037.8911 	EXP 	Created text_instructions = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text_instructions', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+1037.8919 	EXP 	Created text_prompt = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text_prompt', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+1037.9157 	INFO 	Created stream for speaker device: Altavoces (3- Logitech USB Headset) (5.0)
+1037.9167 	EXP 	bip: sampleRate = 48000
+1037.9167 	EXP 	bip: channels = None
+1037.9297 	EXP 	Sound bip set volume 1.000
+1037.9342 	EXP 	Created fixation_bip = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-2.0, draggable=False, fillColor=array([1, 1, 1]), fillColorSpace='rgb', fillRGB=array([1, 1, 1]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1, 1, 1]), lineWidth=1.0, name='fixation_bip', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([0.1, 0.1]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+1037.9360 	EXP 	Created final_silence = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-3.0, draggable=False, fillColor=array([1, 1, 1]), fillColorSpace='rgb', fillRGB=array([1, 1, 1]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1, 1, 1]), lineWidth=1.0, name='final_silence', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([0.1, 0.1]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+1037.9381 	EXP 	Created polygon = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-1.0, draggable=False, fillColor=array([1, 1, 1]), fillColorSpace='rgb', fillRGB=array([1, 1, 1]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1, 1, 1]), lineWidth=1.0, name='polygon', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([0.1, 0.1]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+1037.9607 	INFO 	Created stream for speaker device: Altavoces (3- Logitech USB Headset) (5.0)
+1037.9615 	EXP 	bip: sampleRate = 48000
+1037.9615 	EXP 	bip: channels = None
+1037.9807 	EXP 	Sound bip set volume 1.000
+1037.9951 	EXP 	Created fixation_bip = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-2.0, draggable=False, fillColor=array([1, 1, 1]), fillColorSpace='rgb', fillRGB=array([1, 1, 1]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1, 1, 1]), lineWidth=1.0, name='fixation_bip', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([0.1, 0.1]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+1037.9972 	EXP 	Created final_silence = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-3.0, draggable=False, fillColor=array([1, 1, 1]), fillColorSpace='rgb', fillRGB=array([1, 1, 1]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1, 1, 1]), lineWidth=1.0, name='final_silence', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([0.1, 0.1]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+1037.9980 	EXP 	Created questionary_text0 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='questionary_text0', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+1037.9987 	EXP 	Created questionary_text1 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='questionary_text1', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+1037.9994 	EXP 	Created questionary_text2 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='questionary_text2', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+1038.0509 	EXP 	Created final_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.05), italic=False, languageStyle='LTR', name='final_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+2.0330 	INFO 	Keyboard events cleared
+2.0329 	EXP 	text_instructions: autoDraw = True
+14.8726 	EXP 	Device response: <KeyPress from None: t=14.860738036499242, value=space, duration=None>
+14.8770 	EXP 	Imported conditions.csv as conditions, 5 conditions, 5 params
+14.8772 	EXP 	New trial (rep=0, index=0): <Trial 0 (0 in rep 0) data={'ordered': np.False_, 'voice_L': 'M', 'voice_R': 'F', 'target': 'R', 'target_label': 'NO_M_F', 'thisN': 0, 'thisTrialN': 0, 'thisRepN': 0}>
+14.8858 	DATA 	Keypress: space
+14.9086 	INFO 	Keyboard events cleared
+14.9085 	EXP 	text_instructions: autoDraw = False
+14.9085 	EXP 	text_prompt: height = np.float64(0.05)
+14.9085 	EXP 	text_prompt: height = np.float64(0.05)
+14.9085 	EXP 	text_prompt: height = np.float64(0.05)
+14.9085 	EXP 	text_prompt: text = 'Presta atención a la historia del lado DERECHO (>>>).\n\n\nApretá ESPACIO para continuar...'
+14.9085 	EXP 	text_prompt: autoDraw = True
+15.0017 	EXP 	Device response: <KeyPress from None: t=14.860738036499242, value=space, duration=0.13596219672217558>
+18.4674 	EXP 	Device response: <KeyPress from None: t=18.46074830215548, value=space, duration=None>
+18.4678 	EXP 	New trial (rep=0, index=0): <Trial 0 (0 in rep 0) data={'thisN': 0, 'thisTrialN': 0, 'thisRepN': 0}>
+18.4700 	EXP 	bip: sampleRate = 48000
+18.4715 	EXP 	Sound bip reached end of file
+18.4839 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+18.4726 	DATA 	Keypress: space
+18.4940 	EXP 	text_prompt: autoDraw = False
+18.4940 	EXP 	fixation_bip: autoDraw = True
+18.5607 	EXP 	Device response: <KeyPress from None: t=18.46074830215548, value=space, duration=0.09597425886749988>
+18.9871 	EXP 	Sound bip reached end of file
+19.0005 	EXP 	Sound bip reached end of file
+19.0138 	EXP 	fixation_bip: autoDraw = False
+19.0138 	EXP 	final_silence: autoDraw = True
+19.5072 	EXP 	New trial (rep=1, index=0): <Trial 1 (0 in rep 1) data={'thisN': 1, 'thisTrialN': 0, 'thisRepN': 1}>
+19.5083 	EXP 	bip: sampleRate = 48000
+19.5093 	EXP 	Sound bip reached end of file
+19.5236 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+19.5201 	EXP 	final_silence: autoDraw = False
+19.5201 	EXP 	fixation_bip: autoDraw = False
+19.5201 	EXP 	final_silence: autoDraw = False
+19.5201 	EXP 	fixation_bip: autoDraw = True
+20.0305 	EXP 	Sound bip reached end of file
+20.0535 	EXP 	Sound bip reached end of file
+20.0667 	EXP 	fixation_bip: autoDraw = False
+20.0667 	EXP 	final_silence: autoDraw = True
+20.5600 	EXP 	New trial (rep=2, index=0): <Trial 2 (0 in rep 2) data={'thisN': 2, 'thisTrialN': 0, 'thisRepN': 2}>
+20.5611 	EXP 	bip: sampleRate = 48000
+20.5620 	EXP 	Sound bip reached end of file
+20.5764 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+20.5732 	EXP 	final_silence: autoDraw = False
+20.5732 	EXP 	fixation_bip: autoDraw = False
+20.5732 	EXP 	final_silence: autoDraw = False
+20.5732 	EXP 	fixation_bip: autoDraw = True
+21.0769 	EXP 	Sound bip reached end of file
+21.0931 	EXP 	Sound bip reached end of file
+21.1062 	EXP 	fixation_bip: autoDraw = False
+21.1062 	EXP 	final_silence: autoDraw = True
+21.5998 	EXP 	New trial (rep=3, index=0): <Trial 3 (0 in rep 3) data={'thisN': 3, 'thisTrialN': 0, 'thisRepN': 3}>
+21.6009 	EXP 	bip: sampleRate = 48000
+21.6018 	EXP 	Sound bip reached end of file
+21.6162 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+21.6129 	EXP 	final_silence: autoDraw = False
+21.6129 	EXP 	fixation_bip: autoDraw = False
+21.6129 	EXP 	final_silence: autoDraw = False
+21.6129 	EXP 	fixation_bip: autoDraw = True
+22.1197 	EXP 	Sound bip reached end of file
+22.1327 	EXP 	Sound bip reached end of file
+22.1460 	EXP 	fixation_bip: autoDraw = False
+22.1460 	EXP 	final_silence: autoDraw = True
+22.6393 	EXP 	New trial (rep=4, index=0): <Trial 4 (0 in rep 4) data={'thisN': 4, 'thisTrialN': 0, 'thisRepN': 4}>
+22.6406 	EXP 	bip: sampleRate = 48000
+22.6415 	EXP 	Sound bip reached end of file
+22.6557 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+22.6523 	EXP 	final_silence: autoDraw = False
+22.6523 	EXP 	fixation_bip: autoDraw = False
+22.6523 	EXP 	final_silence: autoDraw = False
+22.6523 	EXP 	fixation_bip: autoDraw = True
+23.1596 	EXP 	Sound bip reached end of file
+23.1724 	EXP 	Sound bip reached end of file
+23.1855 	EXP 	fixation_bip: autoDraw = False
+23.1855 	EXP 	final_silence: autoDraw = True
+23.6789 	EXP 	New trial (rep=5, index=0): <Trial 5 (0 in rep 5) data={'thisN': 5, 'thisTrialN': 0, 'thisRepN': 5}>
+23.6800 	EXP 	bip: sampleRate = 48000
+23.6809 	EXP 	Sound bip reached end of file
+23.6954 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+23.6922 	EXP 	final_silence: autoDraw = False
+23.6922 	EXP 	fixation_bip: autoDraw = False
+23.6922 	EXP 	final_silence: autoDraw = False
+23.6922 	EXP 	fixation_bip: autoDraw = True
+24.2007 	EXP 	Sound bip reached end of file
+24.2119 	EXP 	Sound bip reached end of file
+24.2252 	EXP 	fixation_bip: autoDraw = False
+24.2252 	EXP 	final_silence: autoDraw = True
+24.7186 	EXP 	New trial (rep=6, index=0): <Trial 6 (0 in rep 6) data={'thisN': 6, 'thisTrialN': 0, 'thisRepN': 6}>
+24.7197 	EXP 	bip: sampleRate = 48000
+24.7206 	EXP 	Sound bip reached end of file
+24.7350 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+24.7318 	EXP 	final_silence: autoDraw = False
+24.7318 	EXP 	fixation_bip: autoDraw = False
+24.7318 	EXP 	final_silence: autoDraw = False
+24.7318 	EXP 	fixation_bip: autoDraw = True
+25.2387 	EXP 	Sound bip reached end of file
+25.2516 	EXP 	Sound bip reached end of file
+25.2649 	EXP 	fixation_bip: autoDraw = False
+25.2649 	EXP 	final_silence: autoDraw = True
+25.7585 	EXP 	New trial (rep=7, index=0): <Trial 7 (0 in rep 7) data={'thisN': 7, 'thisTrialN': 0, 'thisRepN': 7}>
+25.7596 	EXP 	bip: sampleRate = 48000
+25.7605 	EXP 	Sound bip reached end of file
+25.7748 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+25.7715 	EXP 	final_silence: autoDraw = False
+25.7715 	EXP 	fixation_bip: autoDraw = False
+25.7715 	EXP 	final_silence: autoDraw = False
+25.7715 	EXP 	fixation_bip: autoDraw = True
+26.2763 	EXP 	Sound bip reached end of file
+26.2914 	EXP 	Sound bip reached end of file
+26.3046 	EXP 	fixation_bip: autoDraw = False
+26.3046 	EXP 	final_silence: autoDraw = True
+26.7980 	EXP 	New trial (rep=8, index=0): <Trial 8 (0 in rep 8) data={'thisN': 8, 'thisTrialN': 0, 'thisRepN': 8}>
+26.7991 	EXP 	bip: sampleRate = 48000
+26.8000 	EXP 	Sound bip reached end of file
+26.8144 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+26.8110 	EXP 	final_silence: autoDraw = False
+26.8110 	EXP 	fixation_bip: autoDraw = False
+26.8110 	EXP 	final_silence: autoDraw = False
+26.8110 	EXP 	fixation_bip: autoDraw = True
+27.3111 	EXP 	Sound bip reached end of file
+27.3310 	EXP 	Sound bip reached end of file
+27.3443 	EXP 	fixation_bip: autoDraw = False
+27.3443 	EXP 	final_silence: autoDraw = True
+27.8377 	EXP 	New trial (rep=9, index=0): <Trial 9 (0 in rep 9) data={'thisN': 9, 'thisTrialN': 0, 'thisRepN': 9}>
+27.8388 	EXP 	bip: sampleRate = 48000
+27.8397 	EXP 	Sound bip reached end of file
+27.8541 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+27.8507 	EXP 	final_silence: autoDraw = False
+27.8507 	EXP 	fixation_bip: autoDraw = False
+27.8507 	EXP 	final_silence: autoDraw = False
+27.8507 	EXP 	fixation_bip: autoDraw = True
+28.3606 	EXP 	Sound bip reached end of file
+28.3707 	EXP 	Sound bip reached end of file
+28.3837 	EXP 	fixation_bip: autoDraw = False
+28.3837 	EXP 	final_silence: autoDraw = True
+28.8788 	EXP 	Sound  reached end of file
+28.8788 	EXP 	Playing sound  on speaker Altavoces (3- Logitech USB Headset)
+28.8904 	EXP 	final_silence: autoDraw = False
+28.8904 	EXP 	fixation_bip: autoDraw = False
+28.8904 	EXP 	final_silence: autoDraw = False
+28.8904 	EXP 	polygon: autoDraw = True
+329.5267 	EXP 	Sound  stopped
+329.5272 	EXP 	New trial (rep=0, index=0): <Trial 0 (0 in rep 0) data={'thisN': 0, 'thisTrialN': 0, 'thisRepN': 0}>
+329.5285 	EXP 	bip: sampleRate = 48000
+329.5294 	EXP 	Sound bip reached end of file
+329.5377 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+329.5475 	EXP 	polygon: autoDraw = False
+329.5475 	EXP 	fixation_bip: autoDraw = True
+330.0397 	EXP 	Sound bip reached end of file
+330.0541 	EXP 	Sound bip reached end of file
+330.0674 	EXP 	fixation_bip: autoDraw = False
+330.0674 	EXP 	final_silence: autoDraw = True
+330.5609 	EXP 	New trial (rep=1, index=0): <Trial 1 (0 in rep 1) data={'thisN': 1, 'thisTrialN': 0, 'thisRepN': 1}>
+330.5620 	EXP 	bip: sampleRate = 48000
+330.5629 	EXP 	Sound bip reached end of file
+330.5773 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+330.5740 	EXP 	final_silence: autoDraw = False
+330.5740 	EXP 	fixation_bip: autoDraw = False
+330.5740 	EXP 	final_silence: autoDraw = False
+330.5740 	EXP 	fixation_bip: autoDraw = True
+331.0789 	EXP 	Sound bip reached end of file
+331.0939 	EXP 	Sound bip reached end of file
+331.1072 	EXP 	fixation_bip: autoDraw = False
+331.1072 	EXP 	final_silence: autoDraw = True
+331.6006 	EXP 	New trial (rep=2, index=0): <Trial 2 (0 in rep 2) data={'thisN': 2, 'thisTrialN': 0, 'thisRepN': 2}>
+331.6018 	EXP 	bip: sampleRate = 48000
+331.6027 	EXP 	Sound bip reached end of file
+331.6170 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+331.6136 	EXP 	final_silence: autoDraw = False
+331.6136 	EXP 	fixation_bip: autoDraw = False
+331.6136 	EXP 	final_silence: autoDraw = False
+331.6136 	EXP 	fixation_bip: autoDraw = True
+332.1171 	EXP 	Sound bip reached end of file
+332.1336 	EXP 	Sound bip reached end of file
+332.1467 	EXP 	fixation_bip: autoDraw = False
+332.1467 	EXP 	final_silence: autoDraw = True
+332.6404 	EXP 	New trial (rep=3, index=0): <Trial 3 (0 in rep 3) data={'thisN': 3, 'thisTrialN': 0, 'thisRepN': 3}>
+332.6415 	EXP 	bip: sampleRate = 48000
+332.6424 	EXP 	Sound bip reached end of file
+332.6567 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+332.6533 	EXP 	final_silence: autoDraw = False
+332.6533 	EXP 	fixation_bip: autoDraw = False
+332.6533 	EXP 	final_silence: autoDraw = False
+332.6533 	EXP 	fixation_bip: autoDraw = True
+333.1599 	EXP 	Sound bip reached end of file
+333.1732 	EXP 	Sound bip reached end of file
+333.1865 	EXP 	fixation_bip: autoDraw = False
+333.1865 	EXP 	final_silence: autoDraw = True
+333.6798 	EXP 	New trial (rep=4, index=0): <Trial 4 (0 in rep 4) data={'thisN': 4, 'thisTrialN': 0, 'thisRepN': 4}>
+333.6810 	EXP 	bip: sampleRate = 48000
+333.6819 	EXP 	Sound bip reached end of file
+333.6962 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+333.6929 	EXP 	final_silence: autoDraw = False
+333.6929 	EXP 	fixation_bip: autoDraw = False
+333.6929 	EXP 	final_silence: autoDraw = False
+333.6929 	EXP 	fixation_bip: autoDraw = True
+334.1979 	EXP 	Sound bip reached end of file
+334.2128 	EXP 	Sound bip reached end of file
+334.2259 	EXP 	fixation_bip: autoDraw = False
+334.2259 	EXP 	final_silence: autoDraw = True
+334.7194 	EXP 	New trial (rep=5, index=0): <Trial 5 (0 in rep 5) data={'thisN': 5, 'thisTrialN': 0, 'thisRepN': 5}>
+334.7205 	EXP 	bip: sampleRate = 48000
+334.7214 	EXP 	Sound bip reached end of file
+334.7358 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+334.7325 	EXP 	final_silence: autoDraw = False
+334.7325 	EXP 	fixation_bip: autoDraw = False
+334.7325 	EXP 	final_silence: autoDraw = False
+334.7325 	EXP 	fixation_bip: autoDraw = True
+335.2385 	EXP 	Sound bip reached end of file
+335.2523 	EXP 	Sound bip reached end of file
+335.2658 	EXP 	fixation_bip: autoDraw = False
+335.2658 	EXP 	final_silence: autoDraw = True
+335.7590 	EXP 	New trial (rep=6, index=0): <Trial 6 (0 in rep 6) data={'thisN': 6, 'thisTrialN': 0, 'thisRepN': 6}>
+335.7602 	EXP 	bip: sampleRate = 48000
+335.7611 	EXP 	Sound bip reached end of file
+335.7754 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+335.7723 	EXP 	final_silence: autoDraw = False
+335.7723 	EXP 	fixation_bip: autoDraw = False
+335.7723 	EXP 	final_silence: autoDraw = False
+335.7723 	EXP 	fixation_bip: autoDraw = True
+336.2756 	EXP 	Sound bip reached end of file
+336.2921 	EXP 	Sound bip reached end of file
+336.3054 	EXP 	fixation_bip: autoDraw = False
+336.3054 	EXP 	final_silence: autoDraw = True
+336.7987 	EXP 	New trial (rep=7, index=0): <Trial 7 (0 in rep 7) data={'thisN': 7, 'thisTrialN': 0, 'thisRepN': 7}>
+336.7999 	EXP 	bip: sampleRate = 48000
+336.8008 	EXP 	Sound bip reached end of file
+336.8151 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+336.8116 	EXP 	final_silence: autoDraw = False
+336.8116 	EXP 	fixation_bip: autoDraw = False
+336.8116 	EXP 	final_silence: autoDraw = False
+336.8116 	EXP 	fixation_bip: autoDraw = True
+337.3168 	EXP 	Sound bip reached end of file
+337.3318 	EXP 	Sound bip reached end of file
+337.3450 	EXP 	fixation_bip: autoDraw = False
+337.3450 	EXP 	final_silence: autoDraw = True
+337.8385 	EXP 	New trial (rep=8, index=0): <Trial 8 (0 in rep 8) data={'thisN': 8, 'thisTrialN': 0, 'thisRepN': 8}>
+337.8396 	EXP 	bip: sampleRate = 48000
+337.8405 	EXP 	Sound bip reached end of file
+337.8549 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+337.8514 	EXP 	final_silence: autoDraw = False
+337.8514 	EXP 	fixation_bip: autoDraw = False
+337.8514 	EXP 	final_silence: autoDraw = False
+337.8514 	EXP 	fixation_bip: autoDraw = True
+338.3575 	EXP 	Sound bip reached end of file
+338.3715 	EXP 	Sound bip reached end of file
+338.3847 	EXP 	fixation_bip: autoDraw = False
+338.3847 	EXP 	final_silence: autoDraw = True
+338.8781 	EXP 	New trial (rep=9, index=0): <Trial 9 (0 in rep 9) data={'thisN': 9, 'thisTrialN': 0, 'thisRepN': 9}>
+338.8794 	EXP 	bip: sampleRate = 48000
+338.8803 	EXP 	Sound bip reached end of file
+338.8944 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+338.8911 	EXP 	final_silence: autoDraw = False
+338.8911 	EXP 	fixation_bip: autoDraw = False
+338.8911 	EXP 	final_silence: autoDraw = False
+338.8911 	EXP 	fixation_bip: autoDraw = True
+339.4000 	EXP 	Sound bip reached end of file
+339.4111 	EXP 	Sound bip reached end of file
+339.4243 	EXP 	fixation_bip: autoDraw = False
+339.4243 	EXP 	final_silence: autoDraw = True
+339.9575 	INFO 	Keyboard events cleared
+339.9575 	EXP 	final_silence: autoDraw = False
+339.9575 	EXP 	fixation_bip: autoDraw = False
+339.9575 	EXP 	final_silence: autoDraw = False
+339.9575 	EXP 	questionary_text0: height = np.float64(0.05)
+339.9575 	EXP 	questionary_text0: height = np.float64(0.05)
+339.9575 	EXP 	questionary_text0: height = np.float64(0.05)
+339.9575 	EXP 	questionary_text0: text = '¿Por qué la máquina se negó inicialmente a cumplir la orden de fabricar "nafta" cuando el ingeniero García se lo pidió?\n\n A: Porque la máquina no tenía los componentes necesarios para crear sustancias líquidas complejas.\n\n B: Porque la aclaración que le dio García sobre qué era la nafta utilizaba una palabra que no empezaba con la letra N.\n\n C: Porque el ingeniero López interrumpió el proceso antes de que la máquina pudiera terminar la tarea.\n\n Presioná la opción que creas correcta (teclas A, B ó C)'
+339.9575 	EXP 	questionary_text0: autoDraw = True
+392.5396 	EXP 	Device response: <KeyPress from None: t=392.53246770328406, value=c, duration=None>
+392.5580 	DATA 	Keypress: c
+392.5796 	INFO 	Keyboard events cleared
+392.5795 	EXP 	questionary_text0: autoDraw = False
+392.5795 	EXP 	questionary_text1: height = np.float64(0.05)
+392.5795 	EXP 	questionary_text1: height = np.float64(0.05)
+392.5795 	EXP 	questionary_text1: height = np.float64(0.05)
+392.5795 	EXP 	questionary_text1: text = '¿Qué sucedió cuando el ingeniero López, intentando ganar la competencia, le ordenó a la máquina que hiciera "nada"?\n\n A: La máquina comenzó a eliminar objetos, personas y partes del mundo real.\n\n B: La máquina se quedó inmóvil y en silencio, dándole la victoria a López.\n\n C: La máquina generó un vacío oscuro dentro de la habitación que asustó a los científicos.\n\n Presioná la opción que creas correcta (teclas A, B ó C)'
+392.5795 	EXP 	questionary_text1: autoDraw = True
+392.6729 	EXP 	Device response: <KeyPress from None: t=392.53246770328406, value=c, duration=0.1279861028669984>
+411.0933 	EXP 	Device response: <KeyPress from None: t=411.09242362512305, value=c, duration=None>
+411.1127 	DATA 	Keypress: c
+411.1330 	INFO 	Keyboard events cleared
+411.1330 	EXP 	questionary_text1: autoDraw = False
+411.1330 	EXP 	questionary_text2: height = np.float64(0.05)
+411.1330 	EXP 	questionary_text2: height = np.float64(0.05)
+411.1330 	EXP 	questionary_text2: height = np.float64(0.05)
+411.1330 	EXP 	questionary_text2: text = 'Según el final del relato, ¿por qué la máquina no pudo restaurar la casa ni el resto de las cosas desaparecidas?\n\n A: Porque las cosas que habían desaparecido, como la casa, no tenían nombres que comenzaran con la letra N.\n\n B: Porque la energía de la máquina se había agotado completamente tras crear la "Nada".\n\n C: Porque el ingeniero García decidió dejar el mundo así como lección para su colega López.\n\n Presioná la opción que creas correcta (teclas A, B ó C)'
+411.1330 	EXP 	questionary_text2: autoDraw = True
+411.2133 	EXP 	Device response: <KeyPress from None: t=411.09242362512305, value=c, duration=0.11996220955370518>
+411.9728 	EXP 	Device response: <KeyPress from None: t=411.9724033504517, value=c, duration=None>
+411.9732 	EXP 	New trial (rep=0, index=1): <Trial 1 (1 in rep 0) data={'ordered': np.True_, 'voice_L': 'M', 'voice_R': 'F', 'target': 'L', 'target_label': 'O_M_F', 'thisN': 1, 'thisTrialN': 1, 'thisRepN': 0}>
+411.9739 	DATA 	Keypress: c
+411.9860 	INFO 	Keyboard events cleared
+411.9860 	EXP 	questionary_text2: autoDraw = False
+411.9860 	EXP 	text_prompt: text = 'Presta atención a la historia del lado DERECHO (>>>).\n\n\nApretá ESPACIO para continuar...'
+411.9860 	EXP 	text_prompt: autoDraw = True
+412.1063 	EXP 	Device response: <KeyPress from None: t=411.9724033504517, value=c, duration=0.12800021814655338>
+424.7686 	EXP 	Device response: <KeyPress from None: t=424.75641876176815, value=space, duration=None>
+424.7690 	EXP 	New trial (rep=0, index=0): <Trial 0 (0 in rep 0) data={'thisN': 0, 'thisTrialN': 0, 'thisRepN': 0}>
+424.7702 	EXP 	bip: sampleRate = 48000
+424.7714 	EXP 	Sound bip reached end of file
+424.7852 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+424.7718 	DATA 	Keypress: space
+424.7818 	EXP 	text_prompt: autoDraw = False
+424.7818 	EXP 	fixation_bip: autoDraw = True
+424.8486 	EXP 	Device response: <KeyPress from None: t=424.75641876176815, value=space, duration=0.08799399459167034>
+425.2888 	EXP 	Sound bip reached end of file
+425.3017 	EXP 	Sound bip reached end of file
+425.3149 	EXP 	fixation_bip: autoDraw = False
+425.3149 	EXP 	final_silence: autoDraw = True
+425.8085 	EXP 	New trial (rep=1, index=0): <Trial 1 (0 in rep 1) data={'thisN': 1, 'thisTrialN': 0, 'thisRepN': 1}>
+425.8096 	EXP 	bip: sampleRate = 48000
+425.8105 	EXP 	Sound bip reached end of file
+425.8248 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+425.8215 	EXP 	final_silence: autoDraw = False
+425.8215 	EXP 	fixation_bip: autoDraw = False
+425.8215 	EXP 	final_silence: autoDraw = False
+425.8215 	EXP 	fixation_bip: autoDraw = True
+426.3277 	EXP 	Sound bip reached end of file
+426.3415 	EXP 	Sound bip reached end of file
+426.3547 	EXP 	fixation_bip: autoDraw = False
+426.3547 	EXP 	final_silence: autoDraw = True
+426.8479 	EXP 	New trial (rep=2, index=0): <Trial 2 (0 in rep 2) data={'thisN': 2, 'thisTrialN': 0, 'thisRepN': 2}>
+426.8490 	EXP 	bip: sampleRate = 48000
+426.8500 	EXP 	Sound bip reached end of file
+426.8643 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+426.8611 	EXP 	final_silence: autoDraw = False
+426.8611 	EXP 	fixation_bip: autoDraw = False
+426.8611 	EXP 	final_silence: autoDraw = False
+426.8611 	EXP 	fixation_bip: autoDraw = True
+427.3678 	EXP 	Sound bip reached end of file
+427.3810 	EXP 	Sound bip reached end of file
+427.3942 	EXP 	fixation_bip: autoDraw = False
+427.3942 	EXP 	final_silence: autoDraw = True
+427.8877 	EXP 	New trial (rep=3, index=0): <Trial 3 (0 in rep 3) data={'thisN': 3, 'thisTrialN': 0, 'thisRepN': 3}>
+427.8889 	EXP 	bip: sampleRate = 48000
+427.8898 	EXP 	Sound bip reached end of file
+427.9041 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+427.9008 	EXP 	final_silence: autoDraw = False
+427.9008 	EXP 	fixation_bip: autoDraw = False
+427.9008 	EXP 	final_silence: autoDraw = False
+427.9008 	EXP 	fixation_bip: autoDraw = True
+428.4098 	EXP 	Sound bip reached end of file
+428.4208 	EXP 	Sound bip reached end of file
+428.4338 	EXP 	fixation_bip: autoDraw = False
+428.4338 	EXP 	final_silence: autoDraw = True
+428.9273 	EXP 	New trial (rep=4, index=0): <Trial 4 (0 in rep 4) data={'thisN': 4, 'thisTrialN': 0, 'thisRepN': 4}>
+428.9284 	EXP 	bip: sampleRate = 48000
+428.9293 	EXP 	Sound bip reached end of file
+428.9437 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+428.9404 	EXP 	final_silence: autoDraw = False
+428.9404 	EXP 	fixation_bip: autoDraw = False
+428.9404 	EXP 	final_silence: autoDraw = False
+428.9404 	EXP 	fixation_bip: autoDraw = True
+429.4484 	EXP 	Sound bip reached end of file
+429.4603 	EXP 	Sound bip reached end of file
+429.4735 	EXP 	fixation_bip: autoDraw = False
+429.4735 	EXP 	final_silence: autoDraw = True
+429.9671 	EXP 	New trial (rep=5, index=0): <Trial 5 (0 in rep 5) data={'thisN': 5, 'thisTrialN': 0, 'thisRepN': 5}>
+429.9682 	EXP 	bip: sampleRate = 48000
+429.9691 	EXP 	Sound bip reached end of file
+429.9834 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+429.9800 	EXP 	final_silence: autoDraw = False
+429.9800 	EXP 	fixation_bip: autoDraw = False
+429.9800 	EXP 	final_silence: autoDraw = False
+429.9800 	EXP 	fixation_bip: autoDraw = True
+430.4868 	EXP 	Sound bip reached end of file
+430.5000 	EXP 	Sound bip reached end of file
+430.5132 	EXP 	fixation_bip: autoDraw = False
+430.5132 	EXP 	final_silence: autoDraw = True
+431.0067 	EXP 	New trial (rep=6, index=0): <Trial 6 (0 in rep 6) data={'thisN': 6, 'thisTrialN': 0, 'thisRepN': 6}>
+431.0078 	EXP 	bip: sampleRate = 48000
+431.0087 	EXP 	Sound bip reached end of file
+431.0231 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+431.0197 	EXP 	final_silence: autoDraw = False
+431.0197 	EXP 	fixation_bip: autoDraw = False
+431.0197 	EXP 	final_silence: autoDraw = False
+431.0197 	EXP 	fixation_bip: autoDraw = True
+431.5306 	EXP 	Sound bip reached end of file
+431.5529 	EXP 	Sound bip reached end of file
+431.5662 	EXP 	fixation_bip: autoDraw = False
+431.5662 	EXP 	final_silence: autoDraw = True
+432.0594 	EXP 	New trial (rep=7, index=0): <Trial 7 (0 in rep 7) data={'thisN': 7, 'thisTrialN': 0, 'thisRepN': 7}>
+432.0606 	EXP 	bip: sampleRate = 48000
+432.0615 	EXP 	Sound bip reached end of file
+432.0758 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+432.0727 	EXP 	final_silence: autoDraw = False
+432.0727 	EXP 	fixation_bip: autoDraw = False
+432.0727 	EXP 	final_silence: autoDraw = False
+432.0727 	EXP 	fixation_bip: autoDraw = True
+432.5792 	EXP 	Sound bip reached end of file
+432.5925 	EXP 	Sound bip reached end of file
+432.6057 	EXP 	fixation_bip: autoDraw = False
+432.6057 	EXP 	final_silence: autoDraw = True
+433.0992 	EXP 	New trial (rep=8, index=0): <Trial 8 (0 in rep 8) data={'thisN': 8, 'thisTrialN': 0, 'thisRepN': 8}>
+433.1003 	EXP 	bip: sampleRate = 48000
+433.1012 	EXP 	Sound bip reached end of file
+433.1155 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+433.1123 	EXP 	final_silence: autoDraw = False
+433.1123 	EXP 	fixation_bip: autoDraw = False
+433.1123 	EXP 	final_silence: autoDraw = False
+433.1123 	EXP 	fixation_bip: autoDraw = True
+433.6156 	EXP 	Sound bip reached end of file
+433.6321 	EXP 	Sound bip reached end of file
+433.6454 	EXP 	fixation_bip: autoDraw = False
+433.6454 	EXP 	final_silence: autoDraw = True
+434.1388 	EXP 	New trial (rep=9, index=0): <Trial 9 (0 in rep 9) data={'thisN': 9, 'thisTrialN': 0, 'thisRepN': 9}>
+434.1398 	EXP 	bip: sampleRate = 48000
+434.1407 	EXP 	Sound bip reached end of file
+434.1552 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+434.1518 	EXP 	final_silence: autoDraw = False
+434.1518 	EXP 	fixation_bip: autoDraw = False
+434.1518 	EXP 	final_silence: autoDraw = False
+434.1518 	EXP 	fixation_bip: autoDraw = True
+434.6579 	EXP 	Sound bip reached end of file
+434.6720 	EXP 	Sound bip reached end of file
+434.6852 	EXP 	fixation_bip: autoDraw = False
+434.6852 	EXP 	final_silence: autoDraw = True
+435.1799 	EXP 	Sound  reached end of file
+435.1800 	EXP 	Playing sound  on speaker Altavoces (3- Logitech USB Headset)
+435.1916 	EXP 	final_silence: autoDraw = False
+435.1916 	EXP 	fixation_bip: autoDraw = False
+435.1916 	EXP 	final_silence: autoDraw = False
+435.1916 	EXP 	polygon: autoDraw = True
+735.8170 	EXP 	Sound  stopped
+735.8174 	EXP 	New trial (rep=0, index=0): <Trial 0 (0 in rep 0) data={'thisN': 0, 'thisTrialN': 0, 'thisRepN': 0}>
+735.8188 	EXP 	bip: sampleRate = 48000
+735.8197 	EXP 	Sound bip reached end of file
+735.8254 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+735.8356 	EXP 	polygon: autoDraw = False
+735.8356 	EXP 	fixation_bip: autoDraw = True
+736.3356 	EXP 	Sound bip reached end of file
+736.3554 	EXP 	Sound bip reached end of file
+736.3688 	EXP 	fixation_bip: autoDraw = False
+736.3688 	EXP 	final_silence: autoDraw = True
+736.8622 	EXP 	New trial (rep=1, index=0): <Trial 1 (0 in rep 1) data={'thisN': 1, 'thisTrialN': 0, 'thisRepN': 1}>
+736.8633 	EXP 	bip: sampleRate = 48000
+736.8642 	EXP 	Sound bip reached end of file
+736.8786 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+736.8750 	EXP 	final_silence: autoDraw = False
+736.8750 	EXP 	fixation_bip: autoDraw = False
+736.8750 	EXP 	final_silence: autoDraw = False
+736.8750 	EXP 	fixation_bip: autoDraw = True
+737.3793 	EXP 	Sound bip reached end of file
+737.3951 	EXP 	Sound bip reached end of file
+737.4083 	EXP 	fixation_bip: autoDraw = False
+737.4083 	EXP 	final_silence: autoDraw = True
+737.9017 	EXP 	New trial (rep=2, index=0): <Trial 2 (0 in rep 2) data={'thisN': 2, 'thisTrialN': 0, 'thisRepN': 2}>
+737.9030 	EXP 	bip: sampleRate = 48000
+737.9039 	EXP 	Sound bip reached end of file
+737.9181 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+737.9149 	EXP 	final_silence: autoDraw = False
+737.9149 	EXP 	fixation_bip: autoDraw = False
+737.9149 	EXP 	final_silence: autoDraw = False
+737.9149 	EXP 	fixation_bip: autoDraw = True
+738.4154 	EXP 	Sound bip reached end of file
+738.4346 	EXP 	Sound bip reached end of file
+738.4480 	EXP 	fixation_bip: autoDraw = False
+738.4480 	EXP 	final_silence: autoDraw = True
+738.9414 	EXP 	New trial (rep=3, index=0): <Trial 3 (0 in rep 3) data={'thisN': 3, 'thisTrialN': 0, 'thisRepN': 3}>
+738.9426 	EXP 	bip: sampleRate = 48000
+738.9435 	EXP 	Sound bip reached end of file
+738.9578 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+738.9545 	EXP 	final_silence: autoDraw = False
+738.9545 	EXP 	fixation_bip: autoDraw = False
+738.9545 	EXP 	final_silence: autoDraw = False
+738.9545 	EXP 	fixation_bip: autoDraw = True
+739.4590 	EXP 	Sound bip reached end of file
+739.4744 	EXP 	Sound bip reached end of file
+739.4876 	EXP 	fixation_bip: autoDraw = False
+739.4876 	EXP 	final_silence: autoDraw = True
+739.9811 	EXP 	New trial (rep=4, index=0): <Trial 4 (0 in rep 4) data={'thisN': 4, 'thisTrialN': 0, 'thisRepN': 4}>
+739.9822 	EXP 	bip: sampleRate = 48000
+739.9831 	EXP 	Sound bip reached end of file
+739.9975 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+739.9942 	EXP 	final_silence: autoDraw = False
+739.9942 	EXP 	fixation_bip: autoDraw = False
+739.9942 	EXP 	final_silence: autoDraw = False
+739.9942 	EXP 	fixation_bip: autoDraw = True
+740.5008 	EXP 	Sound bip reached end of file
+740.5141 	EXP 	Sound bip reached end of file
+740.5272 	EXP 	fixation_bip: autoDraw = False
+740.5272 	EXP 	final_silence: autoDraw = True
+741.0207 	EXP 	New trial (rep=5, index=0): <Trial 5 (0 in rep 5) data={'thisN': 5, 'thisTrialN': 0, 'thisRepN': 5}>
+741.0220 	EXP 	bip: sampleRate = 48000
+741.0229 	EXP 	Sound bip reached end of file
+741.0371 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+741.0338 	EXP 	final_silence: autoDraw = False
+741.0338 	EXP 	fixation_bip: autoDraw = False
+741.0338 	EXP 	final_silence: autoDraw = False
+741.0338 	EXP 	fixation_bip: autoDraw = True
+741.5410 	EXP 	Sound bip reached end of file
+741.5536 	EXP 	Sound bip reached end of file
+741.5670 	EXP 	fixation_bip: autoDraw = False
+741.5670 	EXP 	final_silence: autoDraw = True
+742.0604 	EXP 	New trial (rep=6, index=0): <Trial 6 (0 in rep 6) data={'thisN': 6, 'thisTrialN': 0, 'thisRepN': 6}>
+742.0616 	EXP 	bip: sampleRate = 48000
+742.0625 	EXP 	Sound bip reached end of file
+742.0768 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+742.0734 	EXP 	final_silence: autoDraw = False
+742.0734 	EXP 	fixation_bip: autoDraw = False
+742.0734 	EXP 	final_silence: autoDraw = False
+742.0734 	EXP 	fixation_bip: autoDraw = True
+742.5768 	EXP 	Sound bip reached end of file
+742.5934 	EXP 	Sound bip reached end of file
+742.6065 	EXP 	fixation_bip: autoDraw = False
+742.6065 	EXP 	final_silence: autoDraw = True
+743.1001 	EXP 	New trial (rep=7, index=0): <Trial 7 (0 in rep 7) data={'thisN': 7, 'thisTrialN': 0, 'thisRepN': 7}>
+743.1012 	EXP 	bip: sampleRate = 48000
+743.1021 	EXP 	Sound bip reached end of file
+743.1164 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+743.1129 	EXP 	final_silence: autoDraw = False
+743.1129 	EXP 	fixation_bip: autoDraw = False
+743.1129 	EXP 	final_silence: autoDraw = False
+743.1129 	EXP 	fixation_bip: autoDraw = True
+743.6184 	EXP 	Sound bip reached end of file
+743.6328 	EXP 	Sound bip reached end of file
+743.6463 	EXP 	fixation_bip: autoDraw = False
+743.6463 	EXP 	final_silence: autoDraw = True
+744.1395 	EXP 	New trial (rep=8, index=0): <Trial 8 (0 in rep 8) data={'thisN': 8, 'thisTrialN': 0, 'thisRepN': 8}>
+744.1405 	EXP 	bip: sampleRate = 48000
+744.1414 	EXP 	Sound bip reached end of file
+744.1559 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+744.1527 	EXP 	final_silence: autoDraw = False
+744.1527 	EXP 	fixation_bip: autoDraw = False
+744.1527 	EXP 	final_silence: autoDraw = False
+744.1527 	EXP 	fixation_bip: autoDraw = True
+744.6586 	EXP 	Sound bip reached end of file
+744.6724 	EXP 	Sound bip reached end of file
+744.6858 	EXP 	fixation_bip: autoDraw = False
+744.6858 	EXP 	final_silence: autoDraw = True
+745.1794 	EXP 	New trial (rep=9, index=0): <Trial 9 (0 in rep 9) data={'thisN': 9, 'thisTrialN': 0, 'thisRepN': 9}>
+745.1805 	EXP 	bip: sampleRate = 48000
+745.1814 	EXP 	Sound bip reached end of file
+745.1957 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+745.1924 	EXP 	final_silence: autoDraw = False
+745.1924 	EXP 	fixation_bip: autoDraw = False
+745.1924 	EXP 	final_silence: autoDraw = False
+745.1924 	EXP 	fixation_bip: autoDraw = True
+745.7011 	EXP 	Sound bip reached end of file
+745.7123 	EXP 	Sound bip reached end of file
+745.7254 	EXP 	fixation_bip: autoDraw = False
+745.7254 	EXP 	final_silence: autoDraw = True
+746.2586 	INFO 	Keyboard events cleared
+746.2585 	EXP 	final_silence: autoDraw = False
+746.2585 	EXP 	fixation_bip: autoDraw = False
+746.2585 	EXP 	final_silence: autoDraw = False
+746.2585 	EXP 	questionary_text0: height = np.float64(0.05)
+746.2585 	EXP 	questionary_text0: height = np.float64(0.05)
+746.2585 	EXP 	questionary_text0: height = np.float64(0.05)
+746.2585 	EXP 	questionary_text0: text = '¿Cuál fue la respuesta inicial de Yoli ante la propuesta del rey intergaláctico de llevarla a su planeta?\n\n A: Rechaza la oferta, explicando que está felizmente casada con Ernesto desde hace cuarenta años y prefiere quedarse en la Tierra.\n\n B: Aceptó de inmediato, emocionada por la posibilidad de ser una reina y viajar por el espacio.\n\n C: Se escondió de las cámaras y negó ser la persona que el extraterrestre estaba buscando.\n\n Presioná la opción que creas correcta (teclas A, B ó C)'
+746.2585 	EXP 	questionary_text0: autoDraw = True
+773.6228 	EXP 	Device response: <KeyPress from None: t=773.6121506869968, value=b, duration=None>
+773.6376 	DATA 	Keypress: b
+773.6494 	INFO 	Keyboard events cleared
+773.6493 	EXP 	questionary_text0: autoDraw = False
+773.6493 	EXP 	questionary_text1: height = np.float64(0.05)
+773.6493 	EXP 	questionary_text1: height = np.float64(0.05)
+773.6493 	EXP 	questionary_text1: height = np.float64(0.05)
+773.6493 	EXP 	questionary_text1: text = '¿Qué ocurrió cuando la nave del rey finalmente aterrizó y reclamó la presencia de Yoli?\n\n A: Yoli corre inmediatamente hacia la nave para evitar que el rey cumpla su amenaza de destruir el mundo.\n\n B: El ejército impidió que Yoli se acerque a la nave y comenzaron a disparar contra el alienígena.\n\n C: Yoli lo hizo esperar y luego se reunieron en un café cercano.\n\n Presioná la opción que creas correcta (teclas A, B ó C)'
+773.6493 	EXP 	questionary_text1: autoDraw = True
+773.7294 	EXP 	Device response: <KeyPress from None: t=773.6121506869968, value=b, duration=0.1042377910871437>
+793.1093 	EXP 	Device response: <KeyPress from None: t=793.1001379447498, value=c, duration=None>
+793.1282 	DATA 	Keypress: c
+793.1494 	INFO 	Keyboard events cleared
+793.1493 	EXP 	questionary_text1: autoDraw = False
+793.1493 	EXP 	questionary_text2: height = np.float64(0.05)
+793.1493 	EXP 	questionary_text2: height = np.float64(0.05)
+793.1493 	EXP 	questionary_text2: height = np.float64(0.05)
+793.1493 	EXP 	questionary_text2: text = 'Según lo revelado por una amiga de Yoli al final del cuento, ¿cuál fue el verdadero motivo por el que ella decidió irse con el extraterrestre?\n\n A: Porque se sacrificó heroicamente para salvar a la humanidad, aunque amaba profundamente a su esposo.\n\n B: Porque sentía que su matrimonio se había vuelto una rutina y encontró algo en el rey que le encantaba.\n\n C: Porque el gobierno la obligó a subir a la nave bajo amenaza de prisión si no colaboraba.\n\n Presioná la opción que creas correcta (teclas A, B ó C)'
+793.1493 	EXP 	questionary_text2: autoDraw = True
+793.2294 	EXP 	Device response: <KeyPress from None: t=793.1001379447498, value=c, duration=0.12797936603237758>
+806.1584 	EXP 	Device response: <KeyPress from None: t=806.1481135253216, value=b, duration=None>
+806.1587 	EXP 	New trial (rep=0, index=2): <Trial 2 (2 in rep 0) data={'ordered': np.False_, 'voice_L': 'M', 'voice_R': 'F', 'target': 'L', 'target_label': 'NO_M_F', 'thisN': 2, 'thisTrialN': 2, 'thisRepN': 0}>
+806.1595 	DATA 	Keypress: b
+806.1716 	INFO 	Keyboard events cleared
+806.1716 	EXP 	questionary_text2: autoDraw = False
+806.1716 	EXP 	text_prompt: text = 'Presta atención a la historia del lado DERECHO (>>>).\n\n\nApretá ESPACIO para continuar...'
+806.1716 	EXP 	text_prompt: autoDraw = True
+806.2649 	EXP 	Device response: <KeyPress from None: t=806.1481135253216, value=b, duration=0.11192484256571333>
+809.4771 	EXP 	Device response: <KeyPress from None: t=809.4680622612032, value=space, duration=None>
+809.4775 	EXP 	New trial (rep=0, index=0): <Trial 0 (0 in rep 0) data={'thisN': 0, 'thisTrialN': 0, 'thisRepN': 0}>
+809.4787 	EXP 	bip: sampleRate = 48000
+809.4798 	EXP 	Sound bip reached end of file
+809.4936 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+809.4802 	DATA 	Keypress: space
+809.4904 	EXP 	text_prompt: autoDraw = False
+809.4904 	EXP 	fixation_bip: autoDraw = True
+809.5836 	EXP 	Device response: <KeyPress from None: t=809.4680622612032, value=space, duration=0.10401772108707519>
+810.0000 	EXP 	Sound bip reached end of file
+810.0102 	EXP 	Sound bip reached end of file
+810.0236 	EXP 	fixation_bip: autoDraw = False
+810.0236 	EXP 	final_silence: autoDraw = True
+810.5170 	EXP 	New trial (rep=1, index=0): <Trial 1 (0 in rep 1) data={'thisN': 1, 'thisTrialN': 0, 'thisRepN': 1}>
+810.5181 	EXP 	bip: sampleRate = 48000
+810.5190 	EXP 	Sound bip reached end of file
+810.5333 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+810.5300 	EXP 	final_silence: autoDraw = False
+810.5300 	EXP 	fixation_bip: autoDraw = False
+810.5300 	EXP 	final_silence: autoDraw = False
+810.5300 	EXP 	fixation_bip: autoDraw = True
+811.0354 	EXP 	Sound bip reached end of file
+811.0498 	EXP 	Sound bip reached end of file
+811.0632 	EXP 	fixation_bip: autoDraw = False
+811.0632 	EXP 	final_silence: autoDraw = True
+811.5565 	EXP 	New trial (rep=2, index=0): <Trial 2 (0 in rep 2) data={'thisN': 2, 'thisTrialN': 0, 'thisRepN': 2}>
+811.5577 	EXP 	bip: sampleRate = 48000
+811.5586 	EXP 	Sound bip reached end of file
+811.5729 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+811.5697 	EXP 	final_silence: autoDraw = False
+811.5697 	EXP 	fixation_bip: autoDraw = False
+811.5697 	EXP 	final_silence: autoDraw = False
+811.5697 	EXP 	fixation_bip: autoDraw = True
+812.0719 	EXP 	Sound bip reached end of file
+812.0895 	EXP 	Sound bip reached end of file
+812.1027 	EXP 	fixation_bip: autoDraw = False
+812.1027 	EXP 	final_silence: autoDraw = True
+812.5963 	EXP 	New trial (rep=3, index=0): <Trial 3 (0 in rep 3) data={'thisN': 3, 'thisTrialN': 0, 'thisRepN': 3}>
+812.5974 	EXP 	bip: sampleRate = 48000
+812.5983 	EXP 	Sound bip reached end of file
+812.6126 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+812.6092 	EXP 	final_silence: autoDraw = False
+812.6092 	EXP 	fixation_bip: autoDraw = False
+812.6092 	EXP 	final_silence: autoDraw = False
+812.6092 	EXP 	fixation_bip: autoDraw = True
+813.1195 	EXP 	Sound bip reached end of file
+813.1426 	EXP 	Sound bip reached end of file
+813.1559 	EXP 	fixation_bip: autoDraw = False
+813.1559 	EXP 	final_silence: autoDraw = True
+813.6491 	EXP 	New trial (rep=4, index=0): <Trial 4 (0 in rep 4) data={'thisN': 4, 'thisTrialN': 0, 'thisRepN': 4}>
+813.6503 	EXP 	bip: sampleRate = 48000
+813.6511 	EXP 	Sound bip reached end of file
+813.6655 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+813.6623 	EXP 	final_silence: autoDraw = False
+813.6623 	EXP 	fixation_bip: autoDraw = False
+813.6623 	EXP 	final_silence: autoDraw = False
+813.6623 	EXP 	fixation_bip: autoDraw = True
+814.1684 	EXP 	Sound bip reached end of file
+814.1822 	EXP 	Sound bip reached end of file
+814.1954 	EXP 	fixation_bip: autoDraw = False
+814.1954 	EXP 	final_silence: autoDraw = True
+814.6889 	EXP 	New trial (rep=5, index=0): <Trial 5 (0 in rep 5) data={'thisN': 5, 'thisTrialN': 0, 'thisRepN': 5}>
+814.6900 	EXP 	bip: sampleRate = 48000
+814.6909 	EXP 	Sound bip reached end of file
+814.7053 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+814.7020 	EXP 	final_silence: autoDraw = False
+814.7020 	EXP 	fixation_bip: autoDraw = False
+814.7020 	EXP 	final_silence: autoDraw = False
+814.7020 	EXP 	fixation_bip: autoDraw = True
+815.2054 	EXP 	Sound bip reached end of file
+815.2219 	EXP 	Sound bip reached end of file
+815.2350 	EXP 	fixation_bip: autoDraw = False
+815.2350 	EXP 	final_silence: autoDraw = True
+815.7284 	EXP 	New trial (rep=6, index=0): <Trial 6 (0 in rep 6) data={'thisN': 6, 'thisTrialN': 0, 'thisRepN': 6}>
+815.7296 	EXP 	bip: sampleRate = 48000
+815.7305 	EXP 	Sound bip reached end of file
+815.7448 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+815.7416 	EXP 	final_silence: autoDraw = False
+815.7416 	EXP 	fixation_bip: autoDraw = False
+815.7416 	EXP 	final_silence: autoDraw = False
+815.7416 	EXP 	fixation_bip: autoDraw = True
+816.2505 	EXP 	Sound bip reached end of file
+816.2615 	EXP 	Sound bip reached end of file
+816.2746 	EXP 	fixation_bip: autoDraw = False
+816.2746 	EXP 	final_silence: autoDraw = True
+816.7682 	EXP 	New trial (rep=7, index=0): <Trial 7 (0 in rep 7) data={'thisN': 7, 'thisTrialN': 0, 'thisRepN': 7}>
+816.7694 	EXP 	bip: sampleRate = 48000
+816.7703 	EXP 	Sound bip reached end of file
+816.7846 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+816.7812 	EXP 	final_silence: autoDraw = False
+816.7812 	EXP 	fixation_bip: autoDraw = False
+816.7812 	EXP 	final_silence: autoDraw = False
+816.7812 	EXP 	fixation_bip: autoDraw = True
+817.2882 	EXP 	Sound bip reached end of file
+817.3010 	EXP 	Sound bip reached end of file
+817.3144 	EXP 	fixation_bip: autoDraw = False
+817.3144 	EXP 	final_silence: autoDraw = True
+817.8079 	EXP 	New trial (rep=8, index=0): <Trial 8 (0 in rep 8) data={'thisN': 8, 'thisTrialN': 0, 'thisRepN': 8}>
+817.8090 	EXP 	bip: sampleRate = 48000
+817.8099 	EXP 	Sound bip reached end of file
+817.8243 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+817.8208 	EXP 	final_silence: autoDraw = False
+817.8208 	EXP 	fixation_bip: autoDraw = False
+817.8208 	EXP 	final_silence: autoDraw = False
+817.8208 	EXP 	fixation_bip: autoDraw = True
+818.3255 	EXP 	Sound bip reached end of file
+818.3408 	EXP 	Sound bip reached end of file
+818.3541 	EXP 	fixation_bip: autoDraw = False
+818.3541 	EXP 	final_silence: autoDraw = True
+818.8474 	EXP 	New trial (rep=9, index=0): <Trial 9 (0 in rep 9) data={'thisN': 9, 'thisTrialN': 0, 'thisRepN': 9}>
+818.8486 	EXP 	bip: sampleRate = 48000
+818.8495 	EXP 	Sound bip reached end of file
+818.8638 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+818.8605 	EXP 	final_silence: autoDraw = False
+818.8605 	EXP 	fixation_bip: autoDraw = False
+818.8605 	EXP 	final_silence: autoDraw = False
+818.8605 	EXP 	fixation_bip: autoDraw = True
+819.3678 	EXP 	Sound bip reached end of file
+819.3804 	EXP 	Sound bip reached end of file
+819.3937 	EXP 	fixation_bip: autoDraw = False
+819.3937 	EXP 	final_silence: autoDraw = True
+819.8884 	EXP 	Sound  reached end of file
+819.8884 	EXP 	Playing sound  on speaker Altavoces (3- Logitech USB Headset)
+819.9002 	EXP 	final_silence: autoDraw = False
+819.9002 	EXP 	fixation_bip: autoDraw = False
+819.9002 	EXP 	final_silence: autoDraw = False
+819.9002 	EXP 	polygon: autoDraw = True
+1125.0361 	EXP 	Sound  stopped
+1125.0366 	EXP 	New trial (rep=0, index=0): <Trial 0 (0 in rep 0) data={'thisN': 0, 'thisTrialN': 0, 'thisRepN': 0}>
+1125.0378 	EXP 	bip: sampleRate = 48000
+1125.0388 	EXP 	Sound bip reached end of file
+1125.0527 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+1125.0492 	EXP 	polygon: autoDraw = False
+1125.0492 	EXP 	fixation_bip: autoDraw = True
+1125.5578 	EXP 	Sound bip reached end of file
+1125.5692 	EXP 	Sound bip reached end of file
+1125.5823 	EXP 	fixation_bip: autoDraw = False
+1125.5823 	EXP 	final_silence: autoDraw = True
+1126.0757 	EXP 	New trial (rep=1, index=0): <Trial 1 (0 in rep 1) data={'thisN': 1, 'thisTrialN': 0, 'thisRepN': 1}>
+1126.0768 	EXP 	bip: sampleRate = 48000
+1126.0777 	EXP 	Sound bip reached end of file
+1126.0921 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+1126.0888 	EXP 	final_silence: autoDraw = False
+1126.0888 	EXP 	fixation_bip: autoDraw = False
+1126.0888 	EXP 	final_silence: autoDraw = False
+1126.0888 	EXP 	fixation_bip: autoDraw = True
+1126.5892 	EXP 	Sound bip reached end of file
+1126.6088 	EXP 	Sound bip reached end of file
+1126.6221 	EXP 	fixation_bip: autoDraw = False
+1126.6221 	EXP 	final_silence: autoDraw = True
+1127.1156 	EXP 	New trial (rep=2, index=0): <Trial 2 (0 in rep 2) data={'thisN': 2, 'thisTrialN': 0, 'thisRepN': 2}>
+1127.1167 	EXP 	bip: sampleRate = 48000
+1127.1177 	EXP 	Sound bip reached end of file
+1127.1319 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+1127.1286 	EXP 	final_silence: autoDraw = False
+1127.1286 	EXP 	fixation_bip: autoDraw = False
+1127.1286 	EXP 	final_silence: autoDraw = False
+1127.1286 	EXP 	fixation_bip: autoDraw = True
+1127.6359 	EXP 	Sound bip reached end of file
+1127.6485 	EXP 	Sound bip reached end of file
+1127.6616 	EXP 	fixation_bip: autoDraw = False
+1127.6616 	EXP 	final_silence: autoDraw = True
+1128.1552 	EXP 	New trial (rep=3, index=0): <Trial 3 (0 in rep 3) data={'thisN': 3, 'thisTrialN': 0, 'thisRepN': 3}>
+1128.1563 	EXP 	bip: sampleRate = 48000
+1128.1572 	EXP 	Sound bip reached end of file
+1128.1715 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+1128.1682 	EXP 	final_silence: autoDraw = False
+1128.1682 	EXP 	fixation_bip: autoDraw = False
+1128.1682 	EXP 	final_silence: autoDraw = False
+1128.1682 	EXP 	fixation_bip: autoDraw = True
+1128.6773 	EXP 	Sound bip reached end of file
+1128.6881 	EXP 	Sound bip reached end of file
+1128.7014 	EXP 	fixation_bip: autoDraw = False
+1128.7014 	EXP 	final_silence: autoDraw = True
+1129.1948 	EXP 	New trial (rep=4, index=0): <Trial 4 (0 in rep 4) data={'thisN': 4, 'thisTrialN': 0, 'thisRepN': 4}>
+1129.1960 	EXP 	bip: sampleRate = 48000
+1129.1969 	EXP 	Sound bip reached end of file
+1129.2112 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+1129.2078 	EXP 	final_silence: autoDraw = False
+1129.2078 	EXP 	fixation_bip: autoDraw = False
+1129.2078 	EXP 	final_silence: autoDraw = False
+1129.2078 	EXP 	fixation_bip: autoDraw = True
+1129.7084 	EXP 	Sound bip reached end of file
+1129.7278 	EXP 	Sound bip reached end of file
+1129.7410 	EXP 	fixation_bip: autoDraw = False
+1129.7410 	EXP 	final_silence: autoDraw = True
+1130.2345 	EXP 	New trial (rep=5, index=0): <Trial 5 (0 in rep 5) data={'thisN': 5, 'thisTrialN': 0, 'thisRepN': 5}>
+1130.2356 	EXP 	bip: sampleRate = 48000
+1130.2365 	EXP 	Sound bip reached end of file
+1130.2509 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+1130.2475 	EXP 	final_silence: autoDraw = False
+1130.2475 	EXP 	fixation_bip: autoDraw = False
+1130.2475 	EXP 	final_silence: autoDraw = False
+1130.2475 	EXP 	fixation_bip: autoDraw = True
+1130.7558 	EXP 	Sound bip reached end of file
+1130.7674 	EXP 	Sound bip reached end of file
+1130.7805 	EXP 	fixation_bip: autoDraw = False
+1130.7805 	EXP 	final_silence: autoDraw = True
+1131.2741 	EXP 	New trial (rep=6, index=0): <Trial 6 (0 in rep 6) data={'thisN': 6, 'thisTrialN': 0, 'thisRepN': 6}>
+1131.2753 	EXP 	bip: sampleRate = 48000
+1131.2762 	EXP 	Sound bip reached end of file
+1131.2905 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+1131.2871 	EXP 	final_silence: autoDraw = False
+1131.2871 	EXP 	fixation_bip: autoDraw = False
+1131.2871 	EXP 	final_silence: autoDraw = False
+1131.2871 	EXP 	fixation_bip: autoDraw = True
+1131.7862 	EXP 	Sound bip reached end of file
+1131.8070 	EXP 	Sound bip reached end of file
+1131.8201 	EXP 	fixation_bip: autoDraw = False
+1131.8201 	EXP 	final_silence: autoDraw = True
+1132.3136 	EXP 	New trial (rep=7, index=0): <Trial 7 (0 in rep 7) data={'thisN': 7, 'thisTrialN': 0, 'thisRepN': 7}>
+1132.3147 	EXP 	bip: sampleRate = 48000
+1132.3157 	EXP 	Sound bip reached end of file
+1132.3300 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+1132.3268 	EXP 	final_silence: autoDraw = False
+1132.3268 	EXP 	fixation_bip: autoDraw = False
+1132.3268 	EXP 	final_silence: autoDraw = False
+1132.3268 	EXP 	fixation_bip: autoDraw = True
+1132.8258 	EXP 	Sound bip reached end of file
+1132.8466 	EXP 	Sound bip reached end of file
+1132.8598 	EXP 	fixation_bip: autoDraw = False
+1132.8598 	EXP 	final_silence: autoDraw = True
+1133.3534 	EXP 	New trial (rep=8, index=0): <Trial 8 (0 in rep 8) data={'thisN': 8, 'thisTrialN': 0, 'thisRepN': 8}>
+1133.3545 	EXP 	bip: sampleRate = 48000
+1133.3554 	EXP 	Sound bip reached end of file
+1133.3698 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+1133.3665 	EXP 	final_silence: autoDraw = False
+1133.3665 	EXP 	fixation_bip: autoDraw = False
+1133.3665 	EXP 	final_silence: autoDraw = False
+1133.3665 	EXP 	fixation_bip: autoDraw = True
+1133.8730 	EXP 	Sound bip reached end of file
+1133.8863 	EXP 	Sound bip reached end of file
+1133.8996 	EXP 	fixation_bip: autoDraw = False
+1133.8996 	EXP 	final_silence: autoDraw = True
+1134.3931 	EXP 	New trial (rep=9, index=0): <Trial 9 (0 in rep 9) data={'thisN': 9, 'thisTrialN': 0, 'thisRepN': 9}>
+1134.3942 	EXP 	bip: sampleRate = 48000
+1134.3950 	EXP 	Sound bip reached end of file
+1134.4095 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+1134.4060 	EXP 	final_silence: autoDraw = False
+1134.4060 	EXP 	fixation_bip: autoDraw = False
+1134.4060 	EXP 	final_silence: autoDraw = False
+1134.4060 	EXP 	fixation_bip: autoDraw = True
+1134.9127 	EXP 	Sound bip reached end of file
+1134.9260 	EXP 	Sound bip reached end of file
+1134.9392 	EXP 	fixation_bip: autoDraw = False
+1134.9392 	EXP 	final_silence: autoDraw = True
+1135.4591 	INFO 	Keyboard events cleared
+1135.4591 	EXP 	final_silence: autoDraw = False
+1135.4591 	EXP 	fixation_bip: autoDraw = False
+1135.4591 	EXP 	final_silence: autoDraw = False
+1135.4591 	EXP 	questionary_text0: height = np.float64(0.05)
+1135.4591 	EXP 	questionary_text0: height = np.float64(0.05)
+1135.4591 	EXP 	questionary_text0: height = np.float64(0.05)
+1135.4591 	EXP 	questionary_text0: text = '¿Qué deseo le pidió el rey Pablo al dios que apareció en su palacio?\n\n A: Que su hija Irene fuera la persona más rica del reino para siempre.\n\n B: Que todo lo que él tocara se convirtiera inmediatamente en oro.\n\n C: Que las flores de su jardín nunca se marchitaran y fueran eternas.\n\n Presioná la opción que creas correcta (teclas A, B ó C)'
+1135.4591 	EXP 	questionary_text0: autoDraw = True
+1148.0283 	EXP 	Device response: <KeyPress from None: t=1148.0278818422994, value=b, duration=None>
+1148.0420 	DATA 	Keypress: b
+1148.0547 	INFO 	Keyboard events cleared
+1148.0546 	EXP 	questionary_text0: autoDraw = False
+1148.0546 	EXP 	questionary_text1: height = np.float64(0.05)
+1148.0546 	EXP 	questionary_text1: height = np.float64(0.05)
+1148.0546 	EXP 	questionary_text1: height = np.float64(0.05)
+1148.0546 	EXP 	questionary_text1: text = '¿Qué terrible accidente ocurrió cuando la hija del rey intentó consolarlo durante el desayuno?\n\n A: El rey, al intentar apartarla, la tocó y la convirtió en una estatua de oro.\n\n B: La niña se pinchó con una de las rosas de oro y cayó en un sueño profundo.\n\n C: El rey, furioso por no poder comer, echó a su hija del comedor para estar solo.\n\n Presioná la opción que creas correcta (teclas A, B ó C)'
+1148.0546 	EXP 	questionary_text1: autoDraw = True
+1148.1348 	EXP 	Device response: <KeyPress from None: t=1148.0278818422994, value=b, duration=0.0959861285318766>
+1167.4483 	EXP 	Device response: <KeyPress from None: t=1167.4438337092051, value=a, duration=None>
+1167.4626 	DATA 	Keypress: a
+1167.4747 	INFO 	Keyboard events cleared
+1167.4747 	EXP 	questionary_text1: autoDraw = False
+1167.4747 	EXP 	questionary_text2: height = np.float64(0.05)
+1167.4747 	EXP 	questionary_text2: height = np.float64(0.05)
+1167.4747 	EXP 	questionary_text2: height = np.float64(0.05)
+1167.4747 	EXP 	questionary_text2: text = '¿Qué debió hacer el rey Pablo para romper el hechizo y recuperar a su hija?\n\n A: Tuvo que renunciar a su trono y vivir como un campesino el resto de su vida.\n\n B: Tuvo que esperar a que el dios regresara para pedirle un nuevo deseo.\n\n C: Tuvo que buscar agua del río y mojar con ella a su hija y a los objetos afectados.\n\n Presioná la opción que creas correcta (teclas A, B ó C)'
+1167.4747 	EXP 	questionary_text2: autoDraw = True
+1167.5414 	EXP 	Device response: <KeyPress from None: t=1167.4438337092051, value=a, duration=0.09596463481466344>
+1176.7518 	EXP 	Device response: <KeyPress from None: t=1176.739807005668, value=c, duration=None>
+1176.7521 	EXP 	New trial (rep=0, index=3): <Trial 3 (3 in rep 0) data={'ordered': np.False_, 'voice_L': 'F', 'voice_R': 'M', 'target': 'L', 'target_label': 'NO_F_M', 'thisN': 3, 'thisTrialN': 3, 'thisRepN': 0}>
+1176.7528 	DATA 	Keypress: c
+1176.7650 	INFO 	Keyboard events cleared
+1176.7650 	EXP 	questionary_text2: autoDraw = False
+1176.7650 	EXP 	text_prompt: text = 'Presta atención a la historia del lado DERECHO (>>>).\n\n\nApretá ESPACIO para continuar...'
+1176.7650 	EXP 	text_prompt: autoDraw = True
+1176.8582 	EXP 	Device response: <KeyPress from None: t=1176.739807005668, value=c, duration=0.1119687924056052>
+1179.2309 	EXP 	Device response: <KeyPress from None: t=1179.2277730905062, value=space, duration=None>
+1179.2313 	EXP 	New trial (rep=0, index=0): <Trial 0 (0 in rep 0) data={'thisN': 0, 'thisTrialN': 0, 'thisRepN': 0}>
+1179.2324 	EXP 	bip: sampleRate = 48000
+1179.2334 	EXP 	Sound bip reached end of file
+1179.2475 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+1179.2337 	DATA 	Keypress: space
+1179.2441 	EXP 	text_prompt: autoDraw = False
+1179.2441 	EXP 	fixation_bip: autoDraw = True
+1179.3107 	EXP 	Device response: <KeyPress from None: t=1179.2277730905062, value=space, duration=0.08001405111644999>
+1179.7476 	EXP 	Sound bip reached end of file
+1179.7641 	EXP 	Sound bip reached end of file
+1179.7773 	EXP 	fixation_bip: autoDraw = False
+1179.7773 	EXP 	final_silence: autoDraw = True
+1180.2707 	EXP 	New trial (rep=1, index=0): <Trial 1 (0 in rep 1) data={'thisN': 1, 'thisTrialN': 0, 'thisRepN': 1}>
+1180.2717 	EXP 	bip: sampleRate = 48000
+1180.2726 	EXP 	Sound bip reached end of file
+1180.2871 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+1180.2838 	EXP 	final_silence: autoDraw = False
+1180.2838 	EXP 	fixation_bip: autoDraw = False
+1180.2838 	EXP 	final_silence: autoDraw = False
+1180.2838 	EXP 	fixation_bip: autoDraw = True
+1180.7853 	EXP 	Sound bip reached end of file
+1180.8037 	EXP 	Sound bip reached end of file
+1180.8169 	EXP 	fixation_bip: autoDraw = False
+1180.8169 	EXP 	final_silence: autoDraw = True
+1181.3104 	EXP 	New trial (rep=2, index=0): <Trial 2 (0 in rep 2) data={'thisN': 2, 'thisTrialN': 0, 'thisRepN': 2}>
+1181.3114 	EXP 	bip: sampleRate = 48000
+1181.3123 	EXP 	Sound bip reached end of file
+1181.3268 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+1181.3232 	EXP 	final_silence: autoDraw = False
+1181.3232 	EXP 	fixation_bip: autoDraw = False
+1181.3232 	EXP 	final_silence: autoDraw = False
+1181.3232 	EXP 	fixation_bip: autoDraw = True
+1181.8252 	EXP 	Sound bip reached end of file
+1181.8433 	EXP 	Sound bip reached end of file
+1181.8565 	EXP 	fixation_bip: autoDraw = False
+1181.8565 	EXP 	final_silence: autoDraw = True
+1182.3498 	EXP 	New trial (rep=3, index=0): <Trial 3 (0 in rep 3) data={'thisN': 3, 'thisTrialN': 0, 'thisRepN': 3}>
+1182.3510 	EXP 	bip: sampleRate = 48000
+1182.3519 	EXP 	Sound bip reached end of file
+1182.3662 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+1182.3631 	EXP 	final_silence: autoDraw = False
+1182.3631 	EXP 	fixation_bip: autoDraw = False
+1182.3631 	EXP 	final_silence: autoDraw = False
+1182.3631 	EXP 	fixation_bip: autoDraw = True
+1182.8683 	EXP 	Sound bip reached end of file
+1182.8828 	EXP 	Sound bip reached end of file
+1182.8962 	EXP 	fixation_bip: autoDraw = False
+1182.8962 	EXP 	final_silence: autoDraw = True
+1183.3897 	EXP 	New trial (rep=4, index=0): <Trial 4 (0 in rep 4) data={'thisN': 4, 'thisTrialN': 0, 'thisRepN': 4}>
+1183.3908 	EXP 	bip: sampleRate = 48000
+1183.3917 	EXP 	Sound bip reached end of file
+1183.4060 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+1183.4027 	EXP 	final_silence: autoDraw = False
+1183.4027 	EXP 	fixation_bip: autoDraw = False
+1183.4027 	EXP 	final_silence: autoDraw = False
+1183.4027 	EXP 	fixation_bip: autoDraw = True
+1183.9098 	EXP 	Sound bip reached end of file
+1183.9224 	EXP 	Sound bip reached end of file
+1183.9357 	EXP 	fixation_bip: autoDraw = False
+1183.9357 	EXP 	final_silence: autoDraw = True
+1184.4294 	EXP 	New trial (rep=5, index=0): <Trial 5 (0 in rep 5) data={'thisN': 5, 'thisTrialN': 0, 'thisRepN': 5}>
+1184.4305 	EXP 	bip: sampleRate = 48000
+1184.4314 	EXP 	Sound bip reached end of file
+1184.4457 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+1184.4424 	EXP 	final_silence: autoDraw = False
+1184.4424 	EXP 	fixation_bip: autoDraw = False
+1184.4424 	EXP 	final_silence: autoDraw = False
+1184.4424 	EXP 	fixation_bip: autoDraw = True
+1184.9492 	EXP 	Sound bip reached end of file
+1184.9621 	EXP 	Sound bip reached end of file
+1184.9754 	EXP 	fixation_bip: autoDraw = False
+1184.9754 	EXP 	final_silence: autoDraw = True
+1185.4688 	EXP 	New trial (rep=6, index=0): <Trial 6 (0 in rep 6) data={'thisN': 6, 'thisTrialN': 0, 'thisRepN': 6}>
+1185.4699 	EXP 	bip: sampleRate = 48000
+1185.4708 	EXP 	Sound bip reached end of file
+1185.4851 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+1185.4818 	EXP 	final_silence: autoDraw = False
+1185.4818 	EXP 	fixation_bip: autoDraw = False
+1185.4818 	EXP 	final_silence: autoDraw = False
+1185.4818 	EXP 	fixation_bip: autoDraw = True
+1185.9880 	EXP 	Sound bip reached end of file
+1186.0018 	EXP 	Sound bip reached end of file
+1186.0150 	EXP 	fixation_bip: autoDraw = False
+1186.0150 	EXP 	final_silence: autoDraw = True
+1186.5084 	EXP 	New trial (rep=7, index=0): <Trial 7 (0 in rep 7) data={'thisN': 7, 'thisTrialN': 0, 'thisRepN': 7}>
+1186.5096 	EXP 	bip: sampleRate = 48000
+1186.5105 	EXP 	Sound bip reached end of file
+1186.5248 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+1186.5216 	EXP 	final_silence: autoDraw = False
+1186.5216 	EXP 	fixation_bip: autoDraw = False
+1186.5216 	EXP 	final_silence: autoDraw = False
+1186.5216 	EXP 	fixation_bip: autoDraw = True
+1187.0251 	EXP 	Sound bip reached end of file
+1187.0415 	EXP 	Sound bip reached end of file
+1187.0546 	EXP 	fixation_bip: autoDraw = False
+1187.0546 	EXP 	final_silence: autoDraw = True
+1187.5481 	EXP 	New trial (rep=8, index=0): <Trial 8 (0 in rep 8) data={'thisN': 8, 'thisTrialN': 0, 'thisRepN': 8}>
+1187.5493 	EXP 	bip: sampleRate = 48000
+1187.5502 	EXP 	Sound bip reached end of file
+1187.5645 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+1187.5611 	EXP 	final_silence: autoDraw = False
+1187.5611 	EXP 	fixation_bip: autoDraw = False
+1187.5611 	EXP 	final_silence: autoDraw = False
+1187.5611 	EXP 	fixation_bip: autoDraw = True
+1188.0668 	EXP 	Sound bip reached end of file
+1188.0810 	EXP 	Sound bip reached end of file
+1188.0943 	EXP 	fixation_bip: autoDraw = False
+1188.0943 	EXP 	final_silence: autoDraw = True
+1188.5878 	EXP 	New trial (rep=9, index=0): <Trial 9 (0 in rep 9) data={'thisN': 9, 'thisTrialN': 0, 'thisRepN': 9}>
+1188.5890 	EXP 	bip: sampleRate = 48000
+1188.5899 	EXP 	Sound bip reached end of file
+1188.6042 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+1188.6009 	EXP 	final_silence: autoDraw = False
+1188.6009 	EXP 	fixation_bip: autoDraw = False
+1188.6009 	EXP 	final_silence: autoDraw = False
+1188.6009 	EXP 	fixation_bip: autoDraw = True
+1189.1091 	EXP 	Sound bip reached end of file
+1189.1208 	EXP 	Sound bip reached end of file
+1189.1340 	EXP 	fixation_bip: autoDraw = False
+1189.1340 	EXP 	final_silence: autoDraw = True
+1189.6291 	EXP 	Sound  reached end of file
+1189.6291 	EXP 	Playing sound  on speaker Altavoces (3- Logitech USB Headset)
+1189.6404 	EXP 	final_silence: autoDraw = False
+1189.6404 	EXP 	fixation_bip: autoDraw = False
+1189.6404 	EXP 	final_silence: autoDraw = False
+1189.6404 	EXP 	polygon: autoDraw = True
+1489.9243 	EXP 	Sound  stopped
+1489.9249 	EXP 	New trial (rep=0, index=0): <Trial 0 (0 in rep 0) data={'thisN': 0, 'thisTrialN': 0, 'thisRepN': 0}>
+1489.9261 	EXP 	bip: sampleRate = 48000
+1489.9271 	EXP 	Sound bip reached end of file
+1489.9280 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+1489.9380 	EXP 	polygon: autoDraw = False
+1489.9380 	EXP 	fixation_bip: autoDraw = True
+1490.4404 	EXP 	Sound bip reached end of file
+1490.4577 	EXP 	Sound bip reached end of file
+1490.4712 	EXP 	fixation_bip: autoDraw = False
+1490.4712 	EXP 	final_silence: autoDraw = True
+1490.9644 	EXP 	New trial (rep=1, index=0): <Trial 1 (0 in rep 1) data={'thisN': 1, 'thisTrialN': 0, 'thisRepN': 1}>
+1490.9655 	EXP 	bip: sampleRate = 48000
+1490.9665 	EXP 	Sound bip reached end of file
+1490.9808 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+1490.9776 	EXP 	final_silence: autoDraw = False
+1490.9776 	EXP 	fixation_bip: autoDraw = False
+1490.9776 	EXP 	final_silence: autoDraw = False
+1490.9776 	EXP 	fixation_bip: autoDraw = True
+1491.4877 	EXP 	Sound bip reached end of file
+1491.5107 	EXP 	Sound bip reached end of file
+1491.5241 	EXP 	fixation_bip: autoDraw = False
+1491.5241 	EXP 	final_silence: autoDraw = True
+1492.0174 	EXP 	New trial (rep=2, index=0): <Trial 2 (0 in rep 2) data={'thisN': 2, 'thisTrialN': 0, 'thisRepN': 2}>
+1492.0185 	EXP 	bip: sampleRate = 48000
+1492.0195 	EXP 	Sound bip reached end of file
+1492.0337 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+1492.0304 	EXP 	final_silence: autoDraw = False
+1492.0304 	EXP 	fixation_bip: autoDraw = False
+1492.0304 	EXP 	final_silence: autoDraw = False
+1492.0304 	EXP 	fixation_bip: autoDraw = True
+1492.5400 	EXP 	Sound bip reached end of file
+1492.5503 	EXP 	Sound bip reached end of file
+1492.5636 	EXP 	fixation_bip: autoDraw = False
+1492.5636 	EXP 	final_silence: autoDraw = True
+1493.0572 	EXP 	New trial (rep=3, index=0): <Trial 3 (0 in rep 3) data={'thisN': 3, 'thisTrialN': 0, 'thisRepN': 3}>
+1493.0584 	EXP 	bip: sampleRate = 48000
+1493.0593 	EXP 	Sound bip reached end of file
+1493.0736 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+1493.0703 	EXP 	final_silence: autoDraw = False
+1493.0703 	EXP 	fixation_bip: autoDraw = False
+1493.0703 	EXP 	final_silence: autoDraw = False
+1493.0703 	EXP 	fixation_bip: autoDraw = True
+1493.5753 	EXP 	Sound bip reached end of file
+1493.5902 	EXP 	Sound bip reached end of file
+1493.6033 	EXP 	fixation_bip: autoDraw = False
+1493.6033 	EXP 	final_silence: autoDraw = True
+1494.0968 	EXP 	New trial (rep=4, index=0): <Trial 4 (0 in rep 4) data={'thisN': 4, 'thisTrialN': 0, 'thisRepN': 4}>
+1494.0979 	EXP 	bip: sampleRate = 48000
+1494.0988 	EXP 	Sound bip reached end of file
+1494.1132 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+1494.1099 	EXP 	final_silence: autoDraw = False
+1494.1099 	EXP 	fixation_bip: autoDraw = False
+1494.1099 	EXP 	final_silence: autoDraw = False
+1494.1099 	EXP 	fixation_bip: autoDraw = True
+1494.6099 	EXP 	Sound bip reached end of file
+1494.6296 	EXP 	Sound bip reached end of file
+1494.6429 	EXP 	fixation_bip: autoDraw = False
+1494.6429 	EXP 	final_silence: autoDraw = True
+1495.1365 	EXP 	New trial (rep=5, index=0): <Trial 5 (0 in rep 5) data={'thisN': 5, 'thisTrialN': 0, 'thisRepN': 5}>
+1495.1377 	EXP 	bip: sampleRate = 48000
+1495.1386 	EXP 	Sound bip reached end of file
+1495.1529 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+1495.1495 	EXP 	final_silence: autoDraw = False
+1495.1495 	EXP 	fixation_bip: autoDraw = False
+1495.1495 	EXP 	final_silence: autoDraw = False
+1495.1495 	EXP 	fixation_bip: autoDraw = True
+1495.6486 	EXP 	Sound bip reached end of file
+1495.6694 	EXP 	Sound bip reached end of file
+1495.6826 	EXP 	fixation_bip: autoDraw = False
+1495.6826 	EXP 	final_silence: autoDraw = True
+1496.1761 	EXP 	New trial (rep=6, index=0): <Trial 6 (0 in rep 6) data={'thisN': 6, 'thisTrialN': 0, 'thisRepN': 6}>
+1496.1773 	EXP 	bip: sampleRate = 48000
+1496.1783 	EXP 	Sound bip reached end of file
+1496.1925 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+1496.1892 	EXP 	final_silence: autoDraw = False
+1496.1892 	EXP 	fixation_bip: autoDraw = False
+1496.1892 	EXP 	final_silence: autoDraw = False
+1496.1892 	EXP 	fixation_bip: autoDraw = True
+1496.6883 	EXP 	Sound bip reached end of file
+1496.7091 	EXP 	Sound bip reached end of file
+1496.7222 	EXP 	fixation_bip: autoDraw = False
+1496.7222 	EXP 	final_silence: autoDraw = True
+1497.2158 	EXP 	New trial (rep=7, index=0): <Trial 7 (0 in rep 7) data={'thisN': 7, 'thisTrialN': 0, 'thisRepN': 7}>
+1497.2169 	EXP 	bip: sampleRate = 48000
+1497.2178 	EXP 	Sound bip reached end of file
+1497.2321 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+1497.2286 	EXP 	final_silence: autoDraw = False
+1497.2286 	EXP 	fixation_bip: autoDraw = False
+1497.2286 	EXP 	final_silence: autoDraw = False
+1497.2286 	EXP 	fixation_bip: autoDraw = True
+1497.7375 	EXP 	Sound bip reached end of file
+1497.7485 	EXP 	Sound bip reached end of file
+1497.7620 	EXP 	fixation_bip: autoDraw = False
+1497.7620 	EXP 	final_silence: autoDraw = True
+1498.2555 	EXP 	New trial (rep=8, index=0): <Trial 8 (0 in rep 8) data={'thisN': 8, 'thisTrialN': 0, 'thisRepN': 8}>
+1498.2566 	EXP 	bip: sampleRate = 48000
+1498.2575 	EXP 	Sound bip reached end of file
+1498.2718 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+1498.2685 	EXP 	final_silence: autoDraw = False
+1498.2685 	EXP 	fixation_bip: autoDraw = False
+1498.2685 	EXP 	final_silence: autoDraw = False
+1498.2685 	EXP 	fixation_bip: autoDraw = True
+1498.7778 	EXP 	Sound bip reached end of file
+1498.7882 	EXP 	Sound bip reached end of file
+1498.8016 	EXP 	fixation_bip: autoDraw = False
+1498.8016 	EXP 	final_silence: autoDraw = True
+1499.2951 	EXP 	New trial (rep=9, index=0): <Trial 9 (0 in rep 9) data={'thisN': 9, 'thisTrialN': 0, 'thisRepN': 9}>
+1499.2962 	EXP 	bip: sampleRate = 48000
+1499.2972 	EXP 	Sound bip reached end of file
+1499.3114 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+1499.3081 	EXP 	final_silence: autoDraw = False
+1499.3081 	EXP 	fixation_bip: autoDraw = False
+1499.3081 	EXP 	final_silence: autoDraw = False
+1499.3081 	EXP 	fixation_bip: autoDraw = True
+1499.8172 	EXP 	Sound bip reached end of file
+1499.8279 	EXP 	Sound bip reached end of file
+1499.8413 	EXP 	fixation_bip: autoDraw = False
+1499.8413 	EXP 	final_silence: autoDraw = True
+1500.3743 	INFO 	Keyboard events cleared
+1500.3743 	EXP 	final_silence: autoDraw = False
+1500.3743 	EXP 	fixation_bip: autoDraw = False
+1500.3743 	EXP 	final_silence: autoDraw = False
+1500.3743 	EXP 	questionary_text0: height = np.float64(0.05)
+1500.3743 	EXP 	questionary_text0: height = np.float64(0.05)
+1500.3743 	EXP 	questionary_text0: height = np.float64(0.05)
+1500.3743 	EXP 	questionary_text0: text = '¿Por qué Verónica sentía rechazo hacia Sandra, la hija del dueño de la librería?\n\n A: Porque Sandra le tenía envidia a Verónica por ser la mejor alumna de la clase y siempre la molestaba.\n\n B: Porque Sandra siempre le regalaba diccionarios usados en lugar de libros de cuentos.\n\n C: Porque a pesar de tener acceso a todos los libros, Sandra odiaba leer y no se los prestaba a nadie.\n\n Presioná la opción que creas correcta (teclas A, B ó C)'
+1500.3743 	EXP 	questionary_text0: autoDraw = True
+1521.9537 	EXP 	Device response: <KeyPress from None: t=1521.947515230062, value=c, duration=None>
+1521.9708 	DATA 	Keypress: c
+1521.9938 	INFO 	Keyboard events cleared
+1521.9937 	EXP 	questionary_text0: autoDraw = False
+1521.9937 	EXP 	questionary_text1: height = np.float64(0.05)
+1521.9937 	EXP 	questionary_text1: height = np.float64(0.05)
+1521.9937 	EXP 	questionary_text1: height = np.float64(0.05)
+1521.9937 	EXP 	questionary_text1: text = '¿Qué hacía Sandra cada vez que Verónica iba a su casa a buscar el libro "Corazón de vidrio"?\n\n A: Le decía que volviera al día siguiente, mintiendo con que ya se lo había prestado a otra chica.\n\n B: Le exigía que le trajera caramelos a cambio de prestarle el libro por unas horas.\n\n C: Se escondía en su habitación y hacía que sus padres le dijeran a Verónica que no estaba.\n\n Presioná la opción que creas correcta (teclas A, B ó C)'
+1521.9937 	EXP 	questionary_text1: autoDraw = True
+1522.0470 	EXP 	Device response: <KeyPress from None: t=1521.947515230062, value=c, duration=0.08800458104815334>
+1522.3802 	EXP 	Device response: <KeyPress from None: t=1522.3794821618176, value=c, duration=None>
+1522.3964 	DATA 	Keypress: c
+1522.4069 	INFO 	Keyboard events cleared
+1522.4068 	EXP 	questionary_text1: autoDraw = False
+1522.4068 	EXP 	questionary_text2: height = np.float64(0.05)
+1522.4068 	EXP 	questionary_text2: height = np.float64(0.05)
+1522.4068 	EXP 	questionary_text2: height = np.float64(0.05)
+1522.4068 	EXP 	questionary_text2: text = 'Una vez que Verónica finalmente consiguió el libro y se lo llevó a su casa, ¿cómo lo leyó?\n\n A: Lo leyó todo en una sola noche para no perder ni un segundo de la historia.\n\n B: No pudo leerlo porque se sintió culpable por la discusión entre Sandra y su madre.\n\n C: Lo leía de a poco y a veces lo escondía, fingiendo no tenerlo para aumentar la felicidad de poseerlo.\n\n Presioná la opción que creas correcta (teclas A, B ó C)'
+1522.4068 	EXP 	questionary_text2: autoDraw = True
+1522.4868 	EXP 	Device response: <KeyPress from None: t=1522.3794821618176, value=c, duration=0.09604804326954763>
+1522.8469 	EXP 	Device response: <KeyPress from None: t=1522.8434519551247, value=c, duration=None>
+1522.8472 	EXP 	New trial (rep=0, index=4): <Trial 4 (4 in rep 0) data={'ordered': np.True_, 'voice_L': 'M', 'voice_R': 'F', 'target': 'R', 'target_label': 'O_M_F', 'thisN': 4, 'thisTrialN': 4, 'thisRepN': 0}>
+1522.8479 	DATA 	Keypress: c
+1522.8601 	INFO 	Keyboard events cleared
+1522.8601 	EXP 	questionary_text2: autoDraw = False
+1522.8601 	EXP 	text_prompt: text = 'Presta atención a la historia del lado DERECHO (>>>).\n\n\nApretá ESPACIO para continuar...'
+1522.8601 	EXP 	text_prompt: autoDraw = True
+1522.9268 	EXP 	Device response: <KeyPress from None: t=1522.8434519551247, value=c, duration=0.0800223919632117>
+1537.6552 	EXP 	Device response: <KeyPress from None: t=1537.6515441792126, value=space, duration=None>
+1537.6556 	EXP 	New trial (rep=0, index=0): <Trial 0 (0 in rep 0) data={'thisN': 0, 'thisTrialN': 0, 'thisRepN': 0}>
+1537.6568 	EXP 	bip: sampleRate = 48000
+1537.6579 	EXP 	Sound bip reached end of file
+1537.6717 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+1537.6582 	DATA 	Keypress: space
+1537.6681 	EXP 	text_prompt: autoDraw = False
+1537.6681 	EXP 	fixation_bip: autoDraw = True
+1537.7751 	EXP 	Device response: <KeyPress from None: t=1537.6515441792126, value=space, duration=0.12006743252641172>
+1538.1775 	EXP 	Sound bip reached end of file
+1538.1883 	EXP 	Sound bip reached end of file
+1538.2014 	EXP 	fixation_bip: autoDraw = False
+1538.2014 	EXP 	final_silence: autoDraw = True
+1538.6948 	EXP 	New trial (rep=1, index=0): <Trial 1 (0 in rep 1) data={'thisN': 1, 'thisTrialN': 0, 'thisRepN': 1}>
+1538.6959 	EXP 	bip: sampleRate = 48000
+1538.6969 	EXP 	Sound bip reached end of file
+1538.7112 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+1538.7079 	EXP 	final_silence: autoDraw = False
+1538.7079 	EXP 	fixation_bip: autoDraw = False
+1538.7079 	EXP 	final_silence: autoDraw = False
+1538.7079 	EXP 	fixation_bip: autoDraw = True
+1539.2174 	EXP 	Sound bip reached end of file
+1539.2278 	EXP 	Sound bip reached end of file
+1539.2412 	EXP 	fixation_bip: autoDraw = False
+1539.2412 	EXP 	final_silence: autoDraw = True
+1539.7746 	EXP 	New trial (rep=2, index=0): <Trial 2 (0 in rep 2) data={'thisN': 2, 'thisTrialN': 0, 'thisRepN': 2}>
+1539.7757 	EXP 	bip: sampleRate = 48000
+1539.7766 	EXP 	Sound bip reached end of file
+1539.7910 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+1539.7876 	EXP 	final_silence: autoDraw = False
+1539.7876 	EXP 	fixation_bip: autoDraw = False
+1539.7876 	EXP 	final_silence: autoDraw = False
+1539.7876 	EXP 	fixation_bip: autoDraw = True
+1540.2959 	EXP 	Sound bip reached end of file
+1540.3074 	EXP 	Sound bip reached end of file
+1540.3206 	EXP 	fixation_bip: autoDraw = False
+1540.3206 	EXP 	final_silence: autoDraw = True
+1540.8140 	EXP 	New trial (rep=3, index=0): <Trial 3 (0 in rep 3) data={'thisN': 3, 'thisTrialN': 0, 'thisRepN': 3}>
+1540.8151 	EXP 	bip: sampleRate = 48000
+1540.8160 	EXP 	Sound bip reached end of file
+1540.8304 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+1540.8273 	EXP 	final_silence: autoDraw = False
+1540.8273 	EXP 	fixation_bip: autoDraw = False
+1540.8273 	EXP 	final_silence: autoDraw = False
+1540.8273 	EXP 	fixation_bip: autoDraw = True
+1541.3325 	EXP 	Sound bip reached end of file
+1541.3471 	EXP 	Sound bip reached end of file
+1541.3605 	EXP 	fixation_bip: autoDraw = False
+1541.3605 	EXP 	final_silence: autoDraw = True
+1541.8539 	EXP 	New trial (rep=4, index=0): <Trial 4 (0 in rep 4) data={'thisN': 4, 'thisTrialN': 0, 'thisRepN': 4}>
+1541.8550 	EXP 	bip: sampleRate = 48000
+1541.8559 	EXP 	Sound bip reached end of file
+1541.8703 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+1541.8669 	EXP 	final_silence: autoDraw = False
+1541.8669 	EXP 	fixation_bip: autoDraw = False
+1541.8669 	EXP 	final_silence: autoDraw = False
+1541.8669 	EXP 	fixation_bip: autoDraw = True
+1542.3750 	EXP 	Sound bip reached end of file
+1542.3868 	EXP 	Sound bip reached end of file
+1542.4000 	EXP 	fixation_bip: autoDraw = False
+1542.4000 	EXP 	final_silence: autoDraw = True
+1542.8934 	EXP 	New trial (rep=5, index=0): <Trial 5 (0 in rep 5) data={'thisN': 5, 'thisTrialN': 0, 'thisRepN': 5}>
+1542.8945 	EXP 	bip: sampleRate = 48000
+1542.8954 	EXP 	Sound bip reached end of file
+1542.9097 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+1542.9066 	EXP 	final_silence: autoDraw = False
+1542.9066 	EXP 	fixation_bip: autoDraw = False
+1542.9066 	EXP 	final_silence: autoDraw = False
+1542.9066 	EXP 	fixation_bip: autoDraw = True
+1543.4055 	EXP 	Sound bip reached end of file
+1543.4265 	EXP 	Sound bip reached end of file
+1543.4396 	EXP 	fixation_bip: autoDraw = False
+1543.4396 	EXP 	final_silence: autoDraw = True
+1543.9331 	EXP 	New trial (rep=6, index=0): <Trial 6 (0 in rep 6) data={'thisN': 6, 'thisTrialN': 0, 'thisRepN': 6}>
+1543.9342 	EXP 	bip: sampleRate = 48000
+1543.9351 	EXP 	Sound bip reached end of file
+1543.9495 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+1543.9462 	EXP 	final_silence: autoDraw = False
+1543.9462 	EXP 	fixation_bip: autoDraw = False
+1543.9462 	EXP 	final_silence: autoDraw = False
+1543.9462 	EXP 	fixation_bip: autoDraw = True
+1544.4522 	EXP 	Sound bip reached end of file
+1544.4661 	EXP 	Sound bip reached end of file
+1544.4793 	EXP 	fixation_bip: autoDraw = False
+1544.4793 	EXP 	final_silence: autoDraw = True
+1544.9728 	EXP 	New trial (rep=7, index=0): <Trial 7 (0 in rep 7) data={'thisN': 7, 'thisTrialN': 0, 'thisRepN': 7}>
+1544.9740 	EXP 	bip: sampleRate = 48000
+1544.9749 	EXP 	Sound bip reached end of file
+1544.9892 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+1544.9857 	EXP 	final_silence: autoDraw = False
+1544.9857 	EXP 	fixation_bip: autoDraw = False
+1544.9857 	EXP 	final_silence: autoDraw = False
+1544.9857 	EXP 	fixation_bip: autoDraw = True
+1545.4882 	EXP 	Sound bip reached end of file
+1545.5058 	EXP 	Sound bip reached end of file
+1545.5190 	EXP 	fixation_bip: autoDraw = False
+1545.5190 	EXP 	final_silence: autoDraw = True
+1546.0124 	EXP 	New trial (rep=8, index=0): <Trial 8 (0 in rep 8) data={'thisN': 8, 'thisTrialN': 0, 'thisRepN': 8}>
+1546.0135 	EXP 	bip: sampleRate = 48000
+1546.0144 	EXP 	Sound bip reached end of file
+1546.0288 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+1546.0253 	EXP 	final_silence: autoDraw = False
+1546.0253 	EXP 	fixation_bip: autoDraw = False
+1546.0253 	EXP 	final_silence: autoDraw = False
+1546.0253 	EXP 	fixation_bip: autoDraw = True
+1546.5270 	EXP 	Sound bip reached end of file
+1546.5454 	EXP 	Sound bip reached end of file
+1546.5586 	EXP 	fixation_bip: autoDraw = False
+1546.5586 	EXP 	final_silence: autoDraw = True
+1547.0521 	EXP 	New trial (rep=9, index=0): <Trial 9 (0 in rep 9) data={'thisN': 9, 'thisTrialN': 0, 'thisRepN': 9}>
+1547.0532 	EXP 	bip: sampleRate = 48000
+1547.0541 	EXP 	Sound bip reached end of file
+1547.0685 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+1547.0651 	EXP 	final_silence: autoDraw = False
+1547.0651 	EXP 	fixation_bip: autoDraw = False
+1547.0651 	EXP 	final_silence: autoDraw = False
+1547.0651 	EXP 	fixation_bip: autoDraw = True
+1547.5670 	EXP 	Sound bip reached end of file
+1547.5850 	EXP 	Sound bip reached end of file
+1547.5981 	EXP 	fixation_bip: autoDraw = False
+1547.5981 	EXP 	final_silence: autoDraw = True
+1548.0932 	EXP 	Sound  reached end of file
+1548.0933 	EXP 	Playing sound  on speaker Altavoces (3- Logitech USB Headset)
+1548.1048 	EXP 	final_silence: autoDraw = False
+1548.1048 	EXP 	fixation_bip: autoDraw = False
+1548.1048 	EXP 	final_silence: autoDraw = False
+1548.1048 	EXP 	polygon: autoDraw = True
+1849.0063 	EXP 	Sound  stopped
+1849.0067 	EXP 	New trial (rep=0, index=0): <Trial 0 (0 in rep 0) data={'thisN': 0, 'thisTrialN': 0, 'thisRepN': 0}>
+1849.0080 	EXP 	bip: sampleRate = 48000
+1849.0090 	EXP 	Sound bip reached end of file
+1849.0185 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+1849.0285 	EXP 	polygon: autoDraw = False
+1849.0285 	EXP 	fixation_bip: autoDraw = True
+1849.5192 	EXP 	Sound bip reached end of file
+1849.5352 	EXP 	Sound bip reached end of file
+1849.5485 	EXP 	fixation_bip: autoDraw = False
+1849.5485 	EXP 	final_silence: autoDraw = True
+1850.0419 	EXP 	New trial (rep=1, index=0): <Trial 1 (0 in rep 1) data={'thisN': 1, 'thisTrialN': 0, 'thisRepN': 1}>
+1850.0430 	EXP 	bip: sampleRate = 48000
+1850.0439 	EXP 	Sound bip reached end of file
+1850.0582 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+1850.0550 	EXP 	final_silence: autoDraw = False
+1850.0550 	EXP 	fixation_bip: autoDraw = False
+1850.0550 	EXP 	final_silence: autoDraw = False
+1850.0550 	EXP 	fixation_bip: autoDraw = True
+1850.5614 	EXP 	Sound bip reached end of file
+1850.5746 	EXP 	Sound bip reached end of file
+1850.5881 	EXP 	fixation_bip: autoDraw = False
+1850.5881 	EXP 	final_silence: autoDraw = True
+1851.0815 	EXP 	New trial (rep=2, index=0): <Trial 2 (0 in rep 2) data={'thisN': 2, 'thisTrialN': 0, 'thisRepN': 2}>
+1851.0827 	EXP 	bip: sampleRate = 48000
+1851.0836 	EXP 	Sound bip reached end of file
+1851.0979 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+1851.0945 	EXP 	final_silence: autoDraw = False
+1851.0945 	EXP 	fixation_bip: autoDraw = False
+1851.0945 	EXP 	final_silence: autoDraw = False
+1851.0945 	EXP 	fixation_bip: autoDraw = True
+1851.6013 	EXP 	Sound bip reached end of file
+1851.6145 	EXP 	Sound bip reached end of file
+1851.6277 	EXP 	fixation_bip: autoDraw = False
+1851.6277 	EXP 	final_silence: autoDraw = True
+1852.1212 	EXP 	New trial (rep=3, index=0): <Trial 3 (0 in rep 3) data={'thisN': 3, 'thisTrialN': 0, 'thisRepN': 3}>
+1852.1224 	EXP 	bip: sampleRate = 48000
+1852.1233 	EXP 	Sound bip reached end of file
+1852.1376 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+1852.1343 	EXP 	final_silence: autoDraw = False
+1852.1343 	EXP 	fixation_bip: autoDraw = False
+1852.1343 	EXP 	final_silence: autoDraw = False
+1852.1343 	EXP 	fixation_bip: autoDraw = True
+1852.6346 	EXP 	Sound bip reached end of file
+1852.6542 	EXP 	Sound bip reached end of file
+1852.6674 	EXP 	fixation_bip: autoDraw = False
+1852.6674 	EXP 	final_silence: autoDraw = True
+1853.1608 	EXP 	New trial (rep=4, index=0): <Trial 4 (0 in rep 4) data={'thisN': 4, 'thisTrialN': 0, 'thisRepN': 4}>
+1853.1619 	EXP 	bip: sampleRate = 48000
+1853.1628 	EXP 	Sound bip reached end of file
+1853.1772 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+1853.1737 	EXP 	final_silence: autoDraw = False
+1853.1737 	EXP 	fixation_bip: autoDraw = False
+1853.1737 	EXP 	final_silence: autoDraw = False
+1853.1737 	EXP 	fixation_bip: autoDraw = True
+1853.6779 	EXP 	Sound bip reached end of file
+1853.6937 	EXP 	Sound bip reached end of file
+1853.7070 	EXP 	fixation_bip: autoDraw = False
+1853.7070 	EXP 	final_silence: autoDraw = True
+1854.2005 	EXP 	New trial (rep=5, index=0): <Trial 5 (0 in rep 5) data={'thisN': 5, 'thisTrialN': 0, 'thisRepN': 5}>
+1854.2016 	EXP 	bip: sampleRate = 48000
+1854.2026 	EXP 	Sound bip reached end of file
+1854.2169 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+1854.2136 	EXP 	final_silence: autoDraw = False
+1854.2136 	EXP 	fixation_bip: autoDraw = False
+1854.2136 	EXP 	final_silence: autoDraw = False
+1854.2136 	EXP 	fixation_bip: autoDraw = True
+1854.7186 	EXP 	Sound bip reached end of file
+1854.7334 	EXP 	Sound bip reached end of file
+1854.7466 	EXP 	fixation_bip: autoDraw = False
+1854.7466 	EXP 	final_silence: autoDraw = True
+1855.2401 	EXP 	New trial (rep=6, index=0): <Trial 6 (0 in rep 6) data={'thisN': 6, 'thisTrialN': 0, 'thisRepN': 6}>
+1855.2413 	EXP 	bip: sampleRate = 48000
+1855.2422 	EXP 	Sound bip reached end of file
+1855.2565 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+1855.2532 	EXP 	final_silence: autoDraw = False
+1855.2532 	EXP 	fixation_bip: autoDraw = False
+1855.2532 	EXP 	final_silence: autoDraw = False
+1855.2532 	EXP 	fixation_bip: autoDraw = True
+1855.7595 	EXP 	Sound bip reached end of file
+1855.7730 	EXP 	Sound bip reached end of file
+1855.7864 	EXP 	fixation_bip: autoDraw = False
+1855.7864 	EXP 	final_silence: autoDraw = True
+1856.2798 	EXP 	New trial (rep=7, index=0): <Trial 7 (0 in rep 7) data={'thisN': 7, 'thisTrialN': 0, 'thisRepN': 7}>
+1856.2810 	EXP 	bip: sampleRate = 48000
+1856.2819 	EXP 	Sound bip reached end of file
+1856.2962 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+1856.2928 	EXP 	final_silence: autoDraw = False
+1856.2928 	EXP 	fixation_bip: autoDraw = False
+1856.2928 	EXP 	final_silence: autoDraw = False
+1856.2928 	EXP 	fixation_bip: autoDraw = True
+1856.7998 	EXP 	Sound bip reached end of file
+1856.8126 	EXP 	Sound bip reached end of file
+1856.8259 	EXP 	fixation_bip: autoDraw = False
+1856.8259 	EXP 	final_silence: autoDraw = True
+1857.3195 	EXP 	New trial (rep=8, index=0): <Trial 8 (0 in rep 8) data={'thisN': 8, 'thisTrialN': 0, 'thisRepN': 8}>
+1857.3206 	EXP 	bip: sampleRate = 48000
+1857.3215 	EXP 	Sound bip reached end of file
+1857.3358 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+1857.3325 	EXP 	final_silence: autoDraw = False
+1857.3325 	EXP 	fixation_bip: autoDraw = False
+1857.3325 	EXP 	final_silence: autoDraw = False
+1857.3325 	EXP 	fixation_bip: autoDraw = True
+1857.8389 	EXP 	Sound bip reached end of file
+1857.8524 	EXP 	Sound bip reached end of file
+1857.8655 	EXP 	fixation_bip: autoDraw = False
+1857.8655 	EXP 	final_silence: autoDraw = True
+1858.3590 	EXP 	New trial (rep=9, index=0): <Trial 9 (0 in rep 9) data={'thisN': 9, 'thisTrialN': 0, 'thisRepN': 9}>
+1858.3601 	EXP 	bip: sampleRate = 48000
+1858.3610 	EXP 	Sound bip reached end of file
+1858.3754 	EXP 	Playing sound bip on speaker Altavoces (3- Logitech USB Headset)
+1858.3719 	EXP 	final_silence: autoDraw = False
+1858.3719 	EXP 	fixation_bip: autoDraw = False
+1858.3719 	EXP 	final_silence: autoDraw = False
+1858.3719 	EXP 	fixation_bip: autoDraw = True
+1858.8787 	EXP 	Sound bip reached end of file
+1858.8918 	EXP 	Sound bip reached end of file
+1858.9052 	EXP 	fixation_bip: autoDraw = False
+1858.9052 	EXP 	final_silence: autoDraw = True
+1859.4251 	INFO 	Keyboard events cleared
+1859.4250 	EXP 	final_silence: autoDraw = False
+1859.4250 	EXP 	fixation_bip: autoDraw = False
+1859.4250 	EXP 	final_silence: autoDraw = False
+1859.4250 	EXP 	questionary_text0: height = np.float64(0.05)
+1859.4250 	EXP 	questionary_text0: height = np.float64(0.05)
+1859.4250 	EXP 	questionary_text0: height = np.float64(0.05)
+1859.4250 	EXP 	questionary_text0: text = '¿Qué condición debía cumplir el hombre para conservar su riqueza y quedar libre del pacto?\n\n A: Lograr esconderse del Diablo durante un plazo de veinte años.\n\n B: Adivinar la edad exacta del Diablo antes de que terminara el plazo.\n\n C: Viajar por todo el mundo entrevistando a los sabios de Europa y Asia.\n\n Presioná la opción que creas correcta (teclas A, B ó C)'
+1859.4250 	EXP 	questionary_text0: autoDraw = True
+1873.1004 	EXP 	Device response: <KeyPress from None: t=1873.0992355294347, value=c, duration=None>
+1873.1140 	DATA 	Keypress: c
+1873.1270 	INFO 	Keyboard events cleared
+1873.1269 	EXP 	questionary_text0: autoDraw = False
+1873.1269 	EXP 	questionary_text1: height = np.float64(0.05)
+1873.1269 	EXP 	questionary_text1: height = np.float64(0.05)
+1873.1269 	EXP 	questionary_text1: height = np.float64(0.05)
+1873.1269 	EXP 	questionary_text1: text = '¿Cómo reaccionó el hombre ante su nueva vida de lujos tras firmar el pacto?\n\n A: Se acostumbró rápidamente a la riqueza y pronto olvidó el compromiso que tenía. \n\n B: Sintió mucha nostalgia por su antiguo rancho y sus alpargatas.\n\n C: Pasó los veinte años estudiando para intentar descubrir el secreto del Diablo.\n\n Presioná la opción que creas correcta (teclas A, B ó C)'
+1873.1269 	EXP 	questionary_text1: autoDraw = True
+1873.2072 	EXP 	Device response: <KeyPress from None: t=1873.0992355294347, value=c, duration=0.10396222238523478>
+1874.1002 	EXP 	Device response: <KeyPress from None: t=1874.0912526987431, value=c, duration=None>
+1874.1155 	DATA 	Keypress: c
+1874.1268 	INFO 	Keyboard events cleared
+1874.1268 	EXP 	questionary_text1: autoDraw = False
+1874.1268 	EXP 	questionary_text2: height = np.float64(0.05)
+1874.1268 	EXP 	questionary_text2: height = np.float64(0.05)
+1874.1268 	EXP 	questionary_text2: height = np.float64(0.05)
+1874.1268 	EXP 	questionary_text2: text = '¿De qué manera logró el hombre obtener la información necesaria para vencer al Diablo?\n\n A: Consultó un papel antiguo que tenía guardado en el cajón de su mesa de luz.\n\n B: Su esposa se disfrazó de un ave exótica para engañar al Diablo y hacerlo confesar.\n\n C: Los sabios de México y Bolivia le revelaron el número exacto tras una larga búsqueda.\n\n Presioná la opción que creas correcta (teclas A, B ó C)'
+1874.1268 	EXP 	questionary_text2: autoDraw = True
+1874.1934 	EXP 	Device response: <KeyPress from None: t=1874.0912526987431, value=c, duration=0.09596495561709162>
+1875.2598 	EXP 	Device response: <KeyPress from None: t=1875.2512304351021, value=c, duration=None>
+1875.2613 	DATA 	Keypress: c
+1875.2729 	INFO 	Keyboard events cleared
+1875.2729 	EXP 	questionary_text2: autoDraw = False
+1875.2729 	EXP 	final_text: autoDraw = True
+1875.3398 	EXP 	Device response: <KeyPress from None: t=1875.2512304351021, value=c, duration=0.08797025526291691>
+1890.5213 	EXP 	Device response: <KeyPress from None: t=1890.5153064137885, value=space, duration=None>
+1890.5218 	DATA 	Keypress: space
+1890.5345 	EXP 	final_text: autoDraw = False
+1890.5345 	EXP 	DichoticListeningProbe: status = STOPPED
+1890.5565 	INFO 	saved data to 'C:\\Users\\slipina\\Desktop\\Dichotic-master\\Dichotic-master\\psychopy_experiment\\data\\piloto_ed_1_DichoticListeningProbe_2026-01-13_11h42.55.526.csv'
+1890.5590 	INFO 	saved data to C:\Users\slipina\Desktop\Dichotic-master\Dichotic-master\psychopy_experiment\data\piloto_ed_1_DichoticListeningProbe_2026-01-13_11h42.55.526.psydat
+1890.8799 	WARNING 	Stopping key buffers but this could be dangerous ifother keyboards rely on the same.

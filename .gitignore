@@ -4,5 +4,8 @@ __pycache__/
 # /data/intermediate_audios/
 # /data/processed_audios/*.wav
 # !/data/processed_audios/*_not_scrambled.wav
-/data/original_audios/
-/data/intermediate_audios/
+/data/stimuli/original_audios/
+/data/stimuli/intermediate_audios/
+/data/EEG
+# /figures
+/psychopy_experiment_113

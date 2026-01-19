@@ -13,17 +13,17 @@ from utils.audio_helpers import (
     create_attention_probe, create_attention_track,
     scramble_audio, scale_audio_to_relative_db, 
 )
+import config
 
 # Paths
-INTERMEDIATE_AUDIO_DIR = Path('data/intermediate_audios')
-OUTPUT_DIR = Path('data/processed_audios')
-TABLES_DIR = Path('psychopy_experiment')
+INTERMEDIATE_AUDIO_DIR = config.STIMULI_DIR / 'intermediate_audios'
+OUTPUT_DIR = config.STIMULI_DIR / 'processed_audios'
+AUDIO_DIR = config.STIMULI_DIR / 'original_audios'
+TABLES_DIR = config.PSYCHOPY_DIR.parent
 
 INTERMEDIATE_AUDIO_DIR.mkdir(parents=True, exist_ok=True)
-TABLES_DIR.mkdir(parents=True, exist_ok=True)
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-
-AUDIO_DIR = Path('data/original_audios')
+TABLES_DIR.mkdir(parents=True, exist_ok=True)
 assert AUDIO_DIR.exists(), f"Audio directory {AUDIO_DIR} does not exist. Please load necessary audio files."
 
 # Create output subdirectories  
@@ -31,6 +31,8 @@ no_probe_path = OUTPUT_DIR/'no_probe'
 probe_path = OUTPUT_DIR/'with_probe'
 no_probe_path.mkdir(parents=True, exist_ok=True)
 probe_path.mkdir(parents=True, exist_ok=True)
+probe_path_short = probe_path.parent.parent / 'processed_audios_short' 
+probe_path_short.mkdir(parents=True, exist_ok=True)
 
 # Hyperparameters
 ABSOLUTE_RELATIVE_ATTENUATION_DB = 10
@@ -47,14 +49,15 @@ BIP_FREQ = 1000  # Hz
 BIP_DUR = 500   # ms
 BIP_VOL = -20  # dB
 
-# Create a bip sound for events
+# Create a bip sound for events: bip of 500ms at 1000Hz followed by 500ms of silence
 create_bip(
     output_file=OUTPUT_DIR/'bip.wav',
     bip_freq=BIP_FREQ,
     bip_dur=BIP_DUR,
     bip_vol=BIP_VOL,
     sample_rate=COMMON_SAMPLE_RATE,
-    silence_sides_dur=0,
+    silence_sides_dur=BIP_DUR,
+    silence_type="after",
     number_of_bips=0
 )
 wav_to_ogg(
@@ -123,9 +126,7 @@ if isinstance(PROBE_TYPE, str) and SCRAMBLED_PROBE:
     attention_probe_path = scrambled_probe_path
 
 # Process each combination
-df_audio_combinations = []
-df_audio_combinations_noprobes = []
-
+audio_combinations_dict = []
 skipped_combinations = []
 for j, (audio_f, audio_m) in enumerate(combinations):
     # Get numbers and names of the stories
@@ -256,6 +257,18 @@ for j, (audio_f, audio_m) in enumerate(combinations):
             sample_rate_target=COMMON_SAMPLE_RATE,
             bitrate=OGG_BITRATE
         )
+
+        # Save a shorter version for testing in psychopy
+        short_data = normalized_data[:COMMON_SAMPLE_RATE*5,:]  # first 5 seconds
+        short_save_path = probe_path_short / f'{stereo_name}_short.wav'
+        save_wav(short_save_path, sr_data, short_data)
+        
+        wav_to_ogg(
+            input_wav=short_save_path,
+            output_ogg=short_save_path.with_suffix('.ogg'),
+            sample_rate_target=COMMON_SAMPLE_RATE,
+            bitrate=OGG_BITRATE
+        )
     
         # Save combinations
         story_right = stereo_name.split('_')[1][1:]
@@ -265,7 +278,7 @@ for j, (audio_f, audio_m) in enumerate(combinations):
         ordered = story_left < story_right
         condition_label = f'O_{voice_left}_{voice_right}' if ordered else f'NO_{voice_left}_{voice_right}'
         
-        df_audio_combinations.append({
+        audio_combinations_dict.append({
             'filename':str(Path("..")/save_path.with_suffix('.ogg')),
             'condition_label': condition_label,
             'ordered': ordered,
@@ -274,32 +287,34 @@ for j, (audio_f, audio_m) in enumerate(combinations):
             'voice_L': voice_left,
             'voice_R': voice_right,
         })
-        df_audio_combinations_noprobes.append({
-            'filename': str(Path("..")/ no_probe_path / f'{stereo_name}_no_probe.ogg'),
-            'condition_label': condition_label,
-            'ordered': ordered,
-            'story_L': story_left,
-            'story_R': story_right,
-            'voice_L': voice_left,
-            'voice_R': voice_right
-        })
     
 # Print summary
 print(f'\n\nExpected number of combinations: {len(combinations) * 2}')
-print(f'Actual number of saved combinations: {len(df_audio_combinations)}\n\n')
+print(f'Actual number of saved combinations: {len(audio_combinations_dict)}\n\n')
 
 # Create csv with filenames relative to psychopy experiment folder and it's labels
 csv_audio_combinations_no_probes_path = TABLES_DIR / 'audiobook_combinations_no_probes.csv'
-csv_audio_combinations_path = TABLES_DIR / 'audiobook_combinations_probes.csv'
-df_audio_combinations = pd.DataFrame(df_audio_combinations)
-df_noprobes = pd.DataFrame(df_audio_combinations_noprobes)
-df_audio_combinations.to_csv(csv_audio_combinations_path, index=False)
-df_noprobes.to_csv(csv_audio_combinations_no_probes_path, index=False)
+csv_audio_combinations_probes_path = TABLES_DIR / 'audiobook_combinations_probes.csv'
+csv_audio_combinations_short_path = TABLES_DIR / 'audiobook_combinations_short.csv'
 
+df_audio_combinations = pd.DataFrame(audio_combinations_dict)
+df_audio_combinations.to_csv(
+    csv_audio_combinations_probes_path, index=False
+)
+df_audio_combinations['filename'] = df_audio_combinations['filename'].apply(
+    lambda p: p.replace('with_probe','no_probe').replace('_tone_probe','').replace('_not_scrambled','').replace('_scrambled','').replace('.ogg','_no_probe.ogg')
+)
+df_audio_combinations.to_csv(
+    csv_audio_combinations_no_probes_path, index=False
+)
+df_audio_combinations['filename'] = df_audio_combinations['filename'].apply(
+    lambda p: str(Path("..") / probe_path_short /Path(p).name.replace('no_probe','short'))
+)
+df_audio_combinations.to_csv(
+    csv_audio_combinations_short_path, index=False
+)
 # Remove .wav files from processed folders to keep only ogg outputs
-no_probe_dir = OUTPUT_DIR / 'no_probe'
-with_probe_dir = OUTPUT_DIR / 'with_probe'
-for d in (no_probe_dir, with_probe_dir):
+for d in (probe_path, no_probe_path, probe_path_short):
     if d.exists():
         for wav_file in d.glob('*.wav'):
             try:

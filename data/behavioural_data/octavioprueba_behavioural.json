@@ -1,0 +1,217 @@
+{
+    "metadata": {
+        "selected_rows": [
+            3,
+            5,
+            6,
+            4,
+            2,
+            1,
+            0
+        ],
+        "relative_filepath": "psychopy_experiment\\data\\octavioprueba_DichoticListeningProbe_2026-01-19_14h22.47.148.csv",
+        "participant_id": "octavioprueba",
+        "experiment": "DichoticListeningProbe",
+        "date": "2026-01-19",
+        "time": "14h22.47.148",
+        "attended_story": [
+            2,
+            3,
+            6,
+            8,
+            9,
+            12,
+            13
+        ],
+        "audio_filepath": [
+            "data\\stimuli\\processed_audios_short\\M01_F02_short.ogg",
+            "data\\stimuli\\processed_audios_short\\F04_M03_short.ogg",
+            "data\\stimuli\\processed_audios_short\\M06_F05_short.ogg",
+            "data\\stimuli\\processed_audios_short\\F08_M07_short.ogg",
+            "data\\stimuli\\processed_audios_short\\M09_F10_short.ogg",
+            "data\\stimuli\\processed_audios_short\\F11_M12_short.ogg",
+            "data\\stimuli\\processed_audios_short\\F13_M14_short.ogg"
+        ],
+        "audio_filecodes": [
+            "M01_F02",
+            "F04_M03",
+            "M06_F05",
+            "F08_M07",
+            "M09_F10",
+            "F11_M12",
+            "F13_M14"
+        ],
+        "framerate": [
+            60.13106166945788,
+            60.13106166945788,
+            60.13106166945788,
+            60.13106166945788,
+            60.13106166945788,
+            60.13106166945788,
+            60.13106166945788
+        ],
+        "condition": [
+            "O_M_F",
+            "NO_F_M",
+            "NO_M_F",
+            "NO_F_M",
+            "O_M_F",
+            "O_F_M",
+            "O_F_M"
+        ],
+        "story_L": [
+            1,
+            4,
+            6,
+            8,
+            9,
+            11,
+            13
+        ],
+        "voice_L": [
+            "M",
+            "F",
+            "M",
+            "F",
+            "M",
+            "F",
+            "F"
+        ],
+        "story_R": [
+            2,
+            3,
+            5,
+            7,
+            10,
+            12,
+            14
+        ],
+        "voice_R": [
+            "F",
+            "M",
+            "F",
+            "M",
+            "F",
+            "M",
+            "M"
+        ],
+        "target": [
+            "R",
+            "R",
+            "L",
+            "L",
+            "L",
+            "R",
+            "L"
+        ]
+    },
+    "behaviour": {
+        "questionary_answers": [
+            "a",
+            "b",
+            "c",
+            "a",
+            "a",
+            "a",
+            "b",
+            "b",
+            "b",
+            "c",
+            "c",
+            "c",
+            "a",
+            "c",
+            "b",
+            "a",
+            "b",
+            "a",
+            "a",
+            "b",
+            "c"
+        ],
+        "questionary_rts": [
+            0.7590933000028599,
+            0.1182565999915823,
+            0.070285000023432,
+            0.6317163999774493,
+            0.7336161000130232,
+            0.135073099983856,
+            0.3592439999920316,
+            0.1676334999792743,
+            0.1196487999986857,
+            0.4792027999938,
+            0.1631026999966707,
+            0.203760800010059,
+            0.6660286999831442,
+            0.1344195999845396,
+            0.2475260999926831,
+            0.5546066999959294,
+            0.0829095999943092,
+            0.1351166999957058,
+            0.8744058000156656,
+            0.1181045999983325,
+            0.1045056000002659
+        ],
+        "questionary_evaluations": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            true,
+            false,
+            false,
+            true,
+            false,
+            true,
+            false,
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+        ]
+    },
+    "listening_presentation": {
+        "expected_audiobook_duration": [
+            5.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0
+        ],
+        "time_audiobook_finished": [
+            5.028596199990716,
+            5.031483600003412,
+            5.031651400000555,
+            5.025040900014574,
+            5.027940200001467,
+            5.050135500001488,
+            5.024803300009808
+        ],
+        "time_audiobook_started": [
+            11.48282116666475,
+            34.266873033346684,
+            57.46750353332803,
+            79.4180985666792,
+            101.95201636667868,
+            124.31926373334912,
+            146.51980326668516
+        ],
+        "audiobook_duration": [
+            -6.454224966674035,
+            -29.235389433343272,
+            -52.43585213332747,
+            -74.39305766666463,
+            -96.92407616667721,
+            -119.26912823334763,
+            -141.49499996667535
+        ]
+    }
+}

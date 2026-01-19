@@ -1,0 +1,169 @@
+{
+    "metadata": {
+        "selected_rows": [
+            7,
+            2,
+            6,
+            4,
+            3
+        ],
+        "relative_filepath": "psychopy_experiment\\data\\piloto_ed_1_DichoticListeningProbe_2026-01-13_11h42.55.526.csv",
+        "participant_id": "piloto_ed_1",
+        "experiment": "DichoticListeningProbe",
+        "date": "2026-01-13",
+        "time": "11h42.55.526",
+        "attended_story": [
+            2,
+            4,
+            5,
+            8,
+            9
+        ],
+        "audio_filepath": [
+            "data\\stimuli\\processed_audios\\with_probe\\M02_F01_tone_probe.ogg",
+            "data\\stimuli\\processed_audios\\with_probe\\M03_F04_tone_probe.ogg",
+            "data\\stimuli\\processed_audios\\with_probe\\M06_F05_tone_probe.ogg",
+            "data\\stimuli\\processed_audios\\with_probe\\F08_M07_tone_probe.ogg",
+            "data\\stimuli\\processed_audios\\with_probe\\M09_F10_tone_probe.ogg"
+        ],
+        "audio_filecodes": [
+            "M02_F01",
+            "M03_F04",
+            "M06_F05",
+            "F08_M07",
+            "M09_F10"
+        ],
+        "framerate": [
+            75.56787603431202,
+            75.56787603431202,
+            75.56787603431202,
+            75.56787603431202,
+            75.56787603431202
+        ],
+        "condition": [
+            "NO_M_F",
+            "O_M_F",
+            "NO_M_F",
+            "NO_F_M",
+            "O_M_F"
+        ],
+        "story_L": [
+            1,
+            4,
+            5,
+            8,
+            10
+        ],
+        "voice_L": [
+            "M",
+            "M",
+            "M",
+            "F",
+            "M"
+        ],
+        "story_R": [
+            2,
+            3,
+            6,
+            7,
+            9
+        ],
+        "voice_R": [
+            "F",
+            "F",
+            "F",
+            "M",
+            "F"
+        ],
+        "target": [
+            "R",
+            "L",
+            "L",
+            "L",
+            "R"
+        ]
+    },
+    "behaviour": {
+        "questionary_answers": [
+            "c",
+            "c",
+            "c",
+            "b",
+            "c",
+            "b",
+            "b",
+            "a",
+            "c",
+            "c",
+            "c",
+            "c",
+            "c",
+            "c",
+            "c"
+        ],
+        "questionary_rts": [
+            52.57498516292071,
+            18.51289077662841,
+            0.8394076074910117,
+            27.35358576153521,
+            19.45080248557133,
+            12.99873411630324,
+            12.56880235083554,
+            19.389190264308127,
+            9.26513494525534,
+            21.573223640521974,
+            0.3857458159436646,
+            0.4365874393279227,
+            13.674185404162928,
+            0.9642931614689588,
+            1.1244470179863129
+        ],
+        "questionary_evaluations": [
+            false,
+            false,
+            false,
+            false,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            false,
+            true,
+            false,
+            false,
+            false
+        ]
+    },
+    "listening_presentation": {
+        "expected_audiobook_duration": [
+            300.6306666666667,
+            300.6173333333333,
+            305.13733333333334,
+            300.27866666666665,
+            300.89866666666666
+        ],
+        "time_audiobook_finished": [
+            300.64371789977486,
+            300.6302461511805,
+            305.1490300559162,
+            300.2837619779366,
+            300.9101257863658
+        ],
+        "time_audiobook_started": [
+            1.039424609984053,
+            1.0395256625361071,
+            1.0393854721733078,
+            1.0395282289500756,
+            1.039451236529203
+        ],
+        "audiobook_duration": [
+            299.6042932897908,
+            299.59072048864437,
+            304.1096445837429,
+            299.2442337489865,
+            299.8706745498366
+        ]
+    }
+}
