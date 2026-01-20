@@ -54,9 +54,15 @@ for subject_file in config.PSYCHOPY_DIR.glob("*.csv"):
     answers_column = 'questions_trial.key_resp_questionary.keys'
     for j, row in subject_data.iterrows():
         exp = 'with_probe' if experiment=='DichoticListeningProbe' else 'no_probe'
+        
         if Path(row['audio_filepath']).name.endswith('_short.ogg'):
             audio_file_path = config.STIMULI_DIR / f"processed_audios_short" / Path(row['audio_filepath']).name
         else:
+            # Check consistency of audio file paths
+            if exp == 'with_probe' and not Path(row['audio_filepath']).parent.name == 'with_probe':
+                raise ValueError(f"Inconsistent audio file path or name of experiment {experiment}: {row['audio_filepath']}")
+            elif exp == 'no_probe' and not Path(row['audio_filepath']).parent.name == 'no_probe':
+                raise ValueError(f"Inconsistent audio file path or name of experiment {experiment}: {row['audio_filepath']}")
             audio_file_path = config.STIMULI_DIR / f"processed_audios/{exp}" / Path(row['audio_filepath']).name
         audio_filecode = '_'.join(Path(row['audio_filepath']).stem.split('_')[:2])
 
