@@ -43,7 +43,7 @@ FIGURES_ICA.mkdir(parents=True, exist_ok=True)
 
 mne.set_log_level(config.VERBOSE_LEVEL)
 
-for eeg_path in tqdm(list(config.EEG_DIR.glob("*.bdf")), desc="Preprocessing EEG files"):
+for eeg_path in tqdm(list(config.EEG_DIR.glob("*.bdf")), desc="Preprocessing EEG files (patience, ICA takes ~2 mins per subj)"):
     
     # Load behavioural and psychopy data if needed
     behavioural_data = load_json_to_dict(
@@ -183,54 +183,52 @@ for eeg_path in tqdm(list(config.EEG_DIR.glob("*.bdf")), desc="Preprocessing EEG
     )
 
     # Filter data: high pass 1 Hz Butterworth; Low pass 40 Hz; Notch 50 Hz. All non-causal # FIXME 6
-    # raw = raw.filter(
-    #     l_freq=1, 
-    #     h_freq=40,
-    #     method='fir',
-    #     phase='zero', 
-    #     fir_design='firwin',
-    #     verbose=config.VERBOSE_LEVEL
-    # )
-    # raw = raw.resample(config.TARGET_SAMPLING_RATE, verbose=config.VERBOSE_LEVEL)
-    raw_data = raw.get_data()
-    raw_data_to_filter = raw_data[:-1, :]  # Exclude trigger channel
-    filtered_data = fir_filter(
-        array=raw_data_to_filter,
-        sfreq=raw.info['sfreq'],
-        l_freq=1,
+    raw = raw.filter(
+        l_freq=1, 
         h_freq=40,
-        axis=1,
-        call_type='both',
-        store_cache=config.PREPROCESSED_DIR / "broad_filter_coefficients_fir.npy"
+        method='fir',
+        phase='zero', 
+        fir_design='firwin',
+        verbose=config.VERBOSE_LEVEL
     )
-    filtered_data = fir_filter(
-        array=filtered_data,
-        sfreq=raw.info['sfreq'],
-        l_freq=49,
-        h_freq=51,
-        axis=1,
-        call_type='both',
-        store_cache=config.PREPROCESSED_DIR / "notch_filter_coefficients_fir.npy"
-    )
-    filtered_data = np.vstack([filtered_data, raw_data[-1, :]])  # Add trigger channel back
+    raw = raw.resample(config.TARGET_SAMPLING_RATE, verbose=config.VERBOSE_LEVEL)
+    # #TODO identificar donde esta el problema : si en el filter o en resample
+    # raw_data = raw.get_data()
+    # raw_data_to_filter = raw_data[:-1, :]  # Exclude trigger channel
+    # filtered_data = fir_filter(
+    #     array=raw_data_to_filter,
+    #     sfreq=raw.info['sfreq'],
+    #     l_freq=1,
+    #     h_freq=40,
+    #     axis=1,
+    #     call_type='forward_compensated_reflected'
+    # )
+    # filtered_data = np.vstack([filtered_data, raw_data[-1, :]])  # Add trigger channel back
     
-    # Downsample 
-    filtered_data = custom_resample(
-        array=filtered_data,
-        original_sr=raw.info['sfreq'],
-        target_sr=config.TARGET_SAMPLING_RATE,
-        axis=1
-    )
-    raw._data = filtered_data
-    raw.info['sfreq'] = config.TARGET_SAMPLING_RATE
+    # # Downsample 
+    # filtered_data = custom_resample(
+    #     array=filtered_data,
+    #     original_sr=raw.info['sfreq'],
+    #     target_sr=config.TARGET_SAMPLING_RATE,
+    #     axis=1
+    # )
+    # # Update info structure
+    # new_info = raw.info.copy()
+    # with new_info._unlock():
+    #     new_info['sfreq'] = config.TARGET_SAMPLING_RATE
+    #     new_info['line_freq'] = 50 
+    #     new_info['highpass'] = 1
+    #     new_info['lowpass'] = 40 
+    # del raw
+    # raw = mne.io.RawArray(filtered_data, new_info)
+    # raw.set_annotations(annotations)
 
     # Rereference to mastoids
     raw = raw.set_eeg_reference(
         ['M1', 'M2'],
         verbose=config.VERBOSE_LEVEL
     )
-    print("About to run ICA...")
-    
+
     # ICA to remove artifacts
     ica = mne.preprocessing.ICA(
         n_components=config.ICA_PERCENTAGE, 

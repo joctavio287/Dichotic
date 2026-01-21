@@ -254,22 +254,25 @@ def custom_resample(
         window=window_param, 
         padtype=padtype
     )
-
 def fir_filter(
     array:np.ndarray, 
     sfreq:float, 
     l_freq:float, 
     h_freq:float,
     axis:int=0,
-    call_type:str="forward_compensated",
-    store_cache:Union[Path, str, None]=None
+    call_type:str="forward_compensated_cut",
+    store_cache:Union[Path, str, None]=None,
+    transition_ratio: float = 0.25,
+    min_transition_bandwidth: float = 0.5,
+    filter_type: Union[bool, str] = 'bandpass',
+    use_fourier: bool = True
 )->np.ndarray:
     """
     Apply a bandpass FIR filter to the input data with manual delay compensation.
     Half of the order of the filter is compensated by shifting the signal back
     and eliminating the invalid samples at the start.
-    The transition band width is set to 25% of the lower cutoff frequency, with a
-    minimum of 2 Hz unless l_freq <= 2 Hz, in which case it is set to 0.5 Hz.
+    By default, the transition band width is set to 25% of the lower cutoff frequency, 
+    with a minimum of 2 Hz unless l_freq <= 2 Hz, in which case it is set to 0.5 Hz.
 
     Parameters
     ----------
@@ -284,9 +287,21 @@ def fir_filter(
     axis : int, optional
         The axis along which to apply the filter. Default is 0.
     call_type : str, optional
-        The type of filtering call. Must be one of: 'forward', 'forward_compensated', 'both'.
+        The type of filtering call. Must be one of: 'forward', 'forward_compensated_cut', 'forward_compensated_reflected', 'both'.
     store_cache : Union[Path, str, None], optional
         Path to store the filter coefficients cache. If None, caching is not used.
+    transition_ratio : float, optional
+        The ratio of the transition bandwidth to the lower cutoff frequency.
+    min_transition_bandwidth : float, optional
+        The minimum transition bandwidth in Hz.
+    filter_type : Union[bool, str], 'bandpass'
+        The type of filter to apply. Default is 'bandpass'. According to scipy:
+        pass_zero : {True, False, 'bandpass', 'lowpass', 'highpass', 'bandstop'} 
+        If True, the gain at the frequency 0 (i.e., the "DC gain") is 1. If False, the DC gain is 0. 
+        Can also be a string argument for the desired filter type (equivalent to btype in IIR design functions).
+    use_fourier : bool, optional
+        If True, uses FFT-based convolution (signal.convolve) which is significantly faster for long filters. 
+        If False, uses direct convolution (signal.lfilter). Default is True.
     
     Returns
     -------
@@ -297,13 +312,19 @@ def fir_filter(
     number_of_dims = array.ndim
 
     # Filter design
-    assert l_freq > 0.5, "l_freq must be greater than 0.5 Hz for proper transition band calculation."
-    trans_bandwidth = 0.5 if l_freq <= 2 else l_freq * 0.25 # 25% of l_freq, min 0.5 Hz
+    assert l_freq >= 0.1, "l_freq must be greater or eq. than 0.1 Hz for proper transition band calculation."
+    
+    if l_freq <= 2.0:
+        trans_bandwidth = min_transition_bandwidth # defaults to 0.5
+    else:
+        # Aquí forzamos el mínimo de 2.0 Hz que usa MNE
+        trans_bandwidth = max(2.0, l_freq * transition_ratio)
+        trans_bandwidth = min(trans_bandwidth, l_freq)
     
     # Bellanger/Hamming window FIR design, and symmetric window
     numtaps = int(3.3 / (trans_bandwidth / sfreq))
-    if numtaps % 2 == 0: numtaps += 1  
-        
+    if numtaps % 2 == 0: numtaps += 1   
+    
     if store_cache:
         store_cache = Path(store_cache)
         if store_cache.exists():
@@ -312,7 +333,7 @@ def fir_filter(
             taps = signal.firwin(
                 numtaps=numtaps, 
                 cutoff=[l_freq, h_freq], 
-                pass_zero=False, # DC gain is 0
+                pass_zero=filter_type, # DC Union[gain, str] is 'bandpass'
                 window='hamming', 
                 fs=sfreq
             )
@@ -321,13 +342,13 @@ def fir_filter(
         taps = signal.firwin(
             numtaps=numtaps, 
             cutoff=[l_freq, h_freq], 
-            pass_zero=False, # DC gain is 0
+            pass_zero=filter_type, # DC Union[gain, str] is 'bandpass'
             window='hamming', 
             fs=sfreq
         )
 
-    if call_type not in {"forward", "forward_compensated", "both"}:
-        raise ValueError("call_type must be one of: 'forward', 'forward_compensated', 'both'.")
+    if call_type not in {"forward", "forward_compensated_cut", "forward_compensated_reflected", "both"}:
+        raise ValueError("call_type must be one of: 'forward', 'forward_compensated_cut', 'forward_compensated_reflected', 'both'.")
 
     if call_type == "both":
         return signal.filtfilt(
@@ -336,38 +357,75 @@ def fir_filter(
             x=array,
             axis=axis
         )
-
-    # Get transition compensation (there can be a discontinuity at the edges)
-    zi = signal.lfilter_zi(taps, 1.0)
-    zi_view_shape = [1] * number_of_dims
-    zi_view_shape[axis] = len(zi) 
-    zi_expanded = zi.reshape(zi_view_shape)
-    
-    # Get the first sample, but KEEP the dimension
-    slice_idx = [slice(None)] * number_of_dims
-    slice_idx[axis] = slice(0, 1) 
-    x0 = array[tuple(slice_idx)]
-    zi_shaped = zi_expanded * x0 
     
     # If array.shape = n_times, n_channels and axis=0 -> zi_shaped.shape = filter_order, n_channels
-
-    # Apply filter
-    filtered_raw, _ = signal.lfilter(
-        b=taps, 
-        a=1.0, 
-        x=array, 
-        axis=axis,
-        zi=zi_shaped
-    )
-
-    if call_type == "forward":
-        return filtered_raw
-
+    
     # Temporal delay compensation is exactly half the filter order
-    delay = int((numtaps - 1) // 2)
-    n_times = array.shape[axis]
-
     slices = [slice(None)] * number_of_dims
-    slices[axis] = slice(delay, None)
-    filtered_truncated = filtered_raw[tuple(slices)]
-    return filtered_truncated
+    delay = int((numtaps - 1) // 2)
+    
+    if call_type == "forward" or call_type == "forward_compensated_cut":
+        # Get transition compensation (there can be a discontinuity at the edges)
+        zi = signal.lfilter_zi(taps, 1.0)
+        zi_view_shape = [1] * number_of_dims
+        zi_view_shape[axis] = len(zi) 
+        zi_expanded = zi.reshape(zi_view_shape)
+        
+        # Get the first sample, but KEEP the dimension
+        slice_idx = [slice(None)] * number_of_dims
+        slice_idx[axis] = slice(0, 1) 
+        x0 = array[tuple(slice_idx)]
+        zi_shaped = zi_expanded * x0 
+        
+        # Apply filter
+        filtered_raw, _ = signal.lfilter(
+            b=taps, 
+            a=1.0, 
+            x=array, 
+            axis=axis,
+            zi=zi_shaped
+        )
+        if call_type == "forward_compensated_cut":
+            slices[axis] = slice(delay, None)
+            filtered_truncated = filtered_raw[tuple(slices)]
+            return filtered_truncated
+
+        return filtered_raw
+    elif call_type == "forward_compensated_reflected":
+        pad_len = numtaps - 1
+        pad_width = [(0, 0)] * array.ndim
+        pad_width[axis] = (pad_len, pad_len)
+        array_padded = np.pad(array, pad_width, mode='reflect')
+        
+        if use_fourier:
+             # FFT-based convolution for speed (O(N log N))
+            shape_taps = [1] * array.ndim
+            shape_taps[axis] = -1
+            taps_reshaped = taps.reshape(shape_taps)
+            
+            # mode='full' gives size N + M - 1
+            filtered_full = signal.convolve(
+                array_padded, 
+                taps_reshaped, 
+                mode='full', 
+                method='auto'
+            )
+            
+            # Slice to match lfilter output size (N) to maintain logic consistency
+            slices_full = [slice(None)] * array.ndim
+            slices_full[axis] = slice(0, array_padded.shape[axis])
+            filtered_padded = filtered_full[tuple(slices_full)]
+            
+        else:
+             # Direct convolution (O(N * M))
+            filtered_padded, _ = signal.lfilter(
+                b=taps, 
+                a=1.0, 
+                x=array_padded, 
+                axis=axis
+            )
+
+        start = delay + pad_len
+        stop = start + array.shape[axis]
+        slices[axis] = slice(start, stop)
+        return filtered_padded[tuple(slices)]
