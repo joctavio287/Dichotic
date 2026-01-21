@@ -14,7 +14,6 @@ This script preprocesses raw EEG data files in BDF format. The preprocessing ste
 # 3. TODO: no aparecen las marcas del offset 105
 # 4. TODO: se generan marcas no esperadas 
 # 5. TODO: hubo que hacer hacks porque aparecieron marcas esperadas, pero en momentos extraños
-# 6. TODO: aplicar filtros reproducibles -> revisar repo speech-encoding
 
 import matplotlib.pyplot as plt
 from pathlib import Path
@@ -26,7 +25,9 @@ from utils.processing import (
     find_first_event_on_id,
     dump_dict_to_json,
     load_json_to_dict,
-    get_no_task_times
+    get_no_task_times,
+    fir_filter,
+    custom_resample
 )
 import config
 
@@ -182,30 +183,53 @@ for eeg_path in tqdm(list(config.EEG_DIR.glob("*.bdf")), desc="Preprocessing EEG
     )
 
     # Filter data: high pass 1 Hz Butterworth; Low pass 40 Hz; Notch 50 Hz. All non-causal # FIXME 6
-    raw = raw.filter(
-        l_freq=1, 
+    # raw = raw.filter(
+    #     l_freq=1, 
+    #     h_freq=40,
+    #     method='fir',
+    #     phase='zero', 
+    #     fir_design='firwin',
+    #     verbose=config.VERBOSE_LEVEL
+    # )
+    # raw = raw.resample(config.TARGET_SAMPLING_RATE, verbose=config.VERBOSE_LEVEL)
+    raw_data = raw.get_data()
+    raw_data_to_filter = raw_data[:-1, :]  # Exclude trigger channel
+    filtered_data = fir_filter(
+        array=raw_data_to_filter,
+        sfreq=raw.info['sfreq'],
+        l_freq=1,
         h_freq=40,
-        method='fir',
-        phase='zero', 
-        fir_design='firwin',
-        verbose=config.VERBOSE_LEVEL
+        axis=1,
+        call_type='both',
+        store_cache=config.PREPROCESSED_DIR / "broad_filter_coefficients_fir.npy"
     )
-    raw = raw.notch_filter(
-        freqs=50,
-        method='fir',
-        phase='zero',
-        fir_design='firwin',
-        verbose=config.VERBOSE_LEVEL
+    filtered_data = fir_filter(
+        array=filtered_data,
+        sfreq=raw.info['sfreq'],
+        l_freq=49,
+        h_freq=51,
+        axis=1,
+        call_type='both',
+        store_cache=config.PREPROCESSED_DIR / "notch_filter_coefficients_fir.npy"
     )
+    filtered_data = np.vstack([filtered_data, raw_data[-1, :]])  # Add trigger channel back
     
     # Downsample 
-    raw = raw.resample(config.TARGET_SAMPLING_RATE, verbose=config.VERBOSE_LEVEL)
+    filtered_data = custom_resample(
+        array=filtered_data,
+        original_sr=raw.info['sfreq'],
+        target_sr=config.TARGET_SAMPLING_RATE,
+        axis=1
+    )
+    raw._data = filtered_data
+    raw.info['sfreq'] = config.TARGET_SAMPLING_RATE
 
     # Rereference to mastoids
     raw = raw.set_eeg_reference(
         ['M1', 'M2'],
         verbose=config.VERBOSE_LEVEL
     )
+    print("About to run ICA...")
     
     # ICA to remove artifacts
     ica = mne.preprocessing.ICA(

@@ -1,4 +1,5 @@
 from pathlib import Path
+from typing import Union
 from scipy import signal
 import numpy as np
 import json
@@ -79,7 +80,6 @@ def load_json_to_dict(
 
 # =====================
 # ANNOTATION PROCESSING
-
 def find_first_event_on_id(
         raw, 
         trigger_signal, 
@@ -255,12 +255,14 @@ def custom_resample(
         padtype=padtype
     )
 
-def fir_delay_compensated(
+def fir_filter(
     array:np.ndarray, 
     sfreq:float, 
     l_freq:float, 
     h_freq:float,
-    axis:int=0
+    axis:int=0,
+    call_type:str="forward_compensated",
+    store_cache:Union[Path, str, None]=None
 )->np.ndarray:
     """
     Apply a bandpass FIR filter to the input data with manual delay compensation.
@@ -281,6 +283,10 @@ def fir_delay_compensated(
         The upper cutoff frequency of the bandpass filter.
     axis : int, optional
         The axis along which to apply the filter. Default is 0.
+    call_type : str, optional
+        The type of filtering call. Must be one of: 'forward', 'forward_compensated', 'both'.
+    store_cache : Union[Path, str, None], optional
+        Path to store the filter coefficients cache. If None, caching is not used.
     
     Returns
     -------
@@ -298,14 +304,39 @@ def fir_delay_compensated(
     numtaps = int(3.3 / (trans_bandwidth / sfreq))
     if numtaps % 2 == 0: numtaps += 1  
         
-    taps = signal.firwin(
-        numtaps=numtaps, 
-        cutoff=[l_freq, h_freq], 
-        pass_zero=False, # DC gain is 0
-        window='hamming', 
-        fs=sfreq
-    )
-    
+    if store_cache:
+        store_cache = Path(store_cache)
+        if store_cache.exists():
+            taps = np.load(store_cache)
+        else:
+            taps = signal.firwin(
+                numtaps=numtaps, 
+                cutoff=[l_freq, h_freq], 
+                pass_zero=False, # DC gain is 0
+                window='hamming', 
+                fs=sfreq
+            )
+            np.save(store_cache, taps)
+    else:
+        taps = signal.firwin(
+            numtaps=numtaps, 
+            cutoff=[l_freq, h_freq], 
+            pass_zero=False, # DC gain is 0
+            window='hamming', 
+            fs=sfreq
+        )
+
+    if call_type not in {"forward", "forward_compensated", "both"}:
+        raise ValueError("call_type must be one of: 'forward', 'forward_compensated', 'both'.")
+
+    if call_type == "both":
+        return signal.filtfilt(
+            b=taps,
+            a=1.0,
+            x=array,
+            axis=axis
+        )
+
     # Get transition compensation (there can be a discontinuity at the edges)
     zi = signal.lfilter_zi(taps, 1.0)
     zi_view_shape = [1] * number_of_dims
@@ -328,6 +359,10 @@ def fir_delay_compensated(
         axis=axis,
         zi=zi_shaped
     )
+
+    if call_type == "forward":
+        return filtered_raw
+
     # Temporal delay compensation is exactly half the filter order
     delay = int((numtaps - 1) // 2)
     n_times = array.shape[axis]
