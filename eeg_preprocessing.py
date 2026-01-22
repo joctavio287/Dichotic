@@ -183,45 +183,38 @@ for eeg_path in tqdm(list(config.EEG_DIR.glob("*.bdf")), desc="Preprocessing EEG
     )
 
     # Filter data: high pass 1 Hz Butterworth; Low pass 40 Hz; Notch 50 Hz. All non-causal # FIXME 6
-    raw = raw.filter(
-        l_freq=1, 
+    # raw = raw.resample(config.TARGET_SAMPLING_RATE, verbose=config.VERBOSE_LEVEL)
+
+    # Apply filters
+    raw_data = raw.get_data()
+    filtered_data = fir_filter(
+        array=raw_data[:-1, :], # exclude trigger channel
+        sfreq=raw.info['sfreq'],
+        l_freq=1,
         h_freq=40,
-        method='fir',
-        phase='zero', 
-        fir_design='firwin',
-        verbose=config.VERBOSE_LEVEL
+        axis=1, # time axis
+        call_type='forward_compensated_reflected'
     )
-    raw = raw.resample(config.TARGET_SAMPLING_RATE, verbose=config.VERBOSE_LEVEL)
-    # #TODO identificar donde esta el problema : si en el filter o en resample
-    # raw_data = raw.get_data()
-    # raw_data_to_filter = raw_data[:-1, :]  # Exclude trigger channel
-    # filtered_data = fir_filter(
-    #     array=raw_data_to_filter,
-    #     sfreq=raw.info['sfreq'],
-    #     l_freq=1,
-    #     h_freq=40,
-    #     axis=1,
-    #     call_type='forward_compensated_reflected'
-    # )
-    # filtered_data = np.vstack([filtered_data, raw_data[-1, :]])  # Add trigger channel back
+    filtered_data = np.vstack([filtered_data, raw_data[-1, :]])  # Add trigger channel back
     
-    # # Downsample 
-    # filtered_data = custom_resample(
-    #     array=filtered_data,
-    #     original_sr=raw.info['sfreq'],
-    #     target_sr=config.TARGET_SAMPLING_RATE,
-    #     axis=1
-    # )
-    # # Update info structure
-    # new_info = raw.info.copy()
-    # with new_info._unlock():
-    #     new_info['sfreq'] = config.TARGET_SAMPLING_RATE
-    #     new_info['line_freq'] = 50 
-    #     new_info['highpass'] = 1
-    #     new_info['lowpass'] = 40 
-    # del raw
-    # raw = mne.io.RawArray(filtered_data, new_info)
-    # raw.set_annotations(annotations)
+    # Downsample 
+    filtered_data = custom_resample(
+        array=filtered_data,
+        original_sr=raw.info['sfreq'],
+        target_sr=config.TARGET_SAMPLING_RATE,
+        axis=1
+    )
+    
+    # Update info structure
+    new_info = raw.info.copy()
+    with new_info._unlock():
+        new_info['sfreq'] = config.TARGET_SAMPLING_RATE
+        new_info['line_freq'] = 50 
+        new_info['highpass'] = 1
+        new_info['lowpass'] = 40 
+    del raw
+    raw = mne.io.RawArray(filtered_data, new_info)
+    raw.set_annotations(annotations)
 
     # Rereference to mastoids
     raw = raw.set_eeg_reference(
@@ -272,6 +265,14 @@ for eeg_path in tqdm(list(config.EEG_DIR.glob("*.bdf")), desc="Preprocessing EEG
     # Remove artifact components based on predefined list
     ica.exclude = config.ICA_REMOVAL[eeg_path.stem] if eeg_path.stem in config.ICA_REMOVAL.keys() else []
     raw = ica.apply(raw)
+
+    # Compute how much variance is explained by removed components
+    if len(ica.exclude) > 0:
+        sources = ica.get_sources(raw).get_data()
+        var_explained = np.sum(np.var(sources[ica.exclude, :], axis=1)) / np.sum(np.var(sources, axis=1))
+        print(f"Variance explained by removed ICA components for {eeg_path.stem}: {var_explained*100:.2f}%")
+    else:
+        var_explained = 0.0
 
     # Erase 'bad' annotations to avoid issues later on
     raw.set_annotations(None)

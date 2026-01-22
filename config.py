@@ -39,8 +39,7 @@ CH_TYPES = {
 }
 
 ICA_REMOVAL = {
-    # 'pruebapiloto_ed_1': [0, 1, 10, 11, 13, 14, 15, 16, 17,18,19, 22, 23,24],
-    'pruebapiloto_ed_1': [0, 7, 12, 13, 14, 15, 16, 18, 19, 20, 22, 23],
+    'pruebapiloto_ed_1': [0, 10, 11, 12, 13, 14, 15, 17, 18, 19, 20, 21],
 }
 
 USE_SCIENCE_PLOTS = False
